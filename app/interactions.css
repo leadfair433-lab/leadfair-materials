@@ -1,0 +1,26 @@
+@media (pointer: fine) {
+  .has-pointer-fx, .has-pointer-fx a, .has-pointer-fx button { cursor: none; }
+  .cursor-glow, .cursor-dot { position: fixed; left: 0; top: 0; pointer-events: none; z-index: 9999; opacity: 0; }
+  .has-pointer-fx .cursor-glow { width: 260px; height: 260px; border-radius: 50%; opacity: .7; transform: translate(calc(var(--mouse-x) - 50%), calc(var(--mouse-y) - 50%)); background: radial-gradient(circle, #2d66ff1e 0, #2d66ff0c 36%, transparent 70%); transition: opacity .25s; }
+  .has-pointer-fx .cursor-dot { width: 8px; height: 8px; border: 1px solid #d9ff64; border-radius: 50%; opacity: 1; transform: translate(calc(var(--mouse-x) - 50%), calc(var(--mouse-y) - 50%)); box-shadow: 0 0 15px #d9ff6499; transition: width .18s, height .18s, background .18s; }
+  .material, .product-visual, .heat-test > div, .industry-list article { transform: perspective(1000px) rotateX(var(--tilt-x,0deg)) rotateY(var(--tilt-y,0deg)); transform-style: preserve-3d; transition: transform .2s ease-out, box-shadow .28s ease, border-color .28s ease; will-change: transform; }
+  .material:hover { box-shadow: 0 28px 70px #121c3226; }
+  .product-visual:hover { border-color: #4d78ff; box-shadow: 0 28px 65px #0008, 0 0 0 1px #3564ff77; }
+  .product-visual:hover .product-photo img { transform: scale(1.085); filter: contrast(1.1) saturate(.72) brightness(.96); }
+  .product-photo img { transition: transform .8s cubic-bezier(.2,.7,.2,1), filter .6s ease; }
+  .heat-test > div:hover { border-color: #5578ff; box-shadow: 0 22px 45px #0005; }
+  .heat-test > div:hover .sample-image { background-size: 212% 106%; }
+  .heat-test > div.pass:hover .sample-image { background-size: 270% 140%; }
+  .sample-image { transition: background-size .65s cubic-bezier(.2,.7,.2,1), background-position .65s ease; }
+  .industry-list article:hover > span { transform: translate(7px,-5px); color: #0b3cff; }
+  .industry-list article > span { transition: transform .25s ease, color .25s ease; }
+  .primary, .contact, .product-copy > button, .cta button { transition: transform .22s ease, box-shadow .22s ease, background .22s ease; }
+  .primary:hover, .contact:hover, .product-copy > button:hover, .cta button:hover { transform: translateY(-3px); box-shadow: 0 12px 30px #0b3cff44; }
+  .top nav a { position: relative; }
+  .top nav a::after { content: ""; position: absolute; left: 0; right: 100%; bottom: -8px; height: 2px; background: #0b3cff; transition: right .28s ease; }
+  .top nav a:hover::after { right: 0; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .cursor-glow, .cursor-dot { display: none; }
+  *, *::before, *::after { scroll-behavior: auto!important; transition-duration: .01ms!important; animation-duration: .01ms!important; }
+}
