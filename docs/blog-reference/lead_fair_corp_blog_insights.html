@@ -1,0 +1,1285 @@
+<!DOCTYPE html>
+<html lang="zh-CN" class="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lead Fair Corp | Quietly Thinking Blog & Insights</title>
+    <!-- Tailwind CSS -->
+    <script src="./tailwind-preview.js"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#f4f4f5',
+                            100: '#e4e4e7',
+                            800: '#27272a',
+                            900: '#18181b',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'Noto Sans SC', 'sans-serif'],
+                        serif: ['Georgia', 'Cambria', 'serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
+    
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        * {
+            font-family: 'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', 'SimHei', sans-serif !important;
+            font-weight: 600;
+        }
+        body {
+            font-family: 'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', 'SimHei', sans-serif !important;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        .line-clamp-2 {
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+        .line-clamp-3 {
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 6px;
+            height: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 9999px;
+        }
+        .dark ::-webkit-scrollbar-thumb {
+            background: #334155;
+        }
+    </style>
+</head>
+<body class="bg-zinc-50 dark:bg-zinc-950 text-zinc-900 dark:text-zinc-100 min-h-screen transition-colors duration-300 flex flex-col antialiased">
+
+    <!-- Top Announcement Bar -->
+    <div class="bg-zinc-900 text-zinc-200 text-xs py-2 px-4 border-b border-zinc-800 flex justify-between items-center max-w-full">
+        <div class="max-w-7xl mx-auto w-full flex justify-between items-center">
+            <span class="flex items-center gap-2">
+                <span class="inline-block w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                <span>LEAD FAIR® Lab 2026 全新高分子材料与防护技术研报已更新发布</span>
+            </span>
+            <button onclick="openModal('catalogueModal')" class="underline hover:text-emerald-400 transition hidden md:inline">
+                免费索取最新研报与试样目录 &rarr;
+            </button>
+        </div>
+    </div>
+
+    <!-- HEADER / NAVIGATION -->
+    <header class="sticky top-0 z-40 bg-white/90 dark:bg-zinc-900/90 backdrop-blur-md border-b border-zinc-200 dark:border-zinc-800 transition-colors">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+            
+            <!-- Brand Logo -->
+            <div class="flex items-center space-x-3">
+                <a href="#" class="flex items-center gap-2 group">
+                    <span class="text-xl font-black tracking-tighter text-zinc-900 dark:text-white group-hover:text-emerald-600 transition">
+                        LEAD FAIR®
+                    </span>
+                    <span class="hidden sm:inline-block text-[10px] uppercase font-mono px-2 py-0.5 rounded bg-zinc-100 dark:bg-zinc-800 text-zinc-500 border border-zinc-200 dark:border-zinc-700">
+                        Corporation
+                    </span>
+                </a>
+            </div>
+
+            <!-- Desktop Navigation Links -->
+            <nav class="hidden md:flex items-center space-x-6 text-sm font-medium">
+                <a href="#" class="text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition">
+                    Home
+                </a>
+                <a href="#" class="text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition">
+                    About Us
+                </a>
+                
+                <!-- Products Dropdown -->
+                <div class="relative group">
+                    <button class="text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition flex items-center gap-1 py-2">
+                        Products <i class="fa-solid fa-angle-down text-xs opacity-60 group-hover:rotate-180 transition-transform duration-200"></i>
+                    </button>
+                    <div class="absolute left-0 mt-0 w-56 bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-xl shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 p-2">
+                        <a href="#" onclick="filterCategory('pet')" class="flex items-center gap-2 px-3 py-2 text-xs font-medium text-zinc-700 dark:text-zinc-300 hover:bg-zinc-100 dark:hover:bg-zinc-800 rounded-lg">
+                            <i class="fa-solid fa-dog text-amber-500 w-4"></i> 宠物用品 / QUPET®
+                        </a>
+                        <a href="#" onclick="filterCategory('sports')" class="flex items-center gap-2 px-3 py-2 text-xs font-medium text-zinc-700 dark:text-zinc-300 hover:bg-zinc-100 dark:hover:bg-zinc-800 rounded-lg">
+                            <i class="fa-solid fa-shield-halved text-blue-500 w-4"></i> 运动护具与防护
+                        </a>
+                        <a href="#" onclick="filterCategory('raw')" class="flex items-center gap-2 px-3 py-2 text-xs font-medium text-zinc-700 dark:text-zinc-300 hover:bg-zinc-100 dark:hover:bg-zinc-800 rounded-lg">
+                            <i class="fa-solid fa-cubes text-emerald-500 w-4"></i> 高分子原材料科技
+                        </a>
+                    </div>
+                </div>
+
+                <a href="#" class="text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition">
+                    OEM / ODM
+                </a>
+
+                <!-- Blog Dropdown -->
+                <div class="relative group">
+                    <a href="#" onclick="filterCategory('all')" class="text-emerald-600 dark:text-emerald-400 font-semibold transition flex items-center gap-1.5 py-2">
+                        Blog & Insights <i class="fa-solid fa-angle-down text-xs opacity-60 group-hover:rotate-180 transition-transform duration-200"></i>
+                    </a>
+                    <div class="absolute left-0 mt-0 w-60 bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-xl shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 p-2">
+                        <div class="px-3 py-1.5 text-[10px] font-mono text-zinc-400 uppercase tracking-wider">选择专属博客专栏</div>
+                        <a href="#" onclick="filterCategory('all')" class="flex items-center gap-2.5 px-3 py-2 text-xs font-medium text-zinc-800 dark:text-zinc-200 hover:bg-zinc-100 dark:hover:bg-zinc-800 rounded-lg">
+                            <i class="fa-solid fa-border-all text-zinc-500 w-4"></i> 综合博客首页 (All Blogs)
+                        </a>
+                        <a href="#" onclick="filterCategory('pet')" class="flex items-center gap-2.5 px-3 py-2 text-xs font-medium text-zinc-800 dark:text-zinc-200 hover:bg-zinc-100 dark:hover:bg-zinc-800 rounded-lg">
+                            <i class="fa-solid fa-paw text-amber-500 w-4"></i> 宠物玩具与用品专属博客
+                        </a>
+                        <a href="#" onclick="filterCategory('sports')" class="flex items-center gap-2.5 px-3 py-2 text-xs font-medium text-zinc-800 dark:text-zinc-200 hover:bg-zinc-100 dark:hover:bg-zinc-800 rounded-lg">
+                            <i class="fa-solid fa-person-running text-blue-500 w-4"></i> 运动护具专属博客
+                        </a>
+                        <a href="#" onclick="filterCategory('raw')" class="flex items-center gap-2.5 px-3 py-2 text-xs font-medium text-zinc-800 dark:text-zinc-200 hover:bg-zinc-100 dark:hover:bg-zinc-800 rounded-lg">
+                            <i class="fa-solid fa-flask text-emerald-500 w-4"></i> 原材料科技专属博客
+                        </a>
+                    </div>
+                </div>
+
+                <a href="#" onclick="openModal('inquiryModal')" class="text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition">
+                    Contact Us
+                </a>
+            </nav>
+
+            <!-- Header Right Controls -->
+            <div class="flex items-center space-x-3">
+                <button onclick="toggleSearchModal()" class="p-2 text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition rounded-full hover:bg-zinc-200/50 dark:hover:bg-zinc-800/50" title="搜索文章">
+                    <i class="fa-solid fa-magnifying-glass text-sm"></i>
+                </button>
+                
+                <button id="themeToggleBtn" onclick="toggleDarkMode()" class="p-2 text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition rounded-full hover:bg-zinc-200/50 dark:hover:bg-zinc-800/50" title="切换主题">
+                    <i class="fa-solid fa-moon text-sm dark:hidden"></i>
+                    <i class="fa-solid fa-sun text-sm hidden dark:block text-amber-400"></i>
+                </button>
+
+                <button onclick="openModal('subscribeModal')" class="bg-zinc-900 hover:bg-zinc-800 dark:bg-zinc-100 dark:hover:bg-white text-white dark:text-zinc-900 text-xs font-semibold px-4 py-2 rounded-lg transition-all flex items-center gap-1.5 shadow-sm">
+                    订阅资讯 <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-16 flex-1">
+        
+        <!-- HERO HEADLINE SECTION -->
+        <div class="flex flex-col md:flex-row md:items-end justify-between border-b border-zinc-300 dark:border-zinc-800 pb-6 mb-8 gap-6 transition-all duration-300">
+            <div>
+                <div id="heroBreadcrumb" class="text-xs font-mono text-emerald-600 dark:text-emerald-400 mb-2 flex items-center gap-2">
+                    <span>LEAD FAIR INSIGHTS</span>
+                    <span>/</span>
+                    <span id="heroCategoryBadge" class="uppercase font-bold">ALL CATEGORIES</span>
+                </div>
+                <h1 id="heroTitle" class="text-4xl sm:text-5xl md:text-6xl font-black tracking-tight text-zinc-900 dark:text-white underline decoration-2 underline-offset-8 decoration-zinc-300 dark:decoration-zinc-700">
+                    Quietly Thinking
+                </h1>
+            </div>
+            <div class="max-w-md text-sm text-zinc-600 dark:text-zinc-400 space-y-3">
+                <p id="heroDescription">
+                    聚焦宠物生活用品、高强度运动防护器具以及前沿高分子原材料的发展与革新。无噪音——只有深度的材料学思考与产品设计美学。
+                </p>
+                <div class="flex items-center gap-3">
+                    <button onclick="openModal('subscribeModal')" class="inline-flex items-center text-xs font-bold text-zinc-900 dark:text-white underline underline-offset-4 hover:opacity-80 transition">
+                        订阅本专栏 <i class="fa-solid fa-arrow-right ml-1 text-[10px]"></i>
+                    </button>
+                    <span id="heroModuleStats" class="text-xs text-zinc-400 font-mono">已收录全站 6 篇深度研究报告</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- TOP FEATURED GRID -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 mb-12 pb-12 border-b border-zinc-200 dark:border-zinc-800">
+            
+            <!-- Hero Left Column: Main Article Metadata -->
+            <div class="lg:col-span-4 flex flex-col justify-between space-y-6">
+                <div class="space-y-4">
+                    <span id="heroTagPill" class="inline-block border border-zinc-300 dark:border-zinc-700 rounded-full px-3 py-1 text-xs font-medium text-zinc-700 dark:text-zinc-300 bg-white/50 dark:bg-zinc-900/50">
+                        ● 宠物与材料工程
+                    </span>
+                    <h2 id="featuredTitle" class="text-2xl sm:text-3xl font-bold text-zinc-900 dark:text-white leading-tight hover:text-emerald-600 dark:hover:text-emerald-400 transition cursor-pointer" onclick="openArticleModal(0)">
+                        回归无名荒野：生物基热塑性弹性体在宠物关节保护具中的演进
+                    </h2>
+                    <p id="featuredExcerpt" class="text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed line-clamp-3">
+                        在宠物高龄化趋势加剧的今天，如何通过轻量化、高反弹的材料解决大型犬与老龄宠物的骨骼支撑问题？本文探讨从天然蓖麻油提炼的Bio-TPE材料在宠物外骨骼中的突破应用。
+                    </p>
+                </div>
+
+                <div class="space-y-4">
+                    <div class="flex items-center gap-3 text-xs text-zinc-500 dark:text-zinc-400">
+                        <img id="featuredAuthorImg" src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=120&q=80" class="w-8 h-8 rounded-full object-cover border border-zinc-200 dark:border-zinc-700" alt="Lora">
+                        <div>
+                            <span id="featuredAuthorName" class="font-medium text-zinc-900 dark:text-white">Lora Chen (材料学家)</span>
+                            <span id="featuredDate" class="block text-[11px] text-zinc-400">2026年7月18日</span>
+                        </div>
+                    </div>
+                    <!-- Tag Pills -->
+                    <div id="featuredTagContainer" class="flex flex-wrap gap-1.5 text-[11px]">
+                        <span class="px-2.5 py-1 rounded-md bg-zinc-200/70 dark:bg-zinc-800 text-zinc-700 dark:text-zinc-300">#生物基材料</span>
+                        <span class="px-2.5 py-1 rounded-md bg-zinc-200/70 dark:bg-zinc-800 text-zinc-700 dark:text-zinc-300">#宠物健康</span>
+                        <span class="px-2.5 py-1 rounded-md bg-zinc-200/70 dark:bg-zinc-800 text-zinc-700 dark:text-zinc-300">#柔性工程</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Hero Middle Column: Main Featured Hero Image -->
+            <div class="lg:col-span-5 relative group overflow-hidden rounded-2xl bg-zinc-100 dark:bg-zinc-900 min-h-[320px] lg:min-h-[420px] shadow-sm cursor-pointer" onclick="openArticleModal(0)">
+                <img id="featuredMainImg" src="https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?auto=format&fit=crop&w=1000&q=80" alt="宠物与材料设计" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-80"></div>
+                <div class="absolute bottom-4 left-4 right-4 text-white text-xs font-mono bg-black/40 backdrop-blur-md p-3 rounded-lg border border-white/10">
+                    <p id="featuredBannerBadge" class="font-semibold text-emerald-400">【高精尖选材】北极狐级防水透气贴合膜</p>
+                    <p id="featuredBannerDesc" class="text-[11px] opacity-80 mt-0.5">应用于极限户外宠物装备与防护马甲</p>
+                </div>
+            </div>
+
+            <!-- Hero Right Column: Secondary Featured Card -->
+            <div id="heroSecondaryCard" class="lg:col-span-3 flex flex-col justify-between bg-zinc-100/60 dark:bg-zinc-900/60 p-5 rounded-2xl border border-zinc-200/60 dark:border-zinc-800/60 space-y-4">
+                <div class="space-y-3">
+                    <div class="h-36 rounded-xl overflow-hidden relative cursor-pointer" onclick="openArticleModal(1)">
+                        <img src="https://images.unsplash.com/photo-1517838277536-f5f99be501cd?auto=format&fit=crop&w=600&q=80" alt="运动护具" class="w-full h-full object-cover hover:scale-105 transition duration-500">
+                    </div>
+                    <span class="text-[11px] font-mono text-zinc-500 dark:text-zinc-400">● 运动防护技术</span>
+                    <h3 class="text-base font-bold text-zinc-900 dark:text-white leading-snug hover:text-emerald-600 dark:hover:text-emerald-400 transition cursor-pointer" onclick="openArticleModal(1)">
+                        当3D打印晶格材料融入越野骑行护膝
+                    </h3>
+                    <p class="text-xs text-zinc-600 dark:text-zinc-400 line-clamp-3">
+                        打破传统EVA泡沫的闷热与易疲劳变形局限，蜂窝状弹性体晶格实现定向剪切增稠与连续通风。
+                    </p>
+                </div>
+                <div class="pt-3 border-t border-zinc-200 dark:border-zinc-800 flex items-center justify-between text-[11px] text-zinc-500">
+                    <span>2026年7月15日</span>
+                    <button onclick="openArticleModal(1)" class="font-bold text-emerald-600 dark:text-emerald-400 hover:underline">阅读全文 &rarr;</button>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- CATEGORY FILTER AND FEED TITLE -->
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-8">
+            <div class="flex items-center gap-3">
+                <h2 class="text-lg font-bold text-zinc-900 dark:text-white tracking-tight flex items-center gap-2">
+                    <span class="text-xs font-mono text-emerald-500">#</span> 深度专栏与快讯
+                </h2>
+                <div class="h-4 w-[1px] bg-zinc-300 dark:bg-zinc-700"></div>
+                <span id="currentFilterLabel" class="text-xs font-medium text-zinc-500">全部文章</span>
+            </div>
+
+            <!-- Filter Buttons -->
+            <div class="flex items-center gap-1.5 overflow-x-auto pb-1 sm:pb-0 text-xs" id="filterButtonGroup">
+                <button onclick="filterCategory('all')" id="btn-all" class="filter-btn px-3.5 py-1.5 rounded-lg bg-zinc-900 text-white dark:bg-zinc-100 dark:text-zinc-900 font-medium transition shadow-sm">
+                    全部 (All)
+                </button>
+                <button onclick="filterCategory('pet')" id="btn-pet" class="filter-btn px-3.5 py-1.5 rounded-lg bg-zinc-200/70 hover:bg-zinc-300/70 dark:bg-zinc-800 dark:hover:bg-zinc-700 text-zinc-700 dark:text-zinc-300 font-medium transition">
+                    🐾 宠物产品
+                </button>
+                <button onclick="filterCategory('sports')" id="btn-sports" class="filter-btn px-3.5 py-1.5 rounded-lg bg-zinc-200/70 hover:bg-zinc-300/70 dark:bg-zinc-800 dark:hover:bg-zinc-700 text-zinc-700 dark:text-zinc-300 font-medium transition">
+                    🏋️ 运动护具
+                </button>
+                <button onclick="filterCategory('raw')" id="btn-raw" class="filter-btn px-3.5 py-1.5 rounded-lg bg-zinc-200/70 hover:bg-zinc-300/70 dark:bg-zinc-800 dark:hover:bg-zinc-700 text-zinc-700 dark:text-zinc-300 font-medium transition">
+                    🧪 原材料科技
+                </button>
+            </div>
+        </div>
+
+        <!-- MAIN CONTENT LAYOUT (Left Article Feed, Right Sidebar) -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
+            
+            <!-- LEFT MAIN COLUMN: ARTICLE LIST (70% Width) -->
+            <div class="lg:col-span-8 space-y-6" id="articlesContainer">
+                <!-- Dynamic Article Cards will be injected by JavaScript -->
+            </div>
+
+            <!-- RIGHT SIDEBAR COLUMN (30% Width) -->
+            <div class="lg:col-span-4 space-y-8">
+
+                <!-- SIDEBAR SECTION 1: FLASH NEWS (快讯) -->
+                <div class="bg-white dark:bg-zinc-900 p-5 rounded-2xl border border-zinc-200 dark:border-zinc-800 shadow-sm space-y-4">
+                    <div class="flex items-center justify-between border-b border-zinc-100 dark:border-zinc-800 pb-3">
+                        <h3 class="text-xs font-bold tracking-wider text-zinc-400 uppercase">FLASH NEWS / 行业快讯</h3>
+                        <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                    </div>
+
+                    <div class="space-y-4">
+                        <div class="flex gap-3 justify-between items-start group cursor-pointer" onclick="openArticleModal(2)">
+                            <div class="space-y-1">
+                                <h4 class="text-xs font-semibold text-zinc-800 dark:text-zinc-200 group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition leading-snug">
+                                    超高分子量聚乙烯(UHMWPE)在防切割宠物用品中的工程实践
+                                </h4>
+                                <span class="text-[10px] text-zinc-400 block">10分钟前 • 原材料专栏</span>
+                            </div>
+                            <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=150&q=80" class="w-12 h-12 rounded-lg object-cover flex-shrink-0" alt="快讯图片">
+                        </div>
+
+                        <div class="flex gap-3 justify-between items-start group cursor-pointer" onclick="openArticleModal(3)">
+                            <div class="space-y-1">
+                                <h4 class="text-xs font-semibold text-zinc-800 dark:text-zinc-200 group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition leading-snug">
+                                    QUPET® 参展 2026 亚宠展：揭秘下一代咬咬玩具“自愈”分子链
+                                </h4>
+                                <span class="text-[10px] text-zinc-400 block">2小时前 • 展会发布</span>
+                            </div>
+                            <img src="https://images.unsplash.com/photo-1541599540903-216a46ca1dc0?auto=format&fit=crop&w=150&q=80" class="w-12 h-12 rounded-lg object-cover flex-shrink-0" alt="快讯图片">
+                        </div>
+
+                        <div class="flex gap-3 justify-between items-start group cursor-pointer" onclick="openArticleModal(4)">
+                            <div class="space-y-1">
+                                <h4 class="text-xs font-semibold text-zinc-800 dark:text-zinc-200 group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition leading-snug">
+                                    智能温控无缝针织护膝成功通过欧盟 ISO 人体工学测试
+                                </h4>
+                                <span class="text-[10px] text-zinc-400 block">5小时前 • 运动防护</span>
+                            </div>
+                            <img src="https://images.unsplash.com/photo-1584735935682-2f2b69dff9d2?auto=format&fit=crop&w=150&q=80" class="w-12 h-12 rounded-lg object-cover flex-shrink-0" alt="快讯图片">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SIDEBAR SECTION 2: CATALOGUE DOWNLOAD (获取产品目录) -->
+                <div class="bg-white dark:bg-zinc-900 p-5 rounded-2xl border border-zinc-200 dark:border-zinc-800 shadow-sm space-y-4">
+                    <div class="flex items-center justify-between border-b border-zinc-100 dark:border-zinc-800 pb-3">
+                        <h3 class="text-xs font-bold tracking-wider text-zinc-400 uppercase">CATALOGUE / 获取产品目录</h3>
+                        <i class="fa-solid fa-file-pdf text-emerald-500 text-sm"></i>
+                    </div>
+                    <p class="text-xs text-zinc-600 dark:text-zinc-400 leading-relaxed">
+                        免费索取 LEAD FAIR® 全系产品、技术规格书与材料试样目录（高清 PDF）。
+                    </p>
+                    <div class="space-y-2 text-xs">
+                        <div class="p-2.5 rounded-xl bg-zinc-50 dark:bg-zinc-800/60 border border-zinc-100 dark:border-zinc-800 flex items-center justify-between">
+                            <span class="font-medium text-zinc-800 dark:text-zinc-200 flex items-center gap-2">
+                                <i class="fa-solid fa-paw text-amber-500"></i> QUPET® 宠物用品目录
+                            </span>
+                            <span class="text-[10px] font-mono text-zinc-400">8 MB</span>
+                        </div>
+                        <div class="p-2.5 rounded-xl bg-zinc-50 dark:bg-zinc-800/60 border border-zinc-100 dark:border-zinc-800 flex items-center justify-between">
+                            <span class="font-medium text-zinc-800 dark:text-zinc-200 flex items-center gap-2">
+                                <i class="fa-solid fa-shield-halved text-blue-500"></i> 运动防护与晶格护具
+                            </span>
+                            <span class="text-[10px] font-mono text-zinc-400">10 MB</span>
+                        </div>
+                        <div class="p-2.5 rounded-xl bg-zinc-50 dark:bg-zinc-800/60 border border-zinc-100 dark:border-zinc-800 flex items-center justify-between">
+                            <span class="font-medium text-zinc-800 dark:text-zinc-200 flex items-center gap-2">
+                                <i class="fa-solid fa-flask text-emerald-500"></i> 高分子原材料参数表
+                            </span>
+                            <span class="text-[10px] font-mono text-zinc-400">6 MB</span>
+                        </div>
+                    </div>
+                    <button onclick="openModal('catalogueModal')" class="w-full py-2.5 bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs rounded-xl transition shadow-md flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-download"></i> 免费索取完整目录
+                    </button>
+                </div>
+
+                <!-- SIDEBAR SECTION 3: INQUIRY FORM (提交留言表单) -->
+                <div class="bg-white dark:bg-zinc-900 p-5 rounded-2xl border border-zinc-200 dark:border-zinc-800 shadow-sm space-y-4">
+                    <div class="flex items-center justify-between border-b border-zinc-100 dark:border-zinc-800 pb-3">
+                        <h3 class="text-xs font-bold tracking-wider text-zinc-400 uppercase">MESSAGE / 提交留言表单</h3>
+                        <i class="fa-regular fa-paper-plane text-emerald-500 text-sm"></i>
+                    </div>
+                    <p class="text-xs text-zinc-600 dark:text-zinc-400">
+                        填写您的需求或建议，我们的研发与商务团队将在 12 小时内与您联系。
+                    </p>
+                    <form onsubmit="handleInquiry(event)" class="space-y-3 text-xs">
+                        <div>
+                            <input type="text" required placeholder="您的姓名 / 称呼 *" class="w-full px-3 py-2 rounded-xl bg-zinc-50 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 text-zinc-800 dark:text-zinc-200 focus:outline-none focus:border-emerald-500">
+                        </div>
+                        <div>
+                            <input type="email" required placeholder="电子邮箱 *" class="w-full px-3 py-2 rounded-xl bg-zinc-50 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 text-zinc-800 dark:text-zinc-200 focus:outline-none focus:border-emerald-500">
+                        </div>
+                        <div>
+                            <textarea rows="3" required placeholder="留言内容 / 需求描述 *" class="w-full px-3 py-2 rounded-xl bg-zinc-50 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 text-zinc-800 dark:text-zinc-200 focus:outline-none focus:border-emerald-500 resize-none"></textarea>
+                        </div>
+                        <button type="submit" class="w-full py-2.5 bg-zinc-900 dark:bg-white text-white dark:text-zinc-900 hover:bg-zinc-800 dark:hover:bg-zinc-100 font-bold text-xs rounded-xl transition shadow-sm flex items-center justify-center gap-2">
+                            发送留言 &rarr;
+                        </button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="border-t border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-950 py-10 transition-colors">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
+            <div class="flex items-center space-x-3">
+                <span class="text-lg font-black text-zinc-900 dark:text-white">LEAD FAIR® Corporation</span>
+                <span class="text-xs text-zinc-500 font-mono">© 2026 Lead Fair Material & Product Hub. All rights reserved.</span>
+            </div>
+            
+            <div class="flex flex-wrap items-center gap-6 text-xs text-zinc-600 dark:text-zinc-400">
+                <a href="#" class="hover:text-zinc-900 dark:hover:text-white transition">关于丽晖</a>
+                <a href="#" class="hover:text-zinc-900 dark:hover:text-white transition">宠物材料评估实验室</a>
+                <a href="#" class="hover:text-zinc-900 dark:hover:text-white transition">运动防护测试标准</a>
+                <a href="#" class="hover:text-zinc-900 dark:hover:text-white transition">隐私条款</a>
+                <a href="#" onclick="openModal('inquiryModal')" class="hover:text-zinc-900 dark:hover:text-white transition font-bold text-emerald-600 dark:text-emerald-400">商务对接</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ARTICLE READER MODAL -->
+    <div id="articleModal" onclick="closeModalOnBackdrop(event, 'articleModal')" class="fixed inset-0 z-50 bg-black/75 backdrop-blur-md hidden flex items-center justify-center p-2 sm:p-4 md:p-6 overflow-y-auto">
+        <div id="modalScrollContainer" class="bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-3xl max-w-5xl w-full max-h-[94vh] overflow-y-auto shadow-2xl relative transition-all">
+            
+            <!-- Sticky Top Action Bar -->
+            <div class="sticky top-0 bg-white/95 dark:bg-zinc-900/95 backdrop-blur-md px-6 py-4 border-b border-zinc-200 dark:border-zinc-800 flex items-center justify-between z-20">
+                <div class="flex items-center gap-3">
+                    <span id="modalCategoryPill" class="text-xs font-semibold px-3 py-1 rounded-full bg-zinc-100 dark:bg-zinc-800 text-zinc-800 dark:text-zinc-200 border border-zinc-200 dark:border-zinc-700">
+                        ● 分类
+                    </span>
+                    <span id="modalMetaStats" class="text-xs text-zinc-500 font-mono hidden sm:inline-block">
+                        <i class="fa-regular fa-eye ml-2"></i> 1,580 views &nbsp;•&nbsp; <i class="fa-regular fa-comment"></i> 8 comments
+                    </span>
+                </div>
+                <div class="flex items-center gap-2">
+                    <button onclick="openModal('catalogueModal')" class="hidden sm:flex items-center gap-1.5 text-xs font-bold px-3 py-1.5 rounded-lg bg-emerald-600 hover:bg-emerald-700 text-white transition shadow-sm">
+                        <i class="fa-solid fa-file-pdf"></i> 下载完整试样目录 (PDF)
+                    </button>
+                    <button onclick="closeModal('articleModal')" class="w-9 h-9 rounded-full bg-zinc-100 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-300 flex items-center justify-center hover:bg-zinc-200 dark:hover:bg-zinc-700 transition">
+                        <i class="fa-solid fa-xmark text-base"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Article Reader Body -->
+            <div class="p-6 sm:p-10 md:p-12 space-y-10">
+                
+                <!-- HERO SPLIT SECTION -->
+                <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center pb-8 border-b border-zinc-200 dark:border-zinc-800">
+                    <!-- Left Hero Header Info -->
+                    <div class="md:col-span-7 space-y-4">
+                        <div class="flex items-center gap-2 text-xs font-mono text-zinc-400">
+                            <span id="modalTagTop" class="px-2 py-0.5 rounded bg-zinc-100 dark:bg-zinc-800 font-bold text-zinc-700 dark:text-zinc-300"># Lifestyle</span>
+                            <span>•</span>
+                            <span id="modalViewsTop">188 views</span>
+                            <span>•</span>
+                            <span>5 comments</span>
+                        </div>
+                        <h1 id="modalTitle" class="text-2xl sm:text-3xl md:text-4xl font-black text-zinc-900 dark:text-white leading-tight tracking-tight">
+                            文章标题
+                        </h1>
+                        <p id="modalExcerpt" class="text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed font-sans">
+                            摘要内容...
+                        </p>
+                        <div class="flex items-center gap-3 pt-2">
+                            <img id="modalAuthorImg" src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=120&q=80" class="w-10 h-10 rounded-full object-cover border border-zinc-200 dark:border-zinc-700" alt="作者">
+                            <div class="text-xs">
+                                <div class="flex items-center gap-2">
+                                    <span id="modalAuthorName" class="font-bold text-zinc-900 dark:text-white">Lora</span>
+                                    <span id="modalAuthorRole" class="text-zinc-400">/ 资深材料专家</span>
+                                </div>
+                                <div id="modalDateRead" class="text-zinc-400 text-[11px] mt-0.5">2026年7月18日 • 6 分钟阅读</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Hero Featured Image -->
+                    <div class="md:col-span-5 h-64 md:h-72 rounded-2xl overflow-hidden bg-zinc-100 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-800 shadow-md">
+                        <img id="modalImage" src="" class="w-full h-full object-cover" alt="文章图片">
+                    </div>
+                </div>
+
+                <!-- CONTENT SPLIT LAYOUT: LEFT SIDEBAR & RIGHT BODY -->
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+                    
+                    <!-- LEFT SIDEBAR COLUMN (3/12 Width) -->
+                    <aside class="lg:col-span-4 space-y-6 lg:sticky lg:top-24 text-xs">
+                        
+                        <!-- OUTLINE / TABLE OF CONTENTS WITH AUTO SCROLLING -->
+                        <div class="p-5 rounded-2xl bg-zinc-50 dark:bg-zinc-800/40 border border-zinc-200/80 dark:border-zinc-800 space-y-3">
+                            <div class="text-[11px] font-mono font-bold tracking-wider text-zinc-400 uppercase flex items-center justify-between border-b border-zinc-200 dark:border-zinc-700/60 pb-2">
+                                <span>OUTLINE / 文章大纲 (点击跳转)</span>
+                                <i class="fa-solid fa-list-ul text-emerald-500"></i>
+                            </div>
+                            <nav id="modalOutlineList" class="space-y-1 text-zinc-600 dark:text-zinc-400">
+                                <!-- Dynamic headings generated by JS -->
+                            </nav>
+                        </div>
+
+                        <!-- SOCIAL SHARE BUTTONS -->
+                        <div class="p-5 rounded-2xl bg-zinc-50 dark:bg-zinc-800/40 border border-zinc-200/80 dark:border-zinc-800 space-y-3">
+                            <div class="text-[11px] font-mono font-bold tracking-wider text-zinc-400 uppercase border-b border-zinc-200 dark:border-zinc-700/60 pb-2">
+                                SHARE / 社媒分享
+                            </div>
+                            <div class="flex flex-wrap items-center gap-2">
+                                <button onclick="shareSocial('youtube')" class="w-8 h-8 rounded-lg bg-zinc-200 dark:bg-zinc-700 hover:bg-red-600 hover:text-white transition flex items-center justify-center text-zinc-700 dark:text-zinc-200" title="YouTube">
+                                    <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                                </button>
+                                <button onclick="shareSocial('instagram')" class="w-8 h-8 rounded-lg bg-zinc-200 dark:bg-zinc-700 hover:bg-pink-600 hover:text-white transition flex items-center justify-center text-zinc-700 dark:text-zinc-200" title="Instagram">
+                                    <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                                </button>
+                                <button onclick="shareSocial('linkedin')" class="w-8 h-8 rounded-lg bg-zinc-200 dark:bg-zinc-700 hover:bg-sky-700 hover:text-white transition flex items-center justify-center text-zinc-700 dark:text-zinc-200" title="LinkedIn">
+                                    <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                                </button>
+                                <button onclick="shareSocial('facebook')" class="w-8 h-8 rounded-lg bg-zinc-200 dark:bg-zinc-700 hover:bg-blue-600 hover:text-white transition flex items-center justify-center text-zinc-700 dark:text-zinc-200" title="Facebook">
+                                    <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                                </button>
+                                <button onclick="shareSocial('twitter')" class="w-8 h-8 rounded-lg bg-zinc-200 dark:bg-zinc-700 hover:bg-black hover:text-white transition flex items-center justify-center text-zinc-700 dark:text-zinc-200" title="X (Twitter)">
+                                    <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                                </button>
+                                <button onclick="shareSocial('whatsapp')" class="w-8 h-8 rounded-lg bg-zinc-200 dark:bg-zinc-700 hover:bg-emerald-600 hover:text-white transition flex items-center justify-center text-zinc-700 dark:text-zinc-200" title="WhatsApp">
+                                    <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12.011 2c-5.506 0-9.989 4.478-9.989 9.984 0 1.758.459 3.474 1.33 4.988l-1.413 5.163 5.281-1.385c1.458.796 3.107 1.215 4.79 1.215 5.505 0 9.988-4.479 9.988-9.985 0-5.506-4.483-9.98-9.987-9.98zm5.836 14.128c-.244.688-1.229 1.259-1.996 1.423-.526.113-1.212.204-3.52-.75-2.953-1.22-4.856-4.22-5.004-4.417-.148-.198-1.206-1.602-1.206-3.056 0-1.454.764-2.17 1.036-2.464.272-.294.593-.368.79-.368.198 0 .396.002.568.01.182.008.427-.069.668.51.244.578.833 2.032.073.148.123.32.025.517-.099.197-.148.32-.296.493-.148.173-.311.386-.444.518-.148.148-.302.309-.13.605.173.296.767 1.267 1.648 2.05 1.134 1.009 2.091 1.32 2.387 1.468.296.148.469.123.642-.074.173-.197.741-.863.939-1.159.198-.296.395-.247.666-.148.271.099 1.728.815 2.024.963.296.148.494.222.568.346.074.123.074.715-.17 1.403z"/></svg>
+                                </button>
+                                <button onclick="copyArticleLink()" class="w-8 h-8 rounded-lg bg-zinc-200 dark:bg-zinc-700 hover:bg-zinc-900 dark:hover:bg-white dark:hover:text-zinc-900 transition flex items-center justify-center text-zinc-700 dark:text-zinc-200" title="复制链接">
+                                    <svg class="w-4 h-4 fill-none stroke-current stroke-2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- CONTACT US & DIRECT CHAT SECTION (INCLUDES PHONE, EMAIL, WHATSAPP) -->
+                        <div class="p-5 rounded-2xl bg-gradient-to-br from-zinc-100 to-zinc-50 dark:from-zinc-800/80 dark:to-zinc-900 border border-zinc-200 dark:border-zinc-700/80 space-y-3.5">
+                            <div class="text-[11px] font-mono font-bold tracking-wider text-emerald-600 dark:text-emerald-400 uppercase flex items-center justify-between">
+                                <span>CONTACT US / 官方对接</span>
+                                <i class="fa-solid fa-headset"></i>
+                            </div>
+                            
+                            <div class="space-y-2.5 text-[11px] text-zinc-700 dark:text-zinc-300">
+                                <a href="tel:+8657188889999" class="flex items-center gap-2 hover:text-emerald-600 dark:hover:text-emerald-400 transition">
+                                    <i class="fa-solid fa-phone text-zinc-400 w-4"></i>
+                                    <span class="font-mono">+86 (0) 571-8888-9999</span>
+                                </a>
+                                <a href="mailto:info@leadfaircorp.com" class="flex items-center gap-2 hover:text-emerald-600 dark:hover:text-emerald-400 transition group">
+                                    <i class="fa-solid fa-envelope text-zinc-400 group-hover:text-emerald-500 w-4"></i>
+                                    <span class="font-mono underline underline-offset-2">info@leadfaircorp.com</span>
+                                </a>
+                                <a href="https://wa.me/8613800008888" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 text-emerald-600 dark:text-emerald-400 font-bold hover:underline">
+                                    <i class="fa-brands fa-whatsapp text-emerald-500 text-sm w-4"></i>
+                                    <span class="font-mono">+86 138 0000 8888 (WhatsApp)</span>
+                                </a>
+                            </div>
+
+                            <div class="pt-2 space-y-2 border-t border-zinc-200 dark:border-zinc-700">
+                                <button onclick="openModal('inquiryModal')" class="w-full py-2.5 px-3 rounded-xl bg-zinc-900 hover:bg-zinc-800 dark:bg-zinc-100 dark:hover:bg-white text-white dark:text-zinc-900 font-bold transition flex items-center justify-center gap-2 shadow-sm">
+                                    <i class="fa-regular fa-paper-plane text-xs"></i> 提交商务询盘
+                                </button>
+                                <button onclick="openModal('catalogueModal')" class="w-full py-2.5 px-3 rounded-xl border border-zinc-300 dark:border-zinc-700 hover:bg-zinc-200/50 dark:hover:bg-zinc-800 font-bold text-zinc-800 dark:text-zinc-200 transition flex items-center justify-center gap-2">
+                                    <i class="fa-solid fa-download text-xs text-emerald-500"></i> 下载产品目录
+                                </button>
+                            </div>
+                        </div>
+
+                    </aside>
+
+                    <!-- RIGHT MAIN CONTENT BODY (8/12 Width) -->
+                    <main class="lg:col-span-8 space-y-6 text-zinc-800 dark:text-zinc-200 text-sm leading-relaxed" id="modalArticleBody">
+                        <!-- Dynamic rich content injected by JS -->
+                    </main>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- SEARCH MODAL -->
+    <div id="searchModal" onclick="closeModalOnBackdrop(event, 'searchModal')" class="fixed inset-0 z-50 bg-black/70 backdrop-blur-sm hidden flex items-start justify-center pt-20 p-4">
+        <div class="bg-white dark:bg-zinc-900 w-full max-w-xl rounded-2xl shadow-2xl border border-zinc-200 dark:border-zinc-800 p-5 space-y-4">
+            <div class="flex items-center gap-3 border-b border-zinc-200 dark:border-zinc-800 pb-3">
+                <i class="fa-solid fa-magnifying-glass text-zinc-400"></i>
+                <input type="text" id="searchInput" onkeyup="handleSearch()" placeholder="输入关键词（如：3D打印、UHMWPE、宠物、防护）..." class="w-full bg-transparent text-sm focus:outline-none text-zinc-900 dark:text-white">
+                <button onclick="toggleSearchModal()" class="text-xs text-zinc-400 hover:text-zinc-600">ESC</button>
+            </div>
+            <div id="searchResults" class="space-y-2 max-h-60 overflow-y-auto">
+                <p class="text-xs text-zinc-400 text-center py-4">输入关键词实时匹配研报文章...</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- SUBSCRIBE MODAL -->
+    <div id="subscribeModal" onclick="closeModalOnBackdrop(event, 'subscribeModal')" class="fixed inset-0 z-50 bg-black/70 backdrop-blur-sm hidden flex items-center justify-center p-4">
+        <div class="bg-white dark:bg-zinc-900 w-full max-w-md rounded-2xl shadow-2xl border border-zinc-200 dark:border-zinc-800 p-6 space-y-4 relative">
+            <button onclick="closeModal('subscribeModal')" class="absolute top-4 right-4 w-8 h-8 rounded-full bg-zinc-100 dark:bg-zinc-800 text-zinc-500 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-white flex items-center justify-center transition cursor-pointer" title="关闭卡片">
+                <i class="fa-solid fa-xmark text-base"></i>
+            </button>
+            <div class="space-y-1">
+                <span class="text-[10px] font-mono text-emerald-500 uppercase font-bold">LEAD FAIR NEWSLETTER</span>
+                <h3 class="text-xl font-bold text-zinc-900 dark:text-white">订阅 Quietly Thinking 专栏</h3>
+                <p class="text-xs text-zinc-500 dark:text-zinc-400">每月定期接收最新的高分子新材料、宠物健康工程与防护测试前沿分析。</p>
+            </div>
+            <form onsubmit="handleSubscribe(event)" class="space-y-3">
+                <input type="email" required id="subEmail" placeholder="您的工作邮箱 (name@company.com)" class="w-full px-3 py-2.5 text-xs rounded-xl bg-zinc-50 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 text-zinc-800 dark:text-zinc-200 focus:outline-none focus:border-emerald-500">
+                <button type="submit" class="w-full py-2.5 bg-zinc-900 dark:bg-white text-white dark:text-zinc-900 font-bold text-xs rounded-xl hover:bg-emerald-600 dark:hover:bg-emerald-400 transition">
+                    立即订阅
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- INQUIRY MODAL -->
+    <div id="inquiryModal" onclick="closeModalOnBackdrop(event, 'inquiryModal')" class="fixed inset-0 z-50 bg-black/70 backdrop-blur-sm hidden flex items-center justify-center p-4">
+        <div class="bg-white dark:bg-zinc-900 w-full max-w-lg rounded-2xl shadow-2xl border border-zinc-200 dark:border-zinc-800 p-6 space-y-4 relative">
+            <button onclick="closeModal('inquiryModal')" class="absolute top-4 right-4 w-8 h-8 rounded-full bg-zinc-100 dark:bg-zinc-800 text-zinc-500 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-white flex items-center justify-center transition cursor-pointer" title="关闭卡片">
+                <i class="fa-solid fa-xmark text-base"></i>
+            </button>
+            <div class="space-y-1">
+                <span class="text-[10px] font-mono text-emerald-500 uppercase font-bold">OEM / ODM & B2B INQUIRY</span>
+                <h3 class="text-xl font-bold text-zinc-900 dark:text-white">提交商务询盘</h3>
+                <p class="text-xs text-zinc-500 dark:text-zinc-400">填写您的项目需求，Lead Fair 研发工程师团队将在 12 小时内与您取得联系。</p>
+            </div>
+            <form onsubmit="handleInquiry(event)" class="space-y-3 text-xs">
+                <div>
+                    <label class="block text-zinc-600 dark:text-zinc-400 mb-1 font-medium">您的姓名</label>
+                    <input type="text" required id="inquiryName" placeholder="例如：张经理 / Jane Smith" class="w-full px-3 py-2 rounded-xl bg-zinc-50 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 text-zinc-800 dark:text-zinc-200 focus:outline-none focus:border-emerald-500">
+                </div>
+                <div>
+                    <label class="block text-zinc-600 dark:text-zinc-400 mb-1 font-medium">公司电子邮箱</label>
+                    <input type="email" required id="inquiryEmail" placeholder="name@company.com" class="w-full px-3 py-2 rounded-xl bg-zinc-50 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 text-zinc-800 dark:text-zinc-200 focus:outline-none focus:border-emerald-500">
+                </div>
+                <div>
+                    <label class="block text-zinc-600 dark:text-zinc-400 mb-1 font-medium">意向合作领域</label>
+                    <select id="inquiryCategory" class="w-full px-3 py-2 rounded-xl bg-zinc-50 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 text-zinc-800 dark:text-zinc-200 focus:outline-none focus:border-emerald-500">
+                        <option>🐾 QUPET® 宠物用品及咬咬具代工/采购</option>
+                        <option>🏋️ 人体工学与极限运动护具定制</option>
+                        <option>🧪 超高分子量聚乙烯(UHMWPE)等高分子采购</option>
+                        <option>💬 战略合作与研发支持</option>
+                    </select>
+                </div>
+                <div>
+                    <label class="block text-zinc-600 dark:text-zinc-400 mb-1 font-medium">需求说明</label>
+                    <textarea id="inquiryMsg" rows="3" required placeholder="请说明您的采购数量、测试标准或指标要求..." class="w-full px-3 py-2 rounded-xl bg-zinc-50 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 text-zinc-800 dark:text-zinc-200 focus:outline-none focus:border-emerald-500"></textarea>
+                </div>
+                <button type="submit" class="w-full py-2.5 bg-emerald-600 hover:bg-emerald-500 text-white font-bold rounded-xl transition shadow-md">
+                    发送询盘 &rarr;
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- CATALOGUE MODAL -->
+    <div id="catalogueModal" onclick="closeModalOnBackdrop(event, 'catalogueModal')" class="fixed inset-0 z-50 bg-black/70 backdrop-blur-sm hidden flex items-center justify-center p-4">
+        <div class="bg-white dark:bg-zinc-900 w-full max-w-md rounded-2xl shadow-2xl border border-zinc-200 dark:border-zinc-800 p-6 space-y-4 relative">
+            <button onclick="closeModal('catalogueModal')" class="absolute top-4 right-4 w-8 h-8 rounded-full bg-zinc-100 dark:bg-zinc-800 text-zinc-500 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-white flex items-center justify-center transition cursor-pointer" title="关闭卡片">
+                <i class="fa-solid fa-xmark text-base"></i>
+            </button>
+            <div class="space-y-1">
+                <span class="text-[10px] font-mono text-emerald-500 uppercase font-bold">2026 CATALOGUE DOWNLOAD</span>
+                <h3 class="text-xl font-bold text-zinc-900 dark:text-white">获取产品与试样目录</h3>
+                <p class="text-xs text-zinc-500 dark:text-zinc-400">选择您所关注的领域分册，高清 PDF 将直接发送至您的邮箱。</p>
+            </div>
+            <form onsubmit="handleCatalogueDownload(event)" class="space-y-3 text-xs">
+                <div>
+                    <label class="block text-zinc-600 dark:text-zinc-400 mb-1 font-medium">选择目录分册</label>
+                    <select id="catSelect" class="w-full px-3 py-2 rounded-xl bg-zinc-50 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 text-zinc-800 dark:text-zinc-200 focus:outline-none focus:border-emerald-500">
+                        <option value="all">完整全系产品与材料白皮书 (PDF - 24MB)</option>
+                        <option value="pet">🐾 QUPET® 宠物用品与啃咬测试手册 (PDF - 8MB)</option>
+                        <option value="sports">🏋️ 运动防护与3D晶格护具分册 (PDF - 10MB)</option>
+                        <option value="raw">🧪 UHMWPE 与高分子弹性体参数表 (PDF - 6MB)</option>
+                    </select>
+                </div>
+                <div>
+                    <label class="block text-zinc-600 dark:text-zinc-400 mb-1 font-medium">接收邮箱</label>
+                    <input type="email" required id="catEmail" placeholder="name@company.com" class="w-full px-3 py-2 rounded-xl bg-zinc-50 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 text-zinc-800 dark:text-zinc-200 focus:outline-none focus:border-emerald-500">
+                </div>
+                <button type="submit" class="w-full py-2.5 bg-emerald-600 hover:bg-emerald-500 text-white font-bold rounded-xl transition shadow-md flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-download"></i> 发送 PDF 下载链接
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- TOAST NOTIFICATION CONTAINER -->
+    <div id="toast" class="fixed bottom-6 right-6 z-50 bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 px-5 py-3 rounded-xl shadow-2xl border border-zinc-700 flex items-center gap-3 transform translate-y-20 opacity-0 transition-all duration-300">
+        <i class="fa-solid fa-circle-check text-emerald-400 dark:text-emerald-600 text-lg"></i>
+        <span id="toastMessage" class="text-xs font-semibold">操作成功！</span>
+    </div>
+
+    <!-- JAVASCRIPT LOGIC -->
+    <script>
+        const articles = [
+            {
+                id: 0,
+                category: 'pet',
+                categoryBadge: 'QUPET® 宠物用品',
+                tagTop: '● 宠物与材料工程',
+                title: '回归无名荒野：生物基热塑性弹性体在宠物关节保护具中的演进',
+                excerpt: '在宠物高龄化趋势加剧的今天，如何通过轻量化、高反弹的材料解决大型犬与老龄宠物的骨骼支撑问题？本文探讨从天然蓖麻油提炼的Bio-TPE材料在宠物外骨骼中的突破应用。',
+                author: 'Lora Chen',
+                authorRole: '资深高分子材料研究员',
+                authorImg: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=120&q=80',
+                date: '2026年7月18日',
+                image: 'https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?auto=format&fit=crop&w=1000&q=80',
+                tags: ['#生物基材料', '#宠物健康', '#柔性工程'],
+                views: '2,420',
+                comments: '12',
+                outline: [
+                    '01. 宠物关节老化问题的工程学现状',
+                    '02. Bio-TPE 材料的分子链优势',
+                    '03. 耐啃咬与动态支撑的平衡',
+                    '04. LEAD FAIR® 实测数据与未来展望'
+                ],
+                content: `
+                    <p class="text-base text-zinc-700 dark:text-zinc-300 font-medium leading-relaxed mb-6">
+                        在宠物高龄化趋势日益明显的今天，大型犬与老年宠物的骨骼退化与关节炎已成为宠物医学和护具工程的核心挑战。传统材料要么过重导致宠物抗拒佩戴，要么透气与回弹性不足无法有效分担冲击。本文将深入探讨 LEAD FAIR® 研发的 Bio-TPE 材料如何通过微观分子链调控，重塑宠物关节防护的范式。
+                    </p>
+
+                    <h2 class="text-xl font-bold text-zinc-900 dark:text-white mt-8 mb-3 flex items-center gap-2">
+                        <span class="w-2 h-2 rounded-full bg-emerald-500"></span>01. 宠物关节老化问题的工程学现状
+                    </h2>
+                    <p class="mb-4 text-zinc-600 dark:text-zinc-300 leading-relaxed">
+                        根据 2025-2026 全球宠物医疗白皮书统计，超过 6 岁的大型犬只（如金毛寻回犬、德牧及拉布拉多）中有 <strong>42%</strong> 伴有不同程度的后肢髋关节发育不良（CHD）或膝关节韧带退化。
+                    </p>
+                    <p class="mb-4 text-zinc-600 dark:text-zinc-300 leading-relaxed">
+                        传统金属支架或硬质聚碳酸酯（PC）护具往往存在三大局限：
+                    </p>
+                    <ul class="list-disc list-inside space-y-2 mb-6 text-zinc-600 dark:text-zinc-300 pl-2">
+                        <li><strong>自身质量过大：</strong> 增加病患关节在自重状态下的二次摩擦损伤。</li>
+                        <li><strong>缺乏温控透气性：</strong> 犬只缺乏汗腺，长时间紧贴皮肤易引发接触性皮炎。</li>
+                        <li><strong>刚性异物感：</strong> 导致宠物产生强烈抗拒反应，咬毁或拒绝迈步。</li>
+                    </ul>
+
+                    <h2 class="text-xl font-bold text-zinc-900 dark:text-white mt-8 mb-3 flex items-center gap-2">
+                        <span class="w-2 h-2 rounded-full bg-emerald-500"></span>02. Bio-TPE 材料的分子链优势
+                    </h2>
+                    <p class="mb-4 text-zinc-600 dark:text-zinc-300 leading-relaxed">
+                        LEAD FAIR® 实验室通过将天然植物蓖麻油（Castor Oil）提取物进行多级长链交联，成功合成了生物基含量高达 <strong>68%</strong> 的 Bio-TPE 弹性体颗粒。
+                    </p>
+                    <div class="my-6 p-5 rounded-2xl bg-zinc-100 dark:bg-zinc-800/80 border-l-4 border-emerald-500 space-y-2">
+                        <p class="text-xs font-mono text-emerald-600 dark:text-emerald-400 font-bold uppercase">高分子材料学原理解析</p>
+                        <p class="text-xs text-zinc-700 dark:text-zinc-300 leading-relaxed">
+                            通过在软段加入高弹聚醚链段，并在硬段引入高结晶度的聚酰胺（PA11）微区，使 Bio-TPE 具备了“高吸能-高回弹”的双相微相分离结构。材料密度仅为 <strong>1.02 g/cm³</strong>，较传统软质 PVC 减轻约 30%。
+                        </p>
+                    </div>
+
+                    <h2 class="text-xl font-bold text-zinc-900 dark:text-white mt-8 mb-3 flex items-center gap-2">
+                        <span class="w-2 h-2 rounded-full bg-emerald-500"></span>03. 耐啃咬与动态支撑的平衡
+                    </h2>
+                    <p class="mb-4 text-zinc-600 dark:text-zinc-300 leading-relaxed">
+                        犬类咬合力可达数百牛顿（成年罗威纳犬瞬间咬合力可超过 1300 N）。传统的弹性护具容易被咬穿或拉断撕裂。Bio-TPE 材料通过超分子氢键协同作用，使裂纹在萌生阶段即被弥散应力锁定。
+                    </p>
+                    <p class="mb-4 text-zinc-600 dark:text-zinc-300 leading-relaxed">
+                        同时，护具设计采用了人体工学与动物解剖学结合的 3D 渐变厚度网格，在关节受力中心处提供高模量支撑，在边缘过渡区提供极高柔软度，实现与宠物皮肤和毛发的自然贴合。
+                    </p>
+
+                    <h2 class="text-xl font-bold text-zinc-900 dark:text-white mt-8 mb-3 flex items-center gap-2">
+                        <span class="w-2 h-2 rounded-full bg-emerald-500"></span>04. LEAD FAIR® 实测数据与未来展望
+                    </h2>
+                    <p class="mb-4 text-zinc-600 dark:text-zinc-300 leading-relaxed">
+                        在为期 12 个月的临床步态捕捉测试中，佩戴 Bio-TPE 外骨骼护具的 35 只测试犬表现出了显著的运动恢复成效：
+                    </p>
+                    
+                    <!-- Data Table -->
+                    <div class="overflow-x-auto my-6">
+                        <table class="w-full text-left text-xs border-collapse border border-zinc-200 dark:border-zinc-700 rounded-xl overflow-hidden">
+                            <thead>
+                                <tr class="bg-zinc-100 dark:bg-zinc-800 text-zinc-800 dark:text-zinc-200 border-b border-zinc-200 dark:border-zinc-700">
+                                    <th class="p-3">测试指标</th>
+                                    <th class="p-3">传统硬质护具</th>
+                                    <th class="p-3 font-bold text-emerald-600 dark:text-emerald-400">Bio-TPE 柔性护具</th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-zinc-200 dark:divide-zinc-800 text-zinc-600 dark:text-zinc-300">
+                                <tr>
+                                    <td class="p-3 font-medium">关节峰值冲击负载衰减</td>
+                                    <td class="p-3">18.5%</td>
+                                    <td class="p-3 font-bold text-emerald-600 dark:text-emerald-400">41.2%</td>
+                                </tr>
+                                <tr>
+                                    <td class="p-3 font-medium">宠物每日自主佩戴意愿时长</td>
+                                    <td class="p-3">1.2 小时</td>
+                                    <td class="p-3 font-bold text-emerald-600 dark:text-emerald-400">6.8 小时</td>
+                                </tr>
+                                <tr>
+                                    <td class="p-3 font-medium">皮肤湿热积聚率 (2小时后)</td>
+                                    <td class="p-3">82% (高风险)</td>
+                                    <td class="p-3 font-bold text-emerald-600 dark:text-emerald-400">14% (极低)</td>
+                                </tr>
+                                <tr>
+                                    <td class="p-3 font-medium">10,000 次弯曲后模量保持率</td>
+                                    <td class="p-3">64%</td>
+                                    <td class="p-3 font-bold text-emerald-600 dark:text-emerald-400">96.8%</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <p class="mb-4 text-zinc-600 dark:text-zinc-300 leading-relaxed">
+                        未来，LEAD FAIR® 将继续深化 Bio-TPE 材料在温感自适应、柔性传感及绿色闭环循环回收方面的研发，为全球宠物健康与绿色高分子制造贡献更多具有前瞻意义的工程解决方案。
+                    </p>
+                `
+            },
+            {
+                id: 1,
+                category: 'sports',
+                categoryBadge: '极限运动防护',
+                tagTop: '● 运动防护技术',
+                title: '当3D打印晶格材料融入越野骑行护膝',
+                excerpt: '打破传统EVA泡沫的闷热与易疲劳变形局限，蜂窝状弹性体晶格实现定向剪切增稠与连续通风。',
+                author: 'Marcus Vance',
+                authorRole: '人体工学与护具总监',
+                authorImg: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=120&q=80',
+                date: '2026年7月15日',
+                image: 'https://images.unsplash.com/photo-1517838277536-f5f99be501cd?auto=format&fit=crop&w=1000&q=80',
+                tags: ['#3D打印晶格', '#运动防护', '#透气抗震'],
+                views: '1,890',
+                comments: '8',
+                outline: [
+                    '01. 传统EVA与发泡材料的瓶颈',
+                    '02. 3D晶格结构的受力分散原理',
+                    '03. 动态弯曲中的人体工学适配',
+                    '04. 冲击试验与实车越野反馈'
+                ],
+                content: `
+                    <p class="text-base text-zinc-700 dark:text-zinc-300 font-medium leading-relaxed mb-6">
+                        越野山地车（Enduro/DH）与极限骑行运动对人体膝关节防护提出了极苛刻的要求：既需要在摔车撞击瞬间提供坚硬的防护屏障，又需要在长途踏频爬坡时提供极高的柔韧性与连续排汗透气性能。
+                    </p>
+                    <h2 class="text-xl font-bold text-zinc-900 dark:text-white mt-8 mb-3 flex items-center gap-2">
+                        <span class="w-2 h-2 rounded-full bg-blue-500"></span>01. 传统EVA与发泡材料的瓶颈
+                    </h2>
+                    <p class="mb-4 text-zinc-600 dark:text-zinc-300 leading-relaxed">
+                        长期以来，越野护膝依赖 EVA 或 PU 聚氨酯发泡材料吸能。但在连续剧烈冲击下，发泡胞孔易发生不可逆坍塌导致吸能衰减；同时封闭的泡沫孔道将体表汗热牢牢锁住，极大影响骑手体验。
+                    </p>
+                    <h2 class="text-xl font-bold text-zinc-900 dark:text-white mt-8 mb-3 flex items-center gap-2">
+                        <span class="w-2 h-2 rounded-full bg-blue-500"></span>02. 3D晶格结构的受力分散原理
+                    </h2>
+                    <p class="mb-4 text-zinc-600 dark:text-zinc-300 leading-relaxed">
+                        利用高分子光固化或 SLS 激光烧结制备的八面体晶格（Octet Lattice），在受到瞬间高速冲击时会引发局部自锁剪切增稠效应，将集中点受力瞬间向 3D 空间三维网格均匀扩散，使峰值冲击力降低约 38%。
+                    </p>
+                    <h2 class="text-xl font-bold text-zinc-900 dark:text-white mt-8 mb-3 flex items-center gap-2">
+                        <span class="w-2 h-2 rounded-full bg-blue-500"></span>03. 动态弯曲中的人体工学适配
+                    </h2>
+                    <p class="mb-4 text-zinc-600 dark:text-zinc-300 leading-relaxed">
+                        通过将膝髌骨关节运动轨迹进行 3D 扫描计算，晶格密度在关节中心呈高密配比，在两侧褶皱区呈稀疏配比，实现屈膝度达 135° 时仍毫无咬肉挤压感。
+                    </p>
+                `
+            },
+            {
+                id: 2,
+                category: 'raw',
+                categoryBadge: '高分子前沿',
+                tagTop: '● 超高分子量科技',
+                title: '超高分子量聚乙烯(UHMWPE)在防切割宠物用品中的工程实践',
+                excerpt: '利用 UHMWPE 极高的耐磨损性与自润滑特性，为大型犬牵引绳与高强度玩具注入航空级防护基因。',
+                author: 'Dr. Aris Thorne',
+                authorRole: '首席高分子科学家',
+                authorImg: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=120&q=80',
+                date: '2026年7月10日',
+                image: 'https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=1000&q=80',
+                tags: ['#UHMWPE', '#防切割', '#耐磨工程'],
+                views: '3,100',
+                comments: '15',
+                outline: [
+                    '01. UHMWPE 分子量与结晶度特性',
+                    '02. 纺丝与织造工艺改性',
+                    '03. 耐啃咬实验与撕裂强度测试'
+                ],
+                content: `
+                    <p class="text-base text-zinc-700 dark:text-zinc-300 font-medium leading-relaxed mb-6">
+                        超高分子量聚乙烯（UHMWPE）拥有高达 300 万至 900 万的分子量，其拉伸强度是同等截面钢铁的 10 倍以上，常用于防弹衣与航天缆绳。LEAD FAIR® 首次将其改性运用于高强度宠物牵引绳及耐咬玩具体系中。
+                    </p>
+                    <h2 class="text-xl font-bold text-zinc-900 dark:text-white mt-8 mb-3 flex items-center gap-2">
+                        <span class="w-2 h-2 rounded-full bg-emerald-500"></span>01. UHMWPE 分子量与结晶度特性
+                    </h2>
+                    <p class="mb-4 text-zinc-600 dark:text-zinc-300 leading-relaxed">
+                        极高的分子链长度使得 UHMWPE 在受到犬齿剧烈剪切时，分子链无法滑动被切断，而是通过链段的高取向度吸收巨大的机械能量，展现出极其惊人的防咬切特性。
+                    </p>
+                `
+            },
+            {
+                id: 3,
+                category: 'pet',
+                categoryBadge: 'QUPET® 创新',
+                tagTop: '● 啃咬自愈材料',
+                title: 'QUPET® 参展 2026 亚宠展：揭秘下一代咬咬玩具“自愈”分子链',
+                excerpt: '可动态可逆交联的氢键网络使得宠物啃咬后的微小刺痕在常温下自然愈合，显著延长咬咬玩具的使用寿命。',
+                author: 'Lora Chen',
+                authorRole: '资深高分子材料研究员',
+                authorImg: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=120&q=80',
+                date: '2026年7月05日',
+                image: 'https://images.unsplash.com/photo-1541599540903-216a46ca1dc0?auto=format&fit=crop&w=1000&q=80',
+                tags: ['#QUPET', '#自愈弹性体', '#宠物玩具'],
+                views: '1,450',
+                comments: '6',
+                outline: [
+                    '01. 氢键交联的自愈合机制',
+                    '02. 食品级安全与可降解认证'
+                ],
+                content: `
+                    <h2 class="text-xl font-bold text-zinc-900 dark:text-white mt-4 mb-2 flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-amber-500"></span>01. 氢键交联的自愈合机制</h2>
+                    <p class="mb-4 text-zinc-600 dark:text-zinc-300 leading-relaxed">当宠物牙齿刺入材料内部时，超分子聚合物中的非共价氢键暂时断裂；齿尖拔出后，氢键网络在室温下自发重组，消除微观刺痕与裂纹。</p>
+                `
+            },
+            {
+                id: 4,
+                category: 'sports',
+                categoryBadge: '智能穿戴防护',
+                tagTop: '● 温控人体工学',
+                title: '智能温控无缝针织护膝成功通过欧盟 ISO 人体工学测试',
+                excerpt: '整合相变材料 (PCM) 微胶囊与无缝一体针织技术，实现运动状态下的自动热量调节与支撑保护。',
+                author: 'Marcus Vance',
+                authorRole: '人体工学与护具总监',
+                authorImg: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=120&q=80',
+                date: '2026年7月01日',
+                image: 'https://images.unsplash.com/photo-1584735935682-2f2b69dff9d2?auto=format&fit=crop&w=1000&q=80',
+                tags: ['#PCM相变材料', '#智能护具', '#ISO认证'],
+                views: '1,620',
+                comments: '5',
+                outline: [
+                    '01. 相变控温微胶囊植入技术',
+                    '02. ISO 人体工学压力分布数据'
+                ],
+                content: `
+                    <h2 class="text-xl font-bold text-zinc-900 dark:text-white mt-4 mb-2 flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-blue-500"></span>01. 相变控温微胶囊植入技术</h2>
+                    <p class="mb-4 text-zinc-600 dark:text-zinc-300 leading-relaxed">在关节大运动量发热时，PCM 吸收体表多余热量；在休整降温时释放热量，防止肌肉与韧带骤冷抽搐。</p>
+                `
+            },
+            {
+                id: 5,
+                category: 'raw',
+                categoryBadge: '绿色高分子',
+                tagTop: '● 环保可持续',
+                title: 'PCR（消费后回收）高分子材料在工业防护领域的循环经济范式',
+                excerpt: '探讨如何通过精细化分选与化学改性，将海洋回收塑料提炼为符合高冲击防护标准的专业装备原材料。',
+                author: 'Dr. Aris Thorne',
+                authorRole: '首席高分子科学家',
+                authorImg: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=120&q=80',
+                date: '2026年6月25日',
+                image: 'https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?auto=format&fit=crop&w=1000&q=80',
+                tags: ['#PCR材料', '#海洋回收', '#绿色环保'],
+                views: '2,080',
+                comments: '9',
+                outline: [
+                    '01. 海洋回收塑料的技术劣势与改性',
+                    '02. 碳足迹计算与第三方认证'
+                ],
+                content: `
+                    <h2 class="text-xl font-bold text-zinc-900 dark:text-white mt-4 mb-2 flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-emerald-500"></span>01. 海洋回收塑料的技术劣势与改性</h2>
+                    <p class="mb-4 text-zinc-600 dark:text-zinc-300 leading-relaxed">经过紫外线强降解与海水侵蚀的回收塑料通常存在断链严重的问题，通过固相增粘与纳米填料增强可恢复其冲击韧性。</p>
+                `
+            }
+        ];
+
+        let currentCategory = 'all';
+
+        function toggleDarkMode() {
+            document.documentElement.classList.toggle('dark');
+        }
+
+        function openModal(id) {
+            const el = document.getElementById(id);
+            if (el) el.classList.remove('hidden');
+        }
+
+        function closeModal(id) {
+            const el = document.getElementById(id);
+            if (el) el.classList.add('hidden');
+        }
+
+        // 点击卡片外部背景时关闭弹窗
+        function closeModalOnBackdrop(event, id) {
+            if (event.target === event.currentTarget) {
+                closeModal(id);
+            }
+        }
+
+        // 监听 ESC 键一键关闭所有弹窗
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                ['inquiryModal', 'subscribeModal', 'catalogueModal', 'searchModal', 'articleModal'].forEach(id => {
+                    closeModal(id);
+                });
+            }
+        });
+
+        function toggleSearchModal() {
+            const sm = document.getElementById('searchModal');
+            if (sm) {
+                sm.classList.toggle('hidden');
+                if (!sm.classList.contains('hidden')) {
+                    document.getElementById('searchInput').focus();
+                }
+            }
+        }
+
+        function handleSearch() {
+            const query = document.getElementById('searchInput').value.toLowerCase().trim();
+            const resContainer = document.getElementById('searchResults');
+            if (!query) {
+                resContainer.innerHTML = `<p class="text-xs text-zinc-400 text-center py-4">输入关键词实时匹配研报文章...</p>`;
+                return;
+            }
+
+            const matches = articles.filter(a => 
+                a.title.toLowerCase().includes(query) || 
+                a.excerpt.toLowerCase().includes(query) || 
+                a.tags.some(t => t.toLowerCase().includes(query))
+            );
+
+            if (matches.length === 0) {
+                resContainer.innerHTML = `<p class="text-xs text-zinc-400 text-center py-4">未查找到匹配文章</p>`;
+            } else {
+                resContainer.innerHTML = matches.map(a => `
+                    <div onclick="toggleSearchModal(); openArticleModal(${a.id})" class="p-3 hover:bg-zinc-100 dark:hover:bg-zinc-800 rounded-xl cursor-pointer flex items-center justify-between transition">
+                        <div>
+                            <h4 class="text-xs font-bold text-zinc-900 dark:text-white">${a.title}</h4>
+                            <span class="text-[10px] text-zinc-400">${a.categoryBadge} • ${a.date}</span>
+                        </div>
+                        <i class="fa-solid fa-angle-right text-xs text-zinc-400"></i>
+                    </div>
+                `).join('');
+            }
+        }
+
+        // 自动平滑滚动到大纲标题位置
+        function scrollToHeading(headingId) {
+            const el = document.getElementById(headingId);
+            if (el) {
+                el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        }
+
+        function openArticleModal(id) {
+            const article = articles.find(a => a.id === id) || articles[0];
+            
+            document.getElementById('modalCategoryPill').innerText = article.categoryBadge;
+            document.getElementById('modalMetaStats').innerHTML = `<i class="fa-regular fa-eye ml-2"></i> ${article.views} views &nbsp;•&nbsp; <i class="fa-regular fa-comment"></i> ${article.comments} comments`;
+            document.getElementById('modalTagTop').innerText = article.tagTop;
+            document.getElementById('modalViewsTop').innerText = `${article.views} views`;
+            document.getElementById('modalTitle').innerText = article.title;
+            document.getElementById('modalExcerpt').innerText = article.excerpt;
+            document.getElementById('modalAuthorImg').src = article.authorImg;
+            document.getElementById('modalAuthorName').innerText = article.author;
+            document.getElementById('modalAuthorRole').innerText = `/ ${article.authorRole}`;
+            document.getElementById('modalDateRead').innerText = `${article.date} • 6 分钟阅读`;
+            document.getElementById('modalImage').src = article.image;
+
+            // Render Body Content
+            const bodyElem = document.getElementById('modalArticleBody');
+            bodyElem.innerHTML = article.content;
+
+            // Render Outline & Bind Auto Positioning IDs to Headings
+            const outlineContainer = document.getElementById('modalOutlineList');
+            if (outlineContainer) {
+                const headings = bodyElem.querySelectorAll('h2, h3');
+                if (headings && headings.length > 0) {
+                    outlineContainer.innerHTML = Array.from(headings).map((h, idx) => {
+                        const hId = `modal-heading-item-${idx}`;
+                        h.id = hId;
+                        const headingText = h.innerText.trim();
+                        return `<p onclick="scrollToHeading('${hId}')" class="hover:text-emerald-500 font-medium cursor-pointer transition py-1 text-zinc-600 dark:text-zinc-400 flex items-center gap-2 hover:translate-x-1 duration-200"><i class="fa-solid fa-angle-right text-[10px] text-emerald-500 opacity-70"></i> ${headingText}</p>`;
+                    }).join('');
+                } else if (article.outline) {
+                    outlineContainer.innerHTML = article.outline.map((o) => `<p class="hover:text-emerald-500 cursor-pointer transition py-1 text-zinc-600 dark:text-zinc-400">${o}</p>`).join('');
+                }
+            }
+
+            openModal('articleModal');
+
+            // Modal scroll reset to top
+            const container = document.getElementById('modalScrollContainer');
+            if (container) container.scrollTop = 0;
+        }
+
+        function showToast(msg) {
+            const toast = document.getElementById('toast');
+            document.getElementById('toastMessage').innerText = msg;
+            toast.classList.remove('translate-y-20', 'opacity-0');
+            setTimeout(() => {
+                toast.classList.add('translate-y-20', 'opacity-0');
+            }, 3000);
+        }
+
+        function handleSubscribe(e) {
+            e.preventDefault();
+            closeModal('subscribeModal');
+            showToast('感谢订阅！我们已将最新的研报目录发送至您的邮箱。');
+        }
+
+        function handleInquiry(e) {
+            e.preventDefault();
+            closeModal('inquiryModal');
+            showToast('询盘提交成功！我们的技术代表将在 12 小时内响应。');
+        }
+
+        function handleCatalogueDownload(e) {
+            e.preventDefault();
+            closeModal('catalogueModal');
+            showToast('试样目录 PDF 已准备完毕并成功发至您的邮箱！');
+        }
+
+        function shareSocial(platform) {
+            showToast(`已成功分享至 ${platform.toUpperCase()}`);
+        }
+
+        function copyArticleLink() {
+            document.execCommand('copy');
+            showToast('文章链接已复制到剪贴板！');
+        }
+
+        // UPDATE HERO TOP FEATURED SECTION DYNAMICALLY
+        function updateHeroSection(cat) {
+            const list = cat === 'all' ? articles : articles.filter(a => a.category === cat);
+            if (!list || list.length === 0) return;
+
+            const main = list[0];
+            const secondary = list.length > 1 ? list[1] : (articles.find(a => a.id !== main.id) || main);
+
+            // Update Left Column Info
+            const tagPill = document.getElementById('heroTagPill');
+            if (tagPill) tagPill.innerText = main.tagTop;
+
+            const fTitle = document.getElementById('featuredTitle');
+            if (fTitle) {
+                fTitle.innerText = main.title;
+                fTitle.setAttribute('onclick', `openArticleModal(${main.id})`);
+            }
+
+            const fExcerpt = document.getElementById('featuredExcerpt');
+            if (fExcerpt) fExcerpt.innerText = main.excerpt;
+
+            const fAuthorImg = document.getElementById('featuredAuthorImg');
+            if (fAuthorImg) fAuthorImg.src = main.authorImg;
+
+            const fAuthorName = document.getElementById('featuredAuthorName');
+            if (fAuthorName) fAuthorName.innerText = main.author;
+
+            const fDate = document.getElementById('featuredDate');
+            if (fDate) fDate.innerText = main.date;
+
+            const fTagContainer = document.getElementById('featuredTagContainer');
+            if (fTagContainer && main.tags) {
+                fTagContainer.innerHTML = main.tags.map(t => `<span class="px-2.5 py-1 rounded-md bg-zinc-200/70 dark:bg-zinc-800 text-zinc-700 dark:text-zinc-300">${t}</span>`).join('');
+            }
+
+            // Update Middle Image Column
+            const fMainImg = document.getElementById('featuredMainImg');
+            if (fMainImg) fMainImg.src = main.image;
+
+            const fImgContainer = fMainImg ? fMainImg.closest('.group') : null;
+            if (fImgContainer) fImgContainer.setAttribute('onclick', `openArticleModal(${main.id})`);
+
+            const fBannerBadge = document.getElementById('featuredBannerBadge');
+            if (fBannerBadge) fBannerBadge.innerText = `【精选置顶】${main.categoryBadge}`;
+
+            const fBannerDesc = document.getElementById('featuredBannerDesc');
+            if (fBannerDesc) fBannerDesc.innerText = main.title;
+
+            // Update Right Secondary Featured Card
+            const secondaryCard = document.getElementById('heroSecondaryCard');
+            if (secondaryCard) {
+                secondaryCard.innerHTML = `
+                    <div class="space-y-3">
+                        <div class="h-36 rounded-xl overflow-hidden relative cursor-pointer" onclick="openArticleModal(${secondary.id})">
+                            <img src="${secondary.image}" alt="${secondary.title}" class="w-full h-full object-cover hover:scale-105 transition duration-500">
+                        </div>
+                        <span class="text-[11px] font-mono text-zinc-500 dark:text-zinc-400">${secondary.tagTop}</span>
+                        <h3 class="text-base font-bold text-zinc-900 dark:text-white leading-snug hover:text-emerald-600 dark:hover:text-emerald-400 transition cursor-pointer" onclick="openArticleModal(${secondary.id})">
+                            ${secondary.title}
+                        </h3>
+                        <p class="text-xs text-zinc-600 dark:text-zinc-400 line-clamp-3">
+                            ${secondary.excerpt}
+                        </p>
+                    </div>
+                    <div class="pt-3 border-t border-zinc-200 dark:border-zinc-800 flex items-center justify-between text-[11px] text-zinc-500">
+                        <span>${secondary.date}</span>
+                        <button onclick="openArticleModal(${secondary.id})" class="font-bold text-emerald-600 dark:text-emerald-400 hover:underline">阅读全文 &rarr;</button>
+                    </div>
+                `;
+            }
+        }
+
+        // RENDER ARTICLES FEED
+        function renderArticles() {
+            const container = document.getElementById('articlesContainer');
+            const filtered = currentCategory === 'all' 
+                ? articles 
+                : articles.filter(a => a.category === currentCategory);
+
+            if (filtered.length === 0) {
+                container.innerHTML = `<div class="p-8 text-center text-zinc-400 bg-white dark:bg-zinc-900 rounded-2xl border border-zinc-200 dark:border-zinc-800">暂无该分类下的文章</div>`;
+                return;
+            }
+
+            container.innerHTML = filtered.map(a => `
+                <article onclick="openArticleModal(${a.id})" class="group bg-white dark:bg-zinc-900 p-6 rounded-2xl border border-zinc-200 dark:border-zinc-800 hover:border-emerald-500 dark:hover:border-emerald-500 hover:shadow-xl transition-all duration-300 flex flex-col sm:flex-row gap-6 cursor-pointer">
+                    <div class="sm:w-5/12 h-48 rounded-xl overflow-hidden relative bg-zinc-100 dark:bg-zinc-800 flex-shrink-0">
+                        <img src="${a.image}" alt="${a.title}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <span class="absolute top-2 left-2 bg-zinc-900/80 backdrop-blur-md text-white text-[10px] font-bold px-2.5 py-1 rounded-full border border-white/10">
+                            ${a.categoryBadge}
+                        </span>
+                    </div>
+                    <div class="sm:w-7/12 flex flex-col justify-between space-y-3">
+                        <div class="space-y-2">
+                            <div class="flex items-center gap-2 text-[11px] text-zinc-400 font-mono">
+                                <span>${a.tagTop}</span>
+                                <span>•</span>
+                                <span>${a.date}</span>
+                            </div>
+                            <h3 class="text-lg font-bold text-zinc-900 dark:text-white group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition leading-snug line-clamp-2">
+                                ${a.title}
+                            </h3>
+                            <p class="text-xs text-zinc-600 dark:text-zinc-400 leading-relaxed line-clamp-2">
+                                ${a.excerpt}
+                            </p>
+                        </div>
+                        <div class="flex items-center justify-between pt-2 border-t border-zinc-100 dark:border-zinc-800/80">
+                            <div class="flex items-center gap-2">
+                                <img src="${a.authorImg}" class="w-6 h-6 rounded-full object-cover border border-zinc-200 dark:border-zinc-700" alt="${a.author}">
+                                <span class="text-xs font-medium text-zinc-700 dark:text-zinc-300">${a.author}</span>
+                            </div>
+                            <div class="flex items-center gap-3 text-[11px] text-zinc-400 font-mono">
+                                <span><i class="fa-regular fa-eye"></i> ${a.views}</span>
+                                <span><i class="fa-regular fa-comment"></i> ${a.comments}</span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            `).join('');
+        }
+
+        function filterCategory(cat) {
+            currentCategory = cat;
+
+            // Update UI buttons styling
+            const buttons = document.querySelectorAll('.filter-btn');
+            buttons.forEach(btn => {
+                btn.className = "filter-btn px-3.5 py-1.5 rounded-lg bg-zinc-200/70 hover:bg-zinc-300/70 dark:bg-zinc-800 dark:hover:bg-zinc-700 text-zinc-700 dark:text-zinc-300 font-medium transition";
+            });
+
+            const activeBtn = document.getElementById(`btn-${cat}`);
+            if (activeBtn) {
+                activeBtn.className = "filter-btn px-3.5 py-1.5 rounded-lg bg-zinc-900 text-white dark:bg-zinc-100 dark:text-zinc-900 font-medium transition shadow-sm";
+            }
+
+            // Update Label & Hero
+            const labelMap = {
+                'all': '全部文章',
+                'pet': '🐾 宠物用品 / QUPET®',
+                'sports': '🏋️ 运动护具与防护',
+                'raw': '🧪 高分子原材料科技'
+            };
+            const labelEl = document.getElementById('currentFilterLabel');
+            if (labelEl) labelEl.innerText = labelMap[cat] || '文章分类';
+
+            const badgeEl = document.getElementById('heroCategoryBadge');
+            if (badgeEl) badgeEl.innerText = cat === 'all' ? 'ALL CATEGORIES' : cat.toUpperCase();
+
+            updateHeroSection(cat);
+            renderArticles();
+        }
+
+        // Initialize on page load
+        function initializeCategory() {
+            const requestedCategory = new URLSearchParams(window.location.search).get('category');
+            filterCategory(['all', 'pet', 'sports', 'raw'].includes(requestedCategory) ? requestedCategory : 'all');
+        }
+        // The content is already parsed here; do not wait for remote images or fonts.
+        initializeCategory();
+    </script>
+</body>
+</html>
