@@ -8,7 +8,7 @@ type Props = { params: Promise<{ slug: string }> };
 
 function Blocks({ blocks }: { blocks: ArticleBlock[] }) {
   return <>{blocks.map((block, i) => {
-    if (block.type === "image") return <figure className="journal-source-figure" key={i}><img src={block.src} alt={block.text || "原文示意圖"} loading="lazy" /></figure>;
+    if (block.type === "image") return <figure className="journal-source-figure" key={i}><img src={`${process.env.NEXT_PUBLIC_BASE_PATH || ""}${block.src}`} alt={block.text || "原文示意圖"} loading="lazy" /></figure>;
     if (block.type === "table") return <div className="journal-table-scroll" key={i} role="region" aria-label="技术数据表" tabIndex={0}><table><tbody>{block.rows?.map((row, r) => <tr key={r}>{row.map((cell, c) => r === 0 ? <th key={c} colSpan={cell.colSpan}>{cell.text}</th> : <td key={c} colSpan={cell.colSpan}>{cell.text}</td>)}</tr>)}</tbody></table></div>;
     if (block.type === "heading") return <h3 key={i}>{block.text}</h3>;
     return <p className={block.type === "list" ? "journal-list-item" : undefined} key={i}>{block.text}</p>;
