@@ -1,5 +1,5 @@
 :HL["/leadfair-materials/_next/static/css/bbe6fdf5947ccc53.css","style"]
 :HL["/leadfair-materials/_next/static/css/3c3ed7f378b8eead.css","style"]
 :HL["/leadfair-materials/_next/static/css/a59973b0c8f90a2a.css","style"]
-:HL["/images/articles/biobased-carbon14-cover.png","image"]
-0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"blog","param":null,"prefetchHints":0,"slots":{"children":{"name":"slug","param":{"type":"d","key":"biobased-carbon14-biodegradability","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"bNguRbz5M8lXZlEnpE7Zv"}
+:HL["/leadfair-materials/images/articles/biobased-carbon14-cover.png","image"]
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"blog","param":null,"prefetchHints":0,"slots":{"children":{"name":"slug","param":{"type":"d","key":"biobased-carbon14-biodegradability","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"9aBTfWkJXMC9Q12JUn7_J"}

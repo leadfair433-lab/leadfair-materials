@@ -18,7 +18,7 @@ export default function Blog({ listing = false }: { listing?: boolean }) {
   return <section className="material-blog shell" id="blog" aria-labelledby="blog-title">
     <header><div><span className="blog-label">{listing ? "MATERIAL JOURNAL / 全部文章" : "06 — MATERIAL JOURNAL"}</span><h2 id="blog-title">材料洞察与应用指南</h2></div><p>从选材到成型，让材料知识<br/>成为产品开发的下一步。</p></header>
     <div className="blog-grid">{(listing ? blogArticles : blogArticles.slice(0, 3)).map(article => <article className="blog-card" key={article.title}>
-      <a className="blog-image" href={`/blog/${article.slug}`} aria-label={`阅读文章：${article.title}`}><img src={article.image} alt={article.alt} loading="lazy" width="640" height="400"/></a>
+      <a className="blog-image" href={`/blog/${article.slug}`} aria-label={`阅读文章：${article.title}`}><img src={`${process.env.NEXT_PUBLIC_BASE_PATH || ""}${article.image}`} alt={article.alt} loading="lazy" width="640" height="400"/></a>
       <div className="blog-copy"><span className="blog-label">{article.category}</span><h3>{article.title}</h3><p>{article.summary}</p>
         <a className="blog-read-link" href={`/blog/${article.slug}`} aria-label={`阅读全文：${article.title}`}><span>阅读全文</span><span aria-hidden="true">↗</span></a>
       </div>
