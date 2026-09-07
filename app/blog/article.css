@@ -88,5 +88,17 @@
 @media print { .material-inquiry-dialog { display:none !important; } }
 @media(max-width:700px) { .journal-reading { grid-template-columns:1fr; } .journal-reading aside { order:0; } .journal-social-grid { grid-template-columns:repeat(6,40px); } }
 .journal-page button:focus-visible { outline:2px solid var(--blue); outline-offset:4px; }
+.journal-body { min-width:0; overflow-wrap:anywhere; }
+.journal-body h2,.journal-body h3,.journal-body p { white-space:pre-line; }
+.journal-body h3 { font-size:20px; line-height:1.6; margin:28px 0 12px; }
+.journal-source-figure { margin:28px 0; }
+.journal-source-figure img { display:block; width:100%; height:auto; object-fit:contain; border-radius:12px; }
+.journal-table-scroll { overflow-x:auto; margin:24px 0; border:1px solid #dce0e7; border-radius:12px; }
+.journal-table-scroll table { width:100%; border-collapse:collapse; font-size:14px; line-height:1.7; min-width:520px; }
+.journal-table-scroll th,.journal-table-scroll td { padding:12px; border:1px solid #dce0e7; text-align:left; vertical-align:top; white-space:pre-line; }
+.journal-table-scroll th { background:#edf1ff; color:#17326d; }
+.journal-list-item { padding-left:18px; border-left:2px solid var(--blue); }
+.journal-outline { max-height:55vh; overflow-y:auto; }
+@media print { .journal-outline { max-height:none; } .journal-table-scroll { overflow:visible; } .journal-table-scroll table { min-width:0; } .journal-body section { break-inside:auto; } }
 @media(max-width:700px) { .journal-reading aside { order:2; } .journal-help { display:block; } }
 @media print { .journal-page { padding:0; background:white; } .journal-sheet { max-width:none; border:0; border-radius:0; box-shadow:none; overflow:visible; } .journal-toolbar,.journal-reading aside,.journal-body footer { display:none; } .journal-content { padding:0; } .journal-reading { display:block; } .journal-hero { gap:24px; padding-bottom:24px; } .journal-hero h1 { font-size:28px; } .journal-body section { break-inside:avoid; } }

@@ -5,8 +5,8 @@ import { useParams } from "next/navigation";
 const products = {
   "ius-4065": { name: "IUS-4065", title: "超柔软 · 更高熔点 · 更稳定加工", image: "/images/ius-4065-white-pellets-v4-scattered.png", description: "专为兼顾卓越柔软性与更高耐热性能而研发，适用于对舒适性、尺寸稳定性与制造可靠性有更高要求的产品。", specs: [["硬度","Shore A 40"],["熔点","≈ 64°C"],["热收缩性","优异"],["尺寸稳定性","优异"],["加工稳定性","优异"]] },
   "lf-et78a": { name: "LF-ET78A", title: "高分散型 TPE 弹性材料", image: "/images/lf-et78a-product.png", description: "适用于射出、押出及发泡应用，具备高延伸、良好撕裂强度、低比重与优秀回弹特性，可兼顾应用功能与制造成本。", specs: [["硬度","Shore A 78"],["熔融指数","2 g/10min"],["比重","0.87"],["延伸率","570%"],["撕裂强度","62 kgf/cm"],["熔点","69°C"]] },
-  "lf-hr53a": { name: "LF-HR53A", title: "材料技术资料整理中", image: "/images/lf-et78a-product.png", description: "此牌号的完整参数与应用资料将在后续补充，欢迎先联系材料工程师获取选材建议。", specs: [] },
-  "gte-8030": { name: "GTE-8030", title: "材料技术资料整理中", image: "/images/lf-et78a-product.png", description: "此牌号的完整参数与应用资料将在后续补充，欢迎先联系材料工程师获取选材建议。", specs: [] },
+  "lf-hr53a": { name: "LF-HR53A", title: "高分散型 TPE 弹性材料", image: "/images/lf-et78a-product.png", description: "适用于射出、押出及发泡应用，具备高延伸、良好耐磨强度、低比重与良好回弹弹性。", specs: [["硬度","Shore A 53"],["熔融指数","0.32 g/10min"],["比重","0.89"],["拉力","37.3 kgf/cm²"],["延伸率","360%"],["撕裂强度","38 kgf/cm"]] },
+  "gte-8030": { name: "GTE-8030", title: "生质高反弹 TPE 弹性材料", image: "/images/lf-et78a-product.png", description: "生质含量 30%，与 EVA、POE 具有良好相容性，适用于发泡鞋材、鞋中底、鞋垫及各类缓冲材料。", specs: [["生质含量","30%"],["硬度","Shore A 72"],["熔融指数","4.7 g/10min"],["密度","0.91 g/cm³"],["反弹率","51%"],["延伸率","665%"]] },
   "gte-8075": { name: "GTE-8075", title: "材料技术资料整理中", image: "/images/lf-et78a-product.png", description: "此牌号的完整参数与应用资料将在后续补充，欢迎先联系材料工程师获取选材建议。", specs: [] },
 } as const;
 

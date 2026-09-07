@@ -238,6 +238,14 @@ body:has(.product-switch-card:not(#product):target) #product { display: none; }
 .lf-data th, .lf-data td { padding: 12px 15px; border-right: 1px solid #ffffff12; border-bottom: 1px solid #ffffff12; text-align: left; }
 .lf-data th { color: #8da7ff; background: #1748e9; }
 .lf-data td:last-child { color: #fff; font-weight: 700; }
+.lf-faq { padding: 54px 0 70px; border-top: 1px solid #ffffff1c; }
+.lf-faq > h3 { margin: 18px 0 28px; color:#fff; font-size:32px; font-weight:500; }
+.lf-faq { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; }
+.lf-faq > .detail-label,.lf-faq > h3 { grid-column:1/-1; }
+.lf-faq article { padding:22px; border:1px solid #ffffff1b; border-radius:12px; background:#ffffff08; }
+.lf-faq article b { color:#5f82ff; font-size:12px; letter-spacing:.12em; }
+.lf-faq article h4 { margin:12px 0 8px; color:#fff; font-size:16px; }
+.lf-faq article p { margin:0; color:#aeb5c0; line-height:1.7; }
 .lf-advantages { display: grid; grid-template-columns: repeat(6,1fr); border-top: 1px solid #ffffff1c; }
 .lf-advantages > div { min-height: 120px; padding: 28px 18px; border-right: 1px solid #ffffff18; }
 .lf-advantages > div:last-child { border-right: 0; }
@@ -251,7 +259,7 @@ body:has(.product-switch-card:not(#product):target) #product { display: none; }
 .grade-placeholder p { max-width: 300px; color: #717873; font-size: 13px; line-height: 1.7; }
 .grade-placeholder a { display: inline-block; margin-top: 12px; color: #0b3cff; font-size: 12px; font-weight: 800; }
 @media (max-width: 1180px) { .product-lf .specs { grid-template-columns: repeat(3,1fr); } .lf-story { grid-template-columns: 1fr; gap: 50px; } .lf-value-grid { grid-template-columns: repeat(3,1fr); } .lf-advantages { grid-template-columns: repeat(3,1fr); } }
-@media (max-width: 760px) { .product-index { position: static; display: block; } .product-index > div { justify-content: flex-start; margin-top: 14px; } .product-index a { padding: 9px 12px; font-size: 10px; } .product-lf .specs { grid-template-columns: repeat(2,1fr); } .lf-value-grid, .lf-data, .grade-placeholders { grid-template-columns: 1fr; } .lf-advantages { grid-template-columns: repeat(2,1fr); } .lf-story { padding: 48px 0; } }
+@media (max-width: 760px) { .product-index { position: static; display: block; } .product-index > div { justify-content: flex-start; margin-top: 14px; } .product-index a { padding: 9px 12px; font-size: 10px; } .product-lf .specs { grid-template-columns: repeat(2,1fr); } .lf-value-grid, .lf-data, .grade-placeholders, .lf-faq { grid-template-columns: 1fr; } .lf-advantages { grid-template-columns: repeat(2,1fr); } .lf-story { padding: 48px 0; } }
 
 /* Technical datasheet preview */
 .tds-modal { position: fixed; z-index: 10000; inset: 0; display: grid; place-items: center; padding: 30px; background: #06090dbd; backdrop-filter: blur(14px); animation: tds-fade .22s ease both; }
