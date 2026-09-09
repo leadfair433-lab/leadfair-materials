@@ -5,6 +5,8 @@ import generatedTranslations from "./content/site-translations.json";
 
 export type SiteLocale = "zh-tw" | "en" | "vi";
 
+const PATH_SEPARATOR = String.fromCharCode(47);
+
 const localeLabels: Record<SiteLocale, string> = {
   "zh-tw": "繁中",
   en: "English",
@@ -53,7 +55,9 @@ function translateText(value: string, locale: SiteLocale) {
 
 function localeFromPath(): SiteLocale {
   const base = process.env.NEXT_PUBLIC_BASE_PATH || "";
-  const path = window.location.pathname.slice(base.length).split("/").filter(Boolean)[0];
+  const pathname = window.location.pathname;
+  const relativePath = base && pathname.startsWith(base) ? pathname.slice(base.length) : pathname;
+  const path = relativePath.split(/\/+/).filter(Boolean)[0];
   return path === "en" || path === "vi" || path === "zh-tw" ? path : "zh-tw";
 }
 
@@ -106,7 +110,7 @@ export default function LanguageSwitcher({ compact = false }: { compact?: boolea
       const href = anchor.getAttribute("href");
       if (!href || href.startsWith("#") || href.startsWith("http") || href.startsWith("mailto:") || href.startsWith("tel:")) return;
       let route = href.startsWith(base) ? href.slice(base.length) : href;
-      if (!route.startsWith("/") || /^\/(zh-tw|en|vi)(?=\/|$)/.test(route) || /^\/(images|_next|blog-reference)(?=\/)/.test(route)) return;
+      if (!route.startsWith(PATH_SEPARATOR) || /^\/(zh-tw|en|vi)(?=\/|$)/.test(route) || /^\/(images|_next|blog-reference)(?=\/)/.test(route)) return;
       anchor.setAttribute("href", `${base}/${current}${route}`.replace(/([^:]\/)\/+/g, "$1"));
     });
 
@@ -130,9 +134,11 @@ export default function LanguageSwitcher({ compact = false }: { compact?: boolea
 
   function change(next: SiteLocale) {
     const base = process.env.NEXT_PUBLIC_BASE_PATH || "";
-    let rest = window.location.pathname.slice(base.length) || "/";
-    rest = rest.replace(/^\/(zh-tw|en|vi)(?=\/|$)/, "") || "/";
-    const target = `${base}/${next}${rest === "/" ? "/" : rest}${window.location.hash}`.replace(/([^:]\/)\/+/g, "$1");
+    const pathname = window.location.pathname;
+    let rest = base && pathname.startsWith(base) ? pathname.slice(base.length) : pathname;
+    rest = rest || PATH_SEPARATOR;
+    rest = rest.replace(/^\/(zh-tw|en|vi)(?=\/|$)/, "") || PATH_SEPARATOR;
+    const target = `${base}/${next}${rest === PATH_SEPARATOR ? PATH_SEPARATOR : rest}${window.location.hash}`.replace(/([^:]\/)\/+/g, "$1");
     window.location.assign(target);
   }
 
