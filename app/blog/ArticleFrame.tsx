@@ -8,7 +8,7 @@ function returnToPreviousPage() {
 }
 
 export function ArticleBackButton() {
-  return <button type="button" className="journal-back-button" onClick={returnToPreviousPage}>← 返回上一页</button>;
+  return <button type="button" className="journal-back-button" onClick={returnToPreviousPage}>← 返回上一頁</button>;
 }
 
 export default function ArticleFrame({ children }: { children: ReactNode }) {
@@ -18,7 +18,7 @@ export default function ArticleFrame({ children }: { children: ReactNode }) {
   return <main className="journal-page" onClick={event => {
     if (event.target === event.currentTarget) goBack();
   }}>
-    <button type="button" className="journal-background-back" aria-label="返回上一页" onClick={goBack} />
+    <button type="button" className="journal-background-back" aria-label="返回上一頁" onClick={goBack} />
     {children}
   </main>;
 }

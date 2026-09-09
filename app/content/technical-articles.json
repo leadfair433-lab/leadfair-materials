@@ -3,7 +3,7 @@
     "slug": "chemical-foaming-vs-supercritical-foaming",
     "title": "化學發泡 vs. 超臨界發泡",
     "englishTitle": "Chemical Foaming vs. Supercritical Foaming",
-    "summary": "不只是泡孔大小：從原理、設備、成本到材料回收性的完整選擇指南",
+    "summary": "不只是泡孔大小：從原理、裝置、成本到材料回收性的完整選擇指南",
     "category": "FOAMING TECHNOLOGY / 發泡技術",
     "image": "/images/articles/chemical-supercritical-cover.png",
     "alt": "化學發泡 vs. 超臨界發泡｜材料實驗室主題示意圖",
@@ -19,7 +19,7 @@
           },
           {
             "type": "paragraph",
-            "text": "不只是泡孔大小：從原理、設備、成本到材料回收性的完整選擇指南"
+            "text": "不只是泡孔大小：從原理、裝置、成本到材料回收性的完整選擇指南"
           },
           {
             "type": "paragraph",
@@ -38,7 +38,7 @@
             "rows": [
               [
                 {
-                  "text": "先說結論｜化學發泡的核心優勢是設備成熟、配方彈性與投資門檻較低；超臨界發泡的核心優勢是可不依賴殘留型化學發泡劑，並具備形成高細胞密度微孔結構的潛力。最終選擇仍由材料的氣體溶解度、熔體強度、產品外觀及產量決定。\nBottom line | The core advantages of chemical foaming are mature equipment, formulation flexibility, and a lower investment threshold; the core advantages of supercritical foaming are that it does not rely on residual chemical blowing agents and has the potential to form microcellular structures with high cell density. The final choice still depends on the material’s gas solubility, melt strength, product appearance, and production volume.",
+                  "text": "先說結論｜化學發泡的核心優勢是裝置成熟、配方彈性與投資門檻較低；超臨界發泡的核心優勢是可不依賴殘留型化學發泡劑，並具備形成高細胞密度微孔結構的潛力。最終選擇仍由材料的氣體溶解度、熔體強度、產品外觀及產量決定。\nBottom line | The core advantages of chemical foaming are mature equipment, formulation flexibility, and a lower investment threshold; the core advantages of supercritical foaming are that it does not rely on residual chemical blowing agents and has the potential to form microcellular structures with high cell density. The final choice still depends on the material’s gas solubility, melt strength, product appearance, and production volume.",
                   "colSpan": 1
                 }
               ]
@@ -52,7 +52,7 @@
         "blocks": [
           {
             "type": "paragraph",
-            "text": "當品牌要求產品更輕、更高回彈、低氣味、減少添加劑，甚至希望提升回收再利用的可能性時，傳統化學發泡是否仍是最佳答案，便成為研發與採購共同面對的問題。另一方面，超臨界發泡常被包裝成「更環保、更細孔、更高性能」，但若忽略高壓設備、材料氣體溶解度與製程控制，其量產風險可能被嚴重低估。"
+            "text": "當品牌要求產品更輕、更高回彈、低氣味、減少新增劑，甚至希望提升回收再利用的可能性時，傳統化學發泡是否仍是最佳答案，便成為研發與採購共同面對的問題。另一方面，超臨界發泡常被包裝成「更環保、更細孔、更高效能」，但若忽略高壓裝置、材料氣體溶解度與製程控制，其量產風險可能被嚴重低估。"
           },
           {
             "type": "paragraph",
@@ -90,7 +90,7 @@
           },
           {
             "type": "list",
-            "text": "發泡劑必須均勻分散，否則容易產生局部大泡孔或表面缺陷。"
+            "text": "發泡劑必須均勻分散，否則容易產生區域性大泡孔或表面缺陷。"
           },
           {
             "type": "list",
@@ -114,7 +114,7 @@
           },
           {
             "type": "list",
-            "text": "ADC 等發泡劑會留下分解副產物，可能影響氣味、顏色、霧度或長期性能。"
+            "text": "ADC 等發泡劑會留下分解副產物，可能影響氣味、顏色、霧度或長期效能。"
           },
           {
             "type": "list",
@@ -128,7 +128,7 @@
         "blocks": [
           {
             "type": "paragraph",
-            "text": "CO₂ 的臨界點約為 31.1°C、7.38 MPa；高於臨界點後不再有明確液氣界面，可呈現氣體般擴散及液體般密度。實際聚合物發泡不一定每一階段都維持在嚴格超臨界狀態，但產業通常仍以「超臨界發泡」統稱高壓 CO₂／N₂ 的物理發泡技術。"
+            "text": "CO₂ 的臨界點約為 31.1°C、7.38 MPa；高於臨界點後不再有明確液氣介面，可呈現氣體般擴散及液體般密度。實際聚合物發泡不一定每一階段都維持在嚴格超臨界狀態，但產業通常仍以「超臨界發泡」統稱高壓 CO₂／N₂ 的物理發泡技術。"
           },
           {
             "type": "paragraph",
@@ -162,7 +162,7 @@
             "rows": [
               [
                 {
-                  "text": "比較項目\nComparison Item",
+                  "text": "比較專案\nComparison Item",
                   "colSpan": 1
                 },
                 {
@@ -222,7 +222,7 @@
                   "colSpan": 1
                 },
                 {
-                  "text": "可達均勻閉孔，但分布較受分散與反應波動影響\nUniform closed cells can be achieved, but distribution is more affected by dispersion and reaction fluctuations",
+                  "text": "可達均勻閉孔，但分佈較受分散與反應波動影響\nUniform closed cells can be achieved, but distribution is more affected by dispersion and reaction fluctuations",
                   "colSpan": 1
                 },
                 {
@@ -246,11 +246,11 @@
               ],
               [
                 {
-                  "text": "設備\nEquipment",
+                  "text": "裝置\nEquipment",
                   "colSpan": 1
                 },
                 {
-                  "text": "常規密煉、押出、射出或模壓設備即可整合\nCan be integrated with conventional internal mixers, extrusion, injection, or molding equipment",
+                  "text": "常規密煉、押出、射出或模壓裝置即可整合\nCan be integrated with conventional internal mixers, extrusion, injection, or molding equipment",
                   "colSpan": 1
                 },
                 {
@@ -260,7 +260,7 @@
               ],
               [
                 {
-                  "text": "製程窗口\nProcess Window",
+                  "text": "製程視窗\nProcess Window",
                   "colSpan": 1
                 },
                 {
@@ -309,7 +309,7 @@
           },
           {
             "type": "paragraph",
-            "text": "圖 2｜典型泡孔趨勢示意；實際結果取決於材料、氣體溶解度與製程窗口"
+            "text": "圖 2｜典型泡孔趨勢示意；實際結果取決於材料、氣體溶解度與製程視窗"
           },
           {
             "type": "paragraph",
@@ -320,7 +320,7 @@
             "rows": [
               [
                 {
-                  "text": "重要提醒｜「微孔」指的是結構尺度，不等於產品一定更柔軟、更高回彈或更耐久。成品性能取決於相對密度、泡孔壁厚度、開閉孔比例、結晶度與材料本體性能。\nImportant reminder | “Microcellular” refers to the structural scale; it does not mean the product will necessarily be softer, more resilient, or more durable. Finished-product performance depends on relative density, cell-wall thickness, open/closed-cell ratio, crystallinity, and the inherent properties of the material.",
+                  "text": "重要提醒｜「微孔」指的是結構尺度，不等於產品一定更柔軟、更高回彈或更耐久。成品效能取決於相對密度、泡孔壁厚度、開閉孔比例、結晶度與材料本體效能。\nImportant reminder | “Microcellular” refers to the structural scale; it does not mean the product will necessarily be softer, more resilient, or more durable. Finished-product performance depends on relative density, cell-wall thickness, open/closed-cell ratio, crystallinity, and the inherent properties of the material.",
                   "colSpan": 1
                 }
               ]
@@ -329,12 +329,12 @@
         ]
       },
       {
-        "title": "六、性能比較：應看哪些數據？\nVI. Performance Comparison: Which Data Should Be Examined?",
+        "title": "六、效能比較：應看哪些資料？\nVI. Performance Comparison: Which Data Should Be Examined?",
         "text": "",
         "blocks": [
           {
             "type": "paragraph",
-            "text": "若只比較密度或顯微照片，很容易做出錯誤結論。不同製程應在相近密度與相近硬度條件下進行公平比較，並建立泡孔結構—力學性能—長期耐久性之間的關係。"
+            "text": "若只比較密度或顯微照片，很容易做出錯誤結論。不同製程應在相近密度與相近硬度條件下進行公平比較，並建立泡孔結構—力學效能—長期耐久性之間的關係。"
           },
           {
             "type": "table",
@@ -359,7 +359,7 @@
                   "colSpan": 1
                 },
                 {
-                  "text": "平均泡孔徑、分布、細胞密度、開閉孔率\nAverage cell size, distribution, cell density, open/closed-cell ratio",
+                  "text": "平均泡孔徑、分佈、細胞密度、開閉孔率\nAverage cell size, distribution, cell density, open/closed-cell ratio",
                   "colSpan": 1
                 },
                 {
@@ -369,7 +369,7 @@
               ],
               [
                 {
-                  "text": "靜態性能\nStatic Properties",
+                  "text": "靜態效能\nStatic Properties",
                   "colSpan": 1
                 },
                 {
@@ -383,7 +383,7 @@
               ],
               [
                 {
-                  "text": "動態性能\nDynamic Properties",
+                  "text": "動態效能\nDynamic Properties",
                   "colSpan": 1
                 },
                 {
@@ -397,7 +397,7 @@
               ],
               [
                 {
-                  "text": "耐久性能\nDurability",
+                  "text": "耐久效能\nDurability",
                   "colSpan": 1
                 },
                 {
@@ -447,7 +447,7 @@
         "blocks": [
           {
             "type": "paragraph",
-            "text": "超臨界 CO₂ 或 N₂ 不會像化學發泡劑一樣留下固體分解殘留，因此在低氣味、配方潔淨度及某些回收情境具有優勢。但「使用 CO₂」本身不能直接證明成品碳足跡較低。高壓壓縮、加熱、冷卻、良率、設備稼動率與材料減量，都必須納入生命週期評估。"
+            "text": "超臨界 CO₂ 或 N₂ 不會像化學發泡劑一樣留下固體分解殘留，因此在低氣味、配方潔淨度及某些回收情境具有優勢。但「使用 CO₂」本身不能直接證明成品碳足跡較低。高壓壓縮、加熱、冷卻、良率、裝置稼動率與材料減量，都必須納入生命週期評估。"
           },
           {
             "type": "paragraph",
@@ -455,7 +455,7 @@
           },
           {
             "type": "paragraph",
-            "text": "同樣地，化學發泡並不必然不可回收。如果基材仍是熱塑性材料、交聯程度低且污染可控，仍可能進行機械回收；反之，若採 DCP 高度交聯，即使使用物理發泡氣體，也可能因形成三維網絡而降低熔融再加工能力。真正影響回收性的關鍵，經常是樹脂結構與交聯狀態，而不只是發泡氣體。"
+            "text": "同樣地，化學發泡並不必然不可回收。如果基材仍是熱塑性材料、交聯程度低且汙染可控，仍可能進行機械回收；反之，若採 DCP 高度交聯，即使使用物理發泡氣體，也可能因形成三維網路而降低熔融再加工能力。真正影響回收性的關鍵，經常是樹脂結構與交聯狀態，而不只是發泡氣體。"
           },
           {
             "type": "paragraph",
@@ -522,7 +522,7 @@
                   "colSpan": 1
                 },
                 {
-                  "text": "長鏈支化、高熔體強度及結晶窗口是關鍵\nLong-chain branching, high melt strength, and the crystallization window are key",
+                  "text": "長鏈支化、高熔體強度及結晶視窗是關鍵\nLong-chain branching, high melt strength, and the crystallization window are key",
                   "colSpan": 1
                 }
               ],
@@ -536,7 +536,7 @@
                   "colSpan": 1
                 },
                 {
-                  "text": "scCO₂ 研究成熟，但乾燥、結晶與可加工窗口仍敏感\nscCO₂ research is mature, but drying, crystallization, and the processing window remain sensitive",
+                  "text": "scCO₂ 研究成熟，但乾燥、結晶與可加工視窗仍敏感\nscCO₂ research is mature, but drying, crystallization, and the processing window remain sensitive",
                   "colSpan": 1
                 }
               ],
@@ -569,7 +569,7 @@
           },
           {
             "type": "paragraph",
-            "text": "圖 3｜技術選擇矩陣：分數表示一般傾向，不代表特定設備或材料的絕對結果"
+            "text": "圖 3｜技術選擇矩陣：分數表示一般傾向，不代表特定裝置或材料的絕對結果"
           },
           {
             "type": "paragraph",
@@ -585,7 +585,7 @@
           },
           {
             "type": "list",
-            "text": "已有成熟密煉、模壓、押出或射出設備，希望以較低投資切入。"
+            "text": "已有成熟密煉、模壓、押出或射出裝置，希望以較低投資切入。"
           },
           {
             "type": "list",
@@ -601,7 +601,7 @@
           },
           {
             "type": "list",
-            "text": "訂單量或產品生命週期不足以支撐高壓設備投資。"
+            "text": "訂單量或產品生命週期不足以支撐高壓裝置投資。"
           },
           {
             "type": "list",
@@ -633,7 +633,7 @@
           },
           {
             "type": "list",
-            "text": "訂單量大且規格長期穩定，可攤提高壓設備與開發成本。"
+            "text": "訂單量大且規格長期穩定，可攤提高壓裝置與開發成本。"
           },
           {
             "type": "list",
@@ -658,7 +658,7 @@
         ]
       },
       {
-        "title": "十、導入超臨界發泡前的六個驗證問題\nX. Six Validation Questions Before Introducing Supercritical Foaming",
+        "title": "十、匯入超臨界發泡前的六個驗證問題\nX. Six Validation Questions Before Introducing Supercritical Foaming",
         "text": "",
         "blocks": [
           {
@@ -675,11 +675,11 @@
           },
           {
             "type": "paragraph",
-            "text": "4  減重能否轉化為商業價值？｜把原料節省、週期、良率與設備折舊放入同一成本模型。"
+            "text": "4  減重能否轉化為商業價值？｜把原料節省、週期、良率與裝置折舊放入同一成本模型。"
           },
           {
             "type": "paragraph",
-            "text": "5  規格是否具足夠量產週期？｜高壓設備較適合長週期、穩定且可複製的產品平台。"
+            "text": "5  規格是否具足夠量產週期？｜高壓裝置較適合長週期、穩定且可複製的產品平臺。"
           },
           {
             "type": "paragraph",
@@ -693,7 +693,7 @@
         "blocks": [
           {
             "type": "paragraph",
-            "text": "化學發泡的優勢是成熟、彈性高、設備投資相對低，適合多品種與既有量產平台；超臨界發泡則在細胞密度、減少發泡劑殘留及材料輕量化方面具備發展潛力，但必須付出更高的設備、控制與材料工程成本。"
+            "text": "化學發泡的優勢是成熟、彈性高、裝置投資相對低，適合多品種與既有量產平臺；超臨界發泡則在細胞密度、減少發泡劑殘留及材料輕量化方面具備發展潛力，但必須付出更高的裝置、控制與材料工程成本。"
           },
           {
             "type": "paragraph",
@@ -701,7 +701,7 @@
           },
           {
             "type": "paragraph",
-            "text": "如果產品只要求降低密度，成熟的化學發泡往往已具備良好成本效益；如果產品同時要求低氣味、精細泡孔、材料減量、高性能與可建立長期量產平台，超臨界發泡才可能創造足以支撐投資的差異化。最佳方案甚至可能不是二選一，而是依材料與產品採用物理發泡、化學發泡、交聯或成核技術的組合。"
+            "text": "如果產品只要求降低密度，成熟的化學發泡往往已具備良好成本效益；如果產品同時要求低氣味、精細泡孔、材料減量、高效能與可建立長期量產平臺，超臨界發泡才可能創造足以支撐投資的差異化。最佳方案甚至可能不是二選一，而是依材料與產品採用物理發泡、化學發泡、交聯或成核技術的組合。"
           },
           {
             "type": "paragraph",
@@ -729,7 +729,7 @@
             "rows": [
               [
                 {
-                  "text": "項目\nItem",
+                  "text": "專案\nItem",
                   "colSpan": 1
                 },
                 {
@@ -743,7 +743,7 @@
                   "colSpan": 1
                 },
                 {
-                  "text": "化學發泡 vs. 超臨界發泡：不只是泡孔大小，成本、性能與回收性的完整比較\nChemical Foaming vs. Supercritical Foaming: A Complete Comparison of Cost, Performance, and Recyclability—not Just Cell Size",
+                  "text": "化學發泡 vs. 超臨界發泡：不只是泡孔大小，成本、效能與回收性的完整比較\nChemical Foaming vs. Supercritical Foaming: A Complete Comparison of Cost, Performance, and Recyclability—not Just Cell Size",
                   "colSpan": 1
                 }
               ],
@@ -753,7 +753,7 @@
                   "colSpan": 1
                 },
                 {
-                  "text": "專業解析化學發泡與超臨界 CO₂／N₂ 發泡的原理、設備、泡孔、性能、成本、環保性與材料適用性，協助 EVA、POE、TPU、TPE 與鞋材產品選擇正確製程。\nA professional analysis of the principles, equipment, cells, performance, cost, environmental considerations, and material applicability of chemical foaming and supercritical CO₂/N₂ foaming, helping EVA, POE, TPU, TPE, and footwear products select the right process.",
+                  "text": "專業解析化學發泡與超臨界 CO₂／N₂ 發泡的原理、裝置、泡孔、效能、成本、環保性與材料適用性，協助 EVA、POE、TPU、TPE 與鞋材產品選擇正確製程。\nA professional analysis of the principles, equipment, cells, performance, cost, environmental considerations, and material applicability of chemical foaming and supercritical CO₂/N₂ foaming, helping EVA, POE, TPU, TPE, and footwear products select the right process.",
                   "colSpan": 1
                 }
               ],
@@ -827,7 +827,7 @@
           },
           {
             "type": "paragraph",
-            "text": "技術聲明｜本文為材料與製程選擇的技術性說明。具體性能、成本與環境效益應依樹脂牌號、設備、產品幾何及量產數據驗證。"
+            "text": "技術宣告｜本文為材料與製程選擇的技術性說明。具體效能、成本與環境效益應依樹脂牌號、裝置、產品幾何及量產資料驗證。"
           },
           {
             "type": "paragraph",
@@ -993,7 +993,7 @@
         "blocks": [
           {
             "type": "paragraph",
-            "text": "ASTM D6866 所報告的 biobased carbon content，通常是生物質衍生碳占總有機碳（TOC）的百分比。若配方含有礦物填料、金屬、無機阻燃劑或其他不含碳成分，這個百分比並不必然等於產品總重量中的生質質量百分比。"
+            "text": "ASTM D6866 所報告的 biobased carbon content，通常是生物質衍生碳佔總有機碳（TOC）的百分比。若配方含有礦物填料、金屬、無機阻燃劑或其他不含碳成分，這個百分比並不必然等於產品總重量中的生質質量百分比。"
           },
           {
             "type": "paragraph",
@@ -1020,7 +1020,7 @@
           },
           {
             "type": "paragraph",
-            "text": "圖 2｜原始報告以碳循環與衰變概念說明 ¹⁴C 檢測原理。資料來源：峰暉塑膠提供之簡報。"
+            "text": "圖 2｜原始報告以碳迴圈與衰變概念說明 ¹⁴C 檢測原理。資料來源：峰暉塑膠提供之簡報。"
           },
           {
             "type": "paragraph",
@@ -1036,7 +1036,7 @@
           },
           {
             "type": "paragraph",
-            "text": "實務上，實驗室可用加速器質譜（AMS）等方法量測樣品的 ¹⁴C 訊號，並與現代參考值比較，以估算 contemporary／biogenic carbon 的比例。ASTM D6866 明確指出，此方法只處理生質碳含量；不評估環境衝擊、功能性能、法規符合性或生物降解性。"
+            "text": "實務上，實驗室可用加速器質譜（AMS）等方法量測樣品的 ¹⁴C 訊號，並與現代參考值比較，以估算 contemporary／biogenic carbon 的比例。ASTM D6866 明確指出，此方法只處理生質碳含量；不評估環境衝擊、功能效能、法規符合性或生物降解性。"
           },
           {
             "type": "paragraph",
@@ -1098,7 +1098,7 @@
           },
           {
             "type": "paragraph",
-            "text": "所以「可生物降解」必須同時說明環境（工業堆肥、家庭堆肥、土壤、淡水或海洋）、溫度、含水量、微生物條件、試驗期限與通過標準。可堆肥是可生物降解的特定子集合，通常還要同時滿足崩解、重金屬限制與堆肥品質／生態毒性要求。"
+            "text": "所以「可生物降解」必須同時說明環境（工業堆肥、家庭堆肥、土壤、淡水或海洋）、溫度、含水量、微生物條件、試驗期限與透過標準。可堆肥是可生物降解的特定子集合，通常還要同時滿足崩解、重金屬限制與堆肥品質／生態毒性要求。"
           },
           {
             "type": "paragraph",
@@ -1143,7 +1143,7 @@
           },
           {
             "type": "list",
-            "text": "PLA ≠ 任意環境都會快速分解：通常需工業堆肥的溫濕條件與時間窗口。"
+            "text": "PLA ≠ 任意環境都會快速分解：通常需工業堆肥的溫濕條件與時間視窗。"
           },
           {
             "type": "paragraph",
@@ -1189,11 +1189,11 @@
             "rows": [
               [
                 {
-                  "text": "這份資料可以支持\nWhat This Information Can Support",
+                  "text": "這份資料可以支援\nWhat This Information Can Support",
                   "colSpan": 1
                 },
                 {
-                  "text": "這份資料不能單獨支持\nWhat This Information Cannot Support on Its Own",
+                  "text": "這份資料不能單獨支援\nWhat This Information Cannot Support on Its Own",
                   "colSpan": 1
                 }
               ],
@@ -1231,7 +1231,7 @@
           },
           {
             "type": "paragraph",
-            "text": "簡報中未完成的新聞稿範本含有日期、主管姓名與聲明占位符，本文未將其視為可引用證據；對外發布前應以官方認證資料重新核對。"
+            "text": "簡報中未完成的新聞稿範本含有日期、主管姓名與宣告佔位符，本文未將其視為可引用證據；對外發布前應以官方認證資料重新核對。"
           },
           {
             "type": "paragraph",
@@ -1240,7 +1240,7 @@
         ]
       },
       {
-        "title": "材料性能與環境宣稱，必須分開驗證\nMaterial Performance and Environmental Claims Must Be Verified Separately",
+        "title": "材料效能與環境宣稱，必須分開驗證\nMaterial Performance and Environmental Claims Must Be Verified Separately",
         "text": "",
         "blocks": [
           {
@@ -1250,7 +1250,7 @@
           },
           {
             "type": "paragraph",
-            "text": "圖 5｜GTE‑8075 技術資料頁列有硬度、流動性、密度、拉伸、伸長與撕裂等性能。資料來源：峰暉塑膠提供之簡報。"
+            "text": "圖 5｜GTE‑8075 技術資料頁列有硬度、流動性、密度、拉伸、伸長與撕裂等效能。資料來源：峰暉塑膠提供之簡報。"
           },
           {
             "type": "paragraph",
@@ -1258,7 +1258,7 @@
           },
           {
             "type": "paragraph",
-            "text": "依簡報技術資料，GTE‑8075 為粒狀、半透明材料，列示 Shore A 75、熔融指數 4.7 g/10 min（ASTM D1238，2.16 kg、190°C）、密度約 0.90–0.93，以及拉伸、伸長與撕裂等數據。這些資訊用於初步評估加工與機械性能，與生質來源證明屬於不同證據鏈。"
+            "text": "依簡報技術資料，GTE‑8075 為粒狀、半透明材料，列示 Shore A 75、熔融指數 4.7 g/10 min（ASTM D1238，2.16 kg、190°C）、密度約 0.90–0.93，以及拉伸、伸長與撕裂等資料。這些資訊用於初步評估加工與機械效能，與生質來源證明屬於不同證據鏈。"
           },
           {
             "type": "paragraph",
@@ -1279,7 +1279,7 @@
           },
           {
             "type": "paragraph",
-            "text": "簡報也展示一般 EVA 發泡與生質基 TPE 的回彈比較。對鞋材、緩衝材或運動用品而言，回彈、壓縮永久變形、撕裂、密度、收縮與熱老化會直接影響成品；但即使性能優異且生質碳含量高，也不能因此延伸出可生物降解或可堆肥宣稱。"
+            "text": "簡報也展示一般 EVA 發泡與生質基 TPE 的回彈比較。對鞋材、緩衝材或運動用品而言，回彈、壓縮永久變形、撕裂、密度、收縮與熱老化會直接影響成品；但即使效能優異且生質碳含量高，也不能因此延伸出可生物降解或可堆肥宣稱。"
           },
           {
             "type": "paragraph",
@@ -1303,7 +1303,7 @@
           },
           {
             "type": "list",
-            "text": "性能軌：依最終用途驗證發泡倍率、密度、回彈、壓縮永久變形、熱收縮、耐水解與老化。"
+            "text": "效能軌：依最終用途驗證發泡倍率、密度、回彈、壓縮永久變形、熱收縮、耐水解與老化。"
           },
           {
             "type": "paragraph",
@@ -1430,7 +1430,7 @@
                   "colSpan": 1
                 },
                 {
-                  "text": "需揭露邊界、數據與假設\nDisclose the boundary, data, and assumptions.",
+                  "text": "需揭露邊界、資料與假設\nDisclose the boundary, data, and assumptions.",
                   "colSpan": 1
                 }
               ]
@@ -1502,7 +1502,7 @@
           },
           {
             "type": "paragraph",
-            "text": "5. European Committee for Standardization. EN 13432；ASTM International. ASTM D6400；ISO. ISO 17088（可堆肥塑膠規範，依市場與產品類型選用）。"
+            "text": "5. European Committee for Standardization. EN 13432；ASTM International. ASTM D6400；ISO. ISO 17088（可堆肥塑膠規範，依市場與產品型別選用）。"
           },
           {
             "type": "paragraph",
@@ -1618,7 +1618,7 @@
             "rows": [
               [
                 {
-                  "text": "類型\nType",
+                  "text": "型別\nType",
                   "colSpan": 1
                 },
                 {
@@ -1788,7 +1788,7 @@
             "rows": [
               [
                 {
-                  "text": "專業判讀｜熔點不是一個絕對開關。POE 常有寬廣熔融峰，應用 DSC 同時查看 onset、peak、endset 與熔融焓 ΔHm；二次加工還要考慮時間、厚度與熱傳，而不能只拿單一峰值判斷安全溫度。\nTechnical interpretation | Melting point is not an absolute on/off switch. POE often has a broad melting peak, so DSC should be used to examine onset, peak, endset, and enthalpy of fusion (ΔHm) together. Secondary processing must also account for time, thickness, and heat transfer; a single peak value alone cannot define a safe temperature.",
+                  "text": "專業判讀｜熔點不是一個絕對開關。POE 常有寬廣熔融峰，應用 DSC 同時檢視 onset、peak、endset 與熔融焓 ΔHm；二次加工還要考慮時間、厚度與熱傳，而不能只拿單一峰值判斷安全溫度。\nTechnical interpretation | Melting point is not an absolute on/off switch. POE often has a broad melting peak, so DSC should be used to examine onset, peak, endset, and enthalpy of fusion (ΔHm) together. Secondary processing must also account for time, thickness, and heat transfer; a single peak value alone cannot define a safe temperature.",
                   "colSpan": 1
                 }
               ]
@@ -1812,7 +1812,7 @@
           },
           {
             "type": "list",
-            "text": "POE 添加比例：比例越高，連續相形態、熔體黏度與 DCP 反應分配都可能改變。"
+            "text": "POE 新增比例：比例越高，連續相形態、熔體黏度與 DCP 反應分配都可能改變。"
           },
           {
             "type": "paragraph",
@@ -1820,7 +1820,7 @@
           },
           {
             "type": "list",
-            "text": "二次加工溫度：即使設備設定僅 55–60°C，厚件中心與接觸面局部溫度、停留時間仍需實測。"
+            "text": "二次加工溫度：即使裝置設定僅 55–60°C，厚件中心與接觸面區域性溫度、停留時間仍需實測。"
           },
           {
             "type": "paragraph",
@@ -1860,7 +1860,7 @@
           },
           {
             "type": "paragraph",
-            "text": "圖 3｜有效交聯密度存在最佳窗口，並非 DCP 添加越多越穩定。"
+            "text": "圖 3｜有效交聯密度存在最佳視窗，並非 DCP 新增越多越穩定。"
           },
           {
             "type": "paragraph",
@@ -1932,7 +1932,7 @@
           },
           {
             "type": "paragraph",
-            "text": "在橡膠平台區，可用 G ≈ νeRT 理解剪切模數 G 與有效網鏈密度 νe 的關係。但對半結晶 EVA／POE 泡棉，晶區與填料也會貢獻模數，因此應以 MDR／流變曲線、凝膠率、平衡溶脹及最終泡孔形貌交叉判讀，而不能只以 DCP phr 代表交聯密度。"
+            "text": "在橡膠平臺區，可用 G ≈ νeRT 理解剪下模數 G 與有效網鏈密度 νe 的關係。但對半結晶 EVA／POE 泡棉，晶區與填料也會貢獻模數，因此應以 MDR／流變曲線、凝膠率、平衡溶脹及最終泡孔形貌交叉判讀，而不能只以 DCP phr 代表交聯密度。"
           },
           {
             "type": "paragraph",
@@ -1941,7 +1941,7 @@
         ]
       },
       {
-        "title": "五、交聯與產氣必須同步：真正重要的是反應窗口\nV. Crosslinking and Gas Generation Must Be Synchronized: What Matters Is the Reaction Window",
+        "title": "五、交聯與產氣必須同步：真正重要的是反應視窗\nV. Crosslinking and Gas Generation Must Be Synchronized: What Matters Is the Reaction Window",
         "text": "",
         "blocks": [
           {
@@ -2019,7 +2019,7 @@
                   "colSpan": 1
                 },
                 {
-                  "text": "局部凹陷、翹曲\nLocalized depressions and warpage",
+                  "text": "區域性凹陷、翹曲\nLocalized depressions and warpage",
                   "colSpan": 1
                 },
                 {
@@ -2057,7 +2057,7 @@
           },
           {
             "type": "list",
-            "text": "固定成品密度，而不是只固定配方重量；密度不同會直接改變硬度與收縮。"
+            "text": "固定成品密度，而不是隻固定配方重量；密度不同會直接改變硬度與收縮。"
           },
           {
             "type": "paragraph",
@@ -2065,7 +2065,7 @@
           },
           {
             "type": "list",
-            "text": "記錄實際膠料與模芯溫度，而不是只記錄機台設定值。"
+            "text": "記錄實際膠料與模芯溫度，而不是隻記錄機臺設定值。"
           },
           {
             "type": "paragraph",
@@ -2194,7 +2194,7 @@
               ],
               [
                 {
-                  "text": "量產窗口\nProduction Window",
+                  "text": "量產視窗\nProduction Window",
                   "colSpan": 1
                 },
                 {
@@ -2208,7 +2208,7 @@
               ],
               [
                 {
-                  "text": "必要限制｜IUS‑4065 的約 64°C 熔點不等於成品耐熱上限，也不代表可直接等量替換。EVA VA 含量、IUS 添加量、DCP 反應效率、發泡倍率與冷卻方式改變後，都必須重新建立製程窗口。\nImportant limitation | The approximately 64°C melting point of IUS-4065 is not the finished product's upper service-temperature limit, nor does it mean the material can be substituted one-for-one. Changes in EVA VA content, IUS loading, DCP reaction efficiency, expansion ratio, and cooling method all require the process window to be re-established.",
+                  "text": "必要限制｜IUS‑4065 的約 64°C 熔點不等於成品耐熱上限，也不代表可直接等量替換。EVA VA 含量、IUS 新增量、DCP 反應效率、發泡倍率與冷卻方式改變後，都必須重新建立製程視窗。\nImportant limitation | The approximately 64°C melting point of IUS-4065 is not the finished product's upper service-temperature limit, nor does it mean the material can be substituted one-for-one. Changes in EVA VA content, IUS loading, DCP reaction efficiency, expansion ratio, and cooling method all require the process window to be re-established.",
                   "colSpan": 3
                 }
               ]
@@ -2217,7 +2217,7 @@
         ]
       },
       {
-        "title": "八、導入 IUS‑4065 時，建議如何重做配方？\nVIII. How Should the Formulation Be Redesigned When Introducing IUS-4065?",
+        "title": "八、匯入 IUS‑4065 時，建議如何重做配方？\nVIII. How Should the Formulation Be Redesigned When Introducing IUS-4065?",
         "text": "",
         "blocks": [
           {
@@ -2238,7 +2238,7 @@
           },
           {
             "type": "list",
-            "text": "設計三階 DCP：以低／中／高有效添加量，搭配 MDR 或流變曲線找交聯—產氣平衡。"
+            "text": "設計三階 DCP：以低／中／高有效新增量，搭配 MDR 或流變曲線找交聯—產氣平衡。"
           },
           {
             "type": "paragraph",
@@ -2246,7 +2246,7 @@
           },
           {
             "type": "list",
-            "text": "固定密度再比性能：比較回彈、壓縮永久變形、撕裂、延伸及泡孔，避免倍率差製造假性優勢。"
+            "text": "固定密度再比效能：比較回彈、壓縮永久變形、撕裂、延伸及泡孔，避免倍率差製造假性優勢。"
           },
           {
             "type": "paragraph",
@@ -2483,13 +2483,13 @@
                   "colSpan": 1
                 },
                 {
-                  "text": "做 DSC＋實際貼合溫度曲線；導入 IUS‑4065 對照\nRun DSC plus an actual lamination-temperature profile; compare against IUS-4065",
+                  "text": "做 DSC＋實際貼合溫度曲線；匯入 IUS‑4065 對照\nRun DSC plus an actual lamination-temperature profile; compare against IUS-4065",
                   "colSpan": 1
                 }
               ],
               [
                 {
-                  "text": "局部翹曲\nLocalized warpage",
+                  "text": "區域性翹曲\nLocalized warpage",
                   "colSpan": 1
                 },
                 {
@@ -2497,7 +2497,7 @@
                   "colSpan": 1
                 },
                 {
-                  "text": "查模穴熱分布、治具與冷卻接觸\nCheck thermal distribution across mold cavities, fixtures, and cooling contact",
+                  "text": "查模穴熱分佈、治具與冷卻接觸\nCheck thermal distribution across mold cavities, fixtures, and cooling contact",
                   "colSpan": 1
                 }
               ],
@@ -2525,7 +2525,7 @@
         "blocks": [
           {
             "type": "paragraph",
-            "text": "EVA／POE 發泡要穩定，必須讓「DCP 成網時鐘、發泡劑產氣時鐘、晶體定型時鐘、泡孔氣體交換時鐘」落在可控制的窗口。低熔點 POE 能快速降低硬度並改善觸感，但在貼合或二次加熱時，較早失去晶區支撐，便容易把原本隱藏的交聯不足、氣體擴散與冷卻梯度放大成尺寸收縮。"
+            "text": "EVA／POE 發泡要穩定，必須讓「DCP 成網時鐘、發泡劑產氣時鐘、晶體定型時鐘、泡孔氣體交換時鐘」落在可控制的視窗。低熔點 POE 能快速降低硬度並改善觸感，但在貼合或二次加熱時，較早失去晶區支撐，便容易把原本隱藏的交聯不足、氣體擴散與冷卻梯度放大成尺寸收縮。"
           },
           {
             "type": "paragraph",
@@ -2533,7 +2533,7 @@
           },
           {
             "type": "paragraph",
-            "text": "IUS‑4065 以約 Shore A 40 與約 64°C 熔點提供不同的材料平衡：不必完全以低熔點換取柔軟度，因而有機會降低二次熱收縮、擴大加工窗口並提高批次一致性。真正的導入標準，不是「換料後剛開模更軟」，而是在相同密度與性能要求下，72 小時及模擬貼合後仍能維持尺寸。"
+            "text": "IUS‑4065 以約 Shore A 40 與約 64°C 熔點提供不同的材料平衡：不必完全以低熔點換取柔軟度，因而有機會降低二次熱收縮、擴大加工視窗並提高批次一致性。真正的匯入標準，不是「換料後剛開模更軟」，而是在相同密度與效能要求下，72 小時及模擬貼合後仍能維持尺寸。"
           },
           {
             "type": "paragraph",
@@ -2561,7 +2561,7 @@
             "rows": [
               [
                 {
-                  "text": "項目\nItem",
+                  "text": "專案\nItem",
                   "colSpan": 1
                 },
                 {
@@ -2613,7 +2613,7 @@
           },
           {
             "type": "heading",
-            "text": "資料與技術聲明"
+            "text": "資料與技術宣告"
           },
           {
             "type": "heading",
@@ -2621,7 +2621,7 @@
           },
           {
             "type": "paragraph",
-            "text": "IUS‑4065、DF 640 與 ENGAGE 8842 的硬度、熔點及定性比較，取自使用者提供的 INNOARK 圖像資料。本文的機理分析用於配方與製程診斷，不替代供應商最新版 TDS／SDS、DSC／流變報告與實際量產驗證。DCP 與發泡系統涉及高溫反應及分解風險，配方與製程變更應依材料安全資料、設備規範與工廠 EHS 程序執行。"
+            "text": "IUS‑4065、DF 640 與 ENGAGE 8842 的硬度、熔點及定性比較，取自使用者提供的 INNOARK 影象資料。本文的機理分析用於配方與製程診斷，不替代供應商最新版 TDS／SDS、DSC／流變報告與實際量產驗證。DCP 與發泡系統涉及高溫反應及分解風險，配方與製程變更應依材料安全資料、裝置規範與工廠 EHS 程式執行。"
           },
           {
             "type": "paragraph",
@@ -2635,12 +2635,12 @@
   },
   {
     "slug": "eva-poe-sebs-compounding",
-    "title": "EVA添加POE有哪些優缺點？",
+    "title": "EVA新增POE有哪些優缺點？",
     "englishTitle": "What Are the Advantages and Disadvantages of Adding POE to EVA?",
     "summary": "封面圖｜EVA、POE與SEBS經雙螺桿預混煉形成均勻多相結構，再進入交聯發泡製程。",
     "category": "COMPOUNDING / 共混改質",
     "image": "/images/articles/eva-poe-sebs-cover.png",
-    "alt": "EVA添加POE有哪些優缺點？｜材料實驗室主題示意圖",
+    "alt": "EVA新增POE有哪些優缺點？｜材料實驗室主題示意圖",
     "sections": [
       {
         "title": "導讀 / Introduction",
@@ -2649,7 +2649,7 @@
           {
             "type": "image",
             "src": "/images/articles/eva-poe-sebs-compounding/figure-1.png",
-            "text": "原文圖 1｜EVA添加POE有哪些優缺點？"
+            "text": "原文圖 1｜EVA新增POE有哪些優缺點？"
           },
           {
             "type": "paragraph",
@@ -2672,7 +2672,7 @@
             "rows": [
               [
                 {
-                  "text": "核心觀點｜EVA／POE能快速降低硬度、改善回彈與低溫柔韌，但也可能犧牲結晶支撐、尺寸穩定、黏著與交聯效率。SEBS可補強熔體彈性、韌性與泡孔壁，但前提是形成細小、均勻且具有界面黏著的分散相；若仍以簡單乾混投入，SEBS的高黏度反而容易形成凝膠粒與弱界面。\nCore insight | EVA/POE can rapidly reduce hardness and improve resilience and low-temperature flexibility, but it may also sacrifice crystalline support, dimensional stability, adhesion, and crosslinking efficiency. SEBS can reinforce melt elasticity, toughness, and cell walls, provided that it forms a fine, uniform dispersed phase with strong interfacial adhesion. If it is still introduced by simple dry blending, the high viscosity of SEBS instead tends to create gel particles and weak interfaces.",
+                  "text": "核心觀點｜EVA／POE能快速降低硬度、改善回彈與低溫柔韌，但也可能犧牲結晶支撐、尺寸穩定、黏著與交聯效率。SEBS可補強熔體彈性、韌性與泡孔壁，但前提是形成細小、均勻且具有介面黏著的分散相；若仍以簡單乾混投入，SEBS的高黏度反而容易形成凝膠粒與弱介面。\nCore insight | EVA/POE can rapidly reduce hardness and improve resilience and low-temperature flexibility, but it may also sacrifice crystalline support, dimensional stability, adhesion, and crosslinking efficiency. SEBS can reinforce melt elasticity, toughness, and cell walls, provided that it forms a fine, uniform dispersed phase with strong interfacial adhesion. If it is still introduced by simple dry blending, the high viscosity of SEBS instead tends to create gel particles and weak interfaces.",
                   "colSpan": 1
                 }
               ]
@@ -2681,7 +2681,7 @@
         ]
       },
       {
-        "title": "一、EVA為什麼常添加POE？先從分子結構理解\nI. Why Is POE Commonly Added to EVA? Start with the Molecular Structure",
+        "title": "一、EVA為什麼常新增POE？先從分子結構理解\nI. Why Is POE Commonly Added to EVA? Start with the Molecular Structure",
         "text": "",
         "blocks": [
           {
@@ -2726,7 +2726,7 @@
           },
           {
             "type": "list",
-            "text": "提高破裂伸長與抗疲勞：細小分散相可鈍化裂紋尖端，延緩裂紋擴展。"
+            "text": "提高破裂伸長與抗疲勞：細小分散相可鈍化裂紋尖端，延緩裂紋擴充套件。"
           },
           {
             "type": "paragraph",
@@ -2750,7 +2750,7 @@
           },
           {
             "type": "paragraph",
-            "text": "EVA與POE通常呈現部分相容或多相結構。VA含量、POE共單體含量、分子量、黏度比與混煉歷史會決定相尺寸。若POE形成過大液滴或局部連續相，物性不再是簡單加成，而會出現撕裂下降、泡孔粗化與收縮放大。"
+            "text": "EVA與POE通常呈現部分相容或多相結構。VA含量、POE共單體含量、分子量、黏度比與混煉歷史會決定相尺寸。若POE形成過大液滴或區域性連續相，物性不再是簡單加成，而會出現撕裂下降、泡孔粗化與收縮放大。"
           },
           {
             "type": "paragraph",
@@ -2759,7 +2759,7 @@
           {
             "type": "image",
             "src": "/images/articles/eva-poe-sebs-compounding/figure-2.png",
-            "text": "原文圖 2｜EVA添加POE有哪些優缺點？"
+            "text": "原文圖 2｜EVA新增POE有哪些優缺點？"
           },
           {
             "type": "paragraph",
@@ -2772,7 +2772,7 @@
         ]
       },
       {
-        "title": "二、EVA添加POE的缺點：問題多半來自結晶、界面與反應稀釋\nII. Disadvantages of Adding POE to EVA: Most Problems Arise from Crystallinity, Interfaces, and Reaction Dilution",
+        "title": "二、EVA新增POE的缺點：問題多半來自結晶、介面與反應稀釋\nII. Disadvantages of Adding POE to EVA: Most Problems Arise from Crystallinity, Interfaces, and Reaction Dilution",
         "text": "",
         "blocks": [
           {
@@ -2812,7 +2812,7 @@
                   "colSpan": 1
                 },
                 {
-                  "text": "相尺寸過大或界面黏著不足，裂紋沿相界面傳播\nOversized domains or insufficient interfacial adhesion allow cracks to propagate along phase boundaries.",
+                  "text": "相尺寸過大或介面黏著不足，裂紋沿相介面傳播\nOversized domains or insufficient interfacial adhesion allow cracks to propagate along phase boundaries.",
                   "colSpan": 1
                 },
                 {
@@ -2886,7 +2886,7 @@
           },
           {
             "type": "heading",
-            "text": "相態的關鍵參數：黏度比與界面張力"
+            "text": "相態的關鍵引數：黏度比與介面張力"
           },
           {
             "type": "heading",
@@ -2894,7 +2894,7 @@
           },
           {
             "type": "paragraph",
-            "text": "在共混剪切場中，分散相尺寸受界面張力、剪切應力與黏度比控制。可用毛細數 Ca = ηm·γ̇·R/σ 理解液滴變形：基體黏度ηm、剪切速率γ̇或液滴半徑R增加，分散相更容易被拉伸；界面張力σ越高則越抗拒破碎。但若分散相黏度過高、停留時間不足或破碎後快速聚併，仍會留下粗大顆粒。"
+            "text": "在共混剪下場中，分散相尺寸受介面張力、剪下應力與黏度比控制。可用毛細數 Ca = ηm·γ̇·R/σ 理解液滴變形：基體黏度ηm、剪下速率γ̇或液滴半徑R增加，分散相更容易被拉伸；介面張力σ越高則越抗拒破碎。但若分散相黏度過高、停留時間不足或破碎後快速聚併，仍會留下粗大顆粒。"
           },
           {
             "type": "paragraph",
@@ -3007,7 +3007,7 @@
                   "colSpan": 1
                 },
                 {
-                  "text": "SEBS未塑化或局部濃度過高\nSEBS is not fully plasticized or is locally overconcentrated.",
+                  "text": "SEBS未塑化或區域性濃度過高\nSEBS is not fully plasticized or is locally overconcentrated.",
                   "colSpan": 1
                 },
                 {
@@ -3062,12 +3062,12 @@
         ]
       },
       {
-        "title": "四、SEBS為何更需要雙螺桿？關鍵是「分散」與「分布」不同\nIV. Why Does SEBS Need a Twin-Screw Extruder Even More? Dispersion and Distribution Are Different",
+        "title": "四、SEBS為何更需要雙螺桿？關鍵是「分散」與「分佈」不同\nIV. Why Does SEBS Need a Twin-Screw Extruder Even More? Dispersion and Distribution Are Different",
         "text": "",
         "blocks": [
           {
             "type": "paragraph",
-            "text": "分布混合（distributive mixing）是把材料搬運到整個體積；分散混合（dispersive mixing）則是用足夠應力打碎團聚體與大相域。SEBS顆粒即使肉眼看似混均，內部仍可能存在未塑化核心。密煉機或單螺桿可以完成部分配方，但若要穩定建立細小相尺寸、連續量產與批次一致性，共旋雙螺桿預混煉通常是更可靠的工業路徑。"
+            "text": "分佈混合（distributive mixing）是把材料搬運到整個體積；分散混合（dispersive mixing）則是用足夠應力打碎團聚體與大相域。SEBS顆粒即使肉眼看似混均，內部仍可能存在未塑化核心。密煉機或單螺桿可以完成部分配方，但若要穩定建立細小相尺寸、連續量產與批次一致性，共旋雙螺桿預混煉通常是更可靠的工業路徑。"
           },
           {
             "type": "paragraph",
@@ -3076,7 +3076,7 @@
           {
             "type": "image",
             "src": "/images/articles/eva-poe-sebs-compounding/figure-3.png",
-            "text": "原文圖 3｜EVA添加POE有哪些優缺點？"
+            "text": "原文圖 3｜EVA新增POE有哪些優缺點？"
           },
           {
             "type": "paragraph",
@@ -3096,7 +3096,7 @@
           },
           {
             "type": "list",
-            "text": "高界面更新率：兩支螺桿互相嚙合，反覆分流、合流與拉伸熔體。"
+            "text": "高介面更新率：兩支螺桿互相嚙合，反覆分流、合流與拉伸熔體。"
           },
           {
             "type": "paragraph",
@@ -3104,7 +3104,7 @@
           },
           {
             "type": "list",
-            "text": "可分區設計剪切：輸送元件負責前進，捏合塊提供可控分散，避免全程高剪切。"
+            "text": "可分割槽設計剪下：輸送元件負責前進，捏合塊提供可控分散，避免全程高剪下。"
           },
           {
             "type": "paragraph",
@@ -3129,12 +3129,12 @@
         ]
       },
       {
-        "title": "五、雙螺桿不是剪切越高越好：要控制比能量與熔體溫度\nV. More Shear Is Not Always Better in Twin-Screw Processing: Control Specific Energy and Melt Temperature",
+        "title": "五、雙螺桿不是剪下越高越好：要控制比能量與熔體溫度\nV. More Shear Is Not Always Better in Twin-Screw Processing: Control Specific Energy and Melt Temperature",
         "text": "",
         "blocks": [
           {
             "type": "paragraph",
-            "text": "雙螺桿的價值不是「把轉速開到最高」，而是用可重複的比機械能（SME）、停留時間與熔體溫度建立形態。SME可作為每公斤物料實際承受機械能的工程指標；過低無法打散SEBS，過高則可能造成EVA熱史增加、分子鏈斷裂、色變或後續發泡窗口縮小。"
+            "text": "雙螺桿的價值不是「把轉速開到最高」，而是用可重複的比機械能（SME）、停留時間與熔體溫度建立形態。SME可作為每公斤物料實際承受機械能的工程指標；過低無法打散SEBS，過高則可能造成EVA熱史增加、分子鏈斷裂、色變或後續發泡視窗縮小。"
           },
           {
             "type": "paragraph",
@@ -3171,7 +3171,7 @@
                   "colSpan": 1
                 },
                 {
-                  "text": "剪切發熱、降解、停留變短\nShear heating, degradation, and shorter residence time",
+                  "text": "剪下發熱、降解、停留變短\nShear heating, degradation, and shorter residence time",
                   "colSpan": 1
                 },
                 {
@@ -3253,7 +3253,7 @@
               ],
               [
                 {
-                  "text": "安全的兩段法｜第一段只製作EVA／POE／SEBS聚合物母粒，必要時加入相容劑；第二段再以低溫密煉或適合設備加入DCP、發泡劑與活化系統。避免活性過氧化物與發泡劑在高剪切雙螺桿中承受不必要熱史。\nSafe two-stage method | In the first stage, make only an EVA/POE/SEBS polymer masterbatch, adding a compatibilizer if needed. In the second stage, add DCP, the blowing agent, and the activation system in a low-temperature internal mixer or other suitable equipment. This avoids exposing active peroxide and blowing agents to unnecessary thermal history in a high-shear twin-screw extruder.",
+                  "text": "安全的兩段法｜第一段只製作EVA／POE／SEBS聚合物母粒，必要時加入相容劑；第二段再以低溫密煉或適合裝置加入DCP、發泡劑與活化系統。避免活性過氧化物與發泡劑在高剪下雙螺桿中承受不必要熱史。\nSafe two-stage method | In the first stage, make only an EVA/POE/SEBS polymer masterbatch, adding a compatibilizer if needed. In the second stage, add DCP, the blowing agent, and the activation system in a low-temperature internal mixer or other suitable equipment. This avoids exposing active peroxide and blowing agents to unnecessary thermal history in a high-shear twin-screw extruder.",
                   "colSpan": 4
                 }
               ]
@@ -3262,12 +3262,12 @@
         ]
       },
       {
-        "title": "六、相容劑何時需要？SEBS並不一定自動停留在界面\nVI. When Is a Compatibilizer Needed? SEBS Does Not Necessarily Migrate to and Remain at the Interface",
+        "title": "六、相容劑何時需要？SEBS並不一定自動停留在介面\nVI. When Is a Compatibilizer Needed? SEBS Does Not Necessarily Migrate to and Remain at the Interface",
         "text": "",
         "blocks": [
           {
             "type": "paragraph",
-            "text": "SEBS的EB中段與POE相容性通常較佳，但EVA的VA極性提高後，界面張力仍可能上升。若顯微形態顯示大顆粒、撕裂沿界面失效或貼合性明顯下降，可評估EVA-g-MAH、SEBS-g-MAH、EAA等相容策略。相容劑的功能是降低界面張力、抑制聚併或形成界面反應；添加過量則可能提高黏度、吸濕、影響交聯或改變發泡。"
+            "text": "SEBS的EB中段與POE相容性通常較佳，但EVA的VA極性提高後，介面張力仍可能上升。若顯微形態顯示大顆粒、撕裂沿介面失效或貼合性明顯下降，可評估EVA-g-MAH、SEBS-g-MAH、EAA等相容策略。相容劑的功能是降低介面張力、抑制聚併或形成介面反應；新增過量則可能提高黏度、吸濕、影響交聯或改變發泡。"
           },
           {
             "type": "paragraph",
@@ -3282,7 +3282,7 @@
           {
             "type": "image",
             "src": "/images/articles/eva-poe-sebs-compounding/figure-4.png",
-            "text": "原文圖 4｜EVA添加POE有哪些優缺點？"
+            "text": "原文圖 4｜EVA新增POE有哪些優缺點？"
           },
           {
             "type": "paragraph",
@@ -3294,7 +3294,7 @@
           },
           {
             "type": "list",
-            "text": "成核不均：粗粒、污染物或界面空隙會造成局部過度成核與粗孔並存。"
+            "text": "成核不均：粗粒、汙染物或介面空隙會造成區域性過度成核與粗孔並存。"
           },
           {
             "type": "paragraph",
@@ -3302,7 +3302,7 @@
           },
           {
             "type": "list",
-            "text": "泡孔壁薄弱：大相域橫跨泡孔壁時，界面可能成為破孔與撕裂起點。"
+            "text": "泡孔壁薄弱：大相域橫跨泡孔壁時，介面可能成為破孔與撕裂起點。"
           },
           {
             "type": "paragraph",
@@ -3310,7 +3310,7 @@
           },
           {
             "type": "list",
-            "text": "交聯不均：DCP與聚合物接觸歷史不同，使局部凝膠率與熔體強度波動。"
+            "text": "交聯不均：DCP與聚合物接觸歷史不同，使區域性凝膠率與熔體強度波動。"
           },
           {
             "type": "paragraph",
@@ -3318,7 +3318,7 @@
           },
           {
             "type": "list",
-            "text": "局部熱點：高黏團聚體提高剪切發熱，造成色差、焦燒或發泡劑提前反應。"
+            "text": "區域性熱點：高黏團聚體提高剪下發熱，造成色差、焦燒或發泡劑提前反應。"
           },
           {
             "type": "paragraph",
@@ -3326,7 +3326,7 @@
           },
           {
             "type": "list",
-            "text": "表面與尺寸失控：粗孔、破孔及相界面回縮會放大表面粗糙與後收縮。"
+            "text": "表面與尺寸失控：粗孔、破孔及相介面回縮會放大表面粗糙與後收縮。"
           },
           {
             "type": "paragraph",
@@ -3381,7 +3381,7 @@
                   "colSpan": 1
                 },
                 {
-                  "text": "黑點、未熔粒與相尺寸分布\nBlack specks, unmelted particles, and domain-size distribution",
+                  "text": "黑點、未熔粒與相尺寸分佈\nBlack specks, unmelted particles, and domain-size distribution",
                   "colSpan": 1
                 }
               ],
@@ -3395,7 +3395,7 @@
                   "colSpan": 1
                 },
                 {
-                  "text": "分散相尺寸、界面與連續相轉換\nDispersed-phase size, interfaces, and continuous-phase transition",
+                  "text": "分散相尺寸、介面與連續相轉換\nDispersed-phase size, interfaces, and continuous-phase transition",
                   "colSpan": 1
                 }
               ],
@@ -3409,7 +3409,7 @@
                   "colSpan": 1
                 },
                 {
-                  "text": "結晶變化、Tg、PS微區與阻尼窗口\nChanges in crystallinity, Tg, PS microdomains, and the damping window",
+                  "text": "結晶變化、Tg、PS微區與阻尼視窗\nChanges in crystallinity, Tg, PS microdomains, and the damping window",
                   "colSpan": 1
                 }
               ],
@@ -3423,7 +3423,7 @@
                   "colSpan": 1
                 },
                 {
-                  "text": "交聯—產氣窗口與網路完整性\nCrosslinking-gas-generation window and network integrity",
+                  "text": "交聯—產氣視窗與網路完整性\nCrosslinking-gas-generation window and network integrity",
                   "colSpan": 1
                 }
               ],
@@ -3433,7 +3433,7 @@
                   "colSpan": 1
                 },
                 {
-                  "text": "密度、泡孔尺寸／分布、撕裂、回彈、壓縮永久變形\nDensity, cell size/distribution, tear strength, resilience, and compression set",
+                  "text": "密度、泡孔尺寸／分佈、撕裂、回彈、壓縮永久變形\nDensity, cell size/distribution, tear strength, resilience, and compression set",
                   "colSpan": 1
                 },
                 {
@@ -3467,7 +3467,7 @@
           },
           {
             "type": "list",
-            "text": "雙螺桿預混：先塑化EVA／POE，再導入SEBS；以捏合塊建立分散，以混合元件完成分布。"
+            "text": "雙螺桿預混：先塑化EVA／POE，再匯入SEBS；以捏合塊建立分散，以混合元件完成分佈。"
           },
           {
             "type": "paragraph",
@@ -3475,7 +3475,7 @@
           },
           {
             "type": "list",
-            "text": "真空與過濾：控制揮發分、未熔粒及污染物，再水冷／風冷造粒。"
+            "text": "真空與過濾：控制揮發分、未熔粒及汙染物，再水冷／風冷造粒。"
           },
           {
             "type": "paragraph",
@@ -3507,7 +3507,7 @@
           },
           {
             "type": "paragraph",
-            "text": "前段使用輸送元件建立穩定固體輸送；第一混煉區完成EVA／POE熔融；中段以中等角度捏合塊讓SEBS充分塑化並破碎團聚；後段使用分布混合元件降低相尺寸差，再經真空排氣與穩壓計量。若材料溫升過高，應優先調整捏合強度、充填度與冷卻，而不是只降低機筒設定溫度。"
+            "text": "前段使用輸送元件建立穩定固體輸送；第一混煉區完成EVA／POE熔融；中段以中等角度捏合塊讓SEBS充分塑化並破碎團聚；後段使用分佈混合元件降低相尺寸差，再經真空排氣與穩壓計量。若材料溫升過高，應優先調整捏合強度、充填度與冷卻，而不是隻降低機筒設定溫度。"
           },
           {
             "type": "paragraph",
@@ -3518,7 +3518,7 @@
             "rows": [
               [
                 {
-                  "text": "為何不建議一次完成所有配方｜DCP與化學發泡劑具有溫度—時間累積效應。若在高剪切雙螺桿中與SEBS一起長時間混煉，可能提前分解、焦燒或消耗有效活性，使後續模壓時產氣與交聯時序失真。\nWhy completing the entire formulation in one step is not recommended | DCP and chemical blowing agents have cumulative temperature-time effects. Prolonged mixing with SEBS in a high-shear twin-screw extruder may cause premature decomposition or scorch, or consume effective activity, disrupting gas-generation and crosslinking timing during subsequent compression molding.",
+                  "text": "為何不建議一次完成所有配方｜DCP與化學發泡劑具有溫度—時間累積效應。若在高剪下雙螺桿中與SEBS一起長時間混煉，可能提前分解、焦燒或消耗有效活性，使後續模壓時產氣與交聯時序失真。\nWhy completing the entire formulation in one step is not recommended | DCP and chemical blowing agents have cumulative temperature-time effects. Prolonged mixing with SEBS in a high-shear twin-screw extruder may cause premature decomposition or scorch, or consume effective activity, disrupting gas-generation and crosslinking timing during subsequent compression molding.",
                   "colSpan": 1
                 }
               ]
@@ -3527,7 +3527,7 @@
         ]
       },
       {
-        "title": "九、建議DOE：同時優化配方、分散與發泡窗口\nIX. Recommended DOE: Optimize the Formulation, Dispersion, and Foaming Window Together",
+        "title": "九、建議DOE：同時最佳化配方、分散與發泡視窗\nIX. Recommended DOE: Optimize the Formulation, Dispersion, and Foaming Window Together",
         "text": "",
         "blocks": [
           {
@@ -3585,7 +3585,7 @@
                   "colSpan": 1
                 },
                 {
-                  "text": "相尺寸、界面破壞、黏著\nDomain size, interfacial failure, and adhesion",
+                  "text": "相尺寸、介面破壞、黏著\nDomain size, interfacial failure, and adhesion",
                   "colSpan": 1
                 }
               ],
@@ -3659,7 +3659,7 @@
           },
           {
             "type": "list",
-            "text": "DCP的有效純度，而不是只比較商品添加重量。"
+            "text": "DCP的有效純度，而不是隻比較商品新增重量。"
           },
           {
             "type": "paragraph",
@@ -3743,7 +3743,7 @@
                   "colSpan": 1
                 },
                 {
-                  "text": "剪切／熱氧降解\nShear/thermo-oxidative degradation",
+                  "text": "剪下／熱氧降解\nShear/thermo-oxidative degradation",
                   "colSpan": 1
                 },
                 {
@@ -3771,7 +3771,7 @@
                   "colSpan": 1
                 },
                 {
-                  "text": "SEBS團聚或弱界面\nSEBS agglomeration or weak interfaces",
+                  "text": "SEBS團聚或弱介面\nSEBS agglomeration or weak interfaces",
                   "colSpan": 1
                 },
                 {
@@ -3812,7 +3812,7 @@
         ]
       },
       {
-        "title": "結論：SEBS的價值，不在「多一種料」，而在建立可控制的界面\nConclusion: The Value of SEBS Is Not Merely Adding Another Material, but Creating Controllable Interfaces",
+        "title": "結論：SEBS的價值，不在「多一種料」，而在建立可控制的介面\nConclusion: The Value of SEBS Is Not Merely Adding Another Material, but Creating Controllable Interfaces",
         "text": "",
         "blocks": [
           {
@@ -3825,7 +3825,7 @@
           },
           {
             "type": "paragraph",
-            "text": "然而，三元共混的成敗取決於相形態。SEBS如果沒有充分塑化與分散，只會變成凝膠粒、弱界面和發泡缺陷。雙螺桿預混煉的真正作用，是把相尺寸、界面更新、熱史與批次能量變成可量化的製程參數；再把DCP與發泡劑移到第二段低溫加入，才能同時兼顧安全、分散與交聯—產氣窗口。"
+            "text": "然而，三元共混的成敗取決於相形態。SEBS如果沒有充分塑化與分散，只會變成凝膠粒、弱介面和發泡缺陷。雙螺桿預混煉的真正作用，是把相尺寸、介面更新、熱史與批次能量變成可量化的製程引數；再把DCP與發泡劑移到第二段低溫加入，才能同時兼顧安全、分散與交聯—產氣視窗。"
           },
           {
             "type": "paragraph",
@@ -3836,7 +3836,7 @@
             "rows": [
               [
                 {
-                  "text": "研發決策一句話｜EVA／POE決定柔軟與回彈的底盤，SEBS負責補強界面與泡孔壁，雙螺桿則把材料潛力轉化為可重複的量產形態。\nR&D decision in one sentence | EVA/POE establishes the foundation of softness and resilience, SEBS reinforces interfaces and cell walls, and the twin-screw process converts the material's potential into a reproducible morphology for mass production.",
+                  "text": "研發決策一句話｜EVA／POE決定柔軟與回彈的底盤，SEBS負責補強介面與泡孔壁，雙螺桿則把材料潛力轉化為可重複的量產形態。\nR&D decision in one sentence | EVA/POE establishes the foundation of softness and resilience, SEBS reinforces interfaces and cell walls, and the twin-screw process converts the material's potential into a reproducible morphology for mass production.",
                   "colSpan": 1
                 }
               ]
@@ -3845,7 +3845,7 @@
         ]
       }
     ],
-    "sourceFile": "EVA添加POE與SEBS_雙螺桿分散及發泡配方技術指南.docx",
+    "sourceFile": "EVA新增POE與SEBS_雙螺桿分散及發泡配方技術指南.docx",
     "illustrativeCover": true
   },
   {
@@ -3893,7 +3893,7 @@
         "blocks": [
           {
             "type": "paragraph",
-            "text": "在 EVA 化學交聯發泡配方中，POE 經常被用來調整柔軟度、彈性感與低溫韌性。研發人員直覺上會選擇更軟的 POE，以較少添加量達到目標硬度；但原料硬度只是第一個條件。若材料在後續製程溫度下失去足夠的結晶支撐，即使剛脫模時尺寸正常，也可能在貼合、熱壓、烘箱或長時間高溫存放後發生二次收縮。"
+            "text": "在 EVA 化學交聯發泡配方中，POE 經常被用來調整柔軟度、彈性感與低溫韌性。研發人員直覺上會選擇更軟的 POE，以較少新增量達到目標硬度；但原料硬度只是第一個條件。若材料在後續製程溫度下失去足夠的結晶支撐，即使剛脫模時尺寸正常，也可能在貼合、熱壓、烘箱或長時間高溫存放後發生二次收縮。"
           },
           {
             "type": "paragraph",
@@ -3918,7 +3918,7 @@
         "blocks": [
           {
             "type": "paragraph",
-            "text": "發泡成品不是完全靜止的結構。材料內部同時存在泡孔壓力、分子取向、交聯網絡、結晶區與冷卻造成的殘留應力。當二次加工溫度接近或超過 POE 的主要熔融區間時，原本提供物理支撐的晶區會逐步減弱，分子鏈開始鬆弛，泡孔壁也更容易重新排列。"
+            "text": "發泡成品不是完全靜止的結構。材料內部同時存在泡孔壓力、分子取向、交聯網路、結晶區與冷卻造成的殘留應力。當二次加工溫度接近或超過 POE 的主要熔融區間時，原本提供物理支撐的晶區會逐步減弱，分子鏈開始鬆弛，泡孔壁也更容易重新排列。"
           },
           {
             "type": "paragraph",
@@ -3963,7 +3963,7 @@
           },
           {
             "type": "list",
-            "text": "交聯不足或不均：若 DCP 網絡無法有效固定尺寸，熱收縮會更明顯。"
+            "text": "交聯不足或不均：若 DCP 網路無法有效固定尺寸，熱收縮會更明顯。"
           },
           {
             "type": "list",
@@ -4009,7 +4009,7 @@
             "rows": [
               [
                 {
-                  "text": "比較項目\nComparison Item",
+                  "text": "比較專案\nComparison Item",
                   "colSpan": 1
                 },
                 {
@@ -4039,7 +4039,7 @@
                   "colSpan": 1
                 },
                 {
-                  "text": "較低添加量或相同比例下，有機會取得更柔軟觸感\nAt a lower addition level or the same ratio, there may be an opportunity to achieve a softer feel.",
+                  "text": "較低新增量或相同比例下，有機會取得更柔軟觸感\nAt a lower addition level or the same ratio, there may be an opportunity to achieve a softer feel.",
                   "colSpan": 1
                 }
               ],
@@ -4111,7 +4111,7 @@
                   "colSpan": 1
                 },
                 {
-                  "text": "仍須由實際 DCP 發泡窗口與量產驗證確認\nStill requires confirmation through the actual DCP foaming window and mass-production validation.",
+                  "text": "仍須由實際 DCP 發泡視窗與量產驗證確認\nStill requires confirmation through the actual DCP foaming window and mass-production validation.",
                   "colSpan": 1
                 }
               ]
@@ -4133,7 +4133,7 @@
           },
           {
             "type": "paragraph",
-            "text": "但熔點不能單獨等同耐熱溫度。DSC 可能呈現寬廣或多重熔融峰，實際尺寸穩定還會受到 POE 添加比例、EVA 的 VA 含量、DCP 交聯密度、發泡倍率、泡孔壁厚度、冷卻條件及受熱時間共同影響。因此，「64°C」應被視為選材優勢與驗證起點，而不是所有成品都能安全承受 64°C 的保證。"
+            "text": "但熔點不能單獨等同耐熱溫度。DSC 可能呈現寬廣或多重熔融峰，實際尺寸穩定還會受到 POE 新增比例、EVA 的 VA 含量、DCP 交聯密度、發泡倍率、泡孔壁厚度、冷卻條件及受熱時間共同影響。因此，「64°C」應被視為選材優勢與驗證起點，而不是所有成品都能安全承受 64°C 的保證。"
           },
           {
             "type": "paragraph",
@@ -4184,7 +4184,7 @@
           },
           {
             "type": "paragraph",
-            "text": "POE 對 EVA 的價值通常不只是降硬，也包括柔韌、低溫性能與能量回復。IUS-4065 若能在較低硬度下維持適當分子網絡，可用於需要舒適性與回彈的鞋墊、中底、護具與緩衝材料。"
+            "text": "POE 對 EVA 的價值通常不只是降硬，也包括柔韌、低溫效能與能量回復。IUS-4065 若能在較低硬度下維持適當分子網路，可用於需要舒適性與回彈的鞋墊、中底、護具與緩衝材料。"
           },
           {
             "type": "paragraph",
@@ -4216,7 +4216,7 @@
           },
           {
             "type": "paragraph",
-            "text": "如果現有不良主要來自熱歷史敏感與尺寸回縮，材料窗口改善可能轉化為更高良率、更少整形與返工。但效益必須用同模具、同倍率、同後加工條件進行 A/B 試驗。"
+            "text": "如果現有不良主要來自熱歷史敏感與尺寸回縮，材料視窗改善可能轉化為更高良率、更少整形與返工。但效益必須用同模具、同倍率、同後加工條件進行 A/B 試驗。"
           },
           {
             "type": "paragraph",
@@ -4241,7 +4241,7 @@
             "rows": [
               [
                 {
-                  "text": "需要重校正的項目\nItems Requiring Recalibration",
+                  "text": "需要重校正的專案\nItems Requiring Recalibration",
                   "colSpan": 1
                 },
                 {
@@ -4255,7 +4255,7 @@
               ],
               [
                 {
-                  "text": "DCP 有效添加量\nEffective DCP Addition Level",
+                  "text": "DCP 有效新增量\nEffective DCP Addition Level",
                   "colSpan": 1
                 },
                 {
@@ -4291,7 +4291,7 @@
                   "colSpan": 1
                 },
                 {
-                  "text": "記錄實際料溫，而不只記錄設備設定\nRecord the actual material temperature, not only the equipment setting.",
+                  "text": "記錄實際料溫，而不只記錄裝置設定\nRecord the actual material temperature, not only the equipment setting.",
                   "colSpan": 1
                 }
               ],
@@ -4305,7 +4305,7 @@
                   "colSpan": 1
                 },
                 {
-                  "text": "以中心溫度及尺寸穩定建立窗口\nEstablish the process window based on core temperature and dimensional stability.",
+                  "text": "以中心溫度及尺寸穩定建立視窗\nEstablish the process window based on core temperature and dimensional stability.",
                   "colSpan": 1
                 }
               ],
@@ -4333,7 +4333,7 @@
         "blocks": [
           {
             "type": "paragraph",
-            "text": "要證明 IUS-4065 的價值，試驗必須模擬客戶真正的二次加工與使用條件。建議至少設置原配方對照、等比例替換及目標硬度最佳化三組，並控制成品密度。"
+            "text": "要證明 IUS-4065 的價值，試驗必須模擬客戶真正的二次加工與使用條件。建議至少設定原配方對照、等比例替換及目標硬度最佳化三組，並控製成品密度。"
           },
           {
             "type": "paragraph",
@@ -4348,7 +4348,7 @@
                   "colSpan": 1
                 },
                 {
-                  "text": "測試項目\nTest Items",
+                  "text": "測試專案\nTest Items",
                   "colSpan": 1
                 },
                 {
@@ -4414,7 +4414,7 @@
               ],
               [
                 {
-                  "text": "力學性能",
+                  "text": "力學效能",
                   "colSpan": 1
                 },
                 {
@@ -4451,7 +4451,7 @@
         ]
       },
       {
-        "title": "八、適合優先導入的產品\nVIII. Products Suitable for Priority Adoption",
+        "title": "八、適合優先匯入的產品\nVIII. Products Suitable for Priority Adoption",
         "text": "",
         "blocks": [
           {
@@ -4502,7 +4502,7 @@
         "blocks": [
           {
             "type": "paragraph",
-            "text": "EVA 添加 POE 的傳統邏輯，是利用軟質彈性體降低硬度並提高回彈；但當 POE 的熔融區間太低，泡棉在貼合或二次加熱時可能失去晶區支撐，使殘留應力、泡孔收縮與尺寸變形被放大。這也是許多配方「剛開模很好，後加工卻不穩」的根本原因之一。"
+            "text": "EVA 新增 POE 的傳統邏輯，是利用軟質彈性體降低硬度並提高回彈；但當 POE 的熔融區間太低，泡棉在貼合或二次加熱時可能失去晶區支撐，使殘留應力、泡孔收縮與尺寸變形被放大。這也是許多配方「剛開模很好，後加工卻不穩」的根本原因之一。"
           },
           {
             "type": "paragraph",
@@ -4510,7 +4510,7 @@
           },
           {
             "type": "paragraph",
-            "text": "IUS-4065 的技術定位，是以約 Shore A 40 的超軟硬度搭配約 64°C 的較高熔點，嘗試把柔軟度、回彈與尺寸穩定性放在同一個材料平台上。對研發端而言，它最值得驗證的不是單一硬度數據，而是能否在相同密度與性能要求下，降低二次收縮、擴大加工窗口並提高量產良率。"
+            "text": "IUS-4065 的技術定位，是以約 Shore A 40 的超軟硬度搭配約 64°C 的較高熔點，嘗試把柔軟度、回彈與尺寸穩定性放在同一個材料平臺上。對研發端而言，它最值得驗證的不是單一硬度資料，而是能否在相同密度與效能要求下，降低二次收縮、擴大加工視窗並提高量產良率。"
           },
           {
             "type": "paragraph",
@@ -4538,7 +4538,7 @@
             "rows": [
               [
                 {
-                  "text": "項目\nItem",
+                  "text": "專案\nItem",
                   "colSpan": 1
                 },
                 {
@@ -4562,7 +4562,7 @@
                   "colSpan": 1
                 },
                 {
-                  "text": "解析 EVA 添加超軟 POE 後的二次收縮原因，並說明 IUS-4065 如何以 Shore A 40 與約 64°C 熔點，兼顧低硬度、回彈及尺寸穩定。\nExplains the causes of secondary shrinkage after adding ultra-soft POE to EVA, and how IUS-4065 uses Shore A 40 and a melting point of approximately 64°C to balance low hardness, resilience, and dimensional stability.",
+                  "text": "解析 EVA 新增超軟 POE 後的二次收縮原因，並說明 IUS-4065 如何以 Shore A 40 與約 64°C 熔點，兼顧低硬度、回彈及尺寸穩定。\nExplains the causes of secondary shrinkage after adding ultra-soft POE to EVA, and how IUS-4065 uses Shore A 40 and a melting point of approximately 64°C to balance low hardness, resilience, and dimensional stability.",
                   "colSpan": 1
                 }
               ],
@@ -4590,7 +4590,7 @@
           },
           {
             "type": "paragraph",
-            "text": "資料與技術聲明｜IUS-4065、DF 640 與 ENGAGE 8842 的硬度、熔點及定性比較取自使用者提供的 INNOARK 圖像資料；正式對外發布前，建議以供應商最新版 TDS、DSC 報告及自有配方實測數據覆核。"
+            "text": "資料與技術宣告｜IUS-4065、DF 640 與 ENGAGE 8842 的硬度、熔點及定性比較取自使用者提供的 INNOARK 影象資料；正式對外發布前，建議以供應商最新版 TDS、DSC 報告及自有配方實測資料覆核。"
           },
           {
             "type": "paragraph",
