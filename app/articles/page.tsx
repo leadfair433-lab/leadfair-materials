@@ -1,4 +1,5 @@
 import { articleAssetPath, blogArticles } from "../Blog";
+import LanguageSwitcher from "../LanguageSwitcher";
 import "./articles.css";
 
 export const metadata = { title: "材料文章汇总 | 材料洞察与应用指南", description: "汇总 TPE 材料选型、发泡开发与成型验证的应用文章。" };
@@ -6,7 +7,7 @@ export const metadata = { title: "材料文章汇总 | 材料洞察与应用指�
 export default function ArticlesPage() {
   const featured = blogArticles[0];
   return <main className="article-hub">
-    <nav className="article-hub-nav shell" aria-label="文章中心导航"><a href="/#blog">← 返回首页</a><span>ADVANCED MATERIALS</span><a href="/#product">查看材料牌号 ↗</a></nav>
+    <nav className="article-hub-nav shell" aria-label="文章中心导航"><a href="/#blog">← 返回首页</a><span>ADVANCED MATERIALS</span><div className="localized-nav-actions"><LanguageSwitcher compact/><a href="/#product">查看材料牌号 ↗</a></div></nav>
     <div className="shell">
       <header className="article-hub-heading"><span>MATERIAL INSIGHTS / 文章中心</span><h1>材料知识，<br />从应用出发。</h1><p>了解材料选型、发泡开发与成型验证，<br />为下一步产品开发找到参考。</p></header>
       <section className="article-hub-feature" aria-label="精选文章"><div><span>FEATURED / 精选阅读</span><h2><a href={`/blog/${featured.slug}`}>{featured.title}</a></h2><p>{featured.summary}</p><a className="article-hub-button" href={`/blog/${featured.slug}`}>阅读全文 ↗</a></div><a className="article-hub-cover" href={`/blog/${featured.slug}`} aria-label={`阅读：${featured.title}`}><img src={articleAssetPath(featured.image)} alt={featured.alt} width="1536" height="1024" /></a></section>

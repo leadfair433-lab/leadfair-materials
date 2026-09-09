@@ -3,6 +3,7 @@ import { articleAssetPath, blogArticles, type ArticleBlock } from "../../Blog";
 import "../article.css";
 import ArticleFrame, { ArticleBackButton } from "../ArticleFrame";
 import { ArticleShare, ArticleContact, ArticlePrint } from "../ArticleActions";
+import LanguageSwitcher from "../../LanguageSwitcher";
 
 type Props = { params: Promise<{ slug: string }> };
 
@@ -32,7 +33,7 @@ export default async function ArticlePage({ params }: Props) {
 
   return <ArticleFrame>
     <article className="journal-sheet">
-      <header className="journal-toolbar"><ArticleBackButton /><span>MATERIAL JOURNAL</span><div className="journal-toolbar-actions"><ArticlePrint /><a className="journal-contact" href="/articles">更多文章 ↗</a></div></header>
+      <header className="journal-toolbar"><ArticleBackButton /><span>MATERIAL JOURNAL</span><div className="journal-toolbar-actions"><LanguageSwitcher compact/><ArticlePrint /><a className="journal-contact" href="/articles">更多文章 ↗</a></div></header>
       <div className="journal-content">
         <div className="journal-hero">
           <div><span className="journal-category">{article.category}</span><h1>{article.title}</h1>{article.englishTitle && <p>{article.englishTitle}</p>}<p>{article.summary}</p><span className="journal-series">材料洞察 / 应用指南{article.illustrativeCover && " · 主圖為 AI 情境示意，非實測照片"}</span></div>

@@ -1,6 +1,7 @@
 "use client";
 
 import { useParams } from "next/navigation";
+import LanguageSwitcher from "../../LanguageSwitcher";
 
 const products = {
   "ius-4065": { name: "IUS-4065", title: "超柔软 · 更高熔点 · 更稳定加工", image: "/images/ius-4065-white-pellets-v4-scattered.png", description: "专为兼顾卓越柔软性与更高耐热性能而研发，适用于对舒适性、尺寸稳定性与制造可靠性有更高要求的产品。", specs: [["硬度","Shore A 40"],["熔点","≈ 64°C"],["热收缩性","优异"],["尺寸稳定性","优异"],["加工稳定性","优异"]] },
@@ -18,7 +19,7 @@ export default function ProductPage() {
   const product = products[key] || products["ius-4065"];
   const isLf = key === "lf-et78a";
   return <main className="product-page">
-    <header className="top shell"><a className="logo" href="/"><i>R</i><span>原料网站<small>ADVANCED MATERIALS</small></span></a><a className="product-back" href="/#materials">返回首页 ↗</a></header>
+    <header className="top shell"><a className="logo" href="/"><i>R</i><span>原料网站<small>ADVANCED MATERIALS</small></span></a><div className="localized-nav-actions"><LanguageSwitcher compact/><a className="product-back" href="/#materials">返回首页 ↗</a></div></header>
     <nav className="product-index shell" aria-label="产品牌号导航"><span>PRODUCT GRADES</span><div>{slugs.map(slug=><a className={slug===key?"active":""} href={`/products/${slug}`} key={slug}>{products[slug].name}</a>)}</div></nav>
     <section className={`product shell ${isLf?"product-lf":""}`}>
       <div className="product-head"><div className="product-visual"><div className="product-photo"><img src={product.image} alt={`${product.name} 产品材料`}/></div><span>{product.specs[0]?.[1] || "TPE MATERIAL"}</span><small>{product.name} / PRODUCT GRADE</small></div><div className="product-copy"><span className="eyebrow blue">FEATURED GRADE · {product.name}</span><h2>{product.name}<br/>{product.title}</h2><p>{product.description}</p>{product.specs.length>0&&<div className="specs">{product.specs.map(x=><div key={x[0]}><small>{x[0]}</small><b>{x[1]}</b></div>)}</div>}<a className="product-action" href="/#inquiry">获取样品 ↗</a></div></div>
