@@ -302,3 +302,27 @@ body:has(.product-switch-card:not(#product):target) #product { display: none; }
 @media (max-width: 900px) {
   .factory-photo img { height: auto; object-position: center; transform: none; }
 }
+
+/* Vietnamese copy is generally longer than Chinese. Let comparison cards grow
+   with their content instead of clipping text inside Chinese-sized boxes. */
+body[data-locale="vi"] .product,
+body[data-locale="vi"] .product * { overflow-wrap: break-word; }
+
+@media (min-width: 901px) {
+  body[data-locale="vi"] .product .pain-compare { align-items: stretch; }
+  body[data-locale="vi"] .product .pain-compare ul {
+    height: auto;
+    min-height: 430px;
+    overflow: visible;
+  }
+  body[data-locale="vi"] .product .pain-compare li {
+    padding: 9px 0;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+  body[data-locale="vi"] .product .heat-test { min-height: 500px; }
+  body[data-locale="vi"] .product .heat-test > div {
+    height: auto;
+    min-height: 500px;
+  }
+}
