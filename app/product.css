@@ -312,7 +312,7 @@ body[data-locale="vi"] .product * { overflow-wrap: break-word; }
   body[data-locale="vi"] .product .pain-compare { align-items: stretch; }
   body[data-locale="vi"] .product .pain-compare ul {
     height: auto;
-    min-height: 430px;
+    min-height: 600px;
     overflow: visible;
   }
   body[data-locale="vi"] .product .pain-compare li {
@@ -320,9 +320,9 @@ body[data-locale="vi"] .product * { overflow-wrap: break-word; }
     font-size: 14px;
     line-height: 1.6;
   }
-  body[data-locale="vi"] .product .heat-test { min-height: 500px; }
+  body[data-locale="vi"] .product .heat-test { min-height: 680px; }
   body[data-locale="vi"] .product .heat-test > div {
     height: auto;
-    min-height: 500px;
+    min-height: 680px;
   }
 }
