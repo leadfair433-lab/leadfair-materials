@@ -3,5 +3,5 @@
 3:I[3258,[],"OutletBoundary"]
 4:"$Sreact.suspense"
 :HL["/leadfair-materials/_next/static/css/a9475c26c92a3ecb.css","style"]
-0:{"rsc":["$","$1","c",{"children":[["$","$L2",null,{}],[["$","link","0",{"rel":"stylesheet","href":"/leadfair-materials/_next/static/css/a9475c26c92a3ecb.css","precedence":"next"}]],["$","$L3",null,{"children":["$","$4",null,{"name":"Next.MetadataOutlet","children":"$@5"}]}]]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"UkL44ckQsStlkH_SL8ExT"}
+0:{"rsc":["$","$1","c",{"children":[["$","$L2",null,{}],[["$","link","0",{"rel":"stylesheet","href":"/leadfair-materials/_next/static/css/a9475c26c92a3ecb.css","precedence":"next"}]],["$","$L3",null,{"children":["$","$4",null,{"name":"Next.MetadataOutlet","children":"$@5"}]}]]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"5MWMQFjBgwN8ZuS8vaC_c"}
 5:null
