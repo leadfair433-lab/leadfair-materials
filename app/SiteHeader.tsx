@@ -16,7 +16,7 @@ export default function SiteHeader() {
           </div>
         </div>
         <a href="/honors/">企業榮譽</a>
-        <a href="/#product">產品</a>
+        <a href="/products/">產品</a>
         <a href="/articles/">Blog</a>
         <a href="/contact/">聯絡我們</a>
       </nav>
