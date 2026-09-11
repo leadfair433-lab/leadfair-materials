@@ -16,10 +16,7 @@ export default function SiteHeader() {
           </div>
         </div>
         <a href="/honors/">企業榮譽</a>
-        <a href="/#materials">材料解決方案</a>
-        <a href="/#rd">客製研發</a>
-        <a href="/#industries">應用產業</a>
-        <a href="/#factory">工廠實力</a>
+        <a href="/#product">產品</a>
         <a href="/articles/">Blog</a>
         <a href="/contact/">聯絡我們</a>
       </nav>
