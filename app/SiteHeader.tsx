@@ -1,11 +1,12 @@
 "use client";
 
 import LanguageSwitcher from "./LanguageSwitcher";
+import BrandLogo from "./BrandLogo";
 
 export default function SiteHeader() {
   return <>
     <header className="top shell site-header">
-      <a className="logo brand-logo-link" href="/#top" aria-label="麗暉塑膠首頁"><img className="brand-logo" src="/images/leadfair-logo.png" alt="麗暉塑膠"/></a>
+      <a className="logo brand-logo-link" href="/#top" aria-label="Found Fair 首頁"><BrandLogo/></a>
       <nav aria-label="主要導航">
         <a href="/products/">產品</a>
         <a href="/articles/">Blog</a>

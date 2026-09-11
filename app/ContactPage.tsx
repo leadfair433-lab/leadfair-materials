@@ -1,6 +1,7 @@
 "use client";
 
 import GlobalInquiryFooter from "./GlobalInquiryFooter";
+import SiteFooter from "./SiteFooter";
 
 const needs = [
   ["01", "材料選型", "依應用、硬度、密度、耐熱與加工方式，快速縮小材料選擇範圍。"],
@@ -16,6 +17,6 @@ export default function ContactPage(){
     <section className="contact-location shell" aria-labelledby="contact-location-title"><div className="contact-location-copy"><span>OUR LOCATION</span><h2 id="contact-location-title">公司位置</h2><h3>臺灣峰暉塑膠工業股份有限公司</h3><p><small>地址</small>彰化縣社頭鄉永興路30之35號</p><a className="map-direction" href="https://www.google.com/maps/dir/?api=1&destination=23.918942%2C120.580882" target="_blank" rel="noreferrer">使用 Google 地圖導航 <b>↗</b></a></div><a className="contact-map" href="https://www.google.com/maps/dir/?api=1&destination=23.918942%2C120.580882" target="_blank" rel="noreferrer" aria-label="在 Google 地圖中導航至臺灣峰暉塑膠工業股份有限公司"><img src="/images/company-location-map.png" alt="臺灣峰暉塑膠工業股份有限公司所在地圖"/><span className="map-pin" aria-label="公司位置"><i>●</i></span><div className="map-location-card"><i aria-hidden="true">●</i><div><b>臺灣峰暉塑膠工業股份有限公司</b><span>彰化縣社頭鄉永興路30之35號</span></div></div><strong className="map-open">開啟 Google 地圖 ↗</strong></a></section>
     <GlobalInquiryFooter showFooter={false}/>
     <section className="contact-social" id="social-qr"><div className="shell contact-social-grid"><div><span>STAY CONNECTED</span><h2>直接聯絡我們</h2><p>可透過 WhatsApp、WeChat、電話或電子郵件與材料團隊聯絡。</p><dl className="contact-detail-list"><div><dt>地址</dt><dd>彰化縣社頭鄉永興路30之35號</dd></div><div><dt>手機電話</dt><dd><a href="tel:+8613928736388">+86-139-2873-6388</a></dd></div><div><dt>電子郵箱</dt><dd><a href="mailto:joe.chen@ffsystem.com">joe.chen@ffsystem.com</a></dd></div><div><dt>座機</dt><dd><a href="tel:+8869250938852">+886-0925-093-8852</a></dd></div></dl><div className="social-contact-buttons"><a href="https://wa.me/8613928736388" target="_blank" rel="noreferrer"><img src="/icons/whatsapp.svg" alt=""/>WhatsApp</a><a href="mailto:joe.chen@ffsystem.com"><img src="/icons/mail.svg" alt=""/>Email</a><a href="tel:+8613928736388"><img src="/icons/phone.svg" alt=""/>Phone</a><a href="#social-qr"><img src="/icons/wechat.svg" alt=""/>WeChat</a></div></div><figure><img src="/images/contact-qr-whatsapp-wechat.png" alt="WhatsApp 與 WeChat 聯絡二維碼"/><figcaption>掃描二維碼，立即與我們聯絡</figcaption></figure></div></section>
-    <footer className="footer contact-footer shell"><a className="logo brand-logo-link" href="/#top" aria-label="麗暉塑膠首頁"><img className="brand-logo" src="/images/leadfair-logo.png" alt="麗暉塑膠"/></a><p>Advanced thermoplastic material solutions for global manufacturing.</p><div className="footer-socials"><a href="https://wa.me/8613928736388" target="_blank" rel="noreferrer" aria-label="WhatsApp"><img src="/icons/whatsapp.svg" alt=""/></a><a href="#social-qr" aria-label="WeChat"><img src="/icons/wechat.svg" alt=""/></a><a href="mailto:joe.chen@ffsystem.com" aria-label="Email"><img src="/icons/mail.svg" alt=""/></a><a href="tel:+8613928736388" aria-label="Phone"><img src="/icons/phone.svg" alt=""/></a></div><small>© 2026 麗暉塑膠. All rights reserved.</small></footer>
+    <SiteFooter/>
   </>;
 }
