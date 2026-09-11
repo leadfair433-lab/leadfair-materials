@@ -1,5 +1,5 @@
-:HL["/leadfair-materials/_next/static/css/bbe6fdf5947ccc53.css","style"]
+:HL["/leadfair-materials/_next/static/css/3f47c646720bafaa.css","style"]
 :HL["/leadfair-materials/_next/static/css/3c3ed7f378b8eead.css","style"]
 :HL["/leadfair-materials/_next/static/css/8f6e71e8ff2d5d63.css","style"]
-:HL["/images/articles/chemical-supercritical-cover.png","image"]
-0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"articles","param":null,"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}},"staleTime":300,"buildId":"9aBTfWkJXMC9Q12JUn7_J"}
+:HL["/leadfair-materials/images/articles/chemical-supercritical-cover.png","image"]
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"articles","param":null,"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}},"staleTime":300,"buildId":"V5tnMIC0lQ87nc1FQdt62"}

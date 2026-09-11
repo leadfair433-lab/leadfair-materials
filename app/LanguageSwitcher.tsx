@@ -15,7 +15,7 @@ const localeLabels: Record<SiteLocale, string> = {
 
 const translationOverrides: Record<"en" | "vi", Record<string, string>> = {
   en: {
-    "原料網站": "Lead Fair Materials", "材料解決方案": "Material Solutions", "定製研發": "Custom R&D", "應用行業": "Applications", "工廠實力": "Manufacturing", "聯絡工程師 ↗": "Talk to an Engineer ↗",
+    "原料網站": "Lead Fair Materials", "材料解決方案": "Material Solutions", "定製研發": "Custom R&D", "客製研發": "Custom R&D", "應用行業": "Applications", "應用產業": "Applications", "工廠實力": "Manufacturing", "聯絡工程師 ↗": "Talk to an Engineer ↗",
     "創新材料，": "Advanced materials,", "驅動產品": "engineered to move products", "進化。": "forward.", "面向全球品牌與製造商，提供 TPE 熱塑性彈性體的研發、改性、測試與規模化生產。": "TPE research, modification, testing and scalable manufacturing for global brands and manufacturers.", "探索材料方案": "Explore Materials", "申請免費樣品": "Request a Sample",
     "製造經驗": "Manufacturing experience", "專業研發團隊": "Specialist R&D team", "材料工程師團隊": "Materials engineering team", "定製開發": "Custom development", "全球合作伙伴": "Global partners", "服務國家和地區": "Countries and regions served",
     "為效能而生的": "Advanced material systems", "先進材料體系": "built for performance", "鞋材": "Footwear", "中底": "Midsoles", "鞋墊": "Insoles", "運動護具": "Sports protection",
@@ -26,7 +26,7 @@ const translationOverrides: Record<"en" | "vi", Record<string, string>> = {
     "返回首頁": "Back to Home", "檢視材料牌號 ↗": "View Material Grades ↗", "材料知識，": "Material knowledge,", "從應用出發。": "grounded in applications.", "全部文章": "All Articles", "精選閱讀": "Featured Reading", "返回上一頁": "Back", "儲存文章 PDF ↓": "Save Article PDF ↓", "返回全部文章 ↗": "Back to All Articles ↗", "文章大綱（點選跳轉）": "Article outline (select to jump)", "官方對接": "Contact Us", "提交商務詢盤": "Submit an Inquiry"
   },
   vi: {
-    "原料網站": "Vật liệu Lead Fair", "材料解決方案": "Giải pháp vật liệu", "定製研發": "R&D tùy chỉnh", "應用行業": "Ứng dụng", "工廠實力": "Năng lực sản xuất", "聯絡工程師 ↗": "Liên hệ kỹ sư ↗",
+    "原料網站": "Vật liệu Lead Fair", "材料解決方案": "Giải pháp vật liệu", "定製研發": "R&D tùy chỉnh", "客製研發": "R&D tùy chỉnh", "應用行業": "Ứng dụng", "應用產業": "Ứng dụng", "工廠實力": "Năng lực sản xuất", "聯絡工程師 ↗": "Liên hệ kỹ sư ↗",
     "創新材料，": "Vật liệu tiên tiến,", "驅動產品": "thúc đẩy sản phẩm", "進化。": "phát triển.", "面向全球品牌與製造商，提供 TPE 熱塑性彈性體的研發、改性、測試與規模化生產。": "Nghiên cứu, cải tiến, thử nghiệm và sản xuất TPE quy mô lớn cho các thương hiệu và nhà sản xuất toàn cầu.", "探索材料方案": "Khám phá vật liệu", "申請免費樣品": "Yêu cầu mẫu",
     "製造經驗": "Kinh nghiệm sản xuất", "專業研發團隊": "Đội ngũ R&D chuyên môn", "材料工程師團隊": "Đội ngũ kỹ sư vật liệu", "定製開發": "Phát triển tùy chỉnh", "全球合作伙伴": "Đối tác toàn cầu", "服務國家和地區": "Quốc gia và khu vực phục vụ",
     "為效能而生的": "Hệ vật liệu tiên tiến", "先進材料體系": "được phát triển vì hiệu suất", "鞋材": "Vật liệu giày", "中底": "Đế giữa", "鞋墊": "Lót giày", "運動護具": "Đồ bảo hộ thể thao",
@@ -44,7 +44,7 @@ const translations: Record<"en" | "vi", Record<string, string>> = {
 };
 
 const traditionalPhrases: Record<string, string> = {
-  "材料解決方案":"材料解決方案", "定製研發":"客製研發", "應用行業":"應用產業", "工廠實力":"工廠實力", "聯絡工程師 ↗":"聯絡工程師 ↗", "創新材料，":"創新材料，", "驅動產品":"驅動產品", "進化。":"進化。", "申請免費樣品":"申請免費樣品", "選擇產品型號":"選擇產品型號", "點選型號，檢視下方產品詳情":"點選型號，檢視下方產品詳情", "更多文章":"更多文章", "閱讀全文":"閱讀全文", "返回首頁":"返回首頁", "全部文章":"全部文章", "返回上一頁":"返回上一頁", "返回全部文章 ↗":"返回全部文章 ↗", "文章大綱（點選跳轉）":"文章大綱（點選跳轉）", "提交商務詢盤":"提交商務詢盤"
+  "材料解決方案":"材料解決方案", "客製研發":"客製研發", "應用產業":"應用產業", "工廠實力":"工廠實力", "聯絡工程師 ↗":"聯絡工程師 ↗", "創新材料，":"創新材料，", "驅動產品":"驅動產品", "進化。":"進化。", "申請免費樣品":"申請免費樣品", "選擇產品型號":"選擇產品型號", "點選型號，檢視下方產品詳情":"點選型號，檢視下方產品詳情", "更多文章":"更多文章", "閱讀全文":"閱讀全文", "返回首頁":"返回首頁", "全部文章":"全部文章", "返回上一頁":"返回上一頁", "返回全部文章 ↗":"返回全部文章 ↗", "文章大綱（點選跳轉）":"文章大綱（點選跳轉）", "提交商務詢盤":"提交商務詢盤"
 };
 
 function translateText(value: string, locale: SiteLocale) {

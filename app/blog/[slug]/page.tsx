@@ -4,6 +4,8 @@ import "../article.css";
 import ArticleFrame, { ArticleBackButton } from "../ArticleFrame";
 import { ArticleShare, ArticleContact, ArticlePrint } from "../ArticleActions";
 import LanguageSwitcher from "../../LanguageSwitcher";
+import SiteHeader from "../../SiteHeader";
+import GlobalInquiryFooter from "../../GlobalInquiryFooter";
 
 type Props = { params: Promise<{ slug: string }> };
 
@@ -31,7 +33,7 @@ export default async function ArticlePage({ params }: Props) {
   const article = blogArticles.find(item => item.slug === slug);
   if (!article) notFound();
 
-  return <ArticleFrame>
+  return <><SiteHeader/><ArticleFrame>
     <article className="journal-sheet">
       <header className="journal-toolbar"><ArticleBackButton /><span>MATERIAL JOURNAL</span><div className="journal-toolbar-actions"><LanguageSwitcher compact/><ArticlePrint /><a className="journal-contact" href="/articles">更多文章 ↗</a></div></header>
       <div className="journal-content">
@@ -45,5 +47,5 @@ export default async function ArticlePage({ params }: Props) {
         </div>
       </div>
     </article>
-  </ArticleFrame>;
+  </ArticleFrame><GlobalInquiryFooter /></>;
 }

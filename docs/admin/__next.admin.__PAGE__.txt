@@ -1,7 +1,7 @@
 1:"$Sreact.fragment"
-2:I[9562,["698","static/chunks/app/admin/page-9e2a500e301de226.js"],"default"]
+2:I[9562,["698","static/chunks/app/admin/page-0d3492f2c046d27f.js"],"default"]
 3:I[3258,[],"OutletBoundary"]
 4:"$Sreact.suspense"
 :HL["/leadfair-materials/_next/static/css/a9475c26c92a3ecb.css","style"]
-0:{"rsc":["$","$1","c",{"children":[["$","$L2",null,{}],[["$","link","0",{"rel":"stylesheet","href":"/leadfair-materials/_next/static/css/a9475c26c92a3ecb.css","precedence":"next"}]],["$","$L3",null,{"children":["$","$4",null,{"name":"Next.MetadataOutlet","children":"$@5"}]}]]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"9aBTfWkJXMC9Q12JUn7_J"}
+0:{"rsc":["$","$1","c",{"children":[["$","$L2",null,{}],[["$","link","0",{"rel":"stylesheet","href":"/leadfair-materials/_next/static/css/a9475c26c92a3ecb.css","precedence":"next"}]],["$","$L3",null,{"children":["$","$4",null,{"name":"Next.MetadataOutlet","children":"$@5"}]}]]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"V5tnMIC0lQ87nc1FQdt62"}
 5:null
