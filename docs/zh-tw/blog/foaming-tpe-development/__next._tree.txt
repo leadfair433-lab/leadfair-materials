@@ -1,5 +1,5 @@
-:HL["/leadfair-materials/_next/static/css/61273cc4ce4eb6ac.css","style"]
+:HL["/leadfair-materials/_next/static/css/1164a4b5a60bab65.css","style"]
 :HL["/leadfair-materials/_next/static/css/3c3ed7f378b8eead.css","style"]
 :HL["/leadfair-materials/_next/static/css/a59973b0c8f90a2a.css","style"]
 :HL["/leadfair-materials/images/blog-foam-v2.png","image"]
-0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"locale","param":{"type":"d","key":"zh-tw","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"blog","param":null,"prefetchHints":0,"slots":{"children":{"name":"slug","param":{"type":"d","key":"foaming-tpe-development","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}}}},"staleTime":300,"buildId":"zpBIzi-7_yDB5ukeOvTK_"}
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"locale","param":{"type":"d","key":"zh-tw","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"blog","param":null,"prefetchHints":0,"slots":{"children":{"name":"slug","param":{"type":"d","key":"foaming-tpe-development","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}}}},"staleTime":300,"buildId":"T6bQcLo4IjlXIE_zNAkqj"}
