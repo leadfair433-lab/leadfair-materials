@@ -23,12 +23,13 @@ export default function SiteHeader() {
       </nav>
       <div className="tools"><LanguageSwitcher/><a className="contact" href="/contact/#inquiry">聯絡工程師 ↗</a></div>
     </header>
-    <div className="site-header-spacer" aria-hidden="true" />
+    <div className="site-header-spacer" id="page-top" aria-hidden="true" />
     <aside className="floating-contacts" aria-label="快速聯絡方式">
       <a href="https://wa.me/8613928736388" target="_blank" rel="noreferrer" aria-label="WhatsApp 聯絡" title="WhatsApp"><img src="/icons/whatsapp.svg" alt=""/></a>
       <a href="/contact/#social-qr" aria-label="查看微信二維碼" title="WeChat"><img src="/icons/wechat.svg" alt=""/></a>
       <a href="mailto:joe.chen@ffsystem.com" aria-label="電子郵件聯絡" title="Email"><img src="/icons/mail.svg" alt=""/></a>
       <a href="tel:+8613928736388" aria-label="電話聯絡" title="Phone"><img src="/icons/phone.svg" alt=""/></a>
+      <a className="back-to-top" href="#page-top" aria-label="返回頁首" title="返回頁首"><span aria-hidden="true">⌃</span></a>
     </aside>
   </>;
 }

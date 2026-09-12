@@ -24,6 +24,12 @@ const history = [
 
 const ffItems = ["原料處理設備", "材料混煉設備", "擠出及成型設備", "實驗生產環境", "材料測試儀器"];
 const lfItems = ["實驗操作台", "材料檢測設備", "力學性能測試設備", "恆溫及環境測試設備", "綜合分析儀器"];
+const labImages = [
+  ["/images/company/generated/ff-laboratory-grid.png", "lab-quadrant-a", "原料處理與混煉設備"],
+  ["/images/company/generated/ff-laboratory-grid.png", "lab-quadrant-b", "擠出與實驗生產設備"],
+  ["/images/company/generated/lf-laboratory-grid.png", "lab-quadrant-c", "材料顯微分析設備"],
+  ["/images/company/generated/lf-laboratory-grid.png", "lab-quadrant-d", "力學與環境測試設備"],
+];
 
 function FactIcon({ type }: { type: string }) {
   if (type === "gear") return <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 8.2A3.8 3.8 0 1 0 12 15.8 3.8 3.8 0 0 0 12 8.2Zm8 5.1v-2.6l-2.1-.7a7.7 7.7 0 0 0-.8-1.9l1-2-1.8-1.8-2 1a7.7 7.7 0 0 0-1.9-.8L11.7 2H9.2l-.7 2.1a7.7 7.7 0 0 0-1.9.8l-2-1-1.8 1.8 1 2A7.7 7.7 0 0 0 3 9.6l-2.1.7v2.6l2.1.7c.2.7.4 1.3.8 1.9l-1 2 1.8 1.8 2-1c.6.4 1.2.6 1.9.8l.7 2.1h2.6l.7-2.1c.7-.2 1.3-.4 1.9-.8l2 1 1.8-1.8-1-2c.4-.6.6-1.2.8-1.9Z"/></svg>;
@@ -44,9 +50,6 @@ export default function CompanySection() {
     <section className="profile-facts" aria-label="企業數據">{facts.map(([icon,value,label]) => <article key={label}><span><FactIcon type={icon}/></span><div><b>{value}</b><small>{label}</small></div></article>)}</section>
     <section className="profile-about" id="company-story"><div className="profile-copy"><span>ABOUT US</span><h2>臺灣峰暉塑膠工業股份有限公司</h2><p>臺灣峰暉塑膠工業股份有限公司於1979年成立於臺灣彰化縣，主要生產經營各類塑膠鞋材，包括各種 ABS、IPS、PC 射出鞋跟、TPR、PVC 及 PU 發泡鞋底，並持續投入材料研發與製程優化，以穩定的品質滿足全球客戶需求。</p><p>集團陸續於中國大陸設立多家生產與營運公司。歷經四十多年發展，秉持「追求卓越、止於至善」的經營理念，致力於創新、服務與永續經營，為客戶創造長期價值。</p><a href="#company-history">了解更多 <b>→</b></a></div><figure><img src="/images/company/generated/taiwan-entrance.png" alt="臺灣峰暉塑膠工業廠區正門"/><figcaption>「以材料創新推動產業進步，<br/>與客戶共創永續未來。」</figcaption></figure></section>
     <section className="profile-history" id="company-history"><header><div><span>OUR HISTORY</span><h2>歷史沿革</h2></div><p>穩健發展・持續創新</p></header><div className="profile-history-grid">{history.map(([year,title,text,imageClass]) => <article key={year}><div><b>{year}</b><h3>{title}</h3></div><div className={`history-image ${imageClass}`} role="img" aria-label={`${year} ${title}廠區`}/><p>{text}</p></article>)}</div></section>
-    <section className="profile-labs" id="company-laboratory"><header><div><span>LABORATORY ENVIRONMENT</span><h2>實驗室環境</h2></div><p>專業設備・嚴格把關</p></header><div className="profile-lab-grid">
-      <article><div className="lab-photo ff-lab" role="img" aria-label="峰暉實驗室材料開發與試產設備"/><div className="lab-content"><span>峰暉實驗室 / FF Laboratory</span><h3>從配方到試產，完整驗證材料表現</h3><ul>{ffItems.map(item=><li key={item}>{item}</li>)}</ul><p>完整的材料開發與測試設備，確保產品品質與穩定性。</p></div></article>
-      <article><div className="lab-photo lf-lab" role="img" aria-label="麗暉實驗室材料檢測與分析設備"/><div className="lab-content"><span>麗暉實驗室 / LF Laboratory</span><h3>以精密檢測，支援客製化研發</h3><ul>{lfItems.map(item=><li key={item}>{item}</li>)}</ul><p>具備專業的檢測與分析能力，支援客製化研發與應用需求。</p></div></article>
-    </div></section>
+    <section className="profile-labs" id="company-laboratory"><header><div><span>LABORATORY ENVIRONMENT</span><h2>實驗室環境</h2></div><p>每張圖片皆可獨立更新</p></header><div className="profile-lab-showcase"><div className="profile-lab-intro"><span>FF / LF LABORATORY</span><h3>從配方開發到性能驗證，設備各自清晰呈現</h3><p>以獨立影像記錄材料處理、混煉成型、顯微分析及力學測試環境。後續可逐張替換，不影響其他設備圖片。</p><div className="lab-capabilities"><div><b>峰暉實驗室</b>{ffItems.map(item=><small key={item}>{item}</small>)}</div><div><b>麗暉實驗室</b>{lfItems.map(item=><small key={item}>{item}</small>)}</div></div></div><div className="profile-lab-gallery">{labImages.map(([src,position,label],index)=><figure key={label} className={position}><div><img src={src} alt={label}/></div><figcaption><b>{String(index+1).padStart(2,"0")}</b><span>{label}</span></figcaption></figure>)}</div></div></section>
   </div></section>;
 }
