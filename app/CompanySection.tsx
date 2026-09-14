@@ -3,7 +3,7 @@
 import { useState } from "react";
 
 const slides = [
-  "/images/company/generated/campus-hero.png",
+  "/images/company/company-hero-campus.jpg",
   "/images/company/generated/taiwan-entrance.png",
   "/images/company/generated/history-campus-grid.png",
 ];
@@ -22,13 +22,11 @@ const history = [
   ["2006", "廣州富勝塑膠有限公司", "提供產品開發、橡塑膠材料生產、模具加工製造、注塑生產及產品組裝等綜合服務，滿足客戶的客製化需求。", "history-d"],
 ];
 
-const ffItems = ["原料處理設備", "材料混煉設備", "擠出及成型設備", "實驗生產環境", "材料測試儀器"];
-const lfItems = ["實驗操作台", "材料檢測設備", "力學性能測試設備", "恆溫及環境測試設備", "綜合分析儀器"];
 const labImages = [
-  ["/images/company/generated/ff-laboratory-grid.png", "lab-quadrant-a", "原料處理與混煉設備"],
-  ["/images/company/generated/ff-laboratory-grid.png", "lab-quadrant-b", "擠出與實驗生產設備"],
-  ["/images/company/generated/lf-laboratory-grid.png", "lab-quadrant-c", "材料顯微分析設備"],
-  ["/images/company/generated/lf-laboratory-grid.png", "lab-quadrant-d", "力學與環境測試設備"],
+  ["/images/company/laboratory/lab-panorama-left.png", "實驗室全景・左區"],
+  ["/images/company/laboratory/lab-panorama-right.png", "實驗室全景・右區"],
+  ["/images/company/laboratory/lab-equipment-front.png", "實驗室設備正面"],
+  ["/images/company/laboratory/lab-testing-area.png", "實驗室檢測區"],
 ];
 
 function FactIcon({ type }: { type: string }) {
@@ -40,6 +38,7 @@ function FactIcon({ type }: { type: string }) {
 
 export default function CompanySection() {
   const [slide, setSlide] = useState(0);
+  const [activeLab, setActiveLab] = useState<number | null>(null);
   const changeSlide = (direction: number) => setSlide((current) => (current + direction + slides.length) % slides.length);
   return <section className="profile-page" id="company"><div className="shell profile-shell">
     <section className="profile-hero" id="company-overview" style={{backgroundImage:`linear-gradient(90deg,rgba(4,28,66,.96) 0%,rgba(4,45,91,.78) 45%,rgba(4,29,62,.18) 82%),url(${slides[slide]})`}}>
@@ -48,8 +47,9 @@ export default function CompanySection() {
       <div className="profile-carousel" aria-label="企業圖片輪播控制"><b>{String(slide + 1).padStart(2,"0")}</b><span>/ 03</span><button onClick={() => changeSlide(-1)} aria-label="上一張">←</button><button onClick={() => changeSlide(1)} aria-label="下一張">→</button></div>
     </section>
     <section className="profile-facts" aria-label="企業數據">{facts.map(([icon,value,label]) => <article key={label}><span><FactIcon type={icon}/></span><div><b>{value}</b><small>{label}</small></div></article>)}</section>
-    <section className="profile-about" id="company-story"><div className="profile-copy"><span>ABOUT US</span><h2>臺灣峰暉塑膠工業股份有限公司</h2><p>臺灣峰暉塑膠工業股份有限公司於1979年成立於臺灣彰化縣，主要生產經營各類塑膠鞋材，包括各種 ABS、IPS、PC 射出鞋跟、TPR、PVC 及 PU 發泡鞋底，並持續投入材料研發與製程優化，以穩定的品質滿足全球客戶需求。</p><p>集團陸續於中國大陸設立多家生產與營運公司。歷經四十多年發展，秉持「追求卓越、止於至善」的經營理念，致力於創新、服務與永續經營，為客戶創造長期價值。</p><a href="#company-history">了解更多 <b>→</b></a></div><figure><img src="/images/company/generated/taiwan-entrance.png" alt="臺灣峰暉塑膠工業廠區正門"/><figcaption>「以材料創新推動產業進步，<br/>與客戶共創永續未來。」</figcaption></figure></section>
+    <section className="profile-about" id="company-story"><div className="profile-copy"><span>ABOUT US</span><h2>臺灣峰暉塑膠工業股份有限公司</h2><p>臺灣峰暉塑膠工業股份有限公司於1979年成立於臺灣彰化縣，主要生產經營各類塑膠鞋材，包括各種 ABS、IPS、PC 射出鞋跟、TPR、PVC 及 PU 發泡鞋底，並持續投入材料研發與製程優化，以穩定的品質滿足全球客戶需求。</p><p>集團陸續於中國大陸設立多家生產與營運公司。歷經四十多年發展，秉持「追求卓越、止於至善」的經營理念，致力於創新、服務與永續經營，為客戶創造長期價值。</p><a href="#company-history">了解更多 <b>→</b></a></div><figure><img src="/images/company/company-story-taiwan-20260914.png" alt="臺灣峰暉塑膠工業廠區正門"/><figcaption>「以材料創新推動產業進步，<br/>與客戶共創永續未來。」</figcaption></figure></section>
     <section className="profile-history" id="company-history"><header><div><span>OUR HISTORY</span><h2>歷史沿革</h2></div><p>穩健發展・持續創新</p></header><div className="profile-history-grid">{history.map(([year,title,text,imageClass]) => <article key={year}><div><b>{year}</b><h3>{title}</h3></div><div className={`history-image ${imageClass}`} role="img" aria-label={`${year} ${title}廠區`}/><p>{text}</p></article>)}</div></section>
-    <section className="profile-labs" id="company-laboratory"><header><div><span>LABORATORY ENVIRONMENT</span><h2>實驗室環境</h2></div><p>每張圖片皆可獨立更新</p></header><div className="profile-lab-showcase"><div className="profile-lab-intro"><span>FF / LF LABORATORY</span><h3>從配方開發到性能驗證，設備各自清晰呈現</h3><p>以獨立影像記錄材料處理、混煉成型、顯微分析及力學測試環境。後續可逐張替換，不影響其他設備圖片。</p><div className="lab-capabilities"><div><b>峰暉實驗室</b>{ffItems.map(item=><small key={item}>{item}</small>)}</div><div><b>麗暉實驗室</b>{lfItems.map(item=><small key={item}>{item}</small>)}</div></div></div><div className="profile-lab-gallery">{labImages.map(([src,position,label],index)=><figure key={label} className={position}><div><img src={src} alt={label}/></div><figcaption><b>{String(index+1).padStart(2,"0")}</b><span>{label}</span></figcaption></figure>)}</div></div></section>
+    <section className="profile-labs" id="company-laboratory"><header><div><span>LABORATORY ENVIRONMENT</span><h2>實驗室環境</h2></div><p>點擊圖片可放大查看</p></header><div className="profile-lab-showcase"><div className="profile-lab-intro"><span>FF / LF LABORATORY</span><h3>從配方開發到性能驗證，設備各自清晰呈現</h3><p>以獨立影像記錄材料處理、混煉成型、顯微分析及力學測試環境。後續可逐張替換，不影響其他設備圖片。</p></div><div className="profile-lab-gallery">{labImages.map(([src,label],index)=><figure key={label}><button type="button" onClick={()=>setActiveLab(index)} aria-label={`放大查看：${label}`}><img src={src} alt={label}/><span aria-hidden="true">＋</span></button><figcaption><b>{String(index+1).padStart(2,"0")}</b><span>{label}</span></figcaption></figure>)}</div></div></section>
+    {activeLab !== null && <div className="lab-lightbox" role="dialog" aria-modal="true" aria-label={labImages[activeLab][1]} onMouseDown={(event)=>{if(event.target===event.currentTarget)setActiveLab(null)}}><div className="lab-lightbox-toolbar"><span>{String(activeLab+1).padStart(2,"0")} / {String(labImages.length).padStart(2,"0")}　{labImages[activeLab][1]}</span><button type="button" onClick={()=>setActiveLab(null)} aria-label="關閉放大圖片">×</button></div><button className="lab-lightbox-arrow lab-lightbox-prev" type="button" onClick={()=>setActiveLab((activeLab-1+labImages.length)%labImages.length)} aria-label="上一張">‹</button><img src={labImages[activeLab][0]} alt={labImages[activeLab][1]}/><button className="lab-lightbox-arrow lab-lightbox-next" type="button" onClick={()=>setActiveLab((activeLab+1)%labImages.length)} aria-label="下一張">›</button></div>}
   </div></section>;
 }
