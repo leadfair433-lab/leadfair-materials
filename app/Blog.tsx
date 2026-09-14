@@ -19,7 +19,18 @@ const articles = [
 
 const articleSlugs = ["tpe-material-selection", "foaming-tpe-development", "material-development-validation"];
 const sectionTitles = [["從產品應用出發", "準備選材資料與效能需求"], ["讓材料配方與成型條件協同", "透過試料驗證關鍵指標"], ["明確開發目標與試料計劃", "從試產驗證走向量產"]];
-export const blogArticles: JournalArticle[] = [...technicalArticles, ...articles.map((article, index) => ({ ...article, image: publicImage(["blog-selection-v2.png", "blog-foam-v2.png", "blog-validation-v2.png"][index]), slug: articleSlugs[index], sections: article.paragraphs.map((text, sectionIndex) => ({ title: sectionTitles[index][sectionIndex], text })) }))];
+const seoSectionPattern = /(?:建議\s*SEO\s*(?:設定|關鍵字)|Recommended SEO Settings|Suggested SEO keywords|Appendix \| Recommended SEO Settings)/i;
+const cleanedTechnicalArticles = technicalArticles.map((article) => ({
+  ...article,
+  sections: article.sections
+    .filter((section) => !seoSectionPattern.test(section.title))
+    .map((section) => ({
+      ...section,
+      blocks: section.blocks?.filter((block) => !seoSectionPattern.test(block.text || "")),
+    })),
+}));
+
+export const blogArticles: JournalArticle[] = [...cleanedTechnicalArticles, ...articles.map((article, index) => ({ ...article, image: publicImage(["blog-selection-v2.png", "blog-foam-v2.png", "blog-validation-v2.png"][index]), slug: articleSlugs[index], sections: article.paragraphs.map((text, sectionIndex) => ({ title: sectionTitles[index][sectionIndex], text })) }))];
 
 export default function Blog({ listing = false }: { listing?: boolean }) {
   return <section className="material-blog shell" id="blog" aria-labelledby="blog-title">

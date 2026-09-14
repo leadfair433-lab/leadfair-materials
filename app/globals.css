@@ -294,9 +294,9 @@ main:not(.contact-page)>section.cta#contact{display:none}
 @media(min-width:901px){.overview-product-card.featured{min-height:410px}.overview-product-card.featured .overview-product-image{min-height:374px}}
 
 /* Historical factory photographs supplied by the client. */
-.history-a{background-image:url('/images/company/company-story-taiwan-20260914.png');background-size:cover;background-position:center}
-.history-c{background-image:url('/images/company/history/1997-tontex-factory.jpg');background-size:cover;background-position:center}
-.history-d{background-image:url('/images/company/history/2006-fast-sonic-factory.jpg');background-size:cover;background-position:center}
-.history-b{background-image:url('/images/company/history/1991-lihui-factory.jpg');background-size:cover;background-position:center}
+.history-a{background-image:url('/images/company/history/1979-taiwan-web.jpg');background-size:cover;background-position:center}
+.history-c{background-image:url('/images/company/history/1997-tontex-web.jpg');background-size:cover;background-position:center}
+.history-d{background-image:url('/images/company/history/2006-fast-sonic-web.jpg');background-size:cover;background-position:center}
+.history-b{background-image:url('/images/company/history/1991-lihui-web.jpg');background-size:cover;background-position:center}
 .lab-switches{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:28px}.lab-switches a{display:flex;align-items:center;justify-content:space-between;min-height:58px;padding:0 18px;border:1px solid #0b55a3;border-radius:999px;background:#fff;color:#0b55a3;font-size:14px;font-weight:800;transition:background .2s ease,color .2s ease,transform .2s ease}.lab-switches a:first-child,.lab-switches a:hover{background:#0b55a3;color:#fff;transform:translateY(-2px)}
 @media(max-width:560px){.lab-switches{grid-template-columns:1fr}}
