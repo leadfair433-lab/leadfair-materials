@@ -1,43 +1,239 @@
 "use client";
 
+import { useEffect, useRef, useState } from "react";
 import { useParams } from "next/navigation";
 import SiteHeader from "../../SiteHeader";
 import GlobalInquiryFooter from "../../GlobalInquiryFooter";
+import { productBySlug, products, type ProductGalleryImage, type ProductModule } from "../../content/products";
 
-const products = {
-  "ius-4065": { name: "IUS-4065", title: "超柔軟 · 更高熔點 · 更穩定加工", image: "/images/ius-4065-white-pellets-v4-scattered.png", description: "專為兼顧卓越柔軟性與更高耐熱效能而研發。IUS–4065 能夠滿足對舒適性、尺寸穩定性及製造可靠性有更高要求的產品，是高效能發泡及注塑應用的理想材料解決方案。", specs: [["硬度","Shore A 40"],["熔點","≈ 64°C"],["熱收縮性","優異"],["尺寸穩定性","優異"],["加工穩定性","優異"]] },
-  "lf-et78a": { name: "LF-ET78A", title: "高分散型 TPE 彈性材料", image: "/images/lf-et78a-product.png", description: "適用於射出、押出及發泡應用，具備高延伸、良好撕裂強度、低比重與優秀回彈特性，可兼顧應用功能與製造成本。", specs: [["硬度","Shore A 78"],["熔融指數","2 g/10min"],["比重","0.87"],["延伸率","570%"],["撕裂強度","62 kgf/cm"],["熔點","69°C"]] },
-  "lf-hr53a": { name: "LF-HR53A", title: "高分散型 TPE 彈性材料", image: "/images/lf-et78a-product.png", description: "適用於射出、押出及發泡應用，具備高延伸、良好耐磨強度、低比重與良好回彈彈性。", specs: [["硬度","Shore A 53"],["熔融指數","0.32 g/10min"],["比重","0.89"],["拉力","37.3 kgf/cm²"],["延伸率","360%"],["撕裂強度","38 kgf/cm"]] },
-  "gte-8030": { name: "GTE-8030", title: "生質高反彈 TPE 彈性材料", image: "/images/lf-et78a-product.png", description: "生質含量 30%，與 EVA、POE 具有良好相容性，適用於發泡鞋材、鞋中底、鞋墊及各類緩衝材料。", specs: [["生質含量","30%"],["硬度","Shore A 72"],["熔融指數","4.7 g/10min"],["密度","0.91 g/cm³"],["反彈率","51%"],["延伸率","665%"]] },
-  "gte-8075": { name: "GTE-8075", title: "材料技術資料整理中", image: "/images/lf-et78a-product.png", description: "此牌號的完整引數與應用資料將在後續補充，歡迎先聯絡材料工程師獲取選材建議。", specs: [] },
-} as const;
+function OtherProductsCarousel({ currentSlug, locale }: { currentSlug: string; locale?: string }) {
+  const [first, setFirst] = useState(0);
+  const others = products.filter(item => item.slug !== currentSlug);
+  const ordered = others.map((_, index) => others[(first + index) % others.length]);
+  const move = (direction: number) => setFirst(index => (index + direction + others.length) % others.length);
+  const prefix = `${process.env.NEXT_PUBLIC_BASE_PATH || ""}${locale ? `/${locale}` : ""}`;
+  return <section className="modular-other-products" aria-labelledby="modular-other-products-title">
+    <div className="modular-other-products-heading">
+      <div><h2 id="modular-other-products-title">其他產品</h2><p>探索更多材料牌號與應用方向</p></div>
+      <div className="modular-other-products-controls">
+        <button type="button" onClick={() => move(-1)} aria-label="上一組產品">←</button>
+        <button type="button" onClick={() => move(1)} aria-label="下一組產品">→</button>
+      </div>
+    </div>
+    <div className="modular-other-products-grid">
+      {ordered.map(item => <a href={`${prefix}/products/${item.slug}/`} className="modular-other-product-card" key={item.slug}>
+        <img src={item.image} alt={item.imageAlt} loading="lazy" />
+        <div><span>{item.family}</span><h3>{item.name}</h3><p>{item.title}</p><b>查看產品詳情 ↗</b></div>
+      </a>)}
+    </div>
+    <a className="modular-other-products-more" href={`${prefix}/products/`}>查看更多產品 <span aria-hidden="true">↗</span></a>
+  </section>;
+}
 
-const slugs = ["ius-4065","lf-et78a","lf-hr53a","gte-8030","gte-8075"] as const;
+function ProductGallery({ images, name }: { images: ProductGalleryImage[]; name: string }) {
+  const [active, setActive] = useState(0);
+  const [firstVisible, setFirstVisible] = useState(0);
+  const dialog = useRef<HTMLDialogElement>(null);
+  const current = images[active];
+  const visibleCount = 5;
+  const maxFirstVisible = Math.max(0, images.length - visibleCount);
+  const select = (index: number) => {
+    setActive(index);
+    setFirstVisible(first => Math.min(maxFirstVisible, Math.max(index - visibleCount + 1, Math.min(first, index))));
+  };
+  const move = (direction: number) => select((active + direction + images.length) % images.length);
+  return <div className="modular-product-gallery">
+    <button className="modular-gallery-main" type="button" onClick={() => dialog.current?.showModal()} aria-label={`放大查看${current.caption}`}>
+      <img src={current.src} alt={current.alt} fetchPriority={active === 0 ? "high" : undefined} />
+      <span className="modular-gallery-zoom" aria-hidden="true">放大查看 ↗</span>
+    </button>
+    {images.length > 1 && <div className="modular-gallery-strip" aria-label={`${name} 圖片選擇`}>
+      <button className="modular-gallery-strip-arrow" type="button" onClick={() => setFirstVisible(first => Math.max(0, first - 1))} disabled={firstVisible === 0} aria-label="向左瀏覽圖片">←</button>
+      <div className="modular-gallery-thumbnails">
+        {images.slice(firstVisible, firstVisible + visibleCount).map((image, offset) => {
+          const index = firstVisible + offset;
+          return <button type="button" key={image.src} onClick={() => select(index)} aria-label={`查看第 ${index + 1} 張：${image.caption}`} aria-pressed={index === active}>
+            <img src={image.src} alt="" loading={index < 3 ? "eager" : "lazy"} />
+            <span>{String(index + 1).padStart(2, "0")}</span>
+          </button>;
+        })}
+      </div>
+      <button className="modular-gallery-strip-arrow" type="button" onClick={() => setFirstVisible(first => Math.min(maxFirstVisible, first + 1))} disabled={firstVisible === maxFirstVisible} aria-label="向右瀏覽圖片">→</button>
+    </div>}
+    <p className="modular-gallery-caption"><span>{String(active + 1).padStart(2, "0")} / {String(images.length).padStart(2, "0")}</span>{current.caption}</p>
+    <dialog ref={dialog} className="modular-gallery-dialog" aria-label={`${name} 圖片放大預覽`} onClick={event => { if (event.target === dialog.current) dialog.current.close(); }} onKeyDown={event => { if (event.key === "ArrowLeft") move(-1); if (event.key === "ArrowRight") move(1); }}>
+      <div className="modular-gallery-dialog-inner">
+        <button className="modular-gallery-close" type="button" onClick={() => dialog.current?.close()} aria-label="關閉圖片預覽">×</button>
+        <img src={current.src} alt={current.alt} />
+        <div className="modular-gallery-dialog-controls">
+          {images.length > 1 && <button type="button" onClick={() => move(-1)} aria-label="上一張圖片">←</button>}
+          <p>{current.caption} <span>{active + 1} / {images.length}</span></p>
+          {images.length > 1 && <button type="button" onClick={() => move(1)} aria-label="下一張圖片">→</button>}
+        </div>
+      </div>
+    </dialog>
+  </div>;
+}
 
-export default function ProductPage() {
-  const params = useParams<{slug:string}>();
-  const key = (params?.slug || "ius-4065") as keyof typeof products;
-  const product = products[key] || products["ius-4065"];
-  const isIus = key === "ius-4065";
-  const isLf = key === "lf-et78a";
-  return <main className="product-page">
+function DetailModule({ module }: { module: ProductModule }) {
+  return <section className={`product-module product-module-${module.type}`} id={module.id}>
+    <header className="product-module-heading">
+      <span>{module.eyebrow || "PRODUCT DETAILS"}</span>
+      <h2>{module.title}</h2>
+    </header>
+    {module.type === "text" && <div className="product-module-prose">
+      {module.paragraphs.map(paragraph => <p key={paragraph}>{paragraph}</p>)}
+    </div>}
+    {module.type === "features" && <div className="product-module-features">
+      {module.items.map((item, index) => <article key={item.title}>
+        <b>{String(index + 1).padStart(2, "0")}</b>
+        <h3>{item.title}</h3>
+        {item.description && <p>{item.description}</p>}
+      </article>)}
+    </div>}
+    {module.type === "imageCompare" && <figure className="product-module-image-compare">
+      <div className="product-module-image-pair">
+        <article className="product-module-image-card">
+          <header><h3>{module.leftLabel}</h3><p>{module.leftSubtitle}</p></header>
+          <img src={module.image} alt="加熱後翹曲的傳統材料樣片示意" loading="lazy" />
+          <div className="product-module-image-result"><strong className="is-low">{module.leftMetric}</strong><p>{module.leftDescription}</p></div>
+        </article>
+        <article className="product-module-image-card">
+          <header><h3>{module.rightLabel}</h3></header>
+          <img src={module.image} alt="加熱後維持平整的 IUS-4065 樣片示意" loading="lazy" />
+          <div className="product-module-image-result"><strong className="is-high">{module.rightMetric}</strong><ul>{module.rightPoints.map(point => <li key={point}>{point}</li>)}</ul></div>
+        </article>
+      </div>
+      {module.note && <figcaption>{module.note}</figcaption>}
+    </figure>}
+    {module.type === "list" && <ul className="product-module-list">
+      {module.items.map(item => <li key={item}>{item}</li>)}
+    </ul>}
+    {module.type === "table" && <div className="product-module-table-wrap">
+      <table>
+        <caption className="sr-only">{module.title}</caption>
+        <thead><tr>{module.columns.map(column => <th scope="col" key={column}>{column}</th>)}</tr></thead>
+        <tbody>{module.rows.map((row, index) => <tr key={index}>
+          {row.map((cell, cellIndex) => cellIndex === 0
+            ? <th scope="row" key={cellIndex}>{cell}</th>
+            : <td key={cellIndex}>{cell}</td>)}
+        </tr>)}</tbody>
+      </table>
+    </div>}
+    {module.type === "compare" && <>{module.description && <p className="product-module-compare-intro">{module.description}</p>}<div className="product-module-compare">
+      <div><h3>{module.leftTitle}</h3><ul>{module.left.map(item => <li key={item}>{item}</li>)}</ul></div>
+      <span aria-hidden="true">→</span>
+      <div><h3>{module.rightTitle}</h3><ul>{module.right.map(item => <li key={item}>{item}</li>)}</ul></div>
+    </div></>}
+    {module.type === "faq" && <div className="product-module-faq">
+      {module.items.map(item => <details key={item.question}>
+        <summary>{item.question}</summary><p>{item.answer}</p>
+      </details>)}
+    </div>}
+    {module.type === "download" && <div className="product-module-download">
+      <p>{module.description}</p>
+      <a href={module.href} download={module.filename}>下載技術資料表 <span aria-hidden="true">↓</span></a>
+    </div>}
+  </section>;
+}
+
+export default function ProductDetail() {
+  const params = useParams<{ slug: string; locale?: string }>();
+  const product = productBySlug[params?.slug || ""] || products[0];
+  const isIus4065 = product.slug === "ius-4065";
+  const tabIds = ["product-overview", "product-technical", "product-comparison"] as const;
+  const [activeTab, setActiveTab] = useState<(typeof tabIds)[number]>("product-overview");
+  useEffect(() => {
+    const syncTabToHash = () => {
+      const hash = window.location.hash.slice(1);
+      if (tabIds.some(id => id === hash)) setActiveTab(hash as (typeof tabIds)[number]);
+    };
+    syncTabToHash();
+    window.addEventListener("hashchange", syncTabToHash);
+    return () => window.removeEventListener("hashchange", syncTabToHash);
+  }, []);
+  const selectTab = (id: (typeof tabIds)[number]) => {
+    setActiveTab(id);
+    window.history.replaceState(null, "", `#${id}`);
+  };
+  const goBack = () => {
+    if (window.history.length > 1 && document.referrer && new URL(document.referrer).origin === window.location.origin) window.history.back();
+    else window.location.assign("/products/");
+  };
+  const onTabKeyDown = (event: React.KeyboardEvent<HTMLButtonElement>, index: number) => {
+    const next = event.key === "ArrowRight" ? (index + 1) % tabIds.length
+      : event.key === "ArrowLeft" ? (index - 1 + tabIds.length) % tabIds.length
+      : event.key === "Home" ? 0 : event.key === "End" ? tabIds.length - 1 : -1;
+    if (next < 0) return;
+    event.preventDefault();
+    selectTab(tabIds[next]);
+    document.getElementById(`tab-${tabIds[next]}`)?.focus();
+  };
+  const gallery = product.gallery || [{ src: product.image, alt: product.imageAlt, caption: product.name }];
+  const moduleById = (id: string) => product.modules.find(module => module.id === id);
+  const overviewModules = isIus4065
+    ? [moduleById("why-ius"), moduleById("heat-photo-compare"), moduleById("advantages")].filter((module): module is ProductModule => Boolean(module))
+    : product.modules.filter(module => module.type === "text" || module.type === "features" || module.type === "imageCompare");
+  const technicalModules = isIus4065
+    ? [moduleById("performance")].filter((module): module is ProductModule => Boolean(module))
+    : product.modules.filter(module => module.type === "table" || module.type === "download");
+  const additionalModules = isIus4065
+    ? [moduleById("problem-solution")].filter((module): module is ProductModule => Boolean(module))
+    : product.modules.filter(module => module.type === "list" || module.type === "faq" || module.type === "compare");
+  return <main className="modular-product-page">
     <SiteHeader />
-    <nav className="product-index shell" aria-label="產品牌號導航"><span>PRODUCT GRADES</span><div>{slugs.map(slug=><a className={slug===key?"active":""} href={`/products/${slug}`} key={slug}>{products[slug].name}</a>)}</div></nav>
-    <section className={`product shell ${isLf?"product-lf":""}`}>
-      <div className="product-head"><div className="product-visual"><div className="product-photo"><img src={product.image} alt={`${product.name} 產品材料`}/></div><span>{product.specs[0]?.[1] || "TPE MATERIAL"}</span><small>{product.name} / PRODUCT GRADE</small></div><div className="product-copy"><span className="eyebrow blue">FEATURED GRADE · {product.name}</span><h2>{product.name}<br/>{product.title}</h2><p>{product.description}</p>{product.specs.length>0&&<div className="specs">{product.specs.map(x=><div key={x[0]}><small>{x[0]}</small><b>{x[1]}</b></div>)}</div>}<a className="product-action" href="/#inquiry">獲取樣品 ↗</a></div></div>
-      {isIus&&<Ius4065Details/>}
-      {isLf&&<><div className="lf-story"><div><span className="detail-label">APPLICATION REQUIREMENTS</span><h3>彈性發泡材料的真實應用需求</h3><ul className="lf-needs"><li>兼具高強韌與耐用性</li><li>滿足輕量化與防震表現</li><li>材料效能穩定、批次一致</li><li>保持良好硬度與尺寸穩定</li><li>適用於射出、押出及壓延加工</li></ul></div><div><span className="detail-label">VALUE OF LF-ET78A</span><h3>從材料效能，轉化為產品價值</h3><div className="lf-value-grid">{[["01","高延伸","提升製品耐用度"],["02","高撕裂強度","降低破損風險"],["03","輕量低密度","有利產品減重"],["04","良好回彈","提升使用舒適感"],["05","加工適應性","適配多種成型方式"]].map(x=><article className="lf-value-card" key={x[0]}><b>{x[0]}</b><h4>{x[1]}</h4><p>{x[2]}</p></article>)}</div></div></div><div className="lf-data"><DataTable title="原料基本特性" rows={[["外觀","N/A","顆粒"],["顏色","N/A","半透明"],["硬度","ASTM D2240","Shore A 78"],["熔融指數","ASTM D1238","2 g/10min"],["比重","ASTM D792","0.87"],["拉力","ASTM D412","85 kgf/cm²"],["延伸率","ASTM D412","570%"],["撕裂強度","ASTM D624","62 kgf/cm"],["熔點","DSC","69°C"]]}/><DataTable title="發泡後物性" rows={[["硬度 Asker C","ASTM D2240","50"],["密度","ASTM D792","0.1919"],["拉力 N/mm²","ASTM D638","4.6"],["延伸率","ASTM D638","446%"],["撕裂強度 N/mm","ASTM D624","5.65"],["回彈度","ASTM D3574","62"],["收縮率","60°C / 120 分鐘","1%"],["壓縮變形","35°C / 6 小時","20%"],["倍率 E/R","—","190%"],["壓縮比 CR","—","1.9"]]}/></div><div className="lf-advantages">{["高回彈","輕量低密度","高柔韌性","尺寸穩定","加工通用性","適合鞋材與發泡製品"].map((x,i)=><div key={x}><b>{String(i+1).padStart(2,"0")}</b><span>{x}</span></div>)}</div></>}
-    </section>
+    <nav className="modular-product-nav shell" aria-label="產品牌號導航">
+      <button type="button" className="modular-product-back" onClick={goBack}>← 返回上一頁</button>
+      <div>{products.map(item => <a
+        href={`/products/${item.slug}/`}
+        className={item.slug === product.slug ? "active" : ""}
+        aria-current={item.slug === product.slug ? "page" : undefined}
+        key={item.slug}
+      >{item.name}</a>)}<a href="/products/" className="modular-product-more">更多產品 ↗</a></div>
+    </nav>
+    <article className="modular-product shell">
+      <header className="modular-product-hero">
+        <ProductGallery images={gallery} name={product.name} />
+        <div className="modular-product-intro">
+          <span>{product.family} / PRODUCT GRADE</span>
+          <h1>{product.name}</h1>
+          <h2>{product.title}</h2>
+          <p>{product.summary}</p>
+          {product.specs.length > 0 && <dl className="modular-product-specs">
+            {product.specs.map(spec => <div key={spec.label}><dt>{spec.label}</dt><dd>{spec.value}</dd></div>)}
+          </dl>}
+          <a href="/contact/#inquiry" className="modular-product-cta">諮詢產品與索取樣品 <b aria-hidden="true">↗</b></a>
+        </div>
+      </header>
+      <div className="modular-product-simple">
+        <div className="modular-product-section-nav" role="tablist" aria-label="產品資訊">
+          {tabIds.map((id, index) => <button key={id} type="button" role="tab" id={`tab-${id}`} aria-controls={id} aria-selected={activeTab === id} tabIndex={activeTab === id ? 0 : -1} onClick={() => selectTab(id)} onKeyDown={event => onTabKeyDown(event, index)}>{["產品亮點", "技術資料", isIus4065 ? "材料比較" : "應用資訊"][index]}</button>)}
+        </div>
+        {activeTab === "product-overview" && <section className="modular-product-info-group" id="product-overview" role="tabpanel" aria-labelledby="tab-product-overview" tabIndex={0}>
+          <div className="modular-product-group-content">{overviewModules.length > 0
+            ? overviewModules.map(module => <DetailModule module={module} key={module.id} />)
+            : <div className="modular-product-placeholder"><h2>產品亮點</h2><p>{product.summary}</p></div>}</div>
+        </section>}
+        {activeTab === "product-technical" && <section className="modular-product-info-group" id="product-technical" role="tabpanel" aria-labelledby="tab-product-technical" tabIndex={0}>
+          <div className="modular-product-group-content">{technicalModules.length > 0
+            ? technicalModules.map(module => <DetailModule module={module} key={module.id} />)
+            : <div className="modular-product-placeholder"><h2>技術資料</h2><p>完整技術資料持續整理中。如需確認材料物性與加工條件，請聯絡材料工程師。</p></div>}</div>
+        </section>}
+        {activeTab === "product-comparison" && <section className="modular-product-info-group" id="product-comparison" role="tabpanel" aria-labelledby="tab-product-comparison" tabIndex={0}>
+          <div className="modular-product-group-content">{additionalModules.length > 0
+            ? additionalModules.map(module => <DetailModule module={module} key={module.id} />)
+            : <div className="modular-product-placeholder"><h2>應用與選材</h2><p>可提供產品用途與加工條件，由材料工程師協助選材、配方調整及試產驗證。</p></div>}</div>
+        </section>}
+      </div>
+      <section className="modular-product-extra" aria-label="產品詳情">
+        {product.detailContent?.length ? <div className="modular-product-extra-content">
+          {product.detailContent.map((block, index) => block.type === "paragraph"
+            ? <p key={`${block.type}-${index}`}>{block.text}</p>
+            : <figure key={`${block.type}-${index}`}><img src={block.src} alt={block.alt} loading="lazy" />{block.caption && <figcaption>{block.caption}</figcaption>}</figure>)}
+        </div> : <div className="modular-product-extra-empty"><p>更多產品詳情將陸續更新。</p></div>}
+      </section>
+      <OtherProductsCarousel currentSlug={product.slug} locale={params?.locale} />
+    </article>
     <GlobalInquiryFooter />
   </main>;
 }
-
-function Ius4065Details() { return <>
-  <div className="product-detail">
-    <div className="pain-panel"><span className="detail-label">THE PROBLEM WE SOLVE</span><h3>傳統低熔點材料的痛點，<br/>IUS–4065 一次系統解決</h3><p className="pain-subtitle">傳統低熔點材料在加工及使用過程中常出現多種問題，而 IUS–4065 能有效解決這些痛點。</p><div className="pain-compare"><ul className="before"><strong>傳統材料</strong><li>二次熱收縮導致翹曲變形</li><li>耐熱性不足，產品易變形</li><li>尺寸穩定性差、公差大</li><li>加工波動大、次品率高</li><li>外觀不一致，影響品質</li></ul><span className="compare-arrow">→</span><ul className="after"><strong>IUS–4065</strong><li>更低熱收縮，減少翹曲</li><li>更高熔點，耐熱性更好</li><li>尺寸穩定，公差更可控</li><li>加工穩定，效率更高</li><li>外觀一致，品質穩定</li></ul></div></div>
-    <div className="why-panel"><span className="detail-label">WHY IUS–4065</span><h3>為什麼選擇 IUS–4065？</h3><p>許多超柔軟配方會採用 TAFMER 或 ENGAGE 系列 POE 來實現低硬度。然而，這類體系通常存在熱收縮率高、易變形等問題。IUS–4065 成功兼顧超柔軟硬度、更高熔點與更穩定加工效能，讓產品同時擁有舒適觸感與卓越製造表現。</p><div className="heat-test"><div className="fail"><small>低熔點材料<br/>DF640 / ENGAGE 8842</small><div className="sample-image warped"><i/><i/></div><b>&lt; 50°C</b><em>容易發生二次熱收縮、<br/>翹曲及外觀不一致</em></div><span>加工溫度<br/><strong>&gt;50°C →</strong><i>層壓 / 後加工溫度</i></span><div className="pass"><small>IUS–4065（約 64°C）</small><div className="sample-image stable"><i/></div><b>≈ 64°C</b><em>✓ 尺寸穩定性優異<br/>✓ 產品品質一致<br/>✓ 良率更高</em></div></div></div>
-  </div>
-  <div className="performance"><div><span className="detail-label">PERFORMANCE COMPARISON</span><h3>材料效能對比</h3><div className="table-wrap"><table><thead><tr><th>效能 / Property</th><th>測試標準</th><th>DF640</th><th>ENGAGE 8842</th><th>IUS–4065</th></tr></thead><tbody><tr><td>硬度 Shore A</td><td>ASTM D2240</td><td>54–56</td><td>54–56</td><td>40</td></tr><tr><td>熔點 °C</td><td>DSC</td><td>&lt; 50</td><td>&lt; 50</td><td>≈ 64</td></tr><tr><td>熱收縮風險</td><td>內部測試</td><td className="bad">高</td><td className="bad">高</td><td className="good">低</td></tr><tr><td>尺寸穩定性</td><td>內部測試</td><td className="bad">低</td><td className="bad">低</td><td className="good">高</td></tr><tr><td>柔軟觸感</td><td>內部評估</td><td className="rating-bad">★★★★☆</td><td className="rating-bad">★★★★☆</td><td className="good">★★★★★</td></tr><tr><td>加工穩定性</td><td>內部評估</td><td className="rating-bad">★★★☆☆</td><td className="rating-bad">★★★☆☆</td><td className="good">★★★★☆</td></tr></tbody></table></div></div><div className="advantages"><span className="detail-label">PRODUCT ADVANTAGES</span><h3>五項核心優勢</h3>{[["01","超柔軟觸感","Shore A 40，觸感舒適細膩"],["02","更高熔點","約 64°C，降低二次熱收縮風險"],["03","卓越尺寸穩定","減少翹曲，尺寸更可控"],["04","更高良率","加工視窗穩定，減少次品"],["05","適用高效能應用","滿足更高耐熱與穩定性要求"]].map(x=><div className="advantage" key={x[0]}><b>{x[0]}</b><h4>{x[1]}</h4><p>{x[2]}</p></div>)}</div></div>
-</> }
-
-function DataTable({title,rows}:{title:string;rows:string[][]}) { return <div><span className="detail-label">TECHNICAL PROPERTIES</span><h3>{title}</h3><div className="table-wrap"><table><thead><tr><th>專案</th><th>測試方法</th><th>數值</th></tr></thead><tbody>{rows.map(r=><tr key={r[0]}>{r.map(c=><td key={c}>{c}</td>)}</tr>)}</tbody></table></div></div> }

@@ -1,0 +1,4 @@
+:HL["/leadfair-materials/_next/static/css/05f000387943b76c.css","style"]
+:HL["/leadfair-materials/_next/static/css/bd16c62009dce839.css","style"]
+:HL["/leadfair-materials/images/company/laboratory/lab-panorama-left-fast.jpg","image"]
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"locale","param":{"type":"d","key":"zh-tw","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"company","param":null,"prefetchHints":0,"slots":{"children":{"name":"laboratory","param":null,"prefetchHints":0,"slots":{"children":{"name":"slug","param":{"type":"d","key":"panorama-left","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}}}}}},"staleTime":300,"buildId":"s-TUoWpvH1oD70haG8aIF"}

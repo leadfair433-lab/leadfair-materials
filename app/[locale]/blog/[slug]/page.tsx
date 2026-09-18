@@ -1,4 +1,4 @@
-import { blogArticles } from "../../../Blog";
+import { blogArticles } from "../../../content/blog-data";
 import ArticlePage from "../../../blog/[slug]/page";
 
 export function generateStaticParams() {

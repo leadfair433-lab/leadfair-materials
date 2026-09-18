@@ -1,10 +1,10 @@
 1:"$Sreact.fragment"
 2:I[3262,[],"ClientPageRoot"]
-3:I[1473,["751","static/chunks/751-430c6c0359019d6d.js","473","static/chunks/473-d7fbf5d320420747.js","974","static/chunks/app/page-8e6a4ca3a4c89547.js"],"default"]
+3:I[707,["751","static/chunks/751-430c6c0359019d6d.js","430","static/chunks/430-c0f53388640abfba.js","765","static/chunks/765-a5e7ce48fcb90f01.js","707","static/chunks/707-f2ef446be8815dec.js","974","static/chunks/app/page-92c237ae6651dde5.js"],"default"]
 6:I[3258,[],"OutletBoundary"]
 7:"$Sreact.suspense"
-:HL["/leadfair-materials/_next/static/css/3c3ed7f378b8eead.css","style"]
-0:{"rsc":["$","$1","c",{"children":[["$","$L2",null,{"Component":"$3","serverProvidedParams":{"searchParams":{},"params":{},"promises":["$@4","$@5"]}}],[["$","link","0",{"rel":"stylesheet","href":"/leadfair-materials/_next/static/css/3c3ed7f378b8eead.css","precedence":"next"}]],["$","$L6",null,{"children":["$","$7",null,{"name":"Next.MetadataOutlet","children":"$@8"}]}]]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"QuNMZRyCP7Z0In9v-d3RP"}
+:HL["/leadfair-materials/_next/static/css/b002d98008872e14.css","style"]
+0:{"rsc":["$","$1","c",{"children":[["$","$L2",null,{"Component":"$3","serverProvidedParams":{"searchParams":{},"params":{},"promises":["$@4","$@5"]}}],[["$","link","0",{"rel":"stylesheet","href":"/leadfair-materials/_next/static/css/b002d98008872e14.css","precedence":"next"}]],["$","$L6",null,{"children":["$","$7",null,{"name":"Next.MetadataOutlet","children":"$@8"}]}]]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"s-TUoWpvH1oD70haG8aIF"}
 4:{}
 5:"$0:rsc:props:children:0:props:serverProvidedParams:params"
 8:null

@@ -4,7 +4,7 @@ import './workspace.css';
 
 type Item = { id: string; group: string; title: string; text: string; image: string; status: string };
 const initial: Item[] = [
-  {id:'hero',group:'首頁管理',title:'為效能而生的先進材料體系',text:'從材料研發到應用驗證，為產品提供更合適的材料方案。',image:'/images/factory-production-line-hero.png',status:'展示'},
+  {id:'hero',group:'首頁管理',title:'為效能而生的先進材料體系',text:'從材料研發到應用驗證，為產品提供更合適的材料方案。',image:'/images/factory-production-line-hero-fast.jpg',status:'展示'},
   ...['鞋材','中底','鞋墊','運動護具'].map((title,i)=>({id:'scene'+i,group:'首頁管理',title,text:'應用場景介紹，可在此修改卡片文案。',image:'/images/'+['application-footwear-v2.png','application-midsole.png','application-insole.png','application-protective-gear.png'][i],status:'展示'})),
   ...['IUS-4065','LF-ET78A','LF-HR53A','GTE-8030','GTE-8075'].map((title,i)=>({id:'product'+i,group:'產品管理',title,text:i===0?'硬度：Shore A 40\n熔點：約 64°C\n超柔軟 · 更高熔點 · 更穩定加工':i===1?'硬度：Shore A 78\n熔點：69°C\n高分散型 TPE 彈性材料':'資料待補充',image:'/images/'+(i===0?'ius-4065-white-pellets-v4-scattered.png':'lf-et78a-product.png'),status:i<2?'展示':'草稿'})),
   ...['如何為產品選擇合適的 TPE 材料？','發泡 TPE 開發，需要關注哪些指標？','從試料到量產，如何推進材料開發？'].map((title,i)=>({id:'article'+i,group:'文章管理',title,text:'從應用場景到目標效能，梳理材料開發需要準備的資訊。\n\n這裡是文章正文編輯演示，可修改後檢視右側預覽。',image:'/images/'+['blog-selection-v2.png','blog-foam-v2.png','blog-validation-v2.png'][i],status:'展示'}))
@@ -19,7 +19,7 @@ export default function Admin(){
  function navigate(name:string){if(!leave())return;setSection(name);setSearch('');setNotice('');const first=items.find(x=>x.group===name);if(first){setSelected(first.id);setDraft({...first});}else if(saved)setDraft({...saved});}
  function select(item:Item){if(!leave())return;setSelected(item.id);setDraft({...item});setNotice('');}
  function save(){if(!draft.title.trim()){setNotice('請填寫標題。');return;}setItems(items.map(x=>x.id===selected?{...draft}:x));setHistory([draft.title,...history].slice(0,5));setNotice('已儲存到本次演示會話。重新整理後重置，未更新線上網站。');}
- function add(){if(!leave())return;const item={id:String(Date.now()),group:section,title:section==='文章管理'?'未命名文章':'新產品',text:'',image:'/images/blog-selection-v2.png',status:'草稿'};setItems([...items,item]);setSelected(item.id);setDraft(item);}
+ function add(){if(!leave())return;const item={id:String(Date.now()),group:section,title:section==='文章管理'?'未命名文章':'新產品',text:'',image:'/images/blog-selection-v2-fast.jpg',status:'草稿'};setItems([...items,item]);setSelected(item.id);setDraft(item);}
  async function upload(file?:File){if(!file)return;if(!['image/png','image/jpeg','image/webp'].includes(file.type)||file.size>5*1024*1024){setNotice('請選擇 5 MB 以內的 JPG、PNG 或 WebP 圖片。');return;}const reader=new FileReader();reader.onload=()=>{setDraft(d=>({...d,image:String(reader.result)}));setNotice('圖片已用於本次預覽，尚未儲存。');};reader.readAsDataURL(file);}
  const filtered=items.filter(x=>x.group===section&&x.title.toLowerCase().includes(search.toLowerCase()));
  return <div className="cms"><aside className="cms-side"><a href="/" className="cms-brand"><b>LF</b><span>LEAD FAIR<small>MATERIALS STUDIO</small></span></a><div className="cms-site">原料研發網站 <span>內容工作區</span></div><nav aria-label="後臺導航">{menus.map((name,i)=><button key={name} aria-current={section===name?'page':undefined} onClick={()=>navigate(name)}><span>{['◫','▤','◇','≡','▧','↗','⚙','◎'][i]}</span>{name}{section===name&&<i>·</i>}</button>)}</nav><div className="cms-side-note"><span className="cms-dot"/> 原型演示模式<p>無真實賬號、資料庫或客戶資料</p></div></aside>

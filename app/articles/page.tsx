@@ -1,4 +1,4 @@
-import { articleAssetPath, blogArticles } from "../Blog";
+import { articleAssetPath, blogArticles } from "../content/blog-data";
 import SiteHeader from "../SiteHeader";
 import GlobalInquiryFooter from "../GlobalInquiryFooter";
 import "./articles.css";

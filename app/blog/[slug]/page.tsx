@@ -1,5 +1,5 @@
 import { notFound } from "next/navigation";
-import { articleAssetPath, blogArticles, type ArticleBlock } from "../../Blog";
+import { articleAssetPath, blogArticles, type ArticleBlock } from "../../content/blog-data";
 import "../article.css";
 import ArticleFrame, { ArticleBackButton } from "../ArticleFrame";
 import { ArticleShare, ArticleContact, ArticlePrint } from "../ArticleActions";
