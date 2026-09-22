@@ -5,12 +5,11 @@ import "./laboratory.css";
 
 export default function LaboratoryArticlePage({ article, locale }: { article: LaboratoryArticle; locale?: string }) {
   const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
-  const companyUrl = `${basePath}${locale ? `/${locale}` : ""}/company/`;
   const laboratoryUrl = `${basePath}${locale ? `/${locale}` : ""}/company/laboratory/`;
   return <main className="laboratory-article-page">
     <SiteHeader />
     <article className="laboratory-article shell">
-      <nav aria-label="返回實驗室"><a href={`${companyUrl}#company-laboratory`}>← 返回實驗室環境</a></nav>
+      <nav aria-label="實驗室導覽"><a href={laboratoryUrl}>← 返回實驗室儀器總覽</a></nav>
       <div className="laboratory-article-hero">
         <header className="laboratory-article-header">
           <span>FF / LF LABORATORY · 實驗室環境</span>
