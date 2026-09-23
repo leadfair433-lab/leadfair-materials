@@ -8,8 +8,26 @@ export default function SiteHeader() {
     <header className="top shell site-header">
       <a className="logo brand-logo-link" href="/#top" aria-label="Found Fair 首頁"><BrandLogo/></a>
       <nav aria-label="主要導航">
-        <a href="/products/">產品</a>
-        <a href="/articles/">Blog</a>
+        <div className="nav-dropdown">
+          <a href="/products/" aria-haspopup="true">產品 <span>⌄</span></a>
+          <div className="nav-dropdown-menu">
+            <a href="/products/">產品總覽</a>
+            <a href="/products/ius-4065/">IUS-4065</a>
+            <a href="/products/lf-et78a/">LF-ET78A</a>
+            <a href="/products/lf-hr53a/">LF-HR53A</a>
+            <a href="/products/gte-8030/">GTE-8030</a>
+            <a href="/products/gte-8075/">GTE-8075</a>
+          </div>
+        </div>
+        <div className="nav-dropdown">
+          <a href="/articles/" aria-haspopup="true">Blog <span>⌄</span></a>
+          <div className="nav-dropdown-menu">
+            <a href="/articles/">文章總覽</a>
+            <a href="/blog/chemical-foaming-vs-supercritical-foaming/">發泡技術</a>
+            <a href="/blog/biobased-carbon14-biodegradability/">生質材料</a>
+            <a href="/blog/eva-foam-shrinkage-ius-4065/">尺寸穩定</a>
+          </div>
+        </div>
         <div className="nav-dropdown">
           <a href="/company/" aria-haspopup="true">企業介紹 <span>⌄</span></a>
           <div className="nav-dropdown-menu">
