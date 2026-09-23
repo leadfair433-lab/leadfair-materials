@@ -1,6 +1,6 @@
-:HL["/leadfair-materials/_next/static/css/49c655bd6da4f490.css","style"]
+:HL["/leadfair-materials/_next/static/css/c2bf11bc2d133144.css","style"]
 :HL["/leadfair-materials/images/ius-4065-white-pellets-v4-scattered-fast.jpg","image"]
 :HL["/leadfair-materials/images/application-footwear-fast.jpg","image"]
 :HL["/leadfair-materials/images/application-midsole-fast.jpg","image"]
 :HL["/leadfair-materials/images/application-protective-gear-fast.jpg","image"]
-0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"products","param":null,"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}},"staleTime":300,"buildId":"FJEjwGbvorMVFGnXn-AIE"}
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"products","param":null,"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}},"staleTime":300,"buildId":"KdG-E7zxFwBH4mrjTKqPj"}
