@@ -2,7 +2,10 @@ export type LaboratoryArticle = {
   slug: string;
   title: string;
   image: string;
+  imageFit?: "cover" | "contain";
   summary: string;
+  statusLabel?: string;
+  imageCaption?: string;
   sections: { title: string; paragraphs: string[] }[];
 };
 
@@ -40,6 +43,38 @@ export const laboratoryArticles: LaboratoryArticle[] = [
     sections: [
       { title: "檢測區介紹", paragraphs: ["檢測區可用於說明樣品製備與性能驗證的工作方式。具體設備和操作條件將以正式資料為準。"] },
       { title: "文章可呈現的內容", paragraphs: ["未來可加入儀器近照、測試目的、方法與樣品要求，並以圖文方式說明結果如何用於材料研發與品質確認。"] },
+    ],
+  },
+  {
+    slug: "servo-computer-tensile-tester",
+    title: "伺服控制電腦系統拉力試驗機",
+    image: "/images/company/laboratory/instruments/servo-computer-tensile-tester.png",
+    imageFit: "contain",
+    summary: "以伺服控制與電腦化介面進行材料力學性能測試，適用於橡膠、塑膠、彈性體、紡織與紙板等材料。",
+    statusLabel: "材料力學測試 / AI-7000-SU1",
+    imageCaption: "GOTECH 台灣高鐵科技 AI-7000-SU1 伺服控制電腦系統拉力試驗機。",
+    sections: [
+      {
+        title: "設備用途",
+        paragraphs: [
+          "伺服控制電腦系統拉力試驗機配備伺服控制技術、電腦化操作介面與多種測試工裝，可對橡膠、塑膠、彈性體等高分子聚合物，以及紡織、紙板等材料的成品、半成品或啞鈴狀試樣進行測試。",
+          "設備可用於測量抗拉強度、伸長、撕裂、膠著力、抗拉應力、剝離、剪力與黏接力等性能，支援材料性能評估與品質控制。",
+        ],
+      },
+      {
+        title: "設備規格與測試標準",
+        paragraphs: [
+          "設備型號為 AI-7000-SU1，廠牌為 GOTECH 台灣高鐵科技，荷重元為 5 kN。",
+          "測試方案涵蓋 DIN、ASTM、ISO、SATRA 等行業標準；測量單位可切換 kgf、lbf、N、kN、gf、kPa、MPa 等。",
+        ],
+      },
+      {
+        title: "控制與數據記錄",
+        paragraphs: [
+          "伺服控制系統可對測試過程進行高精度控制，協助確保測試結果的準確性與可靠性。",
+          "系統能夠即時監控並記錄測試過程中的數據，便於使用者掌握測試進度與結果。",
+        ],
+      },
     ],
   },
 ];

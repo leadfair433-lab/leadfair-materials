@@ -65,6 +65,8 @@ export default function LanguageSwitcher({ compact = false }: { compact?: boolea
   const [locale, setLocale] = useState<SiteLocale>("zh-tw");
   useEffect(() => {
     const current = localeFromPath();
+    // The active locale is derived from the browser URL after hydration.
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setLocale(current);
     document.documentElement.lang = current === "zh-tw" ? "zh-Hant" : current;
     document.body.dataset.locale = current;
@@ -109,7 +111,7 @@ export default function LanguageSwitcher({ compact = false }: { compact?: boolea
     document.querySelectorAll<HTMLAnchorElement>("a[href]").forEach(anchor => {
       const href = anchor.getAttribute("href");
       if (!href || href.startsWith("#") || href.startsWith("http") || href.startsWith("mailto:") || href.startsWith("tel:")) return;
-      let route = href.startsWith(base) ? href.slice(base.length) : href;
+      const route = href.startsWith(base) ? href.slice(base.length) : href;
       if (!route.startsWith(PATH_SEPARATOR) || /^\/(zh-tw|en|vi)(?=\/|$)/.test(route) || /^\/(images|_next|blog-reference)(?=\/)/.test(route)) return;
       anchor.setAttribute("href", `${base}/${current}${route}`.replace(/([^:]\/)\/+/g, "$1"));
     });

@@ -5,6 +5,7 @@ import { useParams } from "next/navigation";
 import SiteHeader from "../../SiteHeader";
 import GlobalInquiryFooter from "../../GlobalInquiryFooter";
 import { productBySlug, products, type ProductGalleryImage, type ProductModule } from "../../content/products";
+import Ius4065ReferenceFrame from "./Ius4065ReferenceFrame";
 
 function OtherProductsCarousel({ currentSlug, locale }: { currentSlug: string; locale?: string }) {
   const [first, setFirst] = useState(0);
@@ -180,6 +181,13 @@ export default function ProductDetail() {
   const additionalModules = isIus4065
     ? [moduleById("problem-solution")].filter((module): module is ProductModule => Boolean(module))
     : product.modules.filter(module => module.type === "list" || module.type === "faq" || module.type === "compare");
+  if (isIus4065 && (!params?.locale || params.locale === "zh-tw")) return <main className="ius-reference-page">
+    <SiteHeader />
+    <nav className="modular-product-nav shell" aria-label="產品牌號導航"><button type="button" className="modular-product-back" onClick={goBack}>← 返回上一頁</button><div>{products.map(item => <a href={`/products/${item.slug}/`} className={item.slug === product.slug ? "active" : ""} aria-current={item.slug === product.slug ? "page" : undefined} key={item.slug}>{item.name}</a>)}<a href="/products/" className="modular-product-more">更多產品 ↗</a></div></nav>
+    <Ius4065ReferenceFrame />
+    <div className="shell"><OtherProductsCarousel currentSlug={product.slug} locale={params?.locale} /></div>
+    <GlobalInquiryFooter />
+  </main>;
   return <main className="modular-product-page">
     <SiteHeader />
     <nav className="modular-product-nav shell" aria-label="產品牌號導航">
