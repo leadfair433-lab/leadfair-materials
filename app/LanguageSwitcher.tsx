@@ -38,9 +38,52 @@ const translationOverrides: Record<"en" | "vi", Record<string, string>> = {
   }
 };
 
+// High-visibility navigation, product and inquiry copy is maintained here by
+// hand so newly added pages never fall back to awkward machine translations.
+const supplementalTranslations: Record<"en" | "vi", Record<string, string>> = {
+  en: {
+    "企業介紹": "Company", "企業榮譽": "Honors", "聯絡我們": "Contact", "產品總覽": "Product Overview",
+    "文章總覽": "Article Overview", "公司簡介": "Company Profile", "歷史沿革": "Company History", "實驗室環境": "Laboratory",
+    "主要導航": "Main navigation", "快速聯絡方式": "Quick contact", "產品牌號導航": "Product grade navigation",
+    "上一組產品": "Previous products", "下一組產品": "Next products", "其他產品": "Other Products", "更多產品 ↗": "More Products ↗",
+    "查看產品詳情 ↗": "View Product Details ↗", "查看更多產品": "View More Products", "探索更多材料牌號與應用方向": "Explore more material grades and applications",
+    "產品資訊": "Product Information", "產品詳情": "Product Details", "材料特點": "Material Features", "更多產品詳情將陸續更新。": "More product information will be added soon.",
+    "請詢產品與索取樣品": "Product Consultation & Sample Request", "聯絡材料工程師 ↗": "Contact a Materials Engineer ↗",
+    "高分散型 TPE": "High-Dispersion TPE", "高回彈 TPE": "High-Rebound TPE", "生質 TPE": "Bio-based TPE", "高耐熱柔軟 TPE": "Soft, Heat-Resistant TPE", "客製材料牌號": "Custom Material Grade",
+    "高延伸・低比重・良好回彈": "High Elongation · Low Specific Gravity · Strong Rebound", "柔韌耐磨・回彈穩定": "Flexible & Wear-Resistant · Stable Rebound",
+    "生質含量・輕量高回彈": "Bio-based Content · Lightweight High Rebound", "依應用條件進行材料匹配": "Material Matching for Your Application",
+    "超柔軟・更高熔點・更穩定加工": "Ultra-Soft · Higher Melting Point · Stable Processing",
+    "硬度": "Hardness", "熔融指數": "Melt Flow Index", "比重": "Specific Gravity", "延伸率": "Elongation", "撕裂強度": "Tear Strength", "熔點": "Melting Point",
+    "專案": "Item", "外觀": "Appearance", "顏色": "Color", "拉力": "Tensile Strength", "回彈度": "Rebound", "收縮率": "Shrinkage", "壓縮變形": "Compression Set",
+    "發泡後物性": "Properties After Foaming", "原料基本特性": "Raw Material Properties", "測試方法": "Test Method", "測試結果": "Test Result", "數值": "Value",
+    "告訴我們您的需求，": "Tell us what you need,", "取得可落地的材料方案。": "and receive a practical material solution.", "提交您的專案需求": "Submit Your Project Requirements",
+    "目前需求": "Current Need", "材料選型": "Material Selection", "索取樣品": "Request Samples", "客製配方": "Custom Formulation", "製程改善": "Process Improvement", "量產與報價": "Production & Quotation",
+    "工作郵箱": "Business Email", "聯絡電話": "Phone", "網站導航": "Site Navigation", "聯絡方式": "Contact Details", "關注與聯絡": "Follow & Contact", "返回頁首 ↑": "Back to Top ↑"
+  },
+  vi: {
+    "企業介紹": "Giới thiệu công ty", "企業榮譽": "Thành tựu", "聯絡我們": "Liên hệ", "產品總覽": "Tổng quan sản phẩm",
+    "文章總覽": "Tổng quan bài viết", "公司簡介": "Hồ sơ công ty", "歷史沿革": "Lịch sử phát triển", "實驗室環境": "Phòng thí nghiệm",
+    "主要導航": "Điều hướng chính", "快速聯絡方式": "Liên hệ nhanh", "產品牌號導航": "Điều hướng mã sản phẩm",
+    "上一組產品": "Sản phẩm trước", "下一組產品": "Sản phẩm tiếp theo", "其他產品": "Sản phẩm khác", "更多產品 ↗": "Thêm sản phẩm ↗",
+    "查看產品詳情 ↗": "Xem chi tiết sản phẩm ↗", "查看更多產品": "Xem thêm sản phẩm", "探索更多材料牌號與應用方向": "Khám phá thêm mã vật liệu và ứng dụng",
+    "產品資訊": "Thông tin sản phẩm", "產品詳情": "Chi tiết sản phẩm", "材料特點": "Đặc tính vật liệu", "更多產品詳情將陸續更新。": "Thông tin sản phẩm sẽ được cập nhật thêm.",
+    "請詢產品與索取樣品": "Tư vấn sản phẩm & yêu cầu mẫu", "聯絡材料工程師 ↗": "Liên hệ kỹ sư vật liệu ↗",
+    "高分散型 TPE": "TPE phân tán cao", "高回彈 TPE": "TPE độ nảy cao", "生質 TPE": "TPE sinh học", "高耐熱柔軟 TPE": "TPE mềm chịu nhiệt", "客製材料牌號": "Mã vật liệu tùy chỉnh",
+    "高延伸・低比重・良好回彈": "Độ giãn dài cao · Tỷ trọng thấp · Độ nảy tốt", "柔韌耐磨・回彈穩定": "Dẻo dai, chống mài mòn · Độ nảy ổn định",
+    "生質含量・輕量高回彈": "Hàm lượng sinh học · Nhẹ, độ nảy cao", "依應用條件進行材料匹配": "Phù hợp vật liệu theo ứng dụng",
+    "超柔軟・更高熔點・更穩定加工": "Siêu mềm · Nhiệt độ nóng chảy cao hơn · Gia công ổn định",
+    "硬度": "Độ cứng", "熔融指數": "Chỉ số chảy", "比重": "Tỷ trọng", "延伸率": "Độ giãn dài", "撕裂強度": "Độ bền xé", "熔點": "Nhiệt độ nóng chảy",
+    "專案": "Hạng mục", "外觀": "Ngoại quan", "顏色": "Màu sắc", "拉力": "Độ bền kéo", "回彈度": "Độ nảy", "收縮率": "Độ co ngót", "壓縮變形": "Biến dạng nén",
+    "發泡後物性": "Tính chất sau khi tạo bọt", "原料基本特性": "Tính chất nguyên liệu", "測試方法": "Phương pháp thử", "測試結果": "Kết quả thử", "數值": "Giá trị",
+    "告訴我們您的需求，": "Hãy cho chúng tôi biết nhu cầu,", "取得可落地的材料方案。": "và nhận giải pháp vật liệu khả thi.", "提交您的專案需求": "Gửi yêu cầu dự án",
+    "目前需求": "Nhu cầu hiện tại", "材料選型": "Lựa chọn vật liệu", "索取樣品": "Yêu cầu mẫu", "客製配方": "Công thức tùy chỉnh", "製程改善": "Cải tiến quy trình", "量產與報價": "Sản xuất & báo giá",
+    "工作郵箱": "Email công việc", "聯絡電話": "Điện thoại", "網站導航": "Điều hướng", "聯絡方式": "Thông tin liên hệ", "關注與聯絡": "Theo dõi & liên hệ", "返回頁首 ↑": "Về đầu trang ↑"
+  }
+};
+
 const translations: Record<"en" | "vi", Record<string, string>> = {
-  en: { ...generatedTranslations.en, ...translationOverrides.en },
-  vi: { ...generatedTranslations.vi, ...translationOverrides.vi },
+  en: { ...generatedTranslations.en, ...translationOverrides.en, ...supplementalTranslations.en },
+  vi: { ...generatedTranslations.vi, ...translationOverrides.vi, ...supplementalTranslations.vi },
 };
 
 const traditionalPhrases: Record<string, string> = {

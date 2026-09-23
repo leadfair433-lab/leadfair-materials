@@ -1,5 +1,10 @@
 import { cp, mkdir, readdir, readFile, stat, writeFile } from "node:fs/promises";
 import path from "node:path";
+import beautify from "js-beautify";
+
+const { html: beautifyHtml, css: beautifyCss } = beautify;
+const htmlFormat = { indent_size: 2, wrap_line_length: 120, end_with_newline: true, extra_liners: [] };
+const cssFormat = { indent_size: 2, selector_separator_newline: true, newline_between_rules: true, end_with_newline: true };
 
 const root = process.cwd();
 const flatRoot = path.resolve(process.argv[2] || path.join(root, "..", "峰晖网站-传统HTML交付版-2026-09-23"));
@@ -65,7 +70,7 @@ for (const filename of htmlFiles) {
   const sourceCssName = filename.replace(/\.html$/, ".css");
   const outputCssName = info.output.replace(/\.html$/, ".css");
   const css = await readFile(path.join(flatRoot, "css", sourceCssName), "utf8");
-  await writeFile(path.join(sectionDirectory, "css", outputCssName), css);
+  await writeFile(path.join(sectionDirectory, "css", outputCssName), beautifyCss(css, cssFormat));
 
   let html = await readFile(path.join(flatRoot, filename), "utf8");
   html = html.replace(`css/${sourceCssName}`, `css/${outputCssName}`);
@@ -76,7 +81,7 @@ for (const filename of htmlFiles) {
     const to = path.join(target.folder, target.section, target.output);
     return `href="${path.relative(from, to).split(path.sep).join("/")}${hash}"`;
   });
-  await writeFile(path.join(sectionDirectory, info.output), html);
+  await writeFile(path.join(sectionDirectory, info.output), beautifyHtml(html, htmlFormat));
 
   await copyReferences(new Set([
     ...collect(html, "images/", "png|jpe?g|webp|gif|svg|avif"),

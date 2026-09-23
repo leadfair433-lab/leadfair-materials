@@ -1,4 +1,4 @@
-:HL["/leadfair-materials/_next/static/css/c2bf11bc2d133144.css","style"]
+:HL["/leadfair-materials/_next/static/css/4c505f28d3fc1973.css","style"]
 :HL["/leadfair-materials/_next/static/css/a59973b0c8f90a2a.css","style"]
 :HL["/leadfair-materials/images/articles/eva-shrinkage-cover-fast.jpg","image"]
-0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"locale","param":{"type":"d","key":"zh-tw","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"blog","param":null,"prefetchHints":0,"slots":{"children":{"name":"slug","param":{"type":"d","key":"eva-foam-shrinkage-ius-4065","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}}}},"staleTime":300,"buildId":"KdG-E7zxFwBH4mrjTKqPj"}
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"locale","param":{"type":"d","key":"zh-tw","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"blog","param":null,"prefetchHints":0,"slots":{"children":{"name":"slug","param":{"type":"d","key":"eva-foam-shrinkage-ius-4065","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}}}},"staleTime":300,"buildId":"1h57GMIV0BbR9d6xZ9-uv"}

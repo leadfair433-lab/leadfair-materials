@@ -1,5 +1,10 @@
 import { cp, mkdir, readdir, readFile, stat, writeFile } from "node:fs/promises";
 import path from "node:path";
+import beautify from "js-beautify";
+
+const { html: beautifyHtml, css: beautifyCss } = beautify;
+const htmlFormat = { indent_size: 2, wrap_line_length: 120, end_with_newline: true, extra_liners: [] };
+const cssFormat = { indent_size: 2, selector_separator_newline: true, newline_between_rules: true, end_with_newline: true };
 
 const root = process.cwd();
 const out = path.join(root, "out");
@@ -107,7 +112,7 @@ for (const page of pages) {
       .replaceAll("/leadfair-materials/images/", "../images/")
       .replaceAll("/leadfair-materials/icons/", "../images/icons/"));
   }
-  await writeFile(path.join(cssDestination, cssName), cssParts.join("\n"));
+  await writeFile(path.join(cssDestination, cssName), beautifyCss(cssParts.join("\n"), cssFormat));
 
   let keptStylesheet = false;
   const html = rewriteHtml(original).replace(/<link rel="stylesheet" href="css\/[^"]+\.css"[^>]*\/?>(?:<\/link>)?/g, () => {
@@ -115,7 +120,7 @@ for (const page of pages) {
     keptStylesheet = true;
     return `<link rel="stylesheet" href="css/${cssName}"/>`;
   });
-  await writeFile(path.join(destination, page.filename), html);
+  await writeFile(path.join(destination, page.filename), beautifyHtml(html, htmlFormat));
 }
 
 const chunksSource = path.join(out, "_next", "static", "chunks");
@@ -138,8 +143,8 @@ for (const entry of await readdir(path.join(out, "_next", "static"), { withFileT
 
 await cp(path.join(root, "public", "images"), path.join(destination, "images"), { recursive: true });
 await cp(path.join(root, "public", "icons"), path.join(destination, "images", "icons"), { recursive: true });
-await cp(path.join(root, "public", "ius-4065-reference.html"), path.join(destination, "ius-4065-reference.html"));
-await cp(path.join(root, "public", "ius-4065-reference.css"), path.join(destination, "ius-4065-reference.css"));
+await writeFile(path.join(destination, "ius-4065-reference.html"), beautifyHtml(await readFile(path.join(root, "public", "ius-4065-reference.html"), "utf8"), htmlFormat));
+await writeFile(path.join(destination, "ius-4065-reference.css"), beautifyCss(await readFile(path.join(root, "public", "ius-4065-reference.css"), "utf8"), cssFormat));
 
 const rows = ["语言,原路由,HTML文件", ...pages.map(page => `${page.locale},/${page.locale}/${page.route},${page.filename}`)];
 await writeFile(path.join(destination, "页面对应表.csv"), `\uFEFF${rows.join("\n")}`);
