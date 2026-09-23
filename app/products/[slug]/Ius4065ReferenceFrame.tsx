@@ -5,7 +5,7 @@ import { useEffect, useRef, useState } from "react";
 export default function Ius4065ReferenceFrame() {
   const frame = useRef<HTMLIFrameElement>(null);
   const [height, setHeight] = useState(6200);
-  const src = `${process.env.NEXT_PUBLIC_BASE_PATH || ""}/ius-4065-reference.html?v=20260923-4`;
+  const src = `${process.env.NEXT_PUBLIC_BASE_PATH || ""}/ius-4065-reference.html?v=20260923-5`;
 
   const measureFrame = () => {
     try {
