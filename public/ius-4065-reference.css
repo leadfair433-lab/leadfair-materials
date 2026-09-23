@@ -26,7 +26,7 @@ section .wrap>.eyebrow,section .two .eyebrow{margin-bottom:14px}
 .two{gap:50px}
 figure img,.two>img{border-radius:16px}
 .product-description figure{margin-top:34px}
-.product-description figure img{width:100%;max-height:720px;object-fit:cover}
+.product-description figure img{width:100%;height:auto;object-fit:contain}
 figure.chart{margin:28px 0;padding:16px;border:1px solid #dce8f5;border-radius:16px;background:#fff;box-shadow:0 12px 28px rgba(32,73,113,.05)}
 figcaption{margin-top:12px;color:#65798a}
 table{font-size:.93rem;margin-top:30px;border-collapse:separate;border-spacing:0;border:1px solid #d8e4f1;border-radius:14px;overflow:hidden;background:#fff}
