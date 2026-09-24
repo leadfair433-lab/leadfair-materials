@@ -27,7 +27,7 @@ export default function LaboratoryArticlePage({ article, locale }: { article: La
       <div className="laboratory-article-layout">
         <aside><strong>本文內容</strong>{article.sections.map((section, index) => <a key={section.title} href={`#lab-section-${index+1}`}>{String(index+1).padStart(2,"0")}　{section.title}</a>)}</aside>
         <div className="laboratory-article-body">
-          {article.sections.map((section, index) => <section id={`lab-section-${index+1}`} key={section.title}><span>{String(index+1).padStart(2,"0")} / LABORATORY</span><h2>{section.title}</h2>{section.paragraphs.map(paragraph => <p key={paragraph}>{paragraph}</p>)}</section>)}
+          {article.sections.map((section, index) => <section id={`lab-section-${index+1}`} key={section.title}>{index === 0 && <span>01 / LABORATORY</span>}<h2>{section.title}</h2>{section.paragraphs.map(paragraph => <p key={paragraph}>{paragraph}</p>)}</section>)}
           <div className="laboratory-article-related"><h2>其他實驗室介紹</h2><div>{laboratoryArticles.filter(item => item.slug !== article.slug).map(item => <a className={`laboratory-related-card${item.imageFit === "contain" ? " contain" : ""}`} href={`${laboratoryUrl}${item.slug}/`} key={item.slug}><img src={item.image} alt="" loading="lazy" /><span>{item.title}<b aria-hidden="true">↗</b></span></a>)}</div><a className="laboratory-related-more" href={laboratoryUrl}>更多介紹 <span aria-hidden="true">↗</span></a></div>
         </div>
       </div>
