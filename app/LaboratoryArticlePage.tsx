@@ -17,7 +17,12 @@ export default function LaboratoryArticlePage({ article, locale }: { article: La
           <p>{article.summary}</p>
           <small>{article.statusLabel || "實驗室介紹 / 設備資料待確認"}</small>
         </header>
-        <figure className={`laboratory-article-cover${article.imageFit === "contain" ? " contain" : ""}${article.slug === "servo-computer-tensile-tester" ? " instrument-cover" : ""}`}><img src={article.image} alt={article.title} /><figcaption>{article.imageCaption || "實驗室環境圖片；設備型號與測試數據待確認。"}</figcaption></figure>
+        <figure className={`laboratory-article-cover${article.imageFit === "contain" ? " contain" : ""}${article.slug === "servo-computer-tensile-tester" ? " instrument-cover" : ""}`}>
+          <div className="laboratory-article-image-frame">
+            <img src={article.image} alt={article.title} />
+          </div>
+          <figcaption>{article.imageCaption || "實驗室環境圖片；設備型號與測試數據待確認。"}</figcaption>
+        </figure>
       </div>
       <div className="laboratory-article-layout">
         <aside><strong>本文內容</strong>{article.sections.map((section, index) => <a key={section.title} href={`#lab-section-${index+1}`}>{String(index+1).padStart(2,"0")}　{section.title}</a>)}</aside>

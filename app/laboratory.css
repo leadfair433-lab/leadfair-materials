@@ -8,8 +8,8 @@
 .laboratory-article-header h1{margin:26px 0;font-size:clamp(34px,3.5vw,54px);font-weight:800;line-height:1.2;letter-spacing:-.045em}
 .laboratory-article-header p{max-width:680px;margin:0 0 36px;color:#626b78;font-size:19px;line-height:1.8}
 .laboratory-article-header small{color:#717987;font-size:14px}
-.laboratory-article-cover{min-width:0;margin:0}.laboratory-article-cover img{display:block;width:100%;aspect-ratio:1.15;object-fit:cover;border-radius:22px}.laboratory-article-cover.contain img{object-fit:contain;background:#fff}.laboratory-article-cover figcaption{padding:12px 0;color:#607383;font-size:13px}
-.laboratory-article-cover.instrument-cover{overflow:hidden;border-radius:22px}.laboratory-article-cover.instrument-cover img{transform:scale(1.35)}
+.laboratory-article-cover{min-width:0;margin:0}.laboratory-article-image-frame{overflow:hidden;border-radius:22px}.laboratory-article-cover img{display:block;width:100%;aspect-ratio:1.15;object-fit:cover}.laboratory-article-cover.contain img{object-fit:contain;background:#fff}.laboratory-article-cover figcaption{position:relative;z-index:1;padding:12px 0;color:#607383;font-size:13px}
+.laboratory-article-cover.instrument-cover img{transform:scale(1.35)}.laboratory-article-cover.instrument-cover figcaption{font-weight:600;color:#40576a}
 .laboratory-article-layout{display:grid;grid-template-columns:minmax(190px,.28fr) minmax(0,.72fr);gap:8%;margin-top:70px}
 .laboratory-article-layout aside{position:sticky;top:100px;align-self:start;display:grid;gap:0;padding:22px;border:1px solid #dce5ec;border-radius:16px;background:#fff}
 .laboratory-article-layout aside strong{margin-bottom:12px;font-size:16px}.laboratory-article-layout aside a{padding:13px 0;border-top:1px solid #e1e9ef;color:#385b79;font-size:15px}
