@@ -2,4 +2,4 @@
 :HL["/leadfair-materials/_next/static/css/e467276655dcd4a5.css","style"]
 :HL["/leadfair-materials/images/company/laboratory/lab-panorama-left-fast.jpg","image"]
 :HL["/leadfair-materials/images/company/laboratory/lab-panorama-right-fast.jpg","image"]
-0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"company","param":null,"prefetchHints":0,"slots":{"children":{"name":"laboratory","param":null,"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"VPSQ-duXQzH8xfoISHkyQ"}
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"company","param":null,"prefetchHints":0,"slots":{"children":{"name":"laboratory","param":null,"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"rzG14TnbjegaJ73yN_XXn"}
