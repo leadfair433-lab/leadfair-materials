@@ -128,6 +128,9 @@ export default function ProductDetail() {
   const params = useParams<{ slug: string; locale?: string }>();
   const product = productBySlug[params?.slug || ""] || products[0];
   const isIus4065 = product.slug === "ius-4065";
+  const heroSpecs = product.specs.length > 0
+    ? product.specs.slice(0, 3)
+    : product.tags.slice(0, 3).map((value, index) => ({ label: `服務項目 ${String(index + 1).padStart(2, "0")}`, value }));
   const goBack = () => {
     if (window.history.length > 1 && document.referrer && new URL(document.referrer).origin === window.location.origin) window.history.back();
     else window.location.assign("/products/");
@@ -158,8 +161,8 @@ export default function ProductDetail() {
           <h1>{product.name}</h1>
           <h2>{product.title}</h2>
           <p>{product.summary}</p>
-          {product.specs.length > 0 && <dl className="modular-product-specs">
-            {product.specs.map(spec => <div key={spec.label}><dt>{spec.label}</dt><dd>{spec.value}</dd></div>)}
+          {heroSpecs.length > 0 && <dl className="modular-product-specs" aria-label="產品關鍵指標">
+            {heroSpecs.map(spec => <div key={spec.label}><dd>{spec.value}</dd><dt>{spec.label}</dt></div>)}
           </dl>}
           <a href="/contact/#inquiry" className="modular-product-cta">歡迎索取樣品，驗證您的配方與加工條件 <b aria-hidden="true">↗</b></a>
         </div>
@@ -169,13 +172,13 @@ export default function ProductDetail() {
           ? product.modules.map(module => <DetailModule module={module} key={module.id} />)
           : <><section className="product-module product-module-text"><header className="product-module-heading"><span>PRODUCT OVERVIEW</span><h2>產品定位與材料方案</h2></header><div className="product-module-prose"><p>{product.summary}</p></div></section><section className="product-module product-module-features"><header className="product-module-heading"><span>APPLICATION SUPPORT</span><h2>從配方開發到量產驗證</h2></header><div className="product-module-features"><article><b>01</b><h3>需求與材料選型</h3><p>依應用條件、目標物性與加工方式進行材料匹配。</p></article><article><b>02</b><h3>配方與樣品驗證</h3><p>透過起始配方、樣品與內部測試縮短開發時程。</p></article><article><b>03</b><h3>製程與量產支援</h3><p>根據試產結果優化加工條件，協助穩定量產。</p></article></div></section></>}
       </div>
-      <section className="modular-product-extra" aria-label="產品詳情">
-        {product.detailContent?.length ? <div className="modular-product-extra-content">
+      {product.detailContent?.length ? <section className="modular-product-extra" aria-label="產品詳情">
+        <div className="modular-product-extra-content">
           {product.detailContent.map((block, index) => block.type === "paragraph"
             ? <p key={`${block.type}-${index}`}>{block.text}</p>
             : <figure key={`${block.type}-${index}`}><img src={block.src} alt={block.alt} loading="lazy" />{block.caption && <figcaption>{block.caption}</figcaption>}</figure>)}
-        </div> : <div className="modular-product-extra-empty"><p>更多產品詳情將陸續更新。</p></div>}
-      </section>
+        </div>
+      </section> : null}
       <ProductFixedModules product={product} />
       <OtherProductsCarousel currentSlug={product.slug} locale={params?.locale} />
     </article>
