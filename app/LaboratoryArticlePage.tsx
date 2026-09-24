@@ -10,7 +10,7 @@ export default function LaboratoryArticlePage({ article, locale }: { article: La
     <SiteHeader />
     <article className="laboratory-article shell">
       <nav aria-label="實驗室導覽"><a href={laboratoryUrl}>← 返回實驗室儀器總覽</a></nav>
-      <div className="laboratory-article-hero">
+      <div className={`laboratory-article-hero${article.slug === "servo-computer-tensile-tester" ? " instrument-hero" : ""}`}>
         <header className="laboratory-article-header">
           <span>FF / LF LABORATORY · 實驗室環境</span>
           <h1>{article.title}</h1>
