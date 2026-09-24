@@ -28,7 +28,7 @@ export default function SiteHeader() {
             <a href="/blog/eva-foam-shrinkage-ius-4065/">尺寸穩定</a>
           </div>
         </div>
-        <div className="nav-dropdown">
+        <div className="nav-dropdown company-dropdown">
           <a href="/company/" aria-haspopup="true">企業介紹 <span>⌄</span></a>
           <div className="nav-dropdown-menu">
             <a href="/company/#company-overview">公司簡介</a>

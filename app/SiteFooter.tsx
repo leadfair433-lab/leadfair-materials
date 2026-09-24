@@ -2,7 +2,7 @@ import BrandLogo from "./BrandLogo";
 
 export default function SiteFooter(){
   return <footer className="footer site-footer">
-    <div className="footer-main shell"><div className="footer-brand"><a className="logo brand-logo-link" href="/#top" aria-label="Found Fair 首頁"><BrandLogo/></a><p>專注 TPE 熱塑性彈性體研發、客製配方、測試驗證與穩定量產。</p></div>
+    <div className="footer-main shell"><div className="footer-brand"><a className="logo brand-logo-link" href="/#top" aria-label="Found Fair 首頁"><BrandLogo variant="footer"/></a><p>專注 TPE 熱塑性彈性體研發、客製配方、測試驗證與穩定量產。</p></div>
     <nav className="footer-nav" aria-label="頁尾導航"><strong>網站導航</strong><a href="/products/">產品</a><a href="/articles/">Blog</a><a href="/company/">企業介紹</a><a href="/honors/">企業榮譽</a><a href="/contact/">聯絡我們</a></nav>
     <div className="footer-contact-info" aria-label="聯絡資訊">
       <strong>聯絡方式</strong>
