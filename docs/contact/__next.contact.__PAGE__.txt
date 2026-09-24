@@ -3,5 +3,5 @@
 3:I[2464,["5751","static/chunks/5751-201b0a24f1e548f7.js","5255","static/chunks/5255-085d04ef1d548977.js","977","static/chunks/app/contact/page-41d4aeafc8136d4f.js"],"default"]
 4:I[3258,[],"OutletBoundary"]
 5:"$Sreact.suspense"
-0:{"rsc":["$","$1","c",{"children":[["$","main",null,{"className":"contact-page","children":[["$","$L2",null,{}],["$","$L3",null,{}]]}],null,["$","$L4",null,{"children":["$","$5",null,{"name":"Next.MetadataOutlet","children":"$@6"}]}]]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"VsyLA8aCzjrwPht0bGn06"}
+0:{"rsc":["$","$1","c",{"children":[["$","main",null,{"className":"contact-page","children":[["$","$L2",null,{}],["$","$L3",null,{}]]}],null,["$","$L4",null,{"children":["$","$5",null,{"name":"Next.MetadataOutlet","children":"$@6"}]}]]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"OksTde5bsW8HSv7iToNqU"}
 6:null
