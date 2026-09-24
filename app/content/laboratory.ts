@@ -52,7 +52,7 @@ export const laboratoryArticles: LaboratoryArticle[] = [
     imageFit: "contain",
     summary: "以伺服控制與電腦化介面進行材料力學性能測試，適用於橡膠、塑膠、彈性體、紡織與紙板等材料。",
     statusLabel: "材料力學測試 / AI-7000-SU1",
-    imageCaption: "GOTECH 台灣高鐵科技 AI-7000-SU1 伺服控制電腦系統拉力試驗機。",
+    imageCaption: "GOTECH 台灣高鐵科技 AI-7000-SU1 伺服控制電腦系統拉力試驗機",
     sections: [
       {
         title: "設備用途",
