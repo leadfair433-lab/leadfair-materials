@@ -4,7 +4,7 @@ import { useState } from "react";
 import { useParams } from "next/navigation";
 import SiteHeader from "../../SiteHeader";
 import GlobalInquiryFooter from "../../GlobalInquiryFooter";
-import { productBySlug, products, type ProductModule } from "../../content/products";
+import { productBySlug, products, type Product, type ProductModule } from "../../content/products";
 import Ius4065ReferenceFrame from "./Ius4065ReferenceFrame";
 
 function OtherProductsCarousel({ currentSlug, locale }: { currentSlug: string; locale?: string }) {
@@ -93,6 +93,37 @@ function DetailModule({ module }: { module: ProductModule }) {
   </section>;
 }
 
+const productApplications: Record<string, string[]> = {
+  "lf-et78a": ["發泡鞋中底與鞋墊", "緩衝與吸震材料", "射出、押出及壓延製品", "輕量高延伸彈性部件", "運動與機能鞋材"],
+  "lf-hr53a": ["高回彈鞋中底", "鞋墊與緩衝部件", "耐磨運動鞋材", "輕量發泡製品", "射出、押出與發泡製品"],
+  "gte-8030": ["生質發泡鞋中底", "高回彈鞋墊", "輕量緩衝材料", "EVA／POE 發泡製品", "永續鞋材與運動用品"],
+  "gte-8075": ["客製鞋材與鞋底系統", "鞋中底與鞋墊", "緩衝與吸震部件", "依目標硬度開發的發泡製品", "試產與量產材料匹配"],
+};
+
+function ProductFixedModules({ product }: { product: Product }) {
+  const applications = productApplications[product.slug] || ["鞋材與發泡應用", "緩衝與吸震部件", "射出、押出及壓延製品", "機能性彈性材料", "客製配方與量產應用"];
+  const applicationImage = product.gallery?.[1] || product.gallery?.[0];
+  const validationImage = product.gallery?.[2] || product.gallery?.[0];
+  return <div className="product-fixed-modules">
+    <section className="product-fixed-panel product-fixed-applications" aria-labelledby={`${product.slug}-applications-title`}>
+      <div className="product-fixed-copy">
+        <h2 id={`${product.slug}-applications-title`}>主要應用領域</h2>
+        <ul>{applications.map(item => <li key={item}>{item}</li>)}</ul>
+      </div>
+      <figure><img src={applicationImage?.src || product.image} alt={applicationImage?.alt || `${product.name} 主要應用領域`} loading="lazy" /></figure>
+    </section>
+    <section className="product-fixed-panel product-fixed-validation" aria-labelledby={`${product.slug}-validation-title`}>
+      <div className="product-fixed-copy">
+        <h2 id={`${product.slug}-validation-title`}>從配方選擇到量產驗證</h2>
+        <p>提供現有材料牌號、配方比例、目標硬度、發泡倍率及二次加工條件，可進一步進行起始配方、試樣、機械物性與二次熱收縮評估。</p>
+        <p>本頁數據為特定配方與測試條件下的內部典型值，僅供材料篩選與配方開發參考，不構成所有配方、製程或成品的保證規格。</p>
+        <a href="/contact/#inquiry">歡迎索取樣品，驗證您的配方與加工條件 <b aria-hidden="true">↗</b></a>
+      </div>
+      <figure><img src={validationImage?.src || product.image} alt={validationImage?.alt || `${product.name} 配方與量產驗證`} loading="lazy" /></figure>
+    </section>
+  </div>;
+}
+
 export default function ProductDetail() {
   const params = useParams<{ slug: string; locale?: string }>();
   const product = productBySlug[params?.slug || ""] || products[0];
@@ -145,6 +176,7 @@ export default function ProductDetail() {
             : <figure key={`${block.type}-${index}`}><img src={block.src} alt={block.alt} loading="lazy" />{block.caption && <figcaption>{block.caption}</figcaption>}</figure>)}
         </div> : <div className="modular-product-extra-empty"><p>更多產品詳情將陸續更新。</p></div>}
       </section>
+      <ProductFixedModules product={product} />
       <OtherProductsCarousel currentSlug={product.slug} locale={params?.locale} />
     </article>
     <GlobalInquiryFooter />
