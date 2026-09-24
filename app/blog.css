@@ -2,8 +2,8 @@
 .material-blog > header { display: flex; justify-content: space-between; align-items: flex-end; gap: 32px; margin-bottom: 42px; padding-top: 42px; }
 .blog-label { font-size: 12px; font-weight: 800; letter-spacing: .15em; color: #0b3cff; }
 .material-blog h2 { margin: 24px 0 0; color: #111514; font-size: clamp(30px, 3.4vw, 54px); font-weight: 500; letter-spacing: -.045em; line-height: 1.2; }
+.blog-heading-copy > p { margin:18px 0 0; color:#68716d; font-size:16px; line-height:1.8; }
 .blog-header-side { display:flex; flex-direction:column; align-items:flex-end; gap:20px; }
-.blog-header-side > p { margin: 0; color: #68716d; font-size: 16px; line-height: 1.8; text-align:right; }
 .blog-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 24px; align-items: start; }
 .blog-card { min-width: 0; border-bottom: 1px solid #ccd4cf; }
 .blog-image { display: block; overflow: hidden; border-radius: 18px; background: #18201f; aspect-ratio: 1.6; }

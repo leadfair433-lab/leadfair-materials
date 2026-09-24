@@ -1,4 +1,5 @@
 import BrandLogo from "./BrandLogo";
+import { socialIcons } from "./blog/SocialIcons";
 
 export default function SiteFooter(){
   return <footer className="footer site-footer">
@@ -11,7 +12,7 @@ export default function SiteFooter(){
       <a href="mailto:joe.chen@ffsystem.com"><small>電子郵箱</small>joe.chen@ffsystem.com</a>
       <a href="tel:+8869250938852"><small>座機</small>+886-0925-093-8852</a>
     </div>
-    <div className="footer-connect"><strong>關注與聯絡</strong><div className="footer-socials"><a className="facebook" href="#" aria-label="Facebook">f</a><a className="youtube" href="#" aria-label="YouTube">▶</a><a className="x-social" href="#" aria-label="X">X</a><a className="linkedin" href="#" aria-label="LinkedIn">in</a><a className="instagram" href="#" aria-label="Instagram">◎</a><a className="whatsapp" href="https://wa.me/8613928736388" target="_blank" rel="noreferrer" aria-label="WhatsApp"><img src="/icons/whatsapp.svg" alt=""/></a></div><a className="footer-contact-button" href="/contact/#inquiry">聯絡材料工程師 ↗</a></div></div>
+    <div className="footer-connect"><strong>關注與聯絡</strong><div className="footer-socials"><a className="facebook" href="#" aria-label="Facebook">{socialIcons[3]}</a><a className="youtube" href="#" aria-label="YouTube">{socialIcons[0]}</a><a className="x-social" href="#" aria-label="X">{socialIcons[4]}</a><a className="linkedin" href="#" aria-label="LinkedIn">{socialIcons[2]}</a><a className="instagram" href="#" aria-label="Instagram">{socialIcons[1]}</a><a className="whatsapp" href="https://wa.me/8613928736388" target="_blank" rel="noreferrer" aria-label="WhatsApp">{socialIcons[5]}</a></div><a className="footer-contact-button" href="/contact/#inquiry">聯絡材料工程師 ↗</a></div></div>
     <div className="footer-bottom shell"><small className="footer-copyright">© 2026 Found Fair. All rights reserved.</small><a href="#page-top">返回頁首 ↑</a></div>
   </footer>;
 }

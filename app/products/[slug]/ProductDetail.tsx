@@ -130,13 +130,13 @@ export default function ProductDetail() {
           {product.specs.length > 0 && <dl className="modular-product-specs">
             {product.specs.map(spec => <div key={spec.label}><dt>{spec.label}</dt><dd>{spec.value}</dd></div>)}
           </dl>}
-          <a href="/contact/#inquiry" className="modular-product-cta">諮詢產品與索取樣品 <b aria-hidden="true">↗</b></a>
+          <a href="/contact/#inquiry" className="modular-product-cta">歡迎索取樣品，驗證您的配方與加工條件 <b aria-hidden="true">↗</b></a>
         </div>
       </header>
       <div className="product-modules modular-product-longform" aria-label="產品資訊">
         {product.modules.length > 0
           ? product.modules.map(module => <DetailModule module={module} key={module.id} />)
-          : <div className="modular-product-placeholder"><h2>產品資訊</h2><p>{product.summary}</p></div>}
+          : <><section className="product-module product-module-text"><header className="product-module-heading"><span>PRODUCT OVERVIEW</span><h2>產品定位與材料方案</h2></header><div className="product-module-prose"><p>{product.summary}</p></div></section><section className="product-module product-module-features"><header className="product-module-heading"><span>APPLICATION SUPPORT</span><h2>從配方開發到量產驗證</h2></header><div className="product-module-features"><article><b>01</b><h3>需求與材料選型</h3><p>依應用條件、目標物性與加工方式進行材料匹配。</p></article><article><b>02</b><h3>配方與樣品驗證</h3><p>透過起始配方、樣品與內部測試縮短開發時程。</p></article><article><b>03</b><h3>製程與量產支援</h3><p>根據試產結果優化加工條件，協助穩定量產。</p></article></div></section></>}
       </div>
       <section className="modular-product-extra" aria-label="產品詳情">
         {product.detailContent?.length ? <div className="modular-product-extra-content">
