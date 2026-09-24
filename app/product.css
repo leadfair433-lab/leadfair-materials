@@ -644,4 +644,5 @@ body[data-locale="vi"] .product * { overflow-wrap: break-word; }
   }
 }
 .ius-reference-page{background:#fff}.ius-reference-frame{display:block;width:100%;min-height:600px;border:0;background:#fff}.ius-reference-page>.shell{padding-top:64px;padding-bottom:64px}
-.ius-reference-page>.modular-product-nav{padding-top:25px;padding-bottom:18px;background:#fff}
+.ius-reference-page>.modular-product-nav{padding-top:48px;padding-bottom:20px;background:#fff}
+@media(max-width:900px){.ius-reference-page>.modular-product-nav{padding-top:30px}}
