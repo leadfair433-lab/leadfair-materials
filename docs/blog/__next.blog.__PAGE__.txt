@@ -1,9 +1,9 @@
 1:"$Sreact.fragment"
-2:I[1841,["5751","static/chunks/5751-201b0a24f1e548f7.js","2430","static/chunks/2430-7f11f73b5227178f.js","3831","static/chunks/app/blog/page-b38a57e8852a5197.js"],"default"]
-3:I[2430,["5751","static/chunks/5751-201b0a24f1e548f7.js","2430","static/chunks/2430-7f11f73b5227178f.js","3831","static/chunks/app/blog/page-b38a57e8852a5197.js"],"default"]
-4:I[6096,["5751","static/chunks/5751-201b0a24f1e548f7.js","2430","static/chunks/2430-7f11f73b5227178f.js","3831","static/chunks/app/blog/page-b38a57e8852a5197.js"],"default"]
+2:I[1841,["5751","static/chunks/5751-1fbaff7d96814d6d.js","2430","static/chunks/2430-7f11f73b5227178f.js","3831","static/chunks/app/blog/page-a5e7afd6b7ebb9d3.js"],"default"]
+3:I[2430,["5751","static/chunks/5751-1fbaff7d96814d6d.js","2430","static/chunks/2430-7f11f73b5227178f.js","3831","static/chunks/app/blog/page-a5e7afd6b7ebb9d3.js"],"default"]
+4:I[6096,["5751","static/chunks/5751-1fbaff7d96814d6d.js","2430","static/chunks/2430-7f11f73b5227178f.js","3831","static/chunks/app/blog/page-a5e7afd6b7ebb9d3.js"],"default"]
 5:I[3258,[],"OutletBoundary"]
 6:"$Sreact.suspense"
 :HL["/leadfair-materials/_next/static/css/b002d98008872e14.css","style"]
-0:{"rsc":["$","$1","c",{"children":[["$","main",null,{"className":"blog-listing","children":[["$","$L2",null,{}],["$","$L3",null,{"listing":true}],["$","$L4",null,{}]]}],[["$","link","0",{"rel":"stylesheet","href":"/leadfair-materials/_next/static/css/b002d98008872e14.css","precedence":"next"}]],["$","$L5",null,{"children":["$","$6",null,{"name":"Next.MetadataOutlet","children":"$@7"}]}]]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"y9ZRsojP1iz3dWwc3w8or"}
+0:{"rsc":["$","$1","c",{"children":[["$","main",null,{"className":"blog-listing","children":[["$","$L2",null,{}],["$","$L3",null,{"listing":true}],["$","$L4",null,{}]]}],[["$","link","0",{"rel":"stylesheet","href":"/leadfair-materials/_next/static/css/b002d98008872e14.css","precedence":"next"}]],["$","$L5",null,{"children":["$","$6",null,{"name":"Next.MetadataOutlet","children":"$@7"}]}]]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"k6mzV-GnqKI_zUxKruDyN"}
 7:null

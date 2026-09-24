@@ -22,7 +22,7 @@ const translationOverrides: Record<"en" | "vi", Record<string, string>> = {
     "選擇產品型號": "Select a product grade", "點選型號，檢視下方產品詳情": "Select a grade to view product details below", "獲取樣品": "Request a Sample", "諮詢技術引數 ↗": "Ask About Technical Data ↗", "諮詢產品 ↗": "Ask About This Grade ↗",
     "定製材料": "Custom material", "開發服務": "development service", "需求溝通": "Requirements", "材料分析": "Material analysis", "配方開發": "Formulation", "樣品測試": "Sample testing", "試產驗證": "Pilot validation", "批次生產": "Mass production",
     "研發與製造，": "R&D and manufacturing,", "在同一套質量體系內": "under one quality system", "材料洞察與應用指南": "Material Insights & Application Guides", "更多文章": "More Articles", "閱讀全文": "Read Article",
-    "合作前，您可能": "What you may want to know", "想了解這些": "before working with us", "讓下一款產品，": "Start your next product", "從更好的材料開始。": "with a better material.", "提交樣品申請": "Submit Sample Request",
+    "合作前，您可能": "What you may want to know", "想了解這些": "before working with us", "讓下一款產品，": "Start your next product", "從更好的材料開始。": "with a better material.", "提交免費樣品申請": "Submit Sample Request",
     "返回首頁": "Back to Home", "檢視材料牌號 ↗": "View Material Grades ↗", "材料知識，": "Material knowledge,", "從應用出發。": "grounded in applications.", "全部文章": "All Articles", "精選閱讀": "Featured Reading", "返回上一頁": "Back", "儲存文章 PDF ↓": "Save Article PDF ↓", "返回全部文章 ↗": "Back to All Articles ↗", "文章大綱（點選跳轉）": "Article outline (select to jump)", "官方對接": "Contact Us", "提交商務詢盤": "Submit an Inquiry", "產品總覽": "Product Portfolio", "產品牌號": "Product Grades", "查看全部牌號": "View All Grades", "查看產品詳情": "View Product Details", "按應用方向選材": "Select by Application", "諮詢適用材料 ↗": "Ask About Materials ↗", "不確定該選哪個牌號？": "Not sure which grade fits?", "提交選材需求": "Send Selection Requirements"
   },
   vi: {
@@ -33,7 +33,7 @@ const translationOverrides: Record<"en" | "vi", Record<string, string>> = {
     "選擇產品型號": "Chọn mã vật liệu", "點選型號，檢視下方產品詳情": "Chọn mã để xem thông tin chi tiết bên dưới", "獲取樣品": "Yêu cầu mẫu", "諮詢技術引數 ↗": "Hỏi thông số kỹ thuật ↗", "諮詢產品 ↗": "Tư vấn sản phẩm ↗",
     "定製材料": "Dịch vụ phát triển", "開發服務": "vật liệu tùy chỉnh", "需求溝通": "Trao đổi nhu cầu", "材料分析": "Phân tích vật liệu", "配方開發": "Phát triển công thức", "樣品測試": "Thử nghiệm mẫu", "試產驗證": "Xác nhận sản xuất thử", "批次生產": "Sản xuất hàng loạt",
     "研發與製造，": "R&D và sản xuất,", "在同一套質量體系內": "trong cùng một hệ thống chất lượng", "材料洞察與應用指南": "Kiến thức & hướng dẫn ứng dụng vật liệu", "更多文章": "Thêm bài viết", "閱讀全文": "Đọc bài viết",
-    "合作前，您可能": "Những điều bạn có thể", "想了解這些": "muốn biết trước khi hợp tác", "讓下一款產品，": "Bắt đầu sản phẩm tiếp theo", "從更好的材料開始。": "từ vật liệu tốt hơn.", "提交樣品申請": "Gửi yêu cầu mẫu",
+    "合作前，您可能": "Những điều bạn có thể", "想了解這些": "muốn biết trước khi hợp tác", "讓下一款產品，": "Bắt đầu sản phẩm tiếp theo", "從更好的材料開始。": "từ vật liệu tốt hơn.", "提交免費樣品申請": "Gửi yêu cầu mẫu",
     "返回首頁": "Về trang chủ", "檢視材料牌號 ↗": "Xem mã vật liệu ↗", "材料知識，": "Kiến thức vật liệu,", "從應用出發。": "bắt đầu từ ứng dụng.", "全部文章": "Tất cả bài viết", "精選閱讀": "Bài viết nổi bật", "返回上一頁": "Quay lại", "儲存文章 PDF ↓": "Lưu bài viết PDF ↓", "返回全部文章 ↗": "Về tất cả bài viết ↗", "文章大綱（點選跳轉）": "Mục lục (nhấp để chuyển)", "官方對接": "Liên hệ chính thức", "提交商務詢盤": "Gửi yêu cầu thương mại", "產品總覽": "Danh mục sản phẩm", "產品牌號": "Mã sản phẩm", "查看全部牌號": "Xem tất cả mã", "查看產品詳情": "Xem chi tiết sản phẩm", "按應用方向選材": "Chọn theo ứng dụng", "諮詢適用材料 ↗": "Tư vấn vật liệu ↗", "不確定該選哪個牌號？": "Chưa chắc nên chọn mã nào?", "提交選材需求": "Gửi yêu cầu chọn vật liệu"
   }
 };
