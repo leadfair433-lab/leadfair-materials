@@ -1,4 +1,4 @@
 :HL["/leadfair-materials/_next/static/css/eda5b4d17bc405b8.css","style"]
 :HL["/leadfair-materials/_next/static/css/a59973b0c8f90a2a.css","style"]
 :HL["/leadfair-materials/images/blog-validation-v2-fast.jpg","image"]
-0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"blog","param":null,"prefetchHints":0,"slots":{"children":{"name":"slug","param":{"type":"d","key":"material-development-validation","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"Ks5h4-0zLWM2PclAt3j8w"}
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"blog","param":null,"prefetchHints":0,"slots":{"children":{"name":"slug","param":{"type":"d","key":"material-development-validation","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"VPSQ-duXQzH8xfoISHkyQ"}
