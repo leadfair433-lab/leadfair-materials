@@ -13,6 +13,12 @@ const localeLabels: Record<SiteLocale, string> = {
   vi: "Tiếng Việt",
 };
 
+const localeLabelsByInterface: Record<SiteLocale, Record<SiteLocale, string>> = {
+  "zh-tw": localeLabels,
+  en: { "zh-tw": "Traditional Chinese", en: "English", vi: "Vietnamese" },
+  vi: { "zh-tw": "Tiếng Hoa phồn thể", en: "Tiếng Anh", vi: "Tiếng Việt" },
+};
+
 const translationOverrides: Record<"en" | "vi", Record<string, string>> = {
   en: {
     "原料網站": "Lead Fair Materials", "產品": "Products", "材料解決方案": "Material Solutions", "定製研發": "Custom R&D", "客製研發": "Custom R&D", "應用行業": "Applications", "應用產業": "Applications", "工廠實力": "Manufacturing", "聯絡工程師 ↗": "Talk to an Engineer ↗",
@@ -58,7 +64,29 @@ const supplementalTranslations: Record<"en" | "vi", Record<string, string>> = {
     "發泡後物性": "Properties After Foaming", "原料基本特性": "Raw Material Properties", "測試方法": "Test Method", "測試結果": "Test Result", "數值": "Value",
     "告訴我們您的需求，": "Tell us what you need,", "取得可落地的材料方案。": "and receive a practical material solution.", "提交您的專案需求": "Submit Your Project Requirements",
     "目前需求": "Current Need", "材料選型": "Material Selection", "索取樣品": "Request Samples", "客製配方": "Custom Formulation", "製程改善": "Process Improvement", "量產與報價": "Production & Quotation",
-    "工作郵箱": "Business Email", "聯絡電話": "Phone", "網站導航": "Site Navigation", "聯絡方式": "Contact Details", "關注與聯絡": "Follow & Contact", "返回頁首 ↑": "Back to Top ↑"
+    "工作郵箱": "Business Email", "聯絡電話": "Phone", "網站導航": "Site Navigation", "聯絡方式": "Contact Details", "關注與聯絡": "Follow & Contact", "返回頁首 ↑": "Back to Top ↑",
+    "我們不只是供應原料，更從應用場景出發解決材料問題。每一個配方，都經過實驗驗證與生產驗證。": "We go beyond supplying raw materials by solving material challenges from the application level. Every formulation is validated in both the laboratory and production.",
+    "面向運動鞋結構的高回彈、耐磨與輕量化材料方案": "High-rebound, wear-resistant and lightweight material solutions for athletic footwear",
+    "兼顧緩震、回彈與尺寸穩定性的發泡中底材料": "Foamed midsole materials balancing cushioning, rebound and dimensional stability",
+    "柔軟貼合、舒適支撐，並保持持久回彈與細膩觸感": "Soft, conforming support with lasting rebound and a refined feel",
+    "從產品牌號，找到適合的材料。": "Find the Right Material by Product Grade.", "選擇牌號查看完整物性、應用與技術資料。每種材料的資料依實際內容呈現。": "Select a grade to review its complete properties, applications and technical data.",
+    "從原料檢驗、配方混煉到造粒與出廠檢測，全流程資料化管理。讓實驗室效能穩定復現於每一批次產訂單。": "From incoming inspection and compound mixing to pelletizing and final testing, every stage is managed with traceable data so laboratory performance is reproduced consistently in every production batch.",
+    "從研發、檢測到定製與協同，我們以工程能力貫穿材料開發全過程，讓每一個專案更快走向穩定量產。": "From R&D and testing to customization and collaboration, our engineering expertise supports the entire material-development process and accelerates every project toward stable mass production.",
+    "專業的研發團隊，根據客戶需求開發更優效能，滿足定製化配方要求。": "Our specialist R&D team develops higher-performance materials around each customer's custom formulation requirements.",
+    "完整的檢測裝置與測試流程，精準驗證材料效能並縮短研發週期。": "Comprehensive test equipment and procedures verify material performance accurately and shorten development cycles.",
+    "從配方設計、樣品測試到量產交付，提供一站式定製開發服務。": "One-stop custom development from formulation design and sample testing through mass-production delivery.",
+    "工程師直接對接客戶技術團隊，共同解決真實產品中的材料應用問題。": "Our engineers work directly with customer technical teams to solve material challenges in real products.",
+    "可以依目標密度、硬度及回彈性開發發泡材料嗎？": "Can foamed materials be developed to target density, hardness and rebound?",
+    "留下您的專案需求與聯絡方式，材料工程師將在 24 小時內回覆，並提供適配建議與樣品方案。": "Share your project requirements and contact details. A materials engineer will respond within 24 hours with recommendations and sample options.",
+    "專注 TPE 熱塑性彈性體研發、客製配方、測試驗證與穩定量產。": "Focused on TPE elastomer R&D, custom formulations, testing, validation and stable mass production.",
+    "傳統低熔點材料的痛點與 IUS-4065 的改善方案": "How IUS-4065 Solves the Limitations of Conventional Low-Melting Materials",
+    "傳統低熔點材料在加工及使用過程中常出現多種問題；IUS-4065 對應改善熱收縮、尺寸與加工穩定性。": "Conventional low-melting materials often create processing and performance issues. IUS-4065 improves thermal shrinkage, dimensional stability and processing consistency.",
+    "傳統材料": "Conventional Material", "二次熱收縮導致翹曲變形": "Secondary heat shrinkage causes warping", "耐熱性不足，產品易變形": "Insufficient heat resistance leads to deformation", "尺寸穩定性差、公差大": "Poor dimensional stability and wide tolerances", "加工波動大、次品率高": "Unstable processing and a high defect rate", "外觀不一致，影響品質": "Inconsistent appearance affects quality",
+    "更低熱收縮，減少翹曲": "Lower heat shrinkage reduces warping", "更高熔點，耐熱性更好": "Higher melting point improves heat resistance", "尺寸穩定，公差更可控": "Stable dimensions and tighter tolerances", "加工穩定，效率更高": "Stable processing and higher efficiency", "外觀一致，品質穩定": "Consistent appearance and reliable quality",
+    "為什麼選擇 IUS-4065？": "Why Choose IUS-4065?", "許多超柔軟配方會採用 TAFMER 或 ENGAGE 系列 POE 來實現低硬度。然而，這類體系通常存在熱收縮率高、易變形等問題。IUS-4065 兼顧超柔軟硬度、更高熔點與更穩定加工效能，讓產品同時擁有舒適觸感與製造穩定性。": "Many ultra-soft formulations use TAFMER or ENGAGE POE grades to achieve low hardness, but these systems can suffer from high thermal shrinkage and deformation. IUS-4065 combines ultra-soft hardness, a higher melting point and stable processing for both a comfortable feel and dependable manufacturing.",
+    "加熱後樣片對照": "Sample Comparison After Heating", "低熔點材料": "Low-Melting Material", "加熱後翹曲的傳統材料樣片示意": "Conventional material sample warped after heating", "容易發生二次熱收縮、翹曲及外觀不一致": "Prone to secondary shrinkage, warping and inconsistent appearance", "IUS-4065（約 64°C）": "IUS-4065 (Approx. 64°C)", "加熱後維持平整的 IUS-4065 樣片示意": "IUS-4065 sample remains flat after heating", "尺寸穩定性優異": "Excellent dimensional stability", "產品品質一致": "Consistent product quality", "良率更高": "Higher yield", "圖片為對照示意；實際表現依材料配方、成型與測試條件而定。": "Images are for comparison only. Actual performance depends on formulation, molding and test conditions.",
+    "材料效能對比": "Material Performance Comparison", "效能 / Property": "Property", "測試標準": "Test Standard", "硬度 Shore A": "Hardness (Shore A)", "熔點 °C": "Melting Point (°C)", "熱收縮風險": "Thermal Shrinkage Risk", "內部測試": "Internal Test", "高": "High", "低": "Low", "柔軟觸感": "Soft Touch", "內部評估": "Internal Evaluation",
+    "五項核心優勢": "Five Core Advantages", "超柔軟觸感": "Ultra-Soft Touch", "Shore A 40，觸感舒適細膩": "Shore A 40 for a refined, comfortable feel", "更高熔點": "Higher Melting Point", "約 64°C，降低二次熱收縮風險": "Approx. 64°C, reducing the risk of secondary heat shrinkage", "卓越尺寸穩定": "Outstanding Dimensional Stability", "減少翹曲，尺寸更可控": "Less warping and better dimensional control", "更高良率": "Higher Production Yield", "加工視窗穩定，減少次品": "A stable processing window reduces defects", "適用高效能應用": "Suitable for High-Performance Applications", "滿足更高耐熱與穩定性要求": "Meets higher heat-resistance and stability requirements", "鞋材與發泡應用": "Footwear and Foam Applications", "機能性彈性材料": "Functional Elastomer Materials", "客製配方與量產應用": "Custom Formulations and Mass Production", "IUS-4065 顆粒與材料樣片的另一角度": "Alternate view of IUS-4065 pellets and material samples", "IUS-4065 顆粒及樣片細節": "Close-up of IUS-4065 pellets and samples"
   },
   vi: {
     "企業介紹": "Giới thiệu công ty", "企業榮譽": "Thành tựu", "聯絡我們": "Liên hệ", "產品總覽": "Tổng quan sản phẩm",
@@ -113,10 +141,13 @@ export default function LanguageSwitcher({ compact = false }: { compact?: boolea
     setLocale(current);
     document.documentElement.lang = current === "zh-tw" ? "zh-Hant" : current;
     document.body.dataset.locale = current;
+    if (current === "en") document.title = "Found Fair Materials | Advanced TPE R&D and Manufacturing";
+    if (current === "vi") document.title = "Vật liệu Found Fair | Nghiên cứu, phát triển và sản xuất TPE";
 
     // The source technical articles retain their original English paragraphs.
-    // When a Chinese paragraph is followed by its English counterpart, hide the
-    // counterpart before translating so localized pages do not repeat content.
+    // English pages keep that reviewed English copy and hide the preceding
+    // Chinese source. Vietnamese pages translate the Chinese source and hide the
+    // English counterpart. This prevents untranslated Chinese/English duplicates.
     if (current === "en" || current === "vi") {
       document.querySelectorAll<HTMLElement>(".journal-body section").forEach(section => {
         const children = Array.from(section.children) as HTMLElement[];
@@ -131,7 +162,8 @@ export default function LanguageSwitcher({ compact = false }: { compact?: boolea
             !/[\u3400-\u9fff]/.test(counterpart) &&
             /[A-Za-z]{4}/.test(counterpart)
           ) {
-            next.hidden = true;
+            if (current === "en") element.hidden = true;
+            else next.hidden = true;
           }
         });
       });
@@ -144,8 +176,8 @@ export default function LanguageSwitcher({ compact = false }: { compact?: boolea
       if (!parent || parent.closest("script,style") || parent.closest(".language-switcher")) continue;
       if (node.nodeValue) node.nodeValue = translateText(node.nodeValue, current);
     }
-    document.querySelectorAll<HTMLElement>("[placeholder],[aria-label],[title]").forEach(element => {
-      ["placeholder", "aria-label", "title"].forEach(attribute => {
+    document.querySelectorAll<HTMLElement>("[placeholder],[aria-label],[title],[alt]").forEach(element => {
+      ["placeholder", "aria-label", "title", "alt"].forEach(attribute => {
         const value = element.getAttribute(attribute);
         if (value) element.setAttribute(attribute, translateText(value, current));
       });
@@ -190,7 +222,7 @@ export default function LanguageSwitcher({ compact = false }: { compact?: boolea
   return <label className={`language-switcher${compact ? " compact" : ""}`}>
     <span className="sr-only">Language</span>
     <select value={locale} onChange={event => change(event.target.value as SiteLocale)} aria-label="Language">
-      {Object.entries(localeLabels).map(([value, label]) => <option value={value} key={value}>{label}</option>)}
+      {Object.entries(localeLabelsByInterface[locale]).map(([value, label]) => <option value={value} key={value}>{label}</option>)}
     </select>
   </label>;
 }

@@ -314,3 +314,28 @@ main:not(.contact-page)>section.cta#contact{display:none}
 
 /* Company statistics use black values; their icons and labels retain their own colors. */
 .profile-facts b{color:#111}
+
+/* English and Vietnamese copy is longer than Traditional Chinese. Keep the
+   localized layouts fluid and prevent translated labels from being clipped. */
+body[data-locale="en"],body[data-locale="vi"]{word-break:normal;overflow-wrap:anywhere}
+body[data-locale="en"] h1,body[data-locale="en"] h2,body[data-locale="en"] h3,
+body[data-locale="vi"] h1,body[data-locale="vi"] h2,body[data-locale="vi"] h3{
+  text-wrap:balance;word-break:normal;overflow-wrap:break-word
+}
+body[data-locale="en"] .top nav,body[data-locale="vi"] .top nav{gap:24px}
+body[data-locale="en"] .top nav a,body[data-locale="vi"] .top nav a{white-space:nowrap}
+body[data-locale="en"] .hero-copy,body[data-locale="vi"] .hero-copy{max-width:850px}
+body[data-locale="en"] .hero h1,body[data-locale="vi"] .hero h1{font-size:clamp(52px,5.35vw,92px);line-height:1.02;letter-spacing:-.055em}
+body[data-locale="en"] .profile-hero-copy h1,body[data-locale="vi"] .profile-hero-copy h1,
+body[data-locale="en"] .products-hero h1,body[data-locale="vi"] .products-hero h1,
+body[data-locale="en"] .contact-hero h1,body[data-locale="vi"] .contact-hero h1{
+  font-size:clamp(46px,4.4vw,72px);line-height:1.08;letter-spacing:-.045em
+}
+body[data-locale="en"] .profile-history-grid article>p,body[data-locale="vi"] .profile-history-grid article>p,
+body[data-locale="en"] .laboratory-index-copy p,body[data-locale="vi"] .laboratory-index-copy p{min-height:0}
+body[data-locale="en"] .contact-needs article,body[data-locale="vi"] .contact-needs article{height:auto;min-height:310px}
+body[data-locale="en"] .products-applications article,body[data-locale="vi"] .products-applications article{height:auto;min-height:470px}
+body[data-locale="en"] .site-footer,body[data-locale="vi"] .site-footer{align-items:start}
+body[data-locale="en"] button,body[data-locale="en"] a,body[data-locale="vi"] button,body[data-locale="vi"] a{line-height:1.35}
+@media(max-width:1200px){body[data-locale="en"] .top nav,body[data-locale="vi"] .top nav{gap:16px}body[data-locale="en"] .top nav a,body[data-locale="vi"] .top nav a{font-size:12px}}
+@media(max-width:900px){body[data-locale="en"] .hero h1,body[data-locale="vi"] .hero h1{font-size:clamp(42px,11vw,58px)}body[data-locale="en"] .profile-hero-copy h1,body[data-locale="vi"] .profile-hero-copy h1,body[data-locale="en"] .products-hero h1,body[data-locale="vi"] .products-hero h1,body[data-locale="en"] .contact-hero h1,body[data-locale="vi"] .contact-hero h1{font-size:clamp(38px,9vw,52px)}body[data-locale="en"] .contact-needs article,body[data-locale="vi"] .contact-needs article{min-height:0}}

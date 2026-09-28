@@ -2,10 +2,10 @@
 
 import { useEffect, useRef, useState } from "react";
 
-export default function Ius4065ReferenceFrame() {
+export default function Ius4065ReferenceFrame({ locale = "zh-tw" }: { locale?: string }) {
   const frame = useRef<HTMLIFrameElement>(null);
   const [height, setHeight] = useState(6200);
-  const src = `${process.env.NEXT_PUBLIC_BASE_PATH || ""}/ius-4065-reference.html?v=20260924-8`;
+  const src = `${process.env.NEXT_PUBLIC_BASE_PATH || ""}/ius-4065-reference.html?lang=${locale}&v=20260928-1`;
 
   const measureFrame = () => {
     try {
@@ -30,5 +30,5 @@ export default function Ius4065ReferenceFrame() {
     };
   }, []);
 
-  return <iframe ref={frame} className="ius-reference-frame" src={src} title="IUS-4065 超柔軟低收縮彈性體產品介紹" height={height} scrolling="no" onLoad={measureFrame} />;
+  return <iframe ref={frame} className="ius-reference-frame" src={src} title={locale === "en" ? "IUS-4065 ultra-soft, low-shrink elastomer product overview" : "IUS-4065 超柔軟低收縮彈性體產品介紹"} height={height} scrolling="no" onLoad={measureFrame} />;
 }
