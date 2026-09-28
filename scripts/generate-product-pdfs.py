@@ -3,6 +3,7 @@
 
 from __future__ import annotations
 
+import argparse
 import re
 import shutil
 from pathlib import Path
@@ -300,10 +301,19 @@ def build_pdf(slug: str):
     print(output)
 
 
+def parse_args():
+    parser = argparse.ArgumentParser(description="Generate downloadable product PDF sheets.")
+    parser.add_argument("--product", action="append", choices=SLUGS, help="Product slug to generate. Repeat for multiple products.")
+    parser.add_argument("--all", action="store_true", help="Generate every configured product PDF.")
+    return parser.parse_args()
+
+
 def main():
+    args = parse_args()
+    selected = SLUGS if args.all else (args.product or ["ius-4065"])
     OUTPUT.mkdir(parents=True, exist_ok=True)
     DOWNLOADS.mkdir(parents=True, exist_ok=True)
-    for slug in SLUGS:
+    for slug in selected:
         build_pdf(slug)
 
 
