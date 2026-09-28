@@ -352,6 +352,8 @@ body:has(.product-switch-card:not(#product):target) #product { display: none; }
 .modular-product-nav>div a.active{border-color:#9fb2c3;background:#fff;color:#142538}
 .modular-product-nav>div a.modular-product-more{border-color:#0b3cff;color:#0b3cff}
 .modular-product-nav>div a.modular-product-more:hover{background:#0b3cff;color:#fff}
+.modular-product-nav>div a.modular-product-pdf{border-color:#0b3cff;background:#0b3cff;color:#fff}
+.modular-product-nav>div a.modular-product-pdf:hover{border-color:#082fca;background:#082fca;color:#fff}
 .modular-product{padding-bottom:100px}
 .modular-product-hero{position:relative;display:flex;align-items:center;min-height:600px;padding:clamp(44px,6vw,86px);border:1px solid #273d55;border-radius:25px;background:#10253c;color:#fff;overflow:hidden;box-shadow:0 25px 65px #12283e1b}
 .modular-product-hero::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#0a294ee8 0%,#102f54c9 42%,#0c274f3d 75%,#0a1d360f 100%)}

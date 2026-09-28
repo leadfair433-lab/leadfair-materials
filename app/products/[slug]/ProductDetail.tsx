@@ -128,6 +128,7 @@ export default function ProductDetail() {
   const params = useParams<{ slug: string; locale?: string }>();
   const product = productBySlug[params?.slug || ""] || products[0];
   const isIus4065 = product.slug === "ius-4065";
+  const pdfHref = `${process.env.NEXT_PUBLIC_BASE_PATH || ""}/downloads/products/${product.slug}-product-sheet-zh-tw.pdf`;
   const heroSpecs = product.specs.length > 0
     ? product.specs.slice(0, 3)
     : product.tags.slice(0, 3).map((value, index) => ({ label: `服務項目 ${String(index + 1).padStart(2, "0")}`, value }));
@@ -137,7 +138,7 @@ export default function ProductDetail() {
   };
   if (isIus4065 && (!params?.locale || params.locale === "zh-tw")) return <main className="ius-reference-page">
     <SiteHeader />
-    <nav className="modular-product-nav shell" aria-label="產品牌號導航"><button type="button" className="modular-product-back" onClick={goBack}>← 返回上一頁</button><div>{products.map(item => <a href={`/products/${item.slug}/`} className={item.slug === product.slug ? "active" : ""} aria-current={item.slug === product.slug ? "page" : undefined} key={item.slug}>{item.name}</a>)}<a href="/products/" className="modular-product-more">更多產品 ↗</a></div></nav>
+    <nav className="modular-product-nav shell" aria-label="產品牌號導航"><button type="button" className="modular-product-back" onClick={goBack}>← 返回上一頁</button><div>{products.map(item => <a href={`/products/${item.slug}/`} className={item.slug === product.slug ? "active" : ""} aria-current={item.slug === product.slug ? "page" : undefined} key={item.slug}>{item.name}</a>)}<a href="/products/" className="modular-product-more">更多產品 ↗</a><a href={pdfHref} className="modular-product-pdf" download={`${product.name}-產品資料.pdf`}>下載產品資料 PDF ↓</a></div></nav>
     <Ius4065ReferenceFrame />
     <div className="shell"><OtherProductsCarousel currentSlug={product.slug} locale={params?.locale} /></div>
     <GlobalInquiryFooter />
@@ -151,7 +152,7 @@ export default function ProductDetail() {
         className={item.slug === product.slug ? "active" : ""}
         aria-current={item.slug === product.slug ? "page" : undefined}
         key={item.slug}
-      >{item.name}</a>)}<a href="/products/" className="modular-product-more">更多產品 ↗</a></div>
+      >{item.name}</a>)}<a href="/products/" className="modular-product-more">更多產品 ↗</a><a href={pdfHref} className="modular-product-pdf" download={`${product.name}-產品資料.pdf`}>下載產品資料 PDF ↓</a></div>
     </nav>
     <article className="modular-product shell">
       <header className="modular-product-hero">

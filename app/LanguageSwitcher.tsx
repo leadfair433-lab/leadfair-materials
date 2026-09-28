@@ -155,7 +155,7 @@ export default function LanguageSwitcher({ compact = false }: { compact?: boolea
       const href = anchor.getAttribute("href");
       if (!href || href.startsWith("#") || href.startsWith("http") || href.startsWith("mailto:") || href.startsWith("tel:")) return;
       const route = href.startsWith(base) ? href.slice(base.length) : href;
-      if (!route.startsWith(PATH_SEPARATOR) || /^\/(zh-tw|en|vi)(?=\/|$)/.test(route) || /^\/(images|_next|blog-reference)(?=\/)/.test(route)) return;
+      if (!route.startsWith(PATH_SEPARATOR) || anchor.hasAttribute("download") || /\.pdf(?:$|[?#])/i.test(route) || /^\/(zh-tw|en|vi)(?=\/|$)/.test(route) || /^\/(images|downloads|_next|blog-reference)(?=\/)/.test(route)) return;
       anchor.setAttribute("href", `${base}/${current}${route}`.replace(/([^:]\/)\/+/g, "$1"));
     });
 
