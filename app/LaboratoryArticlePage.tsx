@@ -10,14 +10,14 @@ export default function LaboratoryArticlePage({ article, locale }: { article: La
     <SiteHeader />
     <article className="laboratory-article shell">
       <nav aria-label="實驗室導覽"><a href={laboratoryUrl}>← 返回實驗室儀器總覽</a></nav>
-      <div className={`laboratory-article-hero${article.slug === "servo-computer-tensile-tester" ? " instrument-hero" : ""}`}>
+      <div className={`laboratory-article-hero${article.imageFit === "contain" ? " instrument-hero" : ""}`}>
         <header className="laboratory-article-header">
           <span>FF / LF LABORATORY · 實驗室環境</span>
           <h1>{article.title}</h1>
           <p>{article.summary}</p>
           <small>{article.statusLabel || "實驗室介紹 / 設備資料待確認"}</small>
         </header>
-        <figure className={`laboratory-article-cover${article.imageFit === "contain" ? " contain" : ""}${article.slug === "servo-computer-tensile-tester" ? " instrument-cover" : ""}`}>
+        <figure className={`laboratory-article-cover${article.imageFit === "contain" ? " contain instrument-cover" : ""}`}>
           <div className="laboratory-article-image-frame">
             <img src={article.image} alt={article.title} />
           </div>

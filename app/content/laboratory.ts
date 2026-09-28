@@ -77,4 +77,68 @@ export const laboratoryArticles: LaboratoryArticle[] = [
       },
     ],
   },
+  {
+    slug: "yellowing-resistance-test-chamber",
+    title: "耐黃變試驗箱",
+    image: "/images/company/laboratory/instruments/yellowing-resistance-test-chamber.png",
+    imageFit: "contain",
+    summary: "模擬淺色與白色材料在太陽光及受熱條件下的長時間照射，評估試樣表面的變色程度與耐黃變能力。",
+    statusLabel: "耐黃變測試 / GT-7035-EUA",
+    imageCaption: "GOTECH 台灣高鐵科技 GT-7035-EUA 耐黃變試驗箱",
+    sections: [
+      {
+        title: "設備原理與用途",
+        paragraphs: [
+          "淺色和白色材料或製品在自然太陽光長時間照射下容易發生黃變。耐黃變試驗箱以太陽燈及加熱控溫裝置模擬自然環境，在規定時間內觀察試樣表面顏色變化，藉此判定試樣在太陽光輻射下的耐黃變能力。",
+          "設備除適用於鞋材，也可用於評估其他淺色或白色材料的耐黃變性能，協助在產品開發階段提前發現黃變問題。",
+        ],
+      },
+      {
+        title: "設備規格與測試規範",
+        paragraphs: [
+          "設備型號為 GT-7035-EUA，廠牌為 GOTECH 台灣高鐵科技；光源採用 300 W 太陽燈泡，溫度範圍為室溫 +10°C 至 80°C，加熱方式為熱風循環。",
+          "測試規範涵蓋 HG/T 3689 Method A 與 HG/T 4905。",
+        ],
+      },
+      {
+        title: "均勻照射與環境控制",
+        paragraphs: [
+          "試驗箱可模擬材料在自然太陽光下的長時間照射，使測試條件更貼近實際使用環境。",
+          "設備配備試樣回轉裝置，使試樣受熱與受輻射更均勻，提升試驗的準確性與可靠性；溫度及照射時間等環境參數可依測試需求控制。",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "aging-test-machine",
+    title: "老化試驗機",
+    image: "/images/company/laboratory/instruments/aging-test-machine.png",
+    imageFit: "contain",
+    summary: "在規定的溫度與時間條件下使試樣均勻受熱，觀察材料老化前後的耐黃、開膠、收縮、伸長與殘餘率等性能變化。",
+    statusLabel: "材料老化與耐熱性能測試",
+    imageCaption: "GOTECH 高鐵檢測儀器老化試驗機",
+    sections: [
+      {
+        title: "設備原理與用途",
+        paragraphs: [
+          "老化試驗機用於測試塑膠、橡膠、皮革與布料等材料在受熱前後的性能變化。設備在規定的溫度和時間條件下使試樣均勻受熱，觀察耐黃、開膠、收縮、伸長與殘餘率等變化，以評估材料的老化特性。",
+          "精確的溫度與時間控制可模擬實際應用環境中的受熱變化，協助確認材料的耐用性、穩定性與可靠性。",
+        ],
+      },
+      {
+        title: "模擬環境與壽命評估",
+        paragraphs: [
+          "設備可模擬材料在高溫環境中的老化過程，提供更貼近使用條件的性能評估。",
+          "透過長時間高溫暴露，可觀察材料性能的變化趨勢，作為預測產品使用壽命與驗證耐熱穩定性的參考。",
+        ],
+      },
+      {
+        title: "性能測試與品質控制",
+        paragraphs: [
+          "老化試驗可從耐黃度、開膠性、收縮率與伸長性等不同面向評估材料的老化特性。",
+          "測試結果可作為產品品質控制與配方改良的依據，協助提升批次一致性及使用可靠性。",
+        ],
+      },
+    ],
+  },
 ];

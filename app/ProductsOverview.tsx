@@ -3,9 +3,9 @@ import GlobalInquiryFooter from "./GlobalInquiryFooter";
 import { products } from "./content/products";
 
 const applications = [
-  ["01", "鞋材與大底", "耐磨、止滑與彎折需求", "/images/application-footwear-fast.jpg"],
-  ["02", "中底與鞋墊", "輕量、回彈與緩衝表現", "/images/application-midsole-fast.jpg"],
-  ["03", "運動護具", "舒適包覆與衝擊吸收", "/images/application-protective-gear-fast.jpg"],
+  ["01 / FOOTWEAR MATERIALS", "鞋材", "面向運動鞋結構的高回彈、耐磨與輕量化材料方案", "/images/application-footwear-v2-fast.jpg"],
+  ["02 / MIDSOLE", "中底", "兼顧緩震、回彈與尺寸穩定性的發泡中底材料", "/images/application-midsole-fast.jpg"],
+  ["03 / INSOLE", "鞋墊", "柔軟貼合、舒適支撐，並保持持久回彈與細膩觸感", "/images/application-insole-fast.jpg"],
 ];
 
 export default function ProductsOverview() {
