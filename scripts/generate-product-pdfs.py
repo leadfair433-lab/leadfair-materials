@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
-"""Generate downloadable Traditional Chinese product sheets from the built site."""
+"""Generate localized downloadable product sheets from the current site source."""
 
 from __future__ import annotations
 
 import argparse
+import json
 import re
 import shutil
 from pathlib import Path
@@ -35,6 +36,7 @@ DOCS = ROOT / "docs"
 OUTPUT = ROOT / "output" / "pdf"
 DOWNLOADS = PUBLIC / "downloads" / "products"
 SLUGS = ["ius-4065", "lf-et78a", "lf-hr53a", "gte-8030", "gte-8075"]
+LOCALES = ["zh-tw", "en"]
 
 NAVY = colors.HexColor("#0B2A4A")
 BLUE = colors.HexColor("#124BFF")
@@ -174,19 +176,54 @@ def page_decor(canvas, doc):
     canvas.line(16 * mm, 13 * mm, A4[0] - 16 * mm, 13 * mm)
     canvas.setFont(FONT, 7)
     canvas.setFillColor(MUTED)
-    canvas.drawString(16 * mm, 8 * mm, "峰暉塑膠｜產品資料")
+    footer = "Found Fair | Product Data" if doc.locale == "en" else "峰暉塑膠｜產品資料"
+    canvas.drawString(16 * mm, 8 * mm, footer)
     canvas.drawRightString(A4[0] - 16 * mm, 8 * mm, f"{doc.product_name}   {doc.page}")
     canvas.restoreState()
 
 
-def ius_content() -> tuple[dict, list]:
+def english_ius_translations() -> tuple[dict[str, str], dict[str, str]]:
+    source = (PUBLIC / "ius-4065-reference-i18n.js").read_text(encoding="utf-8")
+    text_block = source.split("const translations = {", 1)[1].split("};", 1)[0]
+    image_block = source.split("const imageTranslations = {", 1)[1].split("};", 1)[0]
+
+    def pairs(block: str) -> dict[str, str]:
+        pattern = r'("(?:\\.|[^"\\])*")\s*:\s*("(?:\\.|[^"\\])*")'
+        return {json.loads(key): json.loads(value) for key, value in re.findall(pattern, block)}
+
+    return pairs(text_block), pairs(image_block)
+
+
+def translate_ius_tree(tree, locale: str):
+    if locale != "en":
+        return
+    translations, image_translations = english_ius_translations()
+    for node in tree.xpath("//text()"):
+        value = str(node)
+        trimmed = value.strip()
+        if trimmed not in translations:
+            continue
+        parent = node.getparent()
+        replacement = value.replace(trimmed, translations[trimmed])
+        if node.is_text:
+            parent.text = replacement
+        else:
+            parent.tail = replacement
+    for image in tree.cssselect("img[src]"):
+        source = image.get("src")
+        if source in image_translations:
+            image.set("src", image_translations[source])
+
+
+def ius_content(locale: str) -> tuple[dict, list]:
     tree = html.fromstring((PUBLIC / "ius-4065-reference.html").read_text(encoding="utf-8"))
+    translate_ius_tree(tree, locale)
     header = tree.cssselect("body > header")[0]
     metrics = [(text(node.cssselect("strong")[0]), text(node.cssselect("span")[0])) for node in header.cssselect(".metric")]
     meta = {
         "eyebrow": text(header.cssselect(".eyebrow")[0]),
         "name": "IUS-4065",
-        "title": "超柔軟低收縮彈性體",
+        "title": "Ultra-Soft, Low-Shrink Elastomer" if locale == "en" else "超柔軟低收縮彈性體",
         "summary": text(header.cssselect("p")[0]),
         "metrics": metrics,
         "image": PUBLIC / "images/ius-reference/visual-01.jpg",
@@ -285,17 +322,27 @@ def add_section(story: list, section, is_ius=False):
             story.extend([KeepTogether(group), Spacer(1, 5 * mm)])
 
 
-def build_pdf(slug: str):
-    meta, sections = ius_content() if slug == "ius-4065" else modular_content(slug)
-    output = OUTPUT / f"{slug}-product-sheet-zh-tw.pdf"
-    doc = SimpleDocTemplate(str(output), pagesize=A4, leftMargin=16 * mm, rightMargin=16 * mm, topMargin=16 * mm, bottomMargin=18 * mm, title=f"{meta['name']} 產品資料", author="峰暉塑膠")
+def build_pdf(slug: str, locale: str):
+    if locale == "en" and slug != "ius-4065":
+        raise ValueError("English PDF generation is currently configured for ius-4065 only.")
+    meta, sections = ius_content(locale) if slug == "ius-4065" else modular_content(slug)
+    output = OUTPUT / f"{slug}-product-sheet-{locale}.pdf"
+    title = f"{meta['name']} Product Data" if locale == "en" else f"{meta['name']} 產品資料"
+    author = "Found Fair" if locale == "en" else "峰暉塑膠"
+    doc = SimpleDocTemplate(str(output), pagesize=A4, leftMargin=16 * mm, rightMargin=16 * mm, topMargin=16 * mm, bottomMargin=18 * mm, title=title, author=author)
     doc.product_name = meta["name"]
+    doc.locale = locale
     story = [Hero(meta["image"], meta["eyebrow"], meta["name"], meta["title"], meta["summary"], meta["metrics"]), Spacer(1, 8 * mm)]
     for index, section in enumerate(sections):
         if index:
             story.append(Spacer(1, 3 * mm))
         add_section(story, section, is_ius=slug == "ius-4065")
-    story.extend([Spacer(1, 7 * mm), paragraph("資料僅供材料選型與配方開發參考，實際性能依配方、製程及測試條件而定。", NOTE)])
+    disclaimer = (
+        "This information is for material selection and formulation-development reference only. Actual performance depends on formulation, processing and test conditions."
+        if locale == "en"
+        else "資料僅供材料選型與配方開發參考，實際性能依配方、製程及測試條件而定。"
+    )
+    story.extend([Spacer(1, 7 * mm), paragraph(disclaimer, NOTE)])
     doc.build(story, onFirstPage=page_decor, onLaterPages=page_decor)
     shutil.copy2(output, DOWNLOADS / output.name)
     print(output)
@@ -304,6 +351,7 @@ def build_pdf(slug: str):
 def parse_args():
     parser = argparse.ArgumentParser(description="Generate downloadable product PDF sheets.")
     parser.add_argument("--product", action="append", choices=SLUGS, help="Product slug to generate. Repeat for multiple products.")
+    parser.add_argument("--locale", action="append", choices=LOCALES, help="Locale to generate. Repeat for multiple locales.")
     parser.add_argument("--all", action="store_true", help="Generate every configured product PDF.")
     return parser.parse_args()
 
@@ -311,10 +359,12 @@ def parse_args():
 def main():
     args = parse_args()
     selected = SLUGS if args.all else (args.product or ["ius-4065"])
+    locales = args.locale or (["zh-tw", "en"] if selected == ["ius-4065"] else ["zh-tw"])
     OUTPUT.mkdir(parents=True, exist_ok=True)
     DOWNLOADS.mkdir(parents=True, exist_ok=True)
     for slug in selected:
-        build_pdf(slug)
+        for locale in locales:
+            build_pdf(slug, locale)
 
 
 if __name__ == "__main__":
