@@ -30,5 +30,11 @@ export default function Ius4065ReferenceFrame({ locale = "zh-tw" }: { locale?: s
     };
   }, []);
 
-  return <iframe ref={frame} className="ius-reference-frame" src={src} title={locale === "en" ? "IUS-4065 ultra-soft, low-shrink elastomer product overview" : "IUS-4065 超柔軟低收縮彈性體產品介紹"} height={height} scrolling="no" onLoad={measureFrame} />;
+  const title = locale === "en"
+    ? "IUS-4065 ultra-soft, low-shrink elastomer product overview"
+    : locale === "vi"
+      ? "Tổng quan sản phẩm đàn hồi siêu mềm, độ co thấp IUS-4065"
+      : "IUS-4065 超柔軟低收縮彈性體產品介紹";
+
+  return <iframe ref={frame} className="ius-reference-frame" src={src} title={title} height={height} scrolling="no" onLoad={measureFrame} />;
 }

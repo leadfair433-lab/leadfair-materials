@@ -28,7 +28,7 @@ def vertical_text(image, center, text, fnt):
     image.paste(layer, (int(center[0] - layer.width / 2), int(center[1] - layer.height / 2)), layer)
 
 
-def small_chart(filename, title, ylabel, values, suffix=""):
+def small_chart(filename, title, ylabel, values, suffix="", comparison_label="Comparison Material", note="EVA 7470M / comparison material = 60 / 40 PHR; expansion ratio 160%; lower values are better."):
     w, h = 1674, 1046
     image = Image.new("RGB", (w, h), "white")
     d = ImageDraw.Draw(image)
@@ -52,23 +52,25 @@ def small_chart(filename, title, ylabel, values, suffix=""):
         centered(d, (x, y - 44), value_label, font(25, True))
         centered(d, (x, bottom + 20), label, font(23), "#222222")
     vertical_text(image, (48, (top + bottom) / 2), ylabel, font(28, True))
-    centered(d, ((left + right) / 2, bottom + 76), "Comparison Material", font(27, True), "#111111")
-    centered(d, (w / 2, 940), "EVA 7470M / comparison material = 60 / 40 PHR; expansion ratio 160%; lower values are better.", font(21), MUTED)
+    centered(d, ((left + right) / 2, bottom + 76), comparison_label, font(27, True), "#111111")
+    centered(d, (w / 2, 940), note, font(21), MUTED)
     image.save(OUT / filename, optimize=True)
 
 
-def timed_chart():
+def timed_chart(filename="eva-foam-thermal-shrinkage-ius-4065-comparison-en.png", title="Thermal Shrinkage at 70°C by Heating Time", ylabel="Thermal Shrinkage (%)", comparison_label="Comparison Material", note="EVA 7470M / comparison material = 60 / 40 PHR; expansion ratio 160%; lower values are better.", legend_labels=None):
     w, h = 2401, 1466
     image = Image.new("RGB", (w, h), "white")
     d = ImageDraw.Draw(image)
-    centered(d, (w / 2, 35), "Thermal Shrinkage at 70°C by Heating Time", font(46, True), "#111111")
+    centered(d, (w / 2, 35), title, font(46, True), "#111111")
     left, top, right, bottom = 210, 150, 2320, 1260
     maximum = 9
     for i in range(10):
         y = bottom - (bottom - top) * i / maximum
         d.line((left, y, right, y), fill=GRID, width=2)
         d.text((145, y - 16), f"{i}%", font=font(26), fill="#222222")
-    legend = [(LIGHT, "70°C / 20 min"), (BLUE, "70°C / 40 min"), (NAVY, "70°C / 60 min")]
+    legend = [(LIGHT, label) for label in (legend_labels or ["70°C / 20 min", "70°C / 40 min", "70°C / 60 min"])]
+    legend[1] = (BLUE, legend[1][1])
+    legend[2] = (NAVY, legend[2][1])
     lx = 230
     for color, label in legend:
         d.rectangle((lx, 90, lx + 44, 112), fill=color)
@@ -85,13 +87,17 @@ def timed_chart():
             d.rectangle((x1, y, x1 + bw, bottom), fill=color)
             centered(d, (x1 + bw / 2, y - 40), f"{value:.2f}%", font(27, True))
         centered(d, (center + bw / 2, bottom + 25), label, font(29), "#111111")
-    vertical_text(image, (62, (top + bottom) / 2), "Thermal Shrinkage (%)", font(32, True))
-    centered(d, (w / 2, bottom + 92), "Comparison Material", font(31, True), "#111111")
-    centered(d, (w / 2, 1405), "EVA 7470M / comparison material = 60 / 40 PHR; expansion ratio 160%; lower values are better.", font(23), MUTED)
-    image.save(OUT / "eva-foam-thermal-shrinkage-ius-4065-comparison-en.png", optimize=True)
+    vertical_text(image, (62, (top + bottom) / 2), ylabel, font(32, True))
+    centered(d, (w / 2, bottom + 92), comparison_label, font(31, True), "#111111")
+    centered(d, (w / 2, 1405), note, font(23), MUTED)
+    image.save(OUT / filename, optimize=True)
 
 
 if __name__ == "__main__":
     small_chart("visual-03-en.png", "Foamed-Product Hardness Comparison", "Hardness (Asker C)", [41, 42, 35])
     small_chart("visual-04-en.png", "Thermal Shrinkage at 70°C for 40 Minutes", "Thermal Shrinkage (%)", [3.60, 3.20, 0.68], "%")
     timed_chart()
+    vi_note = "EVA 7470M / vật liệu so sánh = 60 / 40 PHR; tỷ lệ nở 160%; giá trị càng thấp càng tốt."
+    small_chart("visual-03-vi.png", "So sánh độ cứng sản phẩm xốp", "Độ cứng (Asker C)", [41, 42, 35], comparison_label="Vật liệu so sánh", note=vi_note)
+    small_chart("visual-04-vi.png", "Độ co nhiệt ở 70°C trong 40 phút", "Độ co nhiệt (%)", [3.60, 3.20, 0.68], "%", "Vật liệu so sánh", vi_note)
+    timed_chart("eva-foam-thermal-shrinkage-ius-4065-comparison-vi.png", "Độ co nhiệt ở 70°C theo thời gian gia nhiệt", "Độ co nhiệt (%)", "Vật liệu so sánh", vi_note, ["70°C / 20 phút", "70°C / 40 phút", "70°C / 60 phút"])
