@@ -5,7 +5,7 @@ import { useEffect, useRef, useState } from "react";
 export default function Ius4065ReferenceFrame({ locale = "zh-tw" }: { locale?: string }) {
   const frame = useRef<HTMLIFrameElement>(null);
   const [height, setHeight] = useState(6200);
-  const src = `${process.env.NEXT_PUBLIC_BASE_PATH || ""}/ius-4065-reference.html?lang=${locale}&v=20260928-1`;
+  const src = `${process.env.NEXT_PUBLIC_BASE_PATH || ""}/ius-4065-reference.html?lang=${locale}&v=20260929-1`;
 
   const measureFrame = () => {
     try {

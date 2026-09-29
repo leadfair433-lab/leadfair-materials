@@ -52,5 +52,14 @@
     const value = element.getAttribute("alt");
     if (value && translations[value]) element.setAttribute("alt", translations[value]);
   });
+  const imageTranslations = {
+    "./images/ius-reference/visual-03.png": "./images/ius-reference/visual-03-en.png",
+    "./images/ius-reference/visual-04.png": "./images/ius-reference/visual-04-en.png",
+    "./images/ius-reference/eva-foam-thermal-shrinkage-ius-4065-comparison.png": "./images/ius-reference/eva-foam-thermal-shrinkage-ius-4065-comparison-en.png",
+  };
+  document.querySelectorAll("img[src]").forEach((image) => {
+    const source = image.getAttribute("src");
+    if (source && imageTranslations[source]) image.setAttribute("src", imageTranslations[source]);
+  });
   document.title = "IUS-4065 Ultra-Soft, Low-Shrink Elastomer";
 })();
