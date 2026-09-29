@@ -331,6 +331,31 @@ body[data-locale="en"] .products-hero h1,body[data-locale="vi"] .products-hero h
 body[data-locale="en"] .contact-hero h1,body[data-locale="vi"] .contact-hero h1{
   font-size:clamp(46px,4.4vw,72px);line-height:1.08;letter-spacing:-.045em
 }
+
+/* Contact hero uses the laboratory reference photo, mirrored horizontally. */
+.contact-hero {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  background: #063b70;
+}
+
+.contact-hero::before,
+.contact-hero::after {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  content: "";
+}
+
+.contact-hero::before {
+  background: url('/images/contact/contact-hero-laboratory.png') center / cover no-repeat;
+  transform: scaleX(-1);
+}
+
+.contact-hero::after {
+  background: linear-gradient(100deg, #051a36f2 0%, #063b70df 56%, #0b3cff8f 100%);
+}
 body[data-locale="en"] .profile-history-grid article>p,body[data-locale="vi"] .profile-history-grid article>p,
 body[data-locale="en"] .laboratory-index-copy p,body[data-locale="vi"] .laboratory-index-copy p{min-height:0}
 body[data-locale="en"] .contact-needs article,body[data-locale="vi"] .contact-needs article{height:auto;min-height:310px}
