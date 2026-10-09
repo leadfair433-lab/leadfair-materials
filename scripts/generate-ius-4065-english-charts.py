@@ -40,7 +40,7 @@ def small_chart(filename, title, ylabel, values, suffix="", comparison_label="Co
     w, h = 1674, 1046
     image = Image.new("RGB", (w, h), "white")
     d = ImageDraw.Draw(image)
-    centered(d, (w / 2, 30), title, font(40, True), "#111111")
+    centered(d, (w / 2, 30), title, font(43, True), "#111111")
     left, top, right, bottom = 175, 130, 1620, 815
     maximum = 50 if max(values) > 10 else 4.2
     steps = 5 if maximum == 50 else 4
@@ -69,7 +69,7 @@ def small_chart_zh(filename, title, ylabel, values, suffix=""):
     w, h = 1674, 1046
     image = Image.new("RGB", (w, h), "white")
     d = ImageDraw.Draw(image)
-    centered(d, (w / 2, 30), title, cjk_font(44, True), "#111111")
+    centered(d, (w / 2, 30), title, cjk_font(47, True), "#111111")
     left, top, right, bottom = 175, 130, 1620, 815
     maximum = 50 if max(values) > 10 else 4.2
     steps = 5 if maximum == 50 else 4
