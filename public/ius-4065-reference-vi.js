@@ -50,8 +50,8 @@
   });
   const imageTranslations = {
     "./images/ius-reference/visual-03.png": "./images/ius-reference/visual-03-vi.png",
-    "./images/ius-reference/visual-04.png?v=20261009-1": "./images/ius-reference/visual-04-vi.png?v=20261009-1",
-    "./images/ius-reference/eva-foam-thermal-shrinkage-ius-4065-comparison.png?v=20261009-1": "./images/ius-reference/eva-foam-thermal-shrinkage-ius-4065-comparison-vi.png?v=20261009-1"
+    "./images/ius-reference/visual-04.png?v=20261009-2": "./images/ius-reference/visual-04-vi.png?v=20261009-2",
+    "./images/ius-reference/eva-foam-thermal-shrinkage-ius-4065-comparison.png?v=20261009-2": "./images/ius-reference/eva-foam-thermal-shrinkage-ius-4065-comparison-vi.png?v=20261009-2"
   };
   document.querySelectorAll("img[src]").forEach((image) => {
     const source = image.getAttribute("src");

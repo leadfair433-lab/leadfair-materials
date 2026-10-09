@@ -36,7 +36,7 @@ def small_chart(filename, title, ylabel, values, suffix="", comparison_label="Co
     w, h = 1674, 1046
     image = Image.new("RGB", (w, h), "white")
     d = ImageDraw.Draw(image)
-    d.text((36, 30), title, font=font(40, True), fill="#111111")
+    centered(d, (w / 2, 30), title, font(40, True), "#111111")
     left, top, right, bottom = 175, 130, 1620, 815
     maximum = 50 if max(values) > 10 else 4.2
     steps = 5 if maximum == 50 else 4
@@ -65,7 +65,7 @@ def small_chart_zh():
     w, h = 1674, 1046
     image = Image.new("RGB", (w, h), "white")
     d = ImageDraw.Draw(image)
-    d.text((36, 30), "70°C／40分鐘熱收縮率比較", font=cjk_font(40), fill="#111111")
+    centered(d, (w / 2, 30), "70°C／40分鐘熱收縮率比較", cjk_font(40), "#111111")
     left, top, right, bottom = 175, 130, 1620, 815
     maximum = 4.2
     for i in range(5):
@@ -93,8 +93,8 @@ def timed_chart(filename="eva-foam-thermal-shrinkage-ius-4065-comparison-en.png"
     w, h = 2401, 1466
     image = Image.new("RGB", (w, h), "white")
     d = ImageDraw.Draw(image)
-    centered(d, (w / 2, 35), title, font(46, True), "#111111")
-    left, top, right, bottom = 210, 150, 2320, 1260
+    centered(d, (w / 2, 12), title, font(48, True), "#111111")
+    left, top, right, bottom = 210, 190, 2320, 1260
     maximum = 9
     for i in range(10):
         y = bottom - (bottom - top) * i / maximum
@@ -105,8 +105,8 @@ def timed_chart(filename="eva-foam-thermal-shrinkage-ius-4065-comparison-en.png"
     legend[2] = (NAVY, legend[2][1])
     lx = 230
     for color, label in legend:
-        d.rectangle((lx, 90, lx + 44, 112), fill=color)
-        d.text((lx + 60, 80), label, font=font(27), fill="#222222")
+        d.rectangle((lx, 116, lx + 44, 138), fill=color)
+        d.text((lx + 60, 106), label, font=font(27), fill="#222222")
         lx += 360
     labels = ["DF610", "ENGAGE 8842", "IUS-4065"]
     series = [[3.60, 5.26, 7.11], [3.20, 7.01, 8.10], [0.68, 0.92, 1.38]]
@@ -129,8 +129,8 @@ def timed_chart_zh():
     w, h = 2401, 1466
     image = Image.new("RGB", (w, h), "white")
     d = ImageDraw.Draw(image)
-    centered(d, (w / 2, 35), "70°C不同加熱時間熱收縮率比較", cjk_font(46), "#111111")
-    left, top, right, bottom = 210, 150, 2320, 1260
+    centered(d, (w / 2, 12), "70°C不同加熱時間熱收縮率比較", cjk_font(48), "#111111")
+    left, top, right, bottom = 210, 190, 2320, 1260
     maximum = 9
     for i in range(10):
         y = bottom - (bottom - top) * i / maximum
@@ -143,8 +143,8 @@ def timed_chart_zh():
     ]
     lx = 230
     for color, label in legend:
-        d.rectangle((lx, 90, lx + 44, 112), fill=color)
-        d.text((lx + 60, 80), label, font=cjk_font(27), fill="#222222")
+        d.rectangle((lx, 116, lx + 44, 138), fill=color)
+        d.text((lx + 60, 106), label, font=cjk_font(27), fill="#222222")
         lx += 360
     labels = ["DF610", "ENGAGE 8842", "IUS-4065"]
     series = [[3.60, 5.26, 7.11], [3.20, 7.01, 8.10], [0.68, 0.92, 1.38]]
