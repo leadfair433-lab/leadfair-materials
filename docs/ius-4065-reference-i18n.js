@@ -21,7 +21,7 @@
     "熔融峰值不是決定成品收縮率的唯一因素。EVA比例、交聯系統、發泡倍率與二次加工條件均會影響最終結果；本頁以70°C加熱40分鐘的配方對照測試作為實際驗證。": "Melting peak is not the only factor determining finished-product shrinkage. EVA ratio, crosslinking system, expansion ratio and secondary-processing conditions all affect the final result. This page uses a comparative formulation test at 70°C for 40 minutes for practical validation.",
     "產品優勢": "Product Advantages", "更低硬度": "Lower Hardness", "相同60／40 PHR對照配方下，IUS-4065發泡體硬度達Asker C 35，提供更柔軟的踩踏與緩衝感。": "In the same 60/40 PHR comparative formulation, IUS-4065 foam reaches Asker C 35 for a softer step-in and cushioning feel.",
     "較寬的二次加工窗口": "Wider Secondary-Processing Window", "DSC熔融峰值約64°C，可降低材料在合貼、烘烤或熱壓過程中過早軟化與結構鬆弛的風險。": "A DSC melting peak of approximately 64°C helps reduce premature softening and structural relaxation during lamination, baking or hot pressing.",
-    "顯著降低熱收縮": "Significantly Lower Thermal Shrinkage", "70°C加熱40分鐘後的熱收縮率為0.68%，較DF610與ENGAGE 8842對照配方降低約79%至81%。": "Thermal shrinkage is 0.68% after 40 minutes at 70°C, approximately 79–81% lower than the DF610 and ENGAGE 8842 comparative formulations.",
+    "顯著降低熱收縮": "Significantly Lower Thermal Shrinkage", "70°C加熱40分鐘後的熱收縮率為0.92%，較DF610與ENGAGE 8842對照配方降低約71%至74%。": "Thermal shrinkage is 0.92% after 40 minutes at 70°C, approximately 71–74% lower than the DF610 and ENGAGE 8842 comparative formulations.",
     "延展性提升": "Improved Elongation", "斷裂延伸率達252.36%，較兩組對照配方提高約9%至11%，展現良好的柔韌性。": "Elongation at break reaches 252.36%, approximately 9–11% higher than the two comparative formulations, demonstrating good flexibility.",
     "回彈性能保持": "Rebound Maintained", "在硬度明顯降低後，球落回彈率仍維持60%，兼顧柔軟度與彈性表現。": "Even with substantially lower hardness, ball rebound remains at 60%, balancing softness and elasticity.",
     "配方與量產支援": "Formulation and Production Support", "可依目標硬度、發泡倍率、密度與尺寸收縮要求，提供起始配方、試樣、物性測試及量產驗證。": "Starting formulations, samples, physical-property testing and production validation can be provided according to target hardness, expansion ratio, density and dimensional-shrinkage requirements.",
@@ -30,7 +30,7 @@
     "低熔點材料受熱變形與IUS-4065尺寸穩定對比": "Comparison of heat deformation in a low-melting material and dimensional stability in IUS-4065", "低熔點材料受熱變形與 IUS-4065 尺寸穩定性對比": "Low-melting material heat deformation versus IUS-4065 dimensional stability",
     "內部實測性能驗證": "Internal Performance Validation", "EVA 7470M／比較材料＝60／40 PHR，發泡倍率160%。數據為特定配方與條件下的典型值。": "EVA 7470M/comparison material = 60/40 PHR; expansion ratio 160%. Data are typical values under the specified formulation and conditions.",
     "IUS-4065發泡成品硬度比較圖": "IUS-4065 foamed-product hardness comparison chart", "IUS-4065熱收縮率比較圖": "IUS-4065 thermal-shrinkage comparison chart", "IUS-4065顆粒及EVA POE微孔發泡材料": "IUS-4065 pellets and EVA/POE microcellular foam materials", "微孔發泡結構及配方驗證": "Microcellular foam structure and formulation validation",
-    "IUS-4065硬度35C，較兩組對照配方降低約15%至17%。": "IUS-4065 hardness is 35C, approximately 15–17% lower than the two comparative formulations.", "熱收縮率0.68%，較兩組對照配方降低約79%至81%。": "Thermal shrinkage is 0.68%, approximately 79–81% lower than the two comparative formulations.", "EVA 7470M／比較材料＝60／40 PHR，發泡倍率160%；數值越低越好。": "EVA 7470M/comparison material = 60/40 PHR; expansion ratio 160%; lower values are better.",
+    "IUS-4065硬度35C，較兩組對照配方降低約15%至17%。": "IUS-4065 hardness is 35C, approximately 15–17% lower than the two comparative formulations.", "熱收縮率0.92%，較兩組對照配方降低約71%至74%。": "Thermal shrinkage is 0.92%, approximately 71–74% lower than the two comparative formulations.", "EVA 7470M／比較材料＝60／40 PHR，發泡倍率160%；數值越低越好。": "EVA 7470M/comparison material = 60/40 PHR; expansion ratio 160%; lower values are better.",
     "柔軟不代表容易收縮——IUS-4065兼顧柔韌性與耐熱尺寸穩定性": "Soft Does Not Have to Mean Shrink-Prone — IUS-4065 Balances Flexibility and Heat-Resistant Dimensional Stability", "IUS-4065在70°C／60分鐘測試後，熱收縮率僅1.38%，展現優異的耐熱尺寸穩定性。歡迎索取樣品，驗證您的配方與加工條件。": "After testing at 70°C for 60 minutes, IUS-4065 shows only 1.38% thermal shrinkage and excellent heat-resistant dimensional stability. Request a sample to validate your formulation and processing conditions.",
     "硬度": "Hardness", "比重": "Specific gravity", "拉伸強度": "Tensile strength", "斷裂延伸率": "Elongation at break", "撕裂強度": "Tear strength", "壓縮永久變形": "Compression set", "熱收縮率": "Thermal shrinkage", "發泡倍率": "Expansion ratio", "約Shore A 40": "Approx. Shore A 40",
     "IUS-4065的優勢集中在更低硬度、更高延伸率與顯著降低熱收縮；拉伸與撕裂強度略低，壓縮永久變形略高，應依實際產品要求進一步優化配方。": "IUS-4065 provides lower hardness, higher elongation and substantially reduced thermal shrinkage. Tensile and tear strength are slightly lower and compression set is slightly higher, so the formulation should be optimized for actual product requirements.",
@@ -53,9 +53,9 @@
     if (value && translations[value]) element.setAttribute("alt", translations[value]);
   });
   const imageTranslations = {
-    "./images/ius-reference/visual-03.png": "./images/ius-reference/visual-03-en.png",
-    "./images/ius-reference/visual-04.png": "./images/ius-reference/visual-04-en.png",
-    "./images/ius-reference/eva-foam-thermal-shrinkage-ius-4065-comparison.png": "./images/ius-reference/eva-foam-thermal-shrinkage-ius-4065-comparison-en.png",
+    "./images/ius-reference/visual-03.png?v=20261009-4": "./images/ius-reference/visual-03-en.png?v=20261009-4",
+    "./images/ius-reference/visual-04.png?v=20261009-4": "./images/ius-reference/visual-04-en.png?v=20261009-4",
+    "./images/ius-reference/eva-foam-thermal-shrinkage-ius-4065-comparison.png?v=20261009-3": "./images/ius-reference/eva-foam-thermal-shrinkage-ius-4065-comparison-en.png?v=20261009-3",
   };
   document.querySelectorAll("img[src]").forEach((image) => {
     const source = image.getAttribute("src");

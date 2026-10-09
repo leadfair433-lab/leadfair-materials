@@ -35,6 +35,7 @@ figcaption{margin-top:12px;color:#65798a}
 table{font-size:.93rem;margin-top:30px;border-collapse:separate;border-spacing:0;border:1px solid #d8e4f1;border-radius:14px;overflow:hidden;background:#fff}
 th{background:#172b40;padding:15px 17px;font-weight:800}
 td{padding:14px 17px;border:0;border-bottom:1px solid #e2ebf4;vertical-align:top}
+tbody td{font-size:calc(.93rem + 4px)}
 tr:nth-child(even) td{background:#f7faff}
 tbody tr:last-child td{border-bottom:0}
 tbody tr:has(td:first-child:is(:not(:empty))):hover td{background:#edf4ff}
