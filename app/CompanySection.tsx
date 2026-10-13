@@ -10,7 +10,7 @@ const slides = [
   "/images/company/company-hero-extrusion-line-fast.jpg",
 ];
 
-const companyLaboratoryArticles = laboratoryArticles.filter((article) => article.slug !== "panorama-right");
+const companyLaboratoryArticles = laboratoryArticles.filter((article) => article.imageFit === "contain");
 
 const facts = [
   ["building", "1979", "公司成立"],

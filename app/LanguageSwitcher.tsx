@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import generatedTranslations from "./content/site-translations.json";
+import { laboratoryTranslations } from "./content/laboratory-translations";
 
 export type SiteLocale = "zh-tw" | "en" | "vi";
 
@@ -110,8 +111,8 @@ const supplementalTranslations: Record<"en" | "vi", Record<string, string>> = {
 };
 
 const translations: Record<"en" | "vi", Record<string, string>> = {
-  en: { ...generatedTranslations.en, ...translationOverrides.en, ...supplementalTranslations.en },
-  vi: { ...generatedTranslations.vi, ...translationOverrides.vi, ...supplementalTranslations.vi },
+  en: { ...generatedTranslations.en, ...translationOverrides.en, ...supplementalTranslations.en, ...laboratoryTranslations.en },
+  vi: { ...generatedTranslations.vi, ...translationOverrides.vi, ...supplementalTranslations.vi, ...laboratoryTranslations.vi },
 };
 
 const traditionalPhrases: Record<string, string> = {

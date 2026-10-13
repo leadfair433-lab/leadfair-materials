@@ -46,99 +46,93 @@ export const laboratoryArticles: LaboratoryArticle[] = [
     ],
   },
   {
-    slug: "servo-computer-tensile-tester",
-    title: "伺服控制電腦系統拉力試驗機",
-    image: "/images/company/laboratory/instruments/servo-computer-tensile-tester.png",
-    imageFit: "contain",
-    summary: "以伺服控制與電腦化介面進行材料力學性能測試，適用於橡膠、塑膠、彈性體、紡織與紙板等材料。",
-    statusLabel: "材料力學測試 / AI-7000-SU1",
-    imageCaption: "GOTECH 台灣高鐵科技 AI-7000-SU1 伺服控制電腦系統拉力試驗機",
+    slug: "aging-test-oven", title: "老化試驗機", image: "/images/company/laboratory/instruments/aging-test-oven.png", imageFit: "contain",
+    summary: "在受控溫度與時間下均勻加熱試樣，評估塑膠、橡膠、皮革與布料的熱老化、收縮、伸長及性能保持。",
+    statusLabel: "熱老化測試 / GT-7017-EM", imageCaption: "GOTECH GT-7017-EM 老化試驗機",
     sections: [
-      {
-        title: "設備用途",
-        paragraphs: [
-          "伺服控制電腦系統拉力試驗機配備伺服控制技術、電腦化操作介面與多種測試工裝，可對橡膠、塑膠、彈性體等高分子聚合物，以及紡織、紙板等材料的成品、半成品或啞鈴狀試樣進行測試。",
-          "設備可用於測量抗拉強度、伸長、撕裂、膠著力、抗拉應力、剝離、剪力與黏接力等性能，支援材料性能評估與品質控制。",
-        ],
-      },
-      {
-        title: "設備規格與測試標準",
-        paragraphs: [
-          "設備型號為 AI-7000-SU1，廠牌為 GOTECH 台灣高鐵科技，荷重元為 5 kN。",
-          "測試方案涵蓋 DIN、ASTM、ISO、SATRA 等行業標準；測量單位可切換 kgf、lbf、N、kN、gf、kPa、MPa 等。",
-        ],
-      },
-      {
-        title: "控制與數據記錄",
-        paragraphs: [
-          "伺服控制系統可對測試過程進行高精度控制，協助確保測試結果的準確性與可靠性。",
-          "系統能夠即時監控並記錄測試過程中的數據，便於使用者掌握測試進度與結果。",
-        ],
-      },
+      { title: "設備原理與用途", paragraphs: ["設備透過精確的溫度與時間控制模擬材料在使用環境中的高溫老化，使試樣均勻受熱後比較老化前後的性能變化。", "可評估耐黃變、開膠、收縮、伸長及性能保持，作為材料耐用性、穩定性與可靠性的判定依據。"] },
+      { title: "設備規格與測試條件", paragraphs: ["設備型號為 GT-7017-EM，廠牌為 GOTECH；溫度範圍為室溫 +10°C 至 300°C，採平衡式溫度控制系統，控制精度為 ±1.0°C。", "旋轉試樣盤速度為 5–10 rpm，可使試樣均勻受熱並提升測試一致性。"] },
+      { title: "應用與品質評估", paragraphs: ["模擬材料長時間暴露於高溫條件，可用於預測產品使用壽命與性能變化。", "多項老化性能測試可為材料選擇、配方改善與品質控制提供完整依據。"] },
     ],
   },
   {
-    slug: "yellowing-resistance-test-chamber",
-    title: "耐黃變試驗箱",
-    image: "/images/company/laboratory/instruments/yellowing-resistance-test-chamber.png",
-    imageFit: "contain",
-    summary: "模擬淺色與白色材料在太陽光及受熱條件下的長時間照射，評估試樣表面的變色程度與耐黃變能力。",
-    statusLabel: "耐黃變測試 / GT-7035-EUA",
-    imageCaption: "GOTECH 台灣高鐵科技 GT-7035-EUA 耐黃變試驗箱",
+    slug: "servo-computer-tensile-tester", title: "伺服控制電腦系統拉力試驗機", image: "/images/company/laboratory/instruments/servo-computer-tensile-tester.png", imageFit: "contain",
+    summary: "以伺服控制與電腦化介面測量材料的拉伸、伸長、撕裂、剝離、剪力與黏接性能。",
+    statusLabel: "材料力學測試 / AI-7000-SU1", imageCaption: "GOTECH AI-7000-SU1 伺服控制電腦系統拉力試驗機",
     sections: [
-      {
-        title: "設備原理與用途",
-        paragraphs: [
-          "淺色和白色材料或製品在自然太陽光長時間照射下容易發生黃變。耐黃變試驗箱以太陽燈及加熱控溫裝置模擬自然環境，在規定時間內觀察試樣表面顏色變化，藉此判定試樣在太陽光輻射下的耐黃變能力。",
-          "設備除適用於鞋材，也可用於評估其他淺色或白色材料的耐黃變性能，協助在產品開發階段提前發現黃變問題。",
-        ],
-      },
-      {
-        title: "設備規格與測試規範",
-        paragraphs: [
-          "設備型號為 GT-7035-EUA，廠牌為 GOTECH 台灣高鐵科技；光源採用 300 W 太陽燈泡，溫度範圍為室溫 +10°C 至 80°C，加熱方式為熱風循環。",
-          "測試規範涵蓋 HG/T 3689 Method A 與 HG/T 4905。",
-        ],
-      },
-      {
-        title: "均勻照射與環境控制",
-        paragraphs: [
-          "試驗箱可模擬材料在自然太陽光下的長時間照射，使測試條件更貼近實際使用環境。",
-          "設備配備試樣回轉裝置，使試樣受熱與受輻射更均勻，提升試驗的準確性與可靠性；溫度及照射時間等環境參數可依測試需求控制。",
-        ],
-      },
+      { title: "設備原理與用途", paragraphs: ["設備配備伺服控制技術、電腦化操作介面與可更換測試工裝，可測試橡膠、塑膠、彈性體、紡織與紙板等材料的成品、半成品及啞鈴狀試樣。", "測試項目包括抗拉強度、伸長、撕裂、膠著力、抗拉應力、剝離、剪力與黏接力。"] },
+      { title: "設備規格與測試標準", paragraphs: ["設備型號為 AI-7000-SU1，廠牌為 GOTECH，荷重元為 5 kN。", "支援 DIN、ASTM、ISO、SATRA 等標準，單位可選 kgf、lbf、N、kN、gf、kPa 與 MPa。"] },
+      { title: "控制與數據記錄", paragraphs: ["伺服控制系統提供高精度控制，支援準確且可靠的材料性能評估與品質控制。", "測試數據可即時監控與記錄，方便追蹤測試進度並分析結果。"] },
     ],
   },
   {
-    slug: "aging-test-machine",
-    title: "老化試驗機",
-    image: "/images/company/laboratory/instruments/aging-test-machine.png",
-    imageFit: "contain",
-    summary: "在規定的溫度與時間條件下使試樣均勻受熱，觀察材料老化前後的耐黃、開膠、收縮、伸長與殘餘率等性能變化。",
-    statusLabel: "材料老化與耐熱性能測試",
-    imageCaption: "GOTECH 高鐵檢測儀器老化試驗機",
+    slug: "plastic-melt-flow-index-tester", title: "塑膠熔融指數測定機", image: "/images/company/laboratory/instruments/plastic-melt-flow-index-tester.png", imageFit: "contain",
+    summary: "在規定溫度與荷重下測量熔融塑料通過毛細管模口的流率，評估材料流動特性與加工性。",
+    statusLabel: "熔融指數測試 / GT-7100-MI", imageCaption: "GOTECH GT-7100-MI 塑膠熔融指數測定機",
     sections: [
-      {
-        title: "設備原理與用途",
-        paragraphs: [
-          "老化試驗機用於測試塑膠、橡膠、皮革與布料等材料在受熱前後的性能變化。設備在規定的溫度和時間條件下使試樣均勻受熱，觀察耐黃、開膠、收縮、伸長與殘餘率等變化，以評估材料的老化特性。",
-          "精確的溫度與時間控制可模擬實際應用環境中的受熱變化，協助確認材料的耐用性、穩定性與可靠性。",
-        ],
-      },
-      {
-        title: "模擬環境與壽命評估",
-        paragraphs: [
-          "設備可模擬材料在高溫環境中的老化過程，提供更貼近使用條件的性能評估。",
-          "透過長時間高溫暴露，可觀察材料性能的變化趨勢，作為預測產品使用壽命與驗證耐熱穩定性的參考。",
-        ],
-      },
-      {
-        title: "性能測試與品質控制",
-        paragraphs: [
-          "老化試驗可從耐黃度、開膠性、收縮率與伸長性等不同面向評估材料的老化特性。",
-          "測試結果可作為產品品質控制與配方改良的依據，協助提升批次一致性及使用可靠性。",
-        ],
-      },
+      { title: "設備原理與用途", paragraphs: ["設備在指定溫度、荷重及活塞位置條件下，以定時方式測量熔融材料通過毛細管模口的速率。", "熔融指數可反映塑料高溫下的流動特性與加工性，協助材料選擇、產品開發與製程改善。"] },
+      { title: "設備規格與測試標準", paragraphs: ["設備型號為 GT-7100-MI，廠牌為 GOTECH，符合 ASTM D1238、GB/T 3682、ISO 1133 與 JIS K7210。", "溫度範圍為室溫至 450°C，雙重 PID 控溫精度為 ±0.1°C；流率範圍為 0.15–50 g/10 min，切料間隔可調 0.1–999.9 秒。"] },
+      { title: "材料選擇與法規符合", paragraphs: ["設備適用於不同塑料與高分子材料，可比較不同材料的熔體行為。", "標準化測試有助於確認材料符合相關產業規範，降低應用風險並提升市場符合性。"] },
+    ],
+  },
+  {
+    slug: "motorcycle-back-protector-impact-tester", title: "摩托車護背耐衝擊試驗機", image: "/images/company/laboratory/instruments/motorcycle-back-protector-impact-tester.png", imageFit: "contain",
+    summary: "以規定質量與落下高度的衝擊體撞擊護具材料，評估摩托車防護服及護背材料的耐衝擊性能。",
+    statusLabel: "護具衝擊測試 / GT-7037-MH", imageCaption: "GOTECH GT-7037-MH 摩托車護背耐衝擊試驗機",
+    sections: [
+      { title: "設備原理與用途", paragraphs: ["電磁控制系統釋放衝擊體，使其自指定高度撞擊試樣，模擬摩托車事故中防護材料可能承受的衝擊。", "測試結果可用於評估摩托車防護服、護背及相關緩衝材料的吸能與耐衝擊能力。"] },
+      { title: "設備規格與測試標準", paragraphs: ["設備型號為 GT-7037-MH，廠牌為 GOTECH，符合 EN 1621-1:2012 與 EN 1621-2:2014。", "衝擊質量為 5 ± 0.05 kg，衝擊能量為 50 J，衝擊速度為 4.47 m/s，對應落下高度 1,020 mm。"] },
+      { title: "高度控制與數據分析", paragraphs: ["衝擊高度可精確調整，以模擬不同條件下的撞擊並提高測試代表性。", "系統可搭配數據記錄與分析功能，自動擷取測試資料並形成評估報告。"] },
+    ],
+  },
+  {
+    slug: "pneumatic-specimen-cutting-machine", title: "氣壓式切片機", image: "/images/company/laboratory/instruments/pneumatic-specimen-cutting-machine.png", imageFit: "contain",
+    summary: "以壓縮空氣驅動沖切橡膠、膠帶、皮革與複合材料，製備啞鈴狀及其他標準測試試樣。",
+    statusLabel: "試樣製備 / GT-7016-AR", imageCaption: "GOTECH GT-7016-AR 氣壓式切片機",
+    sections: [
+      { title: "設備原理與用途", paragraphs: ["設備接入壓縮空氣後，以氣壓驅動沖切刀具，將橡膠、膠帶、皮革等材料裁切為測試試樣。", "除啞鈴狀試樣外，也可製備高壓層板及多種複合材料樣品，擴充實驗室試樣製備能力。"] },
+      { title: "設備規格", paragraphs: ["設備型號為 GT-7016-AR，廠牌為 GOTECH，壓力為 3 噸，氣缸行程為 50 mm，可處理厚度最高 10 mm 的材料。"] },
+      { title: "多功能與維護", paragraphs: ["設備除試樣裁切外，也可作為小型壓床，製備不同形狀與厚度的樣品。", "結構簡潔，便於日常維護並支援長期穩定運行。"] },
+    ],
+  },
+  {
+    slug: "sealed-chamber-foam-curing-rheometer", title: "密閉式發泡硫化儀", image: "/images/company/laboratory/instruments/sealed-chamber-foam-curing-rheometer.png", imageFit: "contain",
+    summary: "在密閉模腔中同步分析橡膠與 EVA 等材料的硫化反應、發泡壓力及物性變化。",
+    statusLabel: "發泡與硫化分析 / UR-2030SD", imageCaption: "U-CAN UR-2030SD 密閉式發泡硫化儀",
+    sections: [
+      { title: "設備原理與用途", paragraphs: ["設備採用無轉子振盪流變測試並結合發泡壓力量測，在密閉氣密模腔中分析材料硫化與發泡過程。", "適用於橡膠、EVA 及其他可交聯發泡材料，可觀察反應行為與物性變化。"] },
+      { title: "設備規格與測試標準", paragraphs: ["設備型號為 UR-2030SD，廠牌為 U-CAN Technology，符合 ASTM D5289、ISO 6502 與 GB/T 16584。", "密閉模腔可在受控條件下同步取得流變與發泡壓力資訊。"] },
+      { title: "選材與品質控制", paragraphs: ["測試結果可客觀比較材料特性，協助產品設計階段選擇符合應用需求的配方。", "標準化測試有助於確認產品一致性及相關標準符合性，提升品質檢驗效率與準確度。"] },
+    ],
+  },
+  {
+    slug: "solid-density-tester", title: "固體密度測試儀", image: "/images/company/laboratory/instruments/solid-density-tester.png", imageFit: "contain",
+    summary: "依阿基米德浮力原理，以試樣在空氣與水中的重量差計算固體材料密度與體積。",
+    statusLabel: "密度與比重測試 / TW-153E", imageCaption: "Matsu Haku TW-153E 固體密度測試儀",
+    sections: [
+      { title: "設備原理與用途", paragraphs: ["設備依阿基米德浮力原理，量測試樣在空氣與水中的重量差，計算材料密度、比重與體積。", "可用於鞋底及其他材料的品質控制，確認密度是否符合產品規格。"] },
+      { title: "設備規格與測試標準", paragraphs: ["設備型號為 TW-153E，廠牌為 Matsu Haku，符合 ASTM D297-93、ASTM D792-00、ASTM D618、ASTM D891、GB/T 1033、JIS K6530 與 ISO 2781。", "最大秤重為 150 g，秤重解析度為 0.001 g；密度與體積解析度可達 0.001 或 0.0001。"] },
+      { title: "測試功能與品質控制", paragraphs: ["設備提供比重、密度及體積等多項測試功能，支援不同材料的快速評估。", "量測結果可用於鞋底材料與發泡製品的批次品質控制。"] },
+    ],
+  },
+  {
+    slug: "vertical-rebound-resilience-tester", title: "垂直彈性試驗機", image: "/images/company/laboratory/instruments/vertical-rebound-resilience-tester.png", imageFit: "contain",
+    summary: "以垂直落錘法測量橡膠試樣的回彈高度，快速評估材料彈性與回彈性能。",
+    statusLabel: "回彈性能測試 / GT-7042-V1", imageCaption: "GOTECH GT-7042-V1 垂直彈性試驗機",
+    sections: [
+      { title: "設備原理與用途", paragraphs: ["設備將落錘提升至規定高度後自由落下撞擊試樣，以回彈高度評估橡膠材料的彈性性能。", "測試時衝擊點距試樣邊緣至少 14 mm，前三次落下不計，記錄第四至第六次回彈高度並取平均值。"] },
+      { title: "設備規格與測試標準", paragraphs: ["設備型號為 GT-7042-V1，廠牌為 GOTECH，符合 ASTM D2632。", "衝擊錘重量為 28 ± 0.5 g，落下高度為 400 mm。"] },
+      { title: "重複性與應用", paragraphs: ["標準化操作有助於不同實驗室與操作人員取得一致且可比較的結果。", "測試數據可用於橡膠與彈性材料的品質控制、研究開發及應用評估。"] },
+    ],
+  },
+  {
+    slug: "yellowing-resistance-test-chamber", title: "耐黃變試驗箱", image: "/images/company/laboratory/instruments/yellowing-resistance-test-chamber.png", imageFit: "contain",
+    summary: "以太陽燈與熱風循環模擬光照和受熱環境，評估淺色及白色材料的表面變色與耐黃變能力。",
+    statusLabel: "耐黃變測試 / GT-7035-EUA", imageCaption: "GOTECH GT-7035-EUA 耐黃變試驗箱",
+    sections: [
+      { title: "設備原理與用途", paragraphs: ["設備以太陽燈及溫控加熱系統模擬自然光照環境，在規定時間內觀察淺色與白色試樣的表面顏色變化。", "除鞋材外，也適用於其他淺色或白色材料，協助在開發階段提前識別黃變風險。"] },
+      { title: "設備規格與測試標準", paragraphs: ["設備型號為 GT-7035-EUA，廠牌為 GOTECH，採 300 W 太陽燈與熱風循環加熱，溫度範圍為室溫 +10°C 至 80°C。", "符合 HG/T 3689 Method A 與 HG/T 4905。"] },
+      { title: "均勻照射與環境控制", paragraphs: ["旋轉試樣架可使試樣均勻受熱與受光，提高測試準確性與可靠性。", "溫度與照射時間等環境參數可依測試需求控制，以模擬長時間使用條件。"] },
     ],
   },
 ];
