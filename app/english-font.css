@@ -26,8 +26,8 @@ body[data-locale="en"] .process-head > div:last-child { padding-top: 72px; paddi
 body[data-locale="en"] .process-track article:last-child h3 { white-space: nowrap; }
 body[data-locale="en"] .why-found-grid h3 { max-width: none; font-size: 21px; line-height: 1.35; text-wrap: balance; }
 body[data-locale="en"] .why-found-grid h3 { min-height: 57px; }
-body[data-locale="en"] .faq { grid-template-columns: minmax(480px,1fr) 1.25fr; }
-body[data-locale="en"] .faq h2 { max-width: 680px; font-size: clamp(44px,4vw,64px); letter-spacing: -.045em; }
+body[data-locale="en"] .faq { grid-template-columns: minmax(0,1.08fr) minmax(0,1fr); gap: 6%; }
+body[data-locale="en"] .faq h2 { max-width: 780px; font-size: clamp(44px,3.55vw,58px); line-height: 1.08; letter-spacing: -.045em; }
 body[data-locale="en"] .inquiry-form label { font-size: 13px; }
 body[data-locale="en"] .inquiry-form input:not([type="checkbox"]),
 body[data-locale="en"] .inquiry-form select,
