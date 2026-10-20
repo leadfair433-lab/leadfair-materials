@@ -3,5 +3,5 @@
 3:I[2327,[],"OutletBoundary"]
 4:"$Sreact.suspense"
 :HL["/leadfair-materials/_next/static/css/c6f724a9f986e0d6.css","style"]
-0:{"rsc":["$","$1","c",{"children":[["$","$L2",null,{}],[["$","link","0",{"rel":"stylesheet","href":"/leadfair-materials/_next/static/css/c6f724a9f986e0d6.css","precedence":"next"}]],["$","$L3",null,{"children":["$","$4",null,{"name":"Next.MetadataOutlet","children":"$@5"}]}]]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"-o_dzDzSIfT-Q4GBRNC49"}
+0:{"rsc":["$","$1","c",{"children":[["$","$L2",null,{}],[["$","link","0",{"rel":"stylesheet","href":"/leadfair-materials/_next/static/css/c6f724a9f986e0d6.css","precedence":"next"}]],["$","$L3",null,{"children":["$","$4",null,{"name":"Next.MetadataOutlet","children":"$@5"}]}]]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"psU15GvgK0Zgdrr9MJF3j"}
 5:null
