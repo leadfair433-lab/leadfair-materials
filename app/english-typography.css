@@ -1,0 +1,280 @@
+/*
+ * English editorial type system
+ * Scope: typography only. Content, imagery and module structure stay unchanged.
+ */
+
+body[data-locale="en"] {
+  --en-display: clamp(3.5rem, 5.8vw, 6rem);
+  --en-page-title: clamp(3rem, 4.7vw, 4.75rem);
+  --en-section-title: clamp(2.5rem, 3.8vw, 4rem);
+  --en-card-title: clamp(1.25rem, 1.65vw, 1.65rem);
+  --en-body-lg: clamp(1rem, 1.15vw, 1.125rem);
+  --en-body: clamp(.9375rem, 1vw, 1.0625rem);
+  --en-small: clamp(.8125rem, .85vw, .9375rem);
+  --en-label: clamp(.6875rem, .72vw, .8125rem);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.65;
+  letter-spacing: 0;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+body[data-locale="en"] :where(h1,h2,h3,h4,p,li,dd,dt,a,button,label,small,span) {
+  overflow-wrap: break-word;
+  word-break: normal;
+}
+
+body[data-locale="en"] :where(h1,h2,h3,h4) {
+  margin-top: 0;
+  text-wrap: balance;
+}
+
+body[data-locale="en"] main h1 {
+  font-size: var(--en-page-title);
+  font-weight: 650;
+  line-height: 1.06;
+  letter-spacing: -.045em;
+}
+
+body[data-locale="en"] main h2 {
+  font-size: var(--en-section-title);
+  font-weight: 600;
+  line-height: 1.12;
+  letter-spacing: -.035em;
+}
+
+body[data-locale="en"] main h3 {
+  font-size: var(--en-card-title);
+  font-weight: 600;
+  line-height: 1.3;
+  letter-spacing: -.022em;
+}
+
+body[data-locale="en"] main h4 {
+  font-size: clamp(1.0625rem, 1.3vw, 1.25rem);
+  font-weight: 650;
+  line-height: 1.35;
+  letter-spacing: -.012em;
+}
+
+body[data-locale="en"] main p,
+body[data-locale="en"] main li,
+body[data-locale="en"] main dd {
+  font-size: var(--en-body);
+  font-weight: 400;
+  line-height: 1.72;
+}
+
+body[data-locale="en"] :where(.eyebrow,.blog-label,.journal-category,.product-module-heading>span,
+  .laboratory-article-header>span,.laboratory-article-body section>span,
+  .article-hub-heading>span,.article-hub-feature>div>span,.article-hub-grid article>span,
+  .products-hero-copy>span,.products-catalog header span,.products-applications header span,
+  .contact-hero>div>span,.contact-needs header>span,.contact-location-copy>span,
+  .profile-hero-copy>span,.profile-copy>span,.profile-history header span,.profile-labs header span,
+  .honors-hero>span,.certificate-section>header>span) {
+  font-size: var(--en-label);
+  font-weight: 750;
+  line-height: 1.45;
+  letter-spacing: .14em;
+}
+
+body[data-locale="en"] :where(.primary,.ghost,.blog-read-link,.article-hub-button,
+  .modular-product-cta,.product-module-download a,.product-module-empty>a,
+  .contact-needs article a,.map-direction,.footer-contact-button) {
+  font-size: var(--en-small);
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+/* Homepage: a clear display-to-body hierarchy. */
+body[data-locale="en"] .hero-copy { max-width: min(900px, 72%); }
+body[data-locale="en"] .hero h1 {
+  max-width: 900px;
+  margin: clamp(18px, 2vw, 30px) 0;
+  font-size: var(--en-display);
+  font-weight: 560;
+  line-height: 1.06;
+  letter-spacing: -.035em;
+  word-spacing: .035em;
+}
+body[data-locale="en"] .hero-copy>p {
+  max-width: 680px;
+  font-size: var(--en-body-lg);
+  line-height: 1.7;
+}
+body[data-locale="en"] .section-title h2,
+body[data-locale="en"] .home-products-heading h2,
+body[data-locale="en"] .process-head h2,
+body[data-locale="en"] .factory-copy h2,
+body[data-locale="en"] .why-found>header h2,
+body[data-locale="en"] .material-blog h2,
+body[data-locale="en"] .faq h2,
+body[data-locale="en"] .inquiry-copy h2 {
+  font-size: var(--en-section-title);
+  font-weight: 560;
+  line-height: 1.1;
+  letter-spacing: -.038em;
+}
+body[data-locale="en"] :where(.lead,.process-head p,.factory-copy p,.why-found>header p,
+  .blog-heading-copy>p,.inquiry-copy>p) {
+  font-size: var(--en-body-lg);
+  line-height: 1.75;
+}
+body[data-locale="en"] .intro .lead { width: min(760px, 62%); margin: 0 0 35px; text-align: left; }
+body[data-locale="en"] .metrics .metric-card b { font-size: clamp(1.35rem, 1.8vw, 1.75rem); font-weight: 650; line-height: 1.2; }
+body[data-locale="en"] .metrics .metric-card span { font-size: var(--en-body); font-weight: 600; line-height: 1.45; }
+body[data-locale="en"] .metrics .metric-card p { font-size: var(--en-body); line-height: 1.65; }
+body[data-locale="en"] .application-copy h3,
+body[data-locale="en"] .home-product-card-copy h3 { font-weight: 600; }
+body[data-locale="en"] .process-track h3 { font-size: clamp(1.125rem, 1.35vw, 1.4rem); font-weight: 650; }
+body[data-locale="en"] .process-track p { font-size: var(--en-small); line-height: 1.65; }
+body[data-locale="en"] .why-found-grid h3,
+body[data-locale="en"] .blog-copy h3 { font-size: clamp(1.125rem, 1.45vw, 1.4rem); font-weight: 600; line-height: 1.35; }
+body[data-locale="en"] .why-found-grid p,
+body[data-locale="en"] .blog-copy>p { font-size: var(--en-small); line-height: 1.7; }
+body[data-locale="en"] .faq button>span { font-size: clamp(1rem, 1.25vw, 1.2rem); font-weight: 650; line-height: 1.45; }
+body[data-locale="en"] .faq button small { font-size: var(--en-body); font-weight: 400; line-height: 1.75; }
+body[data-locale="en"] .inquiry-form :where(label,input,select,textarea) { font-size: var(--en-small); }
+body[data-locale="en"] .factory { grid-template-columns: 1fr 1fr; gap: 6%; }
+body[data-locale="en"] .inquiry-wrap { grid-template-columns: .95fr 1.05fr; gap: 6%; }
+body[data-locale="en"] .inquiry-copy>p { max-width: 640px; }
+
+/* Products overview and product-detail pages. */
+body[data-locale="en"] .products-hero h1,
+body[data-locale="en"] .modular-product-intro h1 { font-size: var(--en-page-title); font-weight: 620; line-height: 1.06; }
+body[data-locale="en"] .modular-product-intro h2 { font-size: clamp(2.25rem, 3.5vw, 3.6rem); font-weight: 650; line-height: 1.13; }
+body[data-locale="en"] .products-hero-copy>p,
+body[data-locale="en"] .modular-product-intro>p { font-size: var(--en-body-lg); line-height: 1.75; }
+body[data-locale="en"] .products-catalog h2,
+body[data-locale="en"] .products-applications h2,
+body[data-locale="en"] .product-selection h2 { font-size: var(--en-section-title); }
+body[data-locale="en"] .overview-product-copy h3 { font-weight: 650; line-height: 1.08; }
+body[data-locale="en"] .overview-product-copy h4,
+body[data-locale="en"] .product-module-features h3 { font-weight: 650; }
+body[data-locale="en"] .product-module-heading h2,
+body[data-locale="en"] .modular-product-placeholder h2 { font-size: clamp(1.75rem, 2.7vw, 2.6rem); font-weight: 650; line-height: 1.22; }
+body[data-locale="en"] .product-module-prose p,
+body[data-locale="en"] .modular-product-extra-content p { max-width: 76ch; font-size: var(--en-body-lg); line-height: 1.8; }
+body[data-locale="en"] .product-module-table-wrap { font-size: var(--en-small); }
+
+/* Company, honors, laboratory and contact pages. */
+body[data-locale="en"] .profile-hero-copy h1,
+body[data-locale="en"] .honors-hero h1,
+body[data-locale="en"] .contact-hero h1,
+body[data-locale="en"] .laboratory-index-heading h1,
+body[data-locale="en"] .laboratory-article-header h1 { font-size: var(--en-page-title); font-weight: 620; line-height: 1.08; }
+body[data-locale="en"] .profile-copy h2,
+body[data-locale="en"] .profile-history h2,
+body[data-locale="en"] .profile-labs h2,
+body[data-locale="en"] .contact-needs h2,
+body[data-locale="en"] .contact-location-copy h2,
+body[data-locale="en"] .certificate-section h2,
+body[data-locale="en"] .laboratory-article-body h2 { font-size: var(--en-section-title); font-weight: 600; }
+body[data-locale="en"] :where(.profile-copy p,.profile-history-grid article>p,.lab-content p,
+  .honors-hero p,.certificate-section header p,.contact-hero>div>p,.contact-needs article p,
+  .contact-location-copy p,.laboratory-index-heading p,.laboratory-index-copy p,
+  .laboratory-article-header p,.laboratory-article-body p) { font-size: var(--en-body); line-height: 1.78; }
+body[data-locale="en"] .laboratory-article-body p { max-width: 76ch; }
+
+/* Article index and long-form journal pages. */
+body[data-locale="en"] .article-hub-heading h1,
+body[data-locale="en"] .journal-hero h1 { font-size: var(--en-page-title); font-weight: 620; line-height: 1.1; }
+body[data-locale="en"] .article-hub-feature h2,
+body[data-locale="en"] .journal-body h2 { font-size: clamp(1.75rem, 2.7vw, 2.6rem); font-weight: 650; line-height: 1.25; }
+body[data-locale="en"] .article-hub-grid h3 { font-size: clamp(1.2rem, 1.55vw, 1.5rem); font-weight: 600; line-height: 1.4; }
+body[data-locale="en"] .journal-hero p,
+body[data-locale="en"] .journal-body p { max-width: 76ch; font-size: var(--en-body-lg); line-height: 1.85; }
+body[data-locale="en"] .journal-outline { font-size: var(--en-small); line-height: 1.55; }
+body[data-locale="en"] .journal-outline h2,
+body[data-locale="en"] .journal-action-card h2 {
+  font-size: .875rem;
+  font-weight: 600;
+  line-height: 1.45;
+  letter-spacing: .035em;
+}
+body[data-locale="en"] .laboratory-index-copy h2 {
+  font-size: clamp(1.2rem, 1.55vw, 1.45rem);
+  font-weight: 650;
+  line-height: 1.3;
+  letter-spacing: -.018em;
+}
+body[data-locale="en"] .hero-quick-form h2 {
+  font-size: clamp(1.45rem, 2.1vw, 1.8rem);
+  font-weight: 650;
+  line-height: 1.25;
+  letter-spacing: -.02em;
+}
+
+/* Footer is supporting information, not a competing headline. */
+body[data-locale="en"] .site-footer :where(.footer-nav,.footer-contact-info,.footer-connect)>strong {
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.35;
+}
+body[data-locale="en"] .site-footer :where(.footer-nav a,.footer-contact-info span,.footer-contact-info a,.footer-brand p) {
+  font-size: .9375rem;
+  font-weight: 400;
+  line-height: 1.65;
+}
+body[data-locale="en"] .site-footer>.footer-main { grid-template-columns: 1.15fr .8fr 1.3fr 1fr; gap: 3%; }
+
+/* Laptop and tablet: reduce display scale before grids begin to feel crowded. */
+@media (max-width: 1200px) {
+  body[data-locale="en"] {
+    --en-display: clamp(3rem, 6.4vw, 4.8rem);
+    --en-page-title: clamp(2.65rem, 5vw, 4rem);
+    --en-section-title: clamp(2.15rem, 4vw, 3.3rem);
+    --en-card-title: clamp(1.15rem, 1.9vw, 1.4rem);
+  }
+  body[data-locale="en"] .hero-copy { max-width: min(780px, 78%); }
+  body[data-locale="en"] .process-track h3 { font-size: 1.125rem; }
+  body[data-locale="en"] .process-track p { font-size: .8125rem; }
+}
+
+@media (max-width: 900px) {
+  body[data-locale="en"] {
+    --en-display: clamp(2.75rem, 9vw, 3.8rem);
+    --en-page-title: clamp(2.35rem, 7vw, 3.3rem);
+    --en-section-title: clamp(2rem, 6vw, 2.8rem);
+    --en-body-lg: 1rem;
+    --en-body: .9375rem;
+    --en-small: .8125rem;
+  }
+  body[data-locale="en"] .hero-copy { max-width: 86%; }
+  body[data-locale="en"] .hero h1 { max-width: 12ch; line-height: 1.08; }
+  body[data-locale="en"] :where(.products-catalog>header,.profile-history>header,.profile-labs>header) {
+    align-items: flex-start;
+  }
+  body[data-locale="en"] .journal-content { padding: clamp(26px, 5vw, 42px); }
+  body[data-locale="en"] .intro .lead { width: auto; margin: 20px 0 30px; }
+  body[data-locale="en"] .factory,
+  body[data-locale="en"] .inquiry-wrap { grid-template-columns: 1fr; }
+  body[data-locale="en"] .site-footer>.footer-main { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 600px) {
+  body[data-locale="en"] {
+    --en-display: clamp(2.35rem, 11.5vw, 3.15rem);
+    --en-page-title: clamp(2.15rem, 10vw, 2.85rem);
+    --en-section-title: clamp(1.8rem, 8vw, 2.35rem);
+    --en-card-title: 1.2rem;
+    font-size: 15px;
+  }
+  body[data-locale="en"] main h1 { letter-spacing: -.035em; }
+  body[data-locale="en"] main h2 { letter-spacing: -.025em; }
+  body[data-locale="en"] .hero-copy { left: 6%; right: 6%; max-width: none; }
+  body[data-locale="en"] .hero h1 { max-width: 11ch; margin: 16px 0; }
+  body[data-locale="en"] .hero-copy>p { max-width: 34ch; line-height: 1.6; }
+  body[data-locale="en"] :where(.eyebrow,.blog-label,.journal-category,.product-module-heading>span) {
+    letter-spacing: .11em;
+  }
+  body[data-locale="en"] .article-hub-heading>p { font-size: .9375rem; line-height: 1.65; }
+  body[data-locale="en"] .journal-toolbar { font-size: .8125rem; }
+  body[data-locale="en"] .journal-body p { font-size: 1rem; line-height: 1.75; }
+  body[data-locale="en"] .product-module { padding: 30px 22px; }
+  body[data-locale="en"] .product-module-heading { padding-right: 30px; }
+  body[data-locale="en"] .inquiry-form { padding: 20px; }
+  body[data-locale="en"] .site-footer>.footer-main { grid-template-columns: 1fr; }
+}
