@@ -78,6 +78,24 @@ const supplementalTranslations: Record<"en" | "vi", Record<string, string>> = {
     "從配方設計、樣品測試到量產交付，提供一站式定製開發服務。": "One-stop custom development from formulation design and sample testing through mass-production delivery.",
     "工程師直接對接客戶技術團隊，共同解決真實產品中的材料應用問題。": "Our engineers work directly with customer technical teams to solve material challenges in real products.",
     "可以依目標密度、硬度及回彈性開發發泡材料嗎？": "Can foamed materials be developed to target density, hardness and rebound?",
+    "可以。我們可依客戶產品用途、加工製程及效能需求進行 TPE 材料配方開發，並針對硬度、密度、回彈性、手感、顏色及其他物性需求進行調整。": "Yes. We develop TPE formulations around the product application, processing method and performance targets, adjusting hardness, density, rebound, feel, color and other required properties.",
+    "若客戶已有現行材料或產品樣品，也可提供樣品及相關物性要求，作為材料分析與配方開發的參考。": "If an existing material or product sample is available, it can be supplied with the relevant property requirements as a reference for material analysis and formulation development.",
+    "我們會依產品用途、結構設計、成型方式及目標效能協助客戶進行材料選型。": "We recommend materials based on the product application, structural design, molding method and target performance.",
+    "客戶可提供產品樣品、圖面或相關需求，包括硬度、密度、回彈性、外觀、使用環境及其他特殊物性要求，我們將依實際應用推薦合適的材料方案，必要時進一步進行客製配方開發。": "Customers can provide samples, drawings or requirements such as hardness, density, rebound, appearance, service environment and other special properties. We will recommend a suitable material solution for the actual application and develop a custom formulation when needed.",
+    "支援。針對新材料開發及客戶前期驗證需求，我們可提供小批次試料及打樣服務，並依產品的硬度、密度、回彈性及加工需求進行配方調整。": "Yes. For new-material development and early-stage validation, we provide small-batch trial material and prototyping, with formulation adjustments for the required hardness, density, rebound and processing conditions.",
+    "實際試料與打樣數量、費用及交期，將依材料與開發專案個別確認。": "Trial and prototype quantities, costs and lead times are confirmed individually according to the material and development project.",
+    "一般材料配方的初步開發約需 2–4 週，實際時間依材料效能、硬度、密度、加工製程及最終應用要求而定。": "Initial development of a standard material formulation typically takes about 2–4 weeks. Actual timing depends on the required performance, hardness, density, processing method and end-use requirements.",
+    "開發初期，我們會依客戶產品用途及目標效能建立材料開發方向，並針對不同應用需求評估與驗證相關物性，包括：硬度、密度、拉伸強度、斷裂伸長率、撕裂強度、回彈性、壓縮永久變形、及其他特定效能要求。": "At the start of development, we define the material direction from the product application and performance targets, then evaluate and validate properties including hardness, density, tensile strength, elongation at break, tear strength, rebound, compression set and other specified requirements.",
+    "針對發泡 TPE 材料，我們亦會進一步評估發泡倍率、成型密度、泡孔結構、表面品質、尺寸穩定性及成型加工性，並透過實際射出成型驗證材料與製程的匹配性。": "For foamed TPE, we also evaluate expansion ratio, molded density, cell structure, surface quality, dimensional stability and processability, and verify material–process compatibility through actual injection molding trials.",
+    "若產品涉及特殊發泡效能、耐久性或其他特定物性要求，我們會依測試結果進行配方調整、試料、成型及再驗證。因此，部分專案可能需要多輪開發，以確保材料效能與實際產品需求相符。": "When special foaming performance, durability or other specific properties are required, we adjust the formulation, prepare trial material, mold and revalidate based on test results. Some projects therefore require several development rounds to ensure the material meets the actual product requirements.",
+    "可以。發泡 TPE 材料是我們重點開發及應用的領域之一，可依不同產品需求調整材料的硬度、密度、回彈性、手感及發泡效果。": "Yes. Foamed TPE is one of our core development areas. We can adjust hardness, density, rebound, feel and foaming performance for different product requirements.",
+    "我們會同時考量材料配方與實際成型條件，透過試料及成型驗證，協助客戶取得適合產品需求的材料與製程方案。": "We evaluate the formulation together with actual molding conditions and use material trials and molding validation to establish a material and process solution suited to the product.",
+    "我們目前主要專注於 TPE 材料的射出成型與射出發泡應用，並可依產品結構、硬度、密度、回彈性及表面要求進行配方設計與製程調整。": "We currently focus on TPE injection molding and injection-foaming applications, with formulation and process adjustments based on product structure, hardness, density, rebound and surface requirements.",
+    "我們具備從材料配方、造粒到實際成型驗證的經驗，可協助客戶解決材料與加工製程之間的匹配問題。": "Our experience spans formulation, pelletizing and molding validation, enabling us to resolve compatibility issues between materials and processing conditions.",
+    "可依材料及客戶目標市場需求，提供現有相關材料資料，或配合安排第三方實驗室檢測，包括 REACH、RoHS 及其他指定化學物質測試。": "Depending on the material and target market, we can provide available material documentation or arrange third-party laboratory testing, including REACH, RoHS and other specified chemical-substance tests.",
+    "部分生質材料亦可提供 USDA Biobased 相關資料。實際可提供的認證、測試專案及報告，將依材料牌號、最終用途及客戶要求確認。": "USDA Biobased documentation is also available for selected bio-based materials. Available certifications, test programs and reports are confirmed according to the grade, end use and customer requirements.",
+    "我們不僅提供材料，也可參與客戶從前期選材、配方開發、試料、打樣到量產匯入的過程。": "Beyond supplying materials, we can support the process from early material selection and formulation development through trials, prototyping and production introduction.",
+    "透過材料配方、造粒及實際成型應用經驗，我們可針對試產過程中的發泡效果、密度、硬度、回彈性及成型狀況進行分析與調整，協助客戶將材料方案匯入實際產品。": "Using our formulation, pelletizing and molding experience, we analyze and adjust foaming behavior, density, hardness, rebound and molding performance during trials to help transfer the material solution into the actual product.",
     "留下您的專案需求與聯絡方式，材料工程師將在 24 小時內回覆，並提供適配建議與樣品方案。": "Share your project requirements and contact details. A materials engineer will respond within 24 hours with recommendations and sample options.",
     "專注 TPE 熱塑性彈性體研發、客製配方、測試驗證與穩定量產。": "Focused on TPE elastomer R&D, custom formulations, testing, validation and stable mass production.",
     "傳統低熔點材料的痛點與 IUS-4065 的改善方案": "How IUS-4065 Solves the Limitations of Conventional Low-Melting Materials",
@@ -170,19 +188,31 @@ export default function LanguageSwitcher({ compact = false }: { compact?: boolea
       });
     }
 
-    const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT);
-    let node: Node | null;
-    while ((node = walker.nextNode())) {
-      const parent = node.parentElement;
-      if (!parent || parent.closest("script,style") || parent.closest(".language-switcher")) continue;
-      if (node.nodeValue) node.nodeValue = translateText(node.nodeValue, current);
-    }
-    document.querySelectorAll<HTMLElement>("[placeholder],[aria-label],[title],[alt]").forEach(element => {
-      ["placeholder", "aria-label", "title", "alt"].forEach(attribute => {
-        const value = element.getAttribute(attribute);
-        if (value) element.setAttribute(attribute, translateText(value, current));
-      });
+    const translateSubtree = (root: Node) => {
+      const translateNode = (textNode: Node) => {
+        const parent = textNode.parentElement;
+        if (!parent || parent.closest("script,style") || parent.closest(".language-switcher")) return;
+        if (textNode.nodeValue) textNode.nodeValue = translateText(textNode.nodeValue, current);
+      };
+      if (root.nodeType === Node.TEXT_NODE) translateNode(root);
+      const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT);
+      let node: Node | null;
+      while ((node = walker.nextNode())) translateNode(node);
+      if (root instanceof Element) {
+        const elements = [root, ...Array.from(root.querySelectorAll<HTMLElement>("[placeholder],[aria-label],[title],[alt]"))];
+        elements.forEach(element => {
+          ["placeholder", "aria-label", "title", "alt"].forEach(attribute => {
+            const value = element.getAttribute(attribute);
+            if (value) element.setAttribute(attribute, translateText(value, current));
+          });
+        });
+      }
+    };
+    translateSubtree(document.body);
+    const translationObserver = new MutationObserver(records => {
+      records.forEach(record => record.addedNodes.forEach(translateSubtree));
     });
+    translationObserver.observe(document.body, { childList: true, subtree: true });
     const base = process.env.NEXT_PUBLIC_BASE_PATH || "";
     document.querySelectorAll<HTMLAnchorElement>("a[href]").forEach(anchor => {
       const href = anchor.getAttribute("href");
@@ -207,7 +237,10 @@ export default function LanguageSwitcher({ compact = false }: { compact?: boolea
       window.location.assign(url.href);
     };
     document.addEventListener("click", forceStaticNavigation, true);
-    return () => document.removeEventListener("click", forceStaticNavigation, true);
+    return () => {
+      translationObserver.disconnect();
+      document.removeEventListener("click", forceStaticNavigation, true);
+    };
   }, []);
 
   function change(next: SiteLocale) {
