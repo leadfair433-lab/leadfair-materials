@@ -10,7 +10,7 @@ export default function SiteFooter(){
       <span><small>地址</small>彰化縣社頭鄉永興路30之35號</span>
       <a href="tel:+8613928736388"><small>手機電話</small>+86-139-2873-6388</a>
       <a href="mailto:joe.chen@ffsystem.com"><small>電子郵箱</small>joe.chen@ffsystem.com</a>
-      <a href="tel:+8869250938852"><small>座機</small>+886-0925-093-8852</a>
+      <a href="https://www.linkedin.com/in/found-fair-qupet" target="_blank" rel="noreferrer"><small>LinkedIn</small>www.linkedin.com/in/found-fair-qupet</a>
     </div>
     <div className="footer-connect"><strong>關注與聯絡</strong><div className="footer-socials"><a className="facebook" href="#" aria-label="Facebook">{socialIcons[3]}</a><a className="youtube" href="#" aria-label="YouTube">{socialIcons[0]}</a><a className="x-social" href="#" aria-label="X">{socialIcons[4]}</a><a className="linkedin" href="#" aria-label="LinkedIn">{socialIcons[2]}</a><a className="instagram" href="#" aria-label="Instagram">{socialIcons[1]}</a><a className="whatsapp" href="https://wa.me/8613928736388" target="_blank" rel="noreferrer" aria-label="WhatsApp">{socialIcons[5]}</a></div><a className="footer-contact-button" href="/contact/#inquiry">聯絡材料工程師 ↗</a></div></div>
     <div className="footer-bottom shell"><small className="footer-copyright">© 2026 Found Fair. All rights reserved.</small><a href="#page-top">返回頁首 ↑</a></div>
