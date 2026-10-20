@@ -40,6 +40,10 @@ body[data-locale="en"] .profile-copy p { text-align: justify; text-align-last: l
 body[data-locale="en"] .profile-labs > header { align-items: flex-end; }
 body[data-locale="en"] .profile-labs > header h2 { margin-bottom: 0; }
 
+@media(min-width:1201px){
+  body[data-locale="en"] .profile-history-grid article:nth-child(3) h3 { font-size: 15px; letter-spacing: -.02em; white-space: nowrap; }
+}
+
 .history-image { position: relative; overflow: hidden; background: #dfe8ef; }
 .history-image img { display: block; width: 100%; height: 100%; object-fit: cover; }
 
