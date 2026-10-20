@@ -28,7 +28,9 @@ body[data-locale="en"] .why-found-grid h3 { max-width: none; font-size: 21px; li
 body[data-locale="en"] .why-found-grid h3 { min-height: 57px; }
 body[data-locale="en"] .faq { grid-template-columns: minmax(0,1.08fr) minmax(0,1fr); gap: 6%; }
 body[data-locale="en"] .faq h2 { max-width: 780px; font-size: clamp(44px,3.55vw,58px); line-height: 1.08; letter-spacing: -.045em; }
-body[data-locale="en"] .inquiry-form label { font-size: 13px; }
+body[data-locale="en"] .inquiry-form label:not(.consent) { font-size: 16px; }
+body[data-locale="en"] .hero-quick-form label:not(.consent) { font-size: 14px; }
+body[data-locale="en"] .material-inquiry-dialog label:not(.material-inquiry-consent) { font-size: 17px; }
 body[data-locale="en"] .inquiry-form input:not([type="checkbox"]),
 body[data-locale="en"] .inquiry-form select,
 body[data-locale="en"] .inquiry-form textarea { font-size: 15px; }
