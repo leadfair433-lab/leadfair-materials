@@ -27,7 +27,16 @@ body[data-locale="en"] .process-track article:last-child h3 { white-space: nowra
 body[data-locale="en"] .why-found-grid h3 { max-width: none; font-size: 21px; line-height: 1.35; text-wrap: balance; }
 body[data-locale="en"] .why-found-grid h3 { min-height: 57px; }
 body[data-locale="en"] .faq { grid-template-columns: minmax(0,1.08fr) minmax(0,1fr); gap: 6%; }
-body[data-locale="en"] .faq h2 { max-width: 780px; font-size: clamp(44px,3.55vw,58px); line-height: 1.08; letter-spacing: -.045em; }
+/* Homepage section headings share the Custom Material Service scale. */
+body[data-locale="en"] .section-title h2,
+body[data-locale="en"] .home-products-heading h2,
+body[data-locale="en"] .process-head h2,
+body[data-locale="en"] .factory-copy h2,
+body[data-locale="en"] .why-found > header h2,
+body[data-locale="en"] .material-blog h2,
+body[data-locale="en"] .faq h2,
+body[data-locale="en"] .inquiry-copy h2 { font-size: clamp(42px,4vw,72px); }
+body[data-locale="en"] .faq h2 { max-width: 780px; line-height: 1.08; letter-spacing: -.045em; }
 body[data-locale="en"] .inquiry-form label:not(.consent) { font-size: 16px; }
 body[data-locale="en"] .hero-quick-form label:not(.consent) { font-size: 14px; }
 body[data-locale="en"] .material-inquiry-dialog label:not(.material-inquiry-consent) { font-size: 17px; }
@@ -107,4 +116,15 @@ body[data-locale="en"] .contact-needs article a { align-self: end; margin-top: 0
   body[data-locale="en"] .metrics .metric-card:last-child p { margin-left: 0; }
   body[data-locale="en"] .contact-location-copy h2,
   body[data-locale="en"] .contact-location-copy h3 { white-space: normal; }
+}
+
+@media(max-width:760px){
+  body[data-locale="en"] .section-title h2,
+  body[data-locale="en"] .home-products-heading h2,
+  body[data-locale="en"] .process-head h2,
+  body[data-locale="en"] .factory-copy h2,
+  body[data-locale="en"] .why-found > header h2,
+  body[data-locale="en"] .material-blog h2,
+  body[data-locale="en"] .faq h2,
+  body[data-locale="en"] .inquiry-copy h2 { font-size: 46px; }
 }
