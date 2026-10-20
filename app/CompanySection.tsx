@@ -20,10 +20,10 @@ const facts = [
 ];
 
 const history = [
-  ["1979", "公司成立", "公司成立於臺灣彰化，主要生產各類塑膠鞋材，包括 ABS 射出鞋跟、TPR、TR、STR、PCU、PVC 及 PU 發泡鞋底。", "history-a"],
-  ["1991", "廣州麗暉塑膠有限公司", "成立中國大陸營運中心，主要生產功能性鞋材、鞋底相關材料及電子類塑膠製品。", "history-b"],
-  ["1997", "廣州番禺東泰塑膠有限公司", "主要生產 SEBS、TPR（SBS）等橡塑膠原料，並提供模具開發與製造服務。", "history-c"],
-  ["2006", "廣州富勝塑膠有限公司", "提供產品開發、橡塑膠材料生產、模具加工製造、注塑生產及產品組裝等綜合服務，滿足客戶的客製化需求。", "history-d"],
+  ["1979", "公司成立", "公司成立於臺灣彰化，主要生產各類塑膠鞋材，包括 ABS 射出鞋跟、TPR、TR、STR、PCU、PVC 及 PU 發泡鞋底。", "/images/company/generated/taiwan-entrance-fast.jpg"],
+  ["1991", "廣州麗暉塑膠有限公司", "成立中國大陸營運中心，主要生產功能性鞋材、鞋底相關材料及電子類塑膠製品。", "/images/company/generated/history-campus-grid-fast.jpg"],
+  ["1997", "廣州番禺東泰塑膠有限公司", "主要生產 SEBS、TPR（SBS）等橡塑膠原料，並提供模具開發與製造服務。", "/images/company/generated/history-campus-grid-fast.jpg"],
+  ["2006", "廣州富勝塑膠有限公司", "提供產品開發、橡塑膠材料生產、模具加工製造、注塑生產及產品組裝等綜合服務，滿足客戶的客製化需求。", "/images/company/generated/history-campus-grid-fast.jpg"],
 ];
 
 function FactIcon({ type }: { type: string }) {
@@ -47,7 +47,7 @@ export default function CompanySection() {
     </section>
     <section className="profile-facts" aria-label="企業數據">{facts.map(([icon,value,label]) => <article key={label}><span><FactIcon type={icon}/></span><div><b>{value}</b><small>{label}</small></div></article>)}</section>
     <section className="profile-about" id="company-story"><div className="profile-copy"><span>ABOUT US</span><h2>臺灣峰暉塑膠工業股份有限公司</h2><p>臺灣峰暉塑膠工業股份有限公司於1979年成立於臺灣彰化縣，主要生產經營各類塑膠鞋材，包括各種 ABS、IPS、PC 射出鞋跟、TPR、PVC 及 PU 發泡鞋底，並持續投入材料研發與製程優化，以穩定的品質滿足全球客戶需求。</p><p>集團陸續於中國大陸設立多家生產與營運公司。歷經四十多年發展，秉持「追求卓越、止於至善」的經營理念，致力於創新、服務與永續經營，為客戶創造長期價值。</p><a href="#company-history">了解更多 <b>→</b></a></div><figure><img src="/images/company/company-story-taiwan-20260914-fast.jpg" alt="臺灣峰暉塑膠工業廠區正門"/><figcaption>「以材料創新推動產業進步，<br/>與客戶共創永續未來。」</figcaption></figure></section>
-    <section className="profile-history" id="company-history"><header><div><span>OUR HISTORY</span><h2>歷史沿革</h2></div><p>穩健發展・持續創新</p></header><div className="profile-history-grid">{history.map(([year,title,text,imageClass]) => <article key={year}><div><b>{year}</b><h3>{title}</h3></div><div className={`history-image ${imageClass}`} role="img" aria-label={`${year} ${title}廠區`}/><p>{text}</p></article>)}</div></section>
+    <section className="profile-history" id="company-history"><header><div><span>OUR HISTORY</span><h2>歷史沿革</h2></div><p>穩健發展・持續創新</p></header><div className="profile-history-grid">{history.map(([year,title,text,image],index) => <article key={year}><div><b>{year}</b><h3>{title}</h3></div><div className={`history-image history-image-${index+1}`}><img src={image} alt={`${year} ${title}廠區`}/></div><p>{text}</p></article>)}</div></section>
     <section className="profile-labs" id="company-laboratory"><header><div><span>LABORATORY ENVIRONMENT</span><h2>實驗室環境</h2></div><a className="profile-lab-all" href={`${laboratoryBase}/`}>查看全部實驗室儀器 <span aria-hidden="true">↗</span></a></header><div className="profile-lab-showcase"><div className="profile-lab-intro"><span>FF / LF LABORATORY</span><h3>從配方開發到性能驗證，設備各自清晰呈現</h3><p>每張圖片連至獨立介紹頁，日後可逐篇補上設備名稱、用途與測試資訊。</p><a className="profile-lab-all" href={`${laboratoryBase}/`}>瀏覽實驗室儀器總覽 <span aria-hidden="true">↗</span></a></div><div className="profile-lab-gallery">{companyLaboratoryArticles.map((article,index)=><figure key={article.slug}><a href={`${laboratoryBase}/${article.slug}/`} aria-label={`閱讀介紹：${article.title}`}><img src={article.image} alt={article.title}/><span aria-hidden="true">↗</span></a><figcaption><b>{String(index+1).padStart(2,"0")}</b><span>{article.title}</span><a href={`${laboratoryBase}/${article.slug}/`}>查看詳情 <span aria-hidden="true">↗</span></a></figcaption></figure>)}</div></div></section>
   </div></section>;
 }

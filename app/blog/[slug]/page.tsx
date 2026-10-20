@@ -38,7 +38,7 @@ export default async function ArticlePage({ params }: Props) {
       <header className="journal-toolbar"><ArticleBackButton /><span>MATERIAL JOURNAL</span><div className="journal-toolbar-actions"><LanguageSwitcher compact/><ArticlePrint /><a className="journal-contact" href="/articles">更多文章 ↗</a></div></header>
       <div className="journal-content">
         <div className="journal-hero">
-          <div><span className="journal-category">{article.category}</span><h1>{article.title}</h1>{article.englishTitle && <p>{article.englishTitle}</p>}<p>{article.summary}</p><span className="journal-series">材料洞察 / 應用指南{article.illustrativeCover && " · 主圖為 AI 情境示意，非實測照片"}</span></div>
+          <div><span className="journal-category">{article.category}</span><h1>{article.title}</h1>{article.englishTitle && <p>{article.englishTitle}</p>}<p>{article.summary}</p></div>
           <img src={articleAssetPath(article.image)} alt={article.alt} width="1536" height="1024" />
         </div>
         <div className="journal-reading">

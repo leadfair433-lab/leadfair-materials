@@ -54,7 +54,7 @@ export default function ProductsOverview() {
       </article>)}</div>
     </div></section>
     <section className="product-selection shell">
-      <div><span>MATERIAL SELECTION SUPPORT</span><h2>不確定該選哪個牌號？</h2><p>提供產品用途、加工方式與目標物性，材料工程師將結合性能、成本與量產條件給出建議。</p></div>
+      <div><h2>不確定該選哪個牌號？</h2><p>提供產品用途、加工方式與目標物性，材料工程師將結合性能、成本與量產條件給出建議。</p></div>
       <a href="/contact/#inquiry">提交選材需求 <b>↗</b></a>
     </section>
     <GlobalInquiryFooter />
