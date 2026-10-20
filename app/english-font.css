@@ -35,7 +35,13 @@ body[data-locale="en"] .inquiry-form textarea { font-size: 15px; }
 body[data-locale="en"] .products-catalog > header { align-items: center; }
 body[data-locale="en"] .article-hub-heading > p { position: static; margin: 0; text-align: left; }
 body[data-locale="en"] .article-hub-grid h3 { min-height: 72px; text-align: left; text-align-last: auto; }
+body[data-locale="en"] .article-hub-grid h3,
+body[data-locale="en"] .blog-copy h3 { font-weight: 700; }
 body[data-locale="en"] .blog-copy h3 { min-height: 64px; }
+body[data-locale="en"] .home-product-card-copy h3,
+body[data-locale="en"] .overview-product-copy h3,
+body[data-locale="en"] .grade-placeholder h3,
+body[data-locale="en"] .modular-product-intro h1 { font-weight: 500; }
 body[data-locale="en"] .profile-copy p { text-align: justify; text-align-last: left; }
 body[data-locale="en"] .profile-history > header { display: block; }
 body[data-locale="en"] .profile-history > header p { margin: 12px 0 0; text-align: left; }
@@ -53,6 +59,8 @@ body[data-locale="en"] .contact-hero .hero-quick-form textarea::placeholder { co
 body[data-locale="en"] .contact-location-copy h2 { font-size: clamp(42px,3.2vw,52px); white-space: nowrap; }
 body[data-locale="en"] .contact-location-copy h3 { font-size: 20px; white-space: nowrap; }
 body[data-locale="en"] .contact-needs h2 { line-height: 1.06; }
+body[data-locale="en"] .contact-needs article { display: flex; flex-direction: column; }
+body[data-locale="en"] .contact-needs article a { margin-top: auto; padding-top: 18px; }
 
 @media(min-width:1201px){
   body[data-locale="en"] .profile-history-grid article:nth-child(3) h3 { font-size: 15px; letter-spacing: -.02em; white-space: nowrap; }
