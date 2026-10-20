@@ -20,10 +20,10 @@ const facts = [
 ];
 
 const history = [
-  ["1979", "公司成立", "公司成立於臺灣彰化，主要生產各類塑膠鞋材，包括 ABS 射出鞋跟、TPR、TR、STR、PCU、PVC 及 PU 發泡鞋底。", "/images/company/generated/taiwan-entrance-fast.jpg"],
-  ["1991", "廣州麗暉塑膠有限公司", "成立中國大陸營運中心，主要生產功能性鞋材、鞋底相關材料及電子類塑膠製品。", "/images/company/generated/history-campus-grid-fast.jpg"],
-  ["1997", "廣州番禺東泰塑膠有限公司", "主要生產 SEBS、TPR（SBS）等橡塑膠原料，並提供模具開發與製造服務。", "/images/company/generated/history-campus-grid-fast.jpg"],
-  ["2006", "廣州富勝塑膠有限公司", "提供產品開發、橡塑膠材料生產、模具加工製造、注塑生產及產品組裝等綜合服務，滿足客戶的客製化需求。", "/images/company/generated/history-campus-grid-fast.jpg"],
+  ["1979", "公司成立", "公司成立於臺灣彰化，主要生產各類塑膠鞋材，包括 ABS 射出鞋跟、TPR、TR、STR、PCU、PVC 及 PU 發泡鞋底。", "/images/company/history/1979-taiwan-web.jpg"],
+  ["1991", "廣州麗暉塑膠有限公司", "成立中國大陸營運中心，主要生產功能性鞋材、鞋底相關材料及電子類塑膠製品。", "/images/company/history/1991-lihui-web.jpg"],
+  ["1997", "廣州番禺東泰塑膠有限公司", "主要生產 SEBS、TPR（SBS）等橡塑膠原料，並提供模具開發與製造服務。", "/images/company/history/1997-tontex-web.jpg"],
+  ["2006", "廣州富勝塑膠有限公司", "提供產品開發、橡塑膠材料生產、模具加工製造、注塑生產及產品組裝等綜合服務，滿足客戶的客製化需求。", "/images/company/history/2006-fast-sonic-web.jpg"],
 ];
 
 function FactIcon({ type }: { type: string }) {

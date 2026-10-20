@@ -2,6 +2,6 @@
 2:I[3006,[],""]
 3:I[6756,[],""]
 :HL["/leadfair-materials/_next/static/css/b58c6369e2ffe0f3.css","style"]
-:HL["/leadfair-materials/_next/static/css/13c104f7ee75bcd2.css","style"]
-:HL["/leadfair-materials/_next/static/css/029a8fc966e61c54.css","style"]
-0:{"rsc":["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/leadfair-materials/_next/static/css/b58c6369e2ffe0f3.css","precedence":"next"}],["$","link","1",{"rel":"stylesheet","href":"/leadfair-materials/_next/static/css/13c104f7ee75bcd2.css","precedence":"next"}],["$","link","2",{"rel":"stylesheet","href":"/leadfair-materials/_next/static/css/029a8fc966e61c54.css","precedence":"next"}]],["$","html",null,{"lang":"zh-CN","children":["$","body",null,{"className":"__variable_25ef48","children":["$","$L2",null,{"parallelRouterKey":"children","template":["$","$L3",null,{}]}]}]}]]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"G-GIxdWVYxnMvg4QSIQqS"}
+:HL["/leadfair-materials/_next/static/css/260bedd61fe4b0a8.css","style"]
+:HL["/leadfair-materials/_next/static/css/f015ce5bc723d7bd.css","style"]
+0:{"rsc":["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/leadfair-materials/_next/static/css/b58c6369e2ffe0f3.css","precedence":"next"}],["$","link","1",{"rel":"stylesheet","href":"/leadfair-materials/_next/static/css/260bedd61fe4b0a8.css","precedence":"next"}],["$","link","2",{"rel":"stylesheet","href":"/leadfair-materials/_next/static/css/f015ce5bc723d7bd.css","precedence":"next"}]],["$","html",null,{"lang":"zh-CN","children":["$","body",null,{"className":"__variable_25ef48","children":["$","$L2",null,{"parallelRouterKey":"children","template":["$","$L3",null,{}]}]}]}]]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"x72fNqk7W8n2SQ4M_U3C6"}
