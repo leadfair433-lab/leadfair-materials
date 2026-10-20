@@ -36,7 +36,7 @@ body[data-locale="en"] .products-catalog > header { align-items: center; }
 body[data-locale="en"] .article-hub-heading > p { position: static; margin: 0; text-align: left; }
 body[data-locale="en"] .article-hub-grid h3 { min-height: 72px; text-align: left; text-align-last: auto; }
 body[data-locale="en"] .article-hub-grid h3,
-body[data-locale="en"] .blog-copy h3 { font-weight: 700; }
+body[data-locale="en"] .blog-copy h3 { font-weight: 500; }
 body[data-locale="en"] .blog-copy h3 { min-height: 64px; }
 body[data-locale="en"] .home-product-card-copy h3,
 body[data-locale="en"] .overview-product-copy h3,
@@ -48,20 +48,32 @@ body[data-locale="en"] .profile-history > header p { margin: 12px 0 0; text-alig
 body[data-locale="en"] .profile-labs > header { align-items: flex-end; }
 body[data-locale="en"] .profile-labs > header h2 { margin-bottom: 0; }
 /* Keep the original glass form treatment, with fully opaque text for clarity. */
+body[data-locale="en"] .contact-hero .hero-quick-form {
+  background: rgba(255,255,255,.06);
+  border-color: rgba(255,255,255,.58);
+  box-shadow: none;
+}
 body[data-locale="en"] .contact-hero .hero-quick-form > div > span,
 body[data-locale="en"] .contact-hero .hero-quick-form h2,
 body[data-locale="en"] .contact-hero .hero-quick-form label,
 body[data-locale="en"] .contact-hero .hero-quick-form > div > p { color: #fff; }
 body[data-locale="en"] .contact-hero .hero-quick-form input,
 body[data-locale="en"] .contact-hero .hero-quick-form select,
-body[data-locale="en"] .contact-hero .hero-quick-form textarea { color: #fff; }
+body[data-locale="en"] .contact-hero .hero-quick-form textarea {
+  background: rgba(6,42,86,.72);
+  border-color: rgba(255,255,255,.38);
+  color: #fff;
+}
 body[data-locale="en"] .contact-hero .hero-quick-form input::placeholder,
 body[data-locale="en"] .contact-hero .hero-quick-form textarea::placeholder { color: #fff; opacity: 1; }
 body[data-locale="en"] .contact-location-copy h2 { font-size: clamp(42px,3.2vw,52px); white-space: nowrap; }
 body[data-locale="en"] .contact-location-copy h3 { font-size: 20px; white-space: nowrap; }
 body[data-locale="en"] .contact-needs h2 { line-height: 1.06; }
-body[data-locale="en"] .contact-needs article { display: flex; flex-direction: column; }
-body[data-locale="en"] .contact-needs article a { margin-top: auto; padding-top: 18px; }
+body[data-locale="en"] .contact-needs article {
+  display: grid;
+  grid-template-rows: auto auto 1fr auto;
+}
+body[data-locale="en"] .contact-needs article a { align-self: end; margin-top: 0; padding-top: 18px; }
 
 @media(min-width:1201px){
   body[data-locale="en"] .profile-history-grid article:nth-child(3) h3 { font-size: 15px; letter-spacing: -.02em; white-space: nowrap; }

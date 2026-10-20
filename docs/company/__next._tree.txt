@@ -1,5 +1,5 @@
 :HL["/leadfair-materials/_next/static/media/636a5ac981f94f8b-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 :HL["/leadfair-materials/_next/static/css/b58c6369e2ffe0f3.css","style"]
 :HL["/leadfair-materials/_next/static/css/260bedd61fe4b0a8.css","style"]
-:HL["/leadfair-materials/_next/static/css/3a3b99527969f35f.css","style"]
-0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"company","param":null,"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}},"staleTime":300,"buildId":"X1sJJrnYXo0mL0LYd3_gN"}
+:HL["/leadfair-materials/_next/static/css/9c15e81f31b24398.css","style"]
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"company","param":null,"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}},"staleTime":300,"buildId":"rLhjEk5p3ZRCXr6aV-mtt"}
