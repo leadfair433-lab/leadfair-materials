@@ -612,6 +612,25 @@ div.product-module-compare>div:last-child{border-color:#a9c8f4;background:#eef5f
 @keyframes tds-rise { from { opacity: 0; transform: translateY(20px) scale(.98); } }
 @media (max-width: 650px) { .tds-modal { padding: 10px; } .tds-card { width: 100%; border-radius: 15px; } .tds-card > header { padding: 20px; } .tds-card > header h3 { font-size: 21px; } .tds-preview { padding: 10px; } .tds-preview img { min-width: 760px; } .tds-card > footer { padding: 14px 18px; } }
 
+/* English homepage typography and spacing refinements. */
+body[data-locale="en"] .metrics .metric-card b { font-size: 28px; }
+body[data-locale="en"] .metrics .metric-card span,
+body[data-locale="en"] .metrics .metric-card p { font-size: 18px; }
+body[data-locale="en"] .process-track h3 { font-size: 25px; }
+body[data-locale="en"] .process-track p { font-size: 14px; }
+body[data-locale="en"] .why-found-grid h3 { font-size: 21px; letter-spacing: -.02em; }
+body[data-locale="en"] .factory { grid-template-columns: 1fr 1fr; gap: 6%; }
+body[data-locale="en"] .factory-copy h2 { font-size: clamp(44px,3.5vw,60px); line-height: 1.08; letter-spacing: -.035em; }
+body[data-locale="en"] .inquiry-wrap { grid-template-columns: .95fr 1.05fr; gap: 6%; }
+body[data-locale="en"] .inquiry-copy > p { max-width: 640px; }
+
+@media (max-width: 900px) {
+  body[data-locale="en"] .factory,
+  body[data-locale="en"] .inquiry-wrap { grid-template-columns: 1fr; }
+  body[data-locale="en"] .metrics .metric-card span,
+  body[data-locale="en"] .metrics .metric-card p { font-size: 15px; }
+}
+
 /* Hero factory image: mirrored so the equipment opens toward the copy. */
 .hero { height: min(680px, calc(100vh - 110px)); min-height: 560px; }
 .hero > img { object-position: center 64%; transform: scaleX(-1) scale(1.12); }

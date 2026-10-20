@@ -23,7 +23,7 @@ const localeLabelsByInterface: Record<SiteLocale, Record<SiteLocale, string>> = 
 const translationOverrides: Record<"en" | "vi", Record<string, string>> = {
   en: {
     "原料網站": "Lead Fair Materials", "產品": "Products", "材料解決方案": "Material Solutions", "定製研發": "Custom R&D", "客製研發": "Custom R&D", "應用行業": "Applications", "應用產業": "Applications", "工廠實力": "Manufacturing", "聯絡工程師 ↗": "Talk to an Engineer ↗",
-    "創新材料，": "Advanced materials,", "驅動產品": "engineered to move products", "進化。": "forward.", "面向全球品牌與製造商，提供 TPE 熱塑性彈性體的研發、改性、測試與規模化生產。": "TPE research, modification, testing and scalable manufacturing for global brands and manufacturers.", "探索材料方案": "Explore Materials", "申請免費樣品": "Request a Sample",
+    "創新材料，": "Advanced materials,", "驅動產品": "engineered to move products ", "進化。": "forward.", "面向全球品牌與製造商，提供 TPE 熱塑性彈性體的研發、改性、測試與規模化生產。": "TPE research, modification, testing and scalable manufacturing for global brands and manufacturers.", "探索材料方案": "Explore Materials", "申請免費樣品": "Request a Sample",
     "製造經驗": "Manufacturing experience", "專業研發團隊": "Specialist R&D team", "材料工程師團隊": "Materials engineering team", "定製開發": "Custom development", "全球合作伙伴": "Global partners", "服務國家和地區": "Countries and regions served",
     "為效能而生的": "Advanced material systems", "先進材料體系": "built for performance", "鞋材": "Footwear", "中底": "Midsoles", "鞋墊": "Insoles", "運動護具": "Sports protection",
     "選擇產品型號": "Select a product grade", "點選型號，檢視下方產品詳情": "Select a grade to view product details below", "獲取樣品": "Request a Sample", "諮詢技術引數 ↗": "Ask About Technical Data ↗", "諮詢產品 ↗": "Ask About This Grade ↗",
@@ -65,7 +65,7 @@ const supplementalTranslations: Record<"en" | "vi", Record<string, string>> = {
     "發泡後物性": "Properties After Foaming", "原料基本特性": "Raw Material Properties", "測試方法": "Test Method", "測試結果": "Test Result", "數值": "Value",
     "告訴我們您的需求，": "Tell us what you need,", "取得可落地的材料方案。": "and receive a practical material solution.", "提交您的專案需求": "Submit Your Project Requirements",
     "目前需求": "Current Need", "材料選型": "Material Selection", "索取樣品": "Request Samples", "客製配方": "Custom Formulation", "製程改善": "Process Improvement", "量產與報價": "Production & Quotation",
-    "工作郵箱": "Business Email", "聯絡電話": "Phone", "網站導航": "Site Navigation", "聯絡方式": "Contact Details", "關注與聯絡": "Follow & Contact", "返回頁首 ↑": "Back to Top ↑",
+    "工作郵箱": "Business Email", "聯絡電話": "Phone & Country Code", "國家程式碼 + 電話號碼": "Country Code + Phone Number", "網站導航": "Site Navigation", "聯絡方式": "Contact Details", "關注與聯絡": "Follow & Contact", "返回頁首 ↑": "Back to Top ↑",
     "我們不只是供應原料，更從應用場景出發解決材料問題。每一個配方，都經過實驗驗證與生產驗證。": "We go beyond supplying raw materials by solving material challenges from the application level. Every formulation is validated in both the laboratory and production.",
     "面向運動鞋結構的高回彈、耐磨與輕量化材料方案": "High-rebound, wear-resistant and lightweight material solutions for athletic footwear",
     "兼顧緩震、回彈與尺寸穩定性的發泡中底材料": "Foamed midsole materials balancing cushioning, rebound and dimensional stability",

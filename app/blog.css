@@ -41,3 +41,5 @@ details[open] .blog-close { display: inline; }
 @media (hover:hover) and (prefers-reduced-motion:no-preference) { .blog-card:hover .blog-image img { transform: scale(1.035); } .blog-copy summary:hover > span:last-child { transform: translate(3px,-3px); } }
 @media (max-width: 760px) { .material-blog { padding-top: 44px; } .material-blog > header { display: block; padding-top: 30px; } .blog-header-side { align-items:flex-start; margin-top:22px; }.blog-header-side > p { text-align:left; } .blog-grid { grid-template-columns: 1fr; gap: 34px; } .blog-copy > p { min-height: 0; } }
 @media (max-width: 760px) { .blog-actions { justify-content:flex-start; flex-wrap:wrap; } .blog-pager button { width:48px; height:48px; } .blog-more a { min-height:48px; } }
+
+body[data-locale="en"] .blog-copy h3 { font-size: clamp(20px,1.4vw,22px); letter-spacing:-.02em; }
