@@ -7,9 +7,9 @@ body[data-locale="en"] textarea {
   font-family: var(--font-plus-jakarta-sans), Arial, Helvetica, sans-serif;
 }
 
-/* English display hierarchy: primary and section headings use SemiBold. */
+/* English display hierarchy: primary and section headings use Medium. */
 body[data-locale="en"] h1,
-body[data-locale="en"] h2 { font-weight: 600; }
+body[data-locale="en"] h2 { font-weight: 500; }
 
 /* English layout refinements from the annotated review. */
 body[data-locale="en"] .hero h1,
