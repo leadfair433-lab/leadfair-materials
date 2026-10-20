@@ -1,0 +1,8 @@
+/* English-only web font. The font files are self-hosted by next/font. */
+body[data-locale="en"],
+body[data-locale="en"] button,
+body[data-locale="en"] input,
+body[data-locale="en"] select,
+body[data-locale="en"] textarea {
+  font-family: var(--font-plus-jakarta-sans), Arial, Helvetica, sans-serif;
+}
