@@ -44,10 +44,10 @@ body[data-locale="en"] .hero-quick-form label:not(.consent) { font-size: 14px; }
 body[data-locale="en"] .material-inquiry-dialog label:not(.material-inquiry-consent) { font-size: 17px; }
 body[data-locale="en"] .inquiry-form input:not([type="checkbox"]),
 body[data-locale="en"] .inquiry-form select,
-body[data-locale="en"] .inquiry-form textarea { font-size: 18px; }
+body[data-locale="en"] .inquiry-form textarea { font-size: 8px; }
 body[data-locale="en"] .hero-quick-form input:not([type="checkbox"]),
 body[data-locale="en"] .hero-quick-form select,
-body[data-locale="en"] .hero-quick-form textarea { font-size: 10px; }
+body[data-locale="en"] .hero-quick-form textarea { font-size: 8px; }
 body[data-locale="en"] .material-inquiry-dialog input:not([type="checkbox"]),
 body[data-locale="en"] .material-inquiry-dialog select,
 body[data-locale="en"] .material-inquiry-dialog textarea { font-size: 18px; }
