@@ -158,6 +158,13 @@ body[data-locale="en"] .products-hero h1 {
   letter-spacing: .01em;
 }
 
+body[data-locale="en"] .products-catalog .overview-product-copy h3,
+body[data-locale="en"] .products-catalog .home-product-card-copy h3 {
+  font-variant-ligatures: none;
+  font-feature-settings: "liga" 0, "clig" 0;
+  letter-spacing: .025em;
+}
+
 body[data-locale="en"] .profile-hero-copy {
   width: 100%;
   max-width: min(1100px,100%);
