@@ -2,6 +2,6 @@
 :HL["/leadfair-materials/_next/static/css/b58c6369e2ffe0f3.css","style"]
 :HL["/leadfair-materials/_next/static/css/5a47667632fd50d1.css","style"]
 :HL["/leadfair-materials/_next/static/css/7ba3b6bfcdc2b6c3.css","style"]
-:HL["/leadfair-materials/_next/static/css/a9ba54b8087dff43.css","style"]
+:HL["/leadfair-materials/_next/static/css/f32ef2702d8f8f31.css","style"]
 :HL["/leadfair-materials/images/articles/ius-soft-poe-cover-fast.jpg","image"]
-0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"locale","param":{"type":"d","key":"vi","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"blog","param":null,"prefetchHints":0,"slots":{"children":{"name":"slug","param":{"type":"d","key":"ius-4065-soft-poe-stability","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}}}},"staleTime":300,"buildId":"vTKc9WNslp3y-eDKGF8Ga"}
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"locale","param":{"type":"d","key":"vi","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"blog","param":null,"prefetchHints":0,"slots":{"children":{"name":"slug","param":{"type":"d","key":"ius-4065-soft-poe-stability","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}}}},"staleTime":300,"buildId":"kjmZE_PzIK_FkJzX12_Ci"}
