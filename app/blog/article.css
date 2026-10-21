@@ -15,7 +15,7 @@
 .journal-hero h1 { margin:24px 0; font-size:clamp(30px,3.1vw,52px); font-weight:700; letter-spacing:-.045em; line-height:1.25; }
 .journal-hero p { color:#626b78; font-size:19px; line-height:1.8; margin:0 0 30px; }
 .journal-series { font-size:14px; color:#717987; }
-.journal-hero img { width:100%; height:auto; aspect-ratio:1.15; object-fit:cover; border-radius:22px; }
+.journal-hero img { display:block; width:100%; height:auto; aspect-ratio:3/2; object-fit:contain; border-radius:22px; }
 .journal-reading { display:grid; grid-template-columns:280px minmax(0,1fr); gap:64px; padding-top:48px; align-items:start; }
 .journal-reading aside { position:static; }
 .journal-outline,.journal-help { padding:26px; background:#f7f8fa; border:1px solid #e0e3e7; border-radius:22px; }
@@ -35,7 +35,7 @@
 .journal-page a:focus-visible { outline:2px solid var(--blue); outline-offset:5px; }
 .journal-outline a:hover,.journal-toolbar>a:first-child:hover { color:var(--blue); }
 @media(max-width:1000px) { .journal-content { padding:36px; } .journal-hero { gap:28px; } .journal-reading { grid-template-columns:220px minmax(0,1fr); gap:32px; } }
-@media(max-width:700px) { .journal-page { padding:16px 12px; } .journal-sheet { border-radius:22px; } .journal-toolbar { padding:18px; gap:12px; flex-wrap:wrap; } .journal-toolbar>span { display:none; } .journal-content { padding:28px 20px; } .journal-hero { grid-template-columns:1fr; padding-bottom:28px; } .journal-hero img { aspect-ratio:1.5; } .journal-reading { grid-template-columns:1fr; padding-top:28px; gap:30px; } .journal-reading aside { position:static; } .journal-help { display:none; } .journal-body p { font-size:17px; } }
+@media(max-width:700px) { .journal-page { padding:16px 12px; } .journal-sheet { border-radius:22px; } .journal-toolbar { padding:18px; gap:12px; flex-wrap:wrap; } .journal-toolbar>span { display:none; } .journal-content { padding:28px 20px; } .journal-hero { grid-template-columns:1fr; padding-bottom:28px; } .journal-hero img { aspect-ratio:3/2; } .journal-reading { grid-template-columns:1fr; padding-top:28px; gap:30px; } .journal-reading aside { position:static; } .journal-help { display:none; } .journal-body p { font-size:17px; } }
 @media(prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } }
 .journal-action-card { margin-top:22px; padding:26px; background:#f7f8fa; border:1px solid #e0e3e7; border-radius:22px; scroll-margin-top:24px; }
 .journal-action-card h2 { font-size:14px; font-weight:500; color:#667080; margin:0 0 18px; padding-bottom:16px; border-bottom:1px solid #dde1e7; }

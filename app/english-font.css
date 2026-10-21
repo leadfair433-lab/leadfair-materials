@@ -139,3 +139,7 @@ body[data-locale="en"] .contact-needs article a { align-self: end; margin-top: 0
   body[data-locale="en"] .faq h2,
   body[data-locale="en"] .inquiry-copy h2 { font-size: 46px; }
 }
+
+body[data-locale="en"] .modular-other-product-card h3 {
+  font-weight: 500;
+}
