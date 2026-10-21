@@ -152,6 +152,10 @@ body[data-locale="en"] .profile-hero-copy h1 {
   word-spacing: .14em;
 }
 
+body[data-locale="en"] .products-hero h1 {
+  letter-spacing: -.025em;
+}
+
 body[data-locale="en"] .profile-hero-copy {
   width: 100%;
   max-width: min(1100px,100%);
