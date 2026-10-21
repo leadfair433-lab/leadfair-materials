@@ -41,7 +41,7 @@ export default function CompanySection() {
   const changeSlide = (direction: number) => setSlide((current) => (current + direction + slides.length) % slides.length);
   return <section className="profile-page" id="company"><div className="shell profile-shell">
     <section className="profile-hero" id="company-overview" style={{backgroundImage:`linear-gradient(90deg,rgba(4,28,66,.96) 0%,rgba(4,45,91,.78) 45%,rgba(4,29,62,.18) 82%),url(${slides[slide]})`}}>
-      <div className="profile-hero-copy"><span>COMPANY PROFILE / 企業介紹</span><h1>深耕材料與製造，<br/>持續創造產品價值</h1><i aria-hidden="true"/><p>以專業的材料技術、穩定的製造能力與持續創新的精神，為全球客戶提供高品質的塑膠材料與客製化解決方案，共同邁向更美好的未來。</p><a href="#company-history">探索企業實力 <b>↗</b></a></div>
+      <div className="profile-hero-copy"><span>COMPANY PROFILE / 企業介紹</span><h1>{locale === "en" ? <><em>deep plowing materials</em><em>and manufacturing, Continuous</em><em>Product Value Creation</em></> : <>深耕材料與製造，<br/>持續創造產品價值</>}</h1><i aria-hidden="true"/><p>以專業的材料技術、穩定的製造能力與持續創新的精神，為全球客戶提供高品質的塑膠材料與客製化解決方案，共同邁向更美好的未來。</p><a href="#company-history">探索企業實力 <b>↗</b></a></div>
       <div className="profile-carousel" aria-label="企業圖片輪播控制"><b>{String(slide + 1).padStart(2,"0")}</b><span>/ 03</span><button onClick={() => changeSlide(-1)} aria-label="上一張">←</button><button onClick={() => changeSlide(1)} aria-label="下一張">→</button></div>
     </section>
     <section className="profile-facts" aria-label="企業數據">{facts.map(([icon,value,label]) => <article key={label}><span><FactIcon type={icon}/></span><div><b>{value}</b><small>{label}</small></div></article>)}</section>

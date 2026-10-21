@@ -145,6 +145,25 @@ body[data-locale="en"] .modular-other-product-card h3 {
 }
 
 body[data-locale="en"] .profile-hero-copy h1 {
+  max-width: 100%;
+  font-size: clamp(42px,4vw,72px);
   letter-spacing: -.035em;
-  word-spacing: .08em;
+  line-height: 1.08;
+  word-spacing: .06em;
+}
+
+body[data-locale="en"] .profile-hero-copy {
+  width: 100%;
+  max-width: min(1100px,100%);
+}
+
+body[data-locale="en"] .profile-hero-copy h1 em {
+  display: block;
+  font-style: normal;
+  white-space: nowrap;
+}
+
+@media(max-width:700px){
+  body[data-locale="en"] .profile-hero-copy h1 { font-size: clamp(38px,11vw,48px); }
+  body[data-locale="en"] .profile-hero-copy h1 em { white-space: normal; }
 }
