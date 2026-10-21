@@ -47,7 +47,7 @@ export default function ProductsOverview() {
         </div>
       </a>)}</div>
     </section>
-    <section className="products-applications"><div className="shell">
+    <section className="products-applications" id="applications"><div className="shell">
       <header><span>APPLICATION DIRECTION</span><h2>按應用方向選材</h2><p>從終端產品出發，快速縮小材料選擇範圍。</p></header>
       <div>{applications.map(([no, title, text, image]) => <article key={no}>
         <img src={image} alt={title} /><b>{no}</b><h3>{title}</h3><p>{text}</p><a href="/contact/#inquiry">諮詢適用材料 ↗</a>

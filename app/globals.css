@@ -391,3 +391,40 @@ body[data-locale="en"] .site-footer .footer-brand p{font-size:15px;line-height:1
   body[data-locale="en"] .site-footer>.footer-main{grid-template-columns:1fr 1fr}
 }
 @media(max-width:560px){body[data-locale="en"] .site-footer>.footer-main{grid-template-columns:1fr}}
+
+/* Laboratory image tiles use matching square geometry. */
+.profile-lab-gallery figure>a{
+  width:100%;
+  height:auto;
+  aspect-ratio:1/1;
+  background:#fff;
+}
+.profile-lab-gallery figure>a>img{object-fit:contain}
+
+/* Right-align the homepage application heading block to the card grid while
+   keeping the copy itself left-aligned. */
+body[data-locale="en"] .intro .section-title h2,
+body[data-locale="en"] .intro .lead{
+  margin-left:0;
+  margin-right:0;
+  text-align:left;
+}
+body[data-locale="en"] .intro .section-title{display:block}
+body[data-locale="en"] .intro .section-title h2{
+  width:min(900px,72%);
+  margin-top:35px;
+  margin-bottom:35px;
+}
+body[data-locale="en"] .intro .lead{
+  width:min(1050px,82%);
+  margin-top:0;
+  margin-bottom:35px;
+  max-width:none;
+  font-size:clamp(17px,1.15vw,19px);
+  line-height:1.65;
+}
+
+@media(max-width:900px){
+  body[data-locale="en"] .intro .section-title h2,
+  body[data-locale="en"] .intro .lead{width:auto;margin-left:0;margin-right:0}
+}

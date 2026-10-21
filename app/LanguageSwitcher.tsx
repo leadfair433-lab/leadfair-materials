@@ -25,7 +25,7 @@ const translationOverrides: Record<"en" | "vi", Record<string, string>> = {
     "原料網站": "Lead Fair Materials", "產品": "Products", "材料解決方案": "Material Solutions", "定製研發": "Custom R&D", "客製研發": "Custom R&D", "應用行業": "Applications", "應用產業": "Applications", "工廠實力": "Manufacturing", "聯絡工程師 ↗": "Talk to an Engineer ↗",
     "創新材料，": "Advanced materials,", "驅動產品": "engineered to move products ", "進化。": "forward.", "面向全球品牌與製造商，提供 TPE 熱塑性彈性體的研發、改性、測試與規模化生產。": "TPE research, modification, testing and scalable manufacturing for global brands and manufacturers.", "探索材料方案": "Explore Materials", "申請免費樣品": "Request a Sample",
     "製造經驗": "Manufacturing experience", "專業研發團隊": "Specialist R&D team", "材料工程師團隊": "Materials engineering team", "定製開發": "Custom development", "全球合作伙伴": "Global partners", "服務國家和地區": "Countries and regions served",
-    "為效能而生的": "Advanced material systems", "先進材料體系": "built for performance", "鞋材": "Footwear", "中底": "Midsoles", "鞋墊": "Insoles", "運動護具": "Sports protection",
+    "為效能而生的": "Advanced Materials", "先進材料體系": "for Performance", "鞋材": "Footwear", "中底": "Midsoles", "鞋墊": "Insoles", "運動護具": "Sports protection",
     "選擇產品型號": "Select a product grade", "點選型號，檢視下方產品詳情": "Select a grade to view product details below", "獲取樣品": "Request a Sample", "諮詢技術引數 ↗": "Ask About Technical Data ↗", "諮詢產品 ↗": "Ask About This Grade ↗",
     "定製材料": "Custom material", "開發服務": "development service", "需求溝通": "Requirements", "材料分析": "Material analysis", "配方開發": "Formulation", "樣品測試": "Sample testing", "試產驗證": "Pilot validation", "批次生產": "Mass production",
     "研發與製造，": "R&D and manufacturing,", "在同一套質量體系內": "under one quality system", "材料洞察與應用指南": "Material Insights & Application Guides", "更多文章": "More Articles", "閱讀全文": "Read Article",

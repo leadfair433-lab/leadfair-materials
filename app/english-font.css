@@ -18,11 +18,9 @@ body[data-locale="en"] .hero h1 span { margin-left: 0; }
 body[data-locale="en"] .metrics .metric-card:last-child { text-align: left; }
 body[data-locale="en"] .metrics .metric-card:last-child p { margin-left: 0; }
 body[data-locale="en"] .section-title h2 {
-  width: 75%;
-  margin-left: auto;
-  white-space: nowrap;
+  width: 50%;
 }
-body[data-locale="en"] .intro .lead { width: 75%; max-width: none; margin: 0 0 35px auto; text-align: left; }
+body[data-locale="en"] .intro .lead { width: 50%; max-width: none; margin: 0 0 35px auto; text-align: left; }
 body[data-locale="en"] .home-products-heading {
   flex-direction: column;
   align-items: flex-start;
@@ -73,7 +71,7 @@ body[data-locale="en"] .blog-copy h3 { min-height: 64px; }
 body[data-locale="en"] .home-product-card-copy h3,
 body[data-locale="en"] .overview-product-copy h3,
 body[data-locale="en"] .grade-placeholder h3,
-body[data-locale="en"] .modular-product-intro h1 { font-weight: 500; }
+body[data-locale="en"] .modular-product-intro h1 { font-weight: 500; letter-spacing: -.025em; }
 body[data-locale="en"] .profile-copy p { text-align: justify; text-align-last: left; }
 body[data-locale="en"] .profile-history > header { display: block; }
 body[data-locale="en"] .profile-history > header p { margin: 12px 0 0; text-align: left; }
@@ -114,6 +112,10 @@ body[data-locale="en"] .contact-needs article a { align-self: end; margin-top: 0
 
 @media(min-width:1201px){
   body[data-locale="en"] .profile-history-grid article:nth-child(3) h3 { font-size: 15px; letter-spacing: -.02em; white-space: nowrap; }
+}
+
+@media(min-width:901px){
+  body[data-locale="en"] .products-applications article p { min-height: 48px; }
 }
 
 .history-image { position: relative; overflow: hidden; background: #dfe8ef; }
@@ -227,4 +229,22 @@ body[data-locale="en"] .profile-copy h2,
 body[data-locale="en"] .profile-history h2,
 body[data-locale="en"] .profile-labs h2 {
   word-spacing: .1em;
+}
+
+/* Homepage application heading follows the left-aligned product-grade pattern. */
+body[data-locale="en"] .intro .section-title{display:block}
+body[data-locale="en"] .intro .section-title h2{
+  width:min(900px,72%);
+  margin:35px 0;
+  text-align:left;
+}
+body[data-locale="en"] .intro.shell>.lead{
+  width:min(580px,52%);
+  max-width:none;
+  margin:0 0 35px;
+  text-align:left;
+}
+@media(max-width:900px){
+  body[data-locale="en"] .intro .section-title h2,
+  body[data-locale="en"] .intro.shell>.lead{width:auto;margin-left:0;margin-right:0}
 }
