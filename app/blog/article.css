@@ -57,7 +57,11 @@
 .journal-social-grid button:last-child svg { fill:none; stroke:currentColor; stroke-width:2; }
 .journal-contact-card { background:linear-gradient(130deg,#f0f2f6,#fafbfc); }
 .journal-contact-card h2 { color:var(--blue); border:0; padding:0; }
-.journal-contact-details { display:grid; gap:16px; font-size:14px; color:#555e6b; line-height:1.5; overflow-wrap:anywhere; }
+.journal-contact-details { display:grid; gap:16px; margin:0; font-size:14px; color:#555e6b; line-height:1.5; overflow-wrap:anywhere; }
+.journal-contact-details>div { display:grid; gap:4px; }
+.journal-contact-details dt { color:#8795a1; font-weight:800; }
+.journal-contact-details dd { margin:0; }
+.journal-contact-details a:hover { color:var(--blue); text-decoration:underline; }
 .journal-email { text-decoration:underline; text-underline-offset:3px; }
 .journal-whatsapp { color:var(--blue); }
 .journal-contact-card small { display:block; }
