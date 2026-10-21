@@ -17,10 +17,18 @@ body[data-locale="en"] .hero h1 span { letter-spacing: -.045em; }
 body[data-locale="en"] .hero h1 span { margin-left: 0; }
 body[data-locale="en"] .metrics .metric-card:last-child { text-align: left; }
 body[data-locale="en"] .metrics .metric-card:last-child p { margin-left: 0; }
-body[data-locale="en"] .section-title h2 { width: 50%; }
-body[data-locale="en"] .intro .lead { width: 50%; max-width: none; margin: 0 0 35px auto; text-align: left; }
-body[data-locale="en"] .home-products-heading { align-items: flex-start; }
-body[data-locale="en"] .home-products-heading > p { margin-top: 56px; }
+body[data-locale="en"] .section-title h2 {
+  width: 87.5%;
+  margin-left: 12.5%;
+  white-space: nowrap;
+}
+body[data-locale="en"] .intro .lead { width: 87.5%; max-width: none; margin: 0 0 35px 12.5%; text-align: left; }
+body[data-locale="en"] .home-products-heading {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0;
+}
+body[data-locale="en"] .home-products-heading > p { max-width: 760px; margin: 14px 0 0; }
 body[data-locale="en"] .process-head { align-items: start; }
 body[data-locale="en"] .process-head > div:last-child { padding-top: 72px; padding-bottom: 0; }
 body[data-locale="en"] .process-track article:last-child h3 { white-space: nowrap; }
@@ -52,7 +60,11 @@ body[data-locale="en"] .material-inquiry-dialog input:not([type="checkbox"]),
 body[data-locale="en"] .material-inquiry-dialog select,
 body[data-locale="en"] .material-inquiry-dialog textarea { font-size: 18px; }
 body[data-locale="en"] .products-catalog > header { align-items: flex-start; }
-body[data-locale="en"] .products-catalog > header > p { margin-top: 29px; }
+body[data-locale="en"] .products-catalog > header {
+  flex-direction: column;
+  gap: 0;
+}
+body[data-locale="en"] .products-catalog > header > p { max-width: 760px; margin: 14px 0 0; }
 body[data-locale="en"] .article-hub-heading > p { position: static; margin: 0; text-align: left; }
 body[data-locale="en"] .article-hub-grid h3 { min-height: 72px; text-align: left; text-align-last: auto; }
 body[data-locale="en"] .article-hub-grid h3,
@@ -117,7 +129,7 @@ body[data-locale="en"] .contact-needs article a { align-self: end; margin-top: 0
 .honors-hero-copy p { max-width:680px; color:#d9e6f2; font-size:17px; line-height:1.8; }
 
 @media(max-width:900px){
-  body[data-locale="en"] .section-title h2 { width: auto; }
+  body[data-locale="en"] .section-title h2 { width: auto; margin-left: 0; white-space: normal; }
   body[data-locale="en"] .intro .lead { width: auto; margin: 20px 0 30px; }
   body[data-locale="en"] .home-products-heading > p { margin-top: 18px; }
   body[data-locale="en"] .process-head > div:last-child { padding-top: 0; }
@@ -159,14 +171,14 @@ body[data-locale="en"] .profile-hero-copy h1 {
 body[data-locale="en"] .products-hero h1 {
   font-variant-ligatures: none;
   font-feature-settings: "liga" 0, "clig" 0;
-  letter-spacing: .01em;
+  letter-spacing: 0;
 }
 
 body[data-locale="en"] .products-catalog .overview-product-copy h3,
 body[data-locale="en"] .products-catalog .home-product-card-copy h3 {
   font-variant-ligatures: none;
   font-feature-settings: "liga" 0, "clig" 0;
-  letter-spacing: .025em;
+  letter-spacing: .01em;
 }
 
 body[data-locale="en"] .profile-hero-copy {
