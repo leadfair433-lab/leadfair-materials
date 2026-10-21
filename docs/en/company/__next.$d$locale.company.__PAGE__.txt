@@ -4,5 +4,5 @@
 4:I[6096,["5588","static/chunks/5588-2548df9dd6460bb4.js","6402","static/chunks/6402-78a56f894a3b9d3a.js","7033","static/chunks/app/%5Blocale%5D/company/page-f5da7e1dc25b14dc.js"],"default"]
 5:I[3258,[],"OutletBoundary"]
 6:"$Sreact.suspense"
-0:{"rsc":["$","$1","c",{"children":[["$","main",null,{"className":"company-page","children":[["$","$L2",null,{}],["$","$L3",null,{}],["$","$L4",null,{}]]}],null,["$","$L5",null,{"children":["$","$6",null,{"name":"Next.MetadataOutlet","children":"$@7"}]}]]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"yCi8nVeeqRINvW6gVX9UZ"}
+0:{"rsc":["$","$1","c",{"children":[["$","main",null,{"className":"company-page","children":[["$","$L2",null,{}],["$","$L3",null,{}],["$","$L4",null,{}]]}],null,["$","$L5",null,{"children":["$","$6",null,{"name":"Next.MetadataOutlet","children":"$@7"}]}]]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"2_Fucpeus_s6ot32tqUy2"}
 7:null

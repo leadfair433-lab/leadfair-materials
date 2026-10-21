@@ -85,7 +85,11 @@ body[data-locale="en"] .contact-hero .hero-quick-form textarea {
   color: #fff;
 }
 body[data-locale="en"] .contact-hero .hero-quick-form input::placeholder,
-body[data-locale="en"] .contact-hero .hero-quick-form textarea::placeholder { color: rgba(255,255,255,.62); opacity: 1; }
+body[data-locale="en"] .contact-hero .hero-quick-form textarea::placeholder {
+  color: #b6c3ef99;
+  font: 400 14px/1.4 Arial, "PingFang SC", sans-serif;
+  opacity: 1;
+}
 body[data-locale="en"] .contact-location-copy h2 { font-size: clamp(42px,3.2vw,52px); white-space: nowrap; }
 body[data-locale="en"] .contact-location-copy h3 { font-size: 20px; white-space: nowrap; }
 body[data-locale="en"] .contact-location-copy { padding-left: 0; padding-right: 0; }
