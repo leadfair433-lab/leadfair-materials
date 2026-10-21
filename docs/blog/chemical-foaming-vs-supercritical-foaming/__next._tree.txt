@@ -1,7 +1,7 @@
 :HL["/leadfair-materials/_next/static/media/636a5ac981f94f8b-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 :HL["/leadfair-materials/_next/static/css/b58c6369e2ffe0f3.css","style"]
-:HL["/leadfair-materials/_next/static/css/5a47667632fd50d1.css","style"]
+:HL["/leadfair-materials/_next/static/css/32215d21e712c1e3.css","style"]
 :HL["/leadfair-materials/_next/static/css/535c023a02368126.css","style"]
 :HL["/leadfair-materials/_next/static/css/e3d784789ced57c4.css","style"]
 :HL["/leadfair-materials/images/articles/chemical-supercritical-cover-fast.jpg","image"]
-0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"blog","param":null,"prefetchHints":0,"slots":{"children":{"name":"slug","param":{"type":"d","key":"chemical-foaming-vs-supercritical-foaming","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"BBErHSDZ5mUnjInf12Cav"}
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"blog","param":null,"prefetchHints":0,"slots":{"children":{"name":"slug","param":{"type":"d","key":"chemical-foaming-vs-supercritical-foaming","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"gk15QG3dHD8wwd4we9S_a"}
