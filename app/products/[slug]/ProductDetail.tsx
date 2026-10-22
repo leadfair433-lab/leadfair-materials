@@ -6,6 +6,7 @@ import SiteHeader from "../../SiteHeader";
 import GlobalInquiryFooter from "../../GlobalInquiryFooter";
 import { productBySlug, products, type Product, type ProductModule } from "../../content/products";
 import Ius4065ReferenceFrame from "./Ius4065ReferenceFrame";
+import Ius4065ClosingSections from "./Ius4065ClosingSections";
 
 function OtherProductsCarousel({ currentSlug, locale }: { currentSlug: string; locale?: string }) {
   const [first, setFirst] = useState(0);
@@ -142,6 +143,7 @@ export default function ProductDetail() {
     <SiteHeader />
     <nav className="modular-product-nav shell" aria-label="產品牌號導航"><button type="button" className="modular-product-back" onClick={goBack}>← 返回上一頁</button><div>{products.map(item => <a href={`/products/${item.slug}/`} className={item.slug === product.slug ? "active" : ""} aria-current={item.slug === product.slug ? "page" : undefined} key={item.slug}>{item.name}</a>)}<a href="/products/" className="modular-product-more">更多產品 ↗</a><a href={pdfHref} className="modular-product-pdf" download={pdfDownloadName}>下載產品資料 PDF ↓</a></div></nav>
     <Ius4065ReferenceFrame locale={params?.locale} />
+    <Ius4065ClosingSections />
     <div className="shell"><OtherProductsCarousel currentSlug={product.slug} locale={params?.locale} /></div>
     <GlobalInquiryFooter />
   </main>;

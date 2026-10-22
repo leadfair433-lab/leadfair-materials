@@ -2,6 +2,6 @@
 2:I[899,[],""]
 3:I[4063,[],""]
 :HL["/leadfair-materials/_next/static/css/b58c6369e2ffe0f3.css","style"]
-:HL["/leadfair-materials/_next/static/css/033d6367447b6f4b.css","style"]
+:HL["/leadfair-materials/_next/static/css/85d464664c6fef47.css","style"]
 :HL["/leadfair-materials/_next/static/css/878277dec950ee7b.css","style"]
-0:{"rsc":["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/leadfair-materials/_next/static/css/b58c6369e2ffe0f3.css","precedence":"next"}],["$","link","1",{"rel":"stylesheet","href":"/leadfair-materials/_next/static/css/033d6367447b6f4b.css","precedence":"next"}],["$","link","2",{"rel":"stylesheet","href":"/leadfair-materials/_next/static/css/878277dec950ee7b.css","precedence":"next"}]],["$","html",null,{"lang":"zh-CN","children":["$","body",null,{"className":"__variable_25ef48","children":["$","$L2",null,{"parallelRouterKey":"children","template":["$","$L3",null,{}]}]}]}]]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"vhhJJylLLCeq8gMIQTqdm"}
+0:{"rsc":["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/leadfair-materials/_next/static/css/b58c6369e2ffe0f3.css","precedence":"next"}],["$","link","1",{"rel":"stylesheet","href":"/leadfair-materials/_next/static/css/85d464664c6fef47.css","precedence":"next"}],["$","link","2",{"rel":"stylesheet","href":"/leadfair-materials/_next/static/css/878277dec950ee7b.css","precedence":"next"}]],["$","html",null,{"lang":"zh-CN","children":["$","body",null,{"className":"__variable_25ef48","children":["$","$L2",null,{"parallelRouterKey":"children","template":["$","$L3",null,{}]}]}]}]]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"jj0xfygR9do_zx4pn-aFU"}

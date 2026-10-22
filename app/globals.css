@@ -25,6 +25,7 @@ html { scroll-padding-top: 104px; }
 }
 .site-header-spacer{height:88px;background:#f8f9f7}
 .site-header .contact{display:inline-flex;align-items:center;border-radius:999px;padding:12px 18px;font-size:13px;font-weight:700}
+.mobile-menu-toggle,.mobile-nav-panel,.mobile-nav-backdrop{display:none}
 .journal-toolbar {
   position: sticky;
   top: 88px;
@@ -93,6 +94,34 @@ html { scroll-padding-top: 104px; }
 @media(max-width:900px){.company-section{padding:75px 0 90px}.company-heading,.company-overview-grid,.honors-layout{grid-template-columns:1fr}.company-heading>p{margin-top:25px}.company-overview-grid{margin-top:45px}.company-overview-grid img{height:auto}.company-story{padding-bottom:0}.company-block{padding-top:75px}.history-grid,.lab-layout{grid-template-columns:1fr}.history-grid article{min-height:0;border-right:0;border-bottom:1px solid #ffffff20}.honors-layout{gap:30px}.lab-layout img{grid-column:auto}.company-block-title{display:block}.company-block-title h3{margin-top:12px;font-size:36px}}
 
 @media(max-width:900px){html{scroll-padding-top:84px}.top{top:0}.site-header-spacer{height:70px}.product-index{top:78px}.journal-toolbar{top:70px}}
+
+@media(max-width:900px){
+  .site-header{z-index:1250}
+  .site-header .brand-logo-link{min-width:0;flex:0 1 auto}
+  .site-header .tools{flex:0 0 auto;min-width:0}
+  .site-header .contact{display:none}
+  .site-header .language-switcher{position:absolute;right:66px}
+  .site-header .mobile-menu-toggle{position:absolute;right:15px;display:grid;place-content:center;flex:0 0 42px;gap:4px;width:42px;height:42px;padding:0;border:1px solid #d5dcd7;border-radius:50%;background:#fff;color:#102131;cursor:pointer}
+  .mobile-menu-toggle span{display:block;width:18px;height:2px;border-radius:99px;background:currentColor;transition:transform .2s ease,opacity .2s ease}
+  .mobile-menu-toggle[aria-expanded="true"] span:nth-child(1){transform:translateY(6px) rotate(45deg)}
+  .mobile-menu-toggle[aria-expanded="true"] span:nth-child(2){opacity:0}
+  .mobile-menu-toggle[aria-expanded="true"] span:nth-child(3){transform:translateY(-6px) rotate(-45deg)}
+  .mobile-nav-panel{position:fixed;z-index:1240;top:78px;left:15px;right:15px;display:block;max-height:calc(100dvh - 94px);padding:18px;overflow:auto;border:1px solid #d8e1e8;border-radius:18px;background:#fff;box-shadow:0 24px 70px #071c3d35;opacity:0;visibility:hidden;transform:translateY(-12px);transition:.22s ease}
+  .mobile-nav-panel.is-open{opacity:1;visibility:visible;transform:translateY(0)}
+  .mobile-nav-primary{display:grid}
+  .mobile-nav-primary a{display:flex;align-items:center;justify-content:space-between;padding:15px 4px;border-bottom:1px solid #e5e9e6;color:#102131;font-size:20px;font-weight:750}
+  .mobile-nav-primary a::after{content:"↗";color:var(--blue);font-size:14px}
+  .mobile-nav-secondary{display:flex;flex-wrap:wrap;gap:8px;padding:16px 0}
+  .mobile-nav-secondary a{padding:9px 12px;border-radius:999px;background:#eef3f7;color:#405668;font-size:11px;font-weight:700}
+  .mobile-nav-contact{display:flex;justify-content:space-between;padding:14px 17px;border-radius:999px;background:var(--blue);color:#fff;font-size:13px;font-weight:800}
+  .mobile-nav-backdrop{position:fixed;z-index:1230;inset:70px 0 0;display:block;width:100%;height:calc(100% - 70px);padding:0;border:0;background:#061a305c;backdrop-filter:blur(3px);-webkit-backdrop-filter:blur(3px)}
+}
+@media(max-width:560px){
+  .site-header .brand-logo{width:116px}
+  .site-header .tools{gap:4px}
+  .site-header .language-switcher select{width:78px;max-width:78px;padding:9px 24px 9px 9px}
+  .site-header .mobile-menu-toggle{flex-basis:40px;width:40px;height:40px}
+}
 
 /* Company page — blue-and-white editorial system aligned with the homepage */
 .company-page{background:#f4f7fa;color:#101820}
@@ -354,7 +383,7 @@ body[data-locale="en"] .contact-hero h1,body[data-locale="vi"] .contact-hero h1{
 .contact-hero > * { position: relative; z-index: 1; }
 
 .contact-hero::before {
-  background: url('/leadfair-materials/images/contact/contact-hero-laboratory.png') center / cover no-repeat;
+  background: url('/images/contact/contact-hero-laboratory.png') center / cover no-repeat;
   transform: scaleX(-1);
 }
 
@@ -428,3 +457,32 @@ body[data-locale="en"] .intro .lead{
   body[data-locale="en"] .intro .section-title h2,
   body[data-locale="en"] .intro .lead{width:auto;margin-left:0;margin-right:0}
 }
+
+/* Contact actions: confirmation/copy and WeChat QR dialogs. */
+.social-contact-buttons button{display:inline-flex;align-items:center;gap:8px;padding:12px 17px;border:1px solid #ffffff70;border-radius:999px;background:transparent;color:#fff;font:inherit;font-size:12px;font-weight:800;cursor:pointer}
+.social-contact-buttons button img{width:18px;height:18px;filter:brightness(0) invert(1)}
+.social-contact-buttons button:hover{background:#07c160;border-color:#07c160}
+.contact-dialog-backdrop{position:fixed;z-index:3000;inset:0;display:grid;place-items:center;padding:24px;background:#061a30b8;backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
+.contact-dialog{position:relative;width:min(460px,100%);padding:34px;border-radius:24px;background:#fff;color:#10283e;box-shadow:0 28px 90px #00152f73;text-align:center}
+.contact-dialog>span{color:#0b3cff;font-size:11px;font-weight:900;letter-spacing:.18em}.contact-dialog h2{margin:10px 0 18px;font-size:30px}.contact-dialog p{margin:14px 0;color:#53697b;font-size:16px;overflow-wrap:anywhere}
+.contact-dialog-close{position:absolute;right:14px;top:12px;width:38px;height:38px;border:0;border-radius:50%;background:#eef3f7;color:#153149;font-size:25px;cursor:pointer}
+.contact-dialog-primary{width:100%;margin-top:8px;padding:14px 20px;border:0;border-radius:999px;background:#0b3cff;color:#fff;font-weight:800;cursor:pointer}
+
+/* Keep the complete mobile header inside narrow device viewports. */
+@media(max-width:560px){
+  .site-header .localized-brand-logo{width:116px}
+  .site-header .tools{gap:4px}
+  .site-header .language-switcher select{width:78px;max-width:78px;padding:9px 24px 9px 9px}
+  .site-header .mobile-menu-toggle{display:grid;flex:0 0 40px;width:40px;height:40px;padding:0}
+}
+
+/* Desktop primary navigation: larger and bolder for stronger visibility. */
+@media(min-width:901px){
+  .site-header>nav>a,
+  .site-header>nav>.nav-dropdown>a{
+    font-size:15px;
+    font-weight:700;
+  }
+}
+.wechat-qr-crop{width:min(330px,100%);aspect-ratio:1/1;margin:0 auto;overflow:hidden;border-radius:16px;background:#0063a3}
+.wechat-qr-crop img{display:block;width:200%;height:100%;max-width:none;object-fit:cover;object-position:right center}

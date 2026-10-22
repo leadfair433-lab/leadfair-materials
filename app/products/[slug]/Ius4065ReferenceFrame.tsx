@@ -5,12 +5,13 @@ import { useEffect, useRef, useState } from "react";
 export default function Ius4065ReferenceFrame({ locale = "zh-tw" }: { locale?: string }) {
   const frame = useRef<HTMLIFrameElement>(null);
   const [height, setHeight] = useState(6200);
-  const src = `${process.env.NEXT_PUBLIC_BASE_PATH || ""}/ius-4065-reference.html?lang=${locale}&v=20261009-2`;
+  const src = `${process.env.NEXT_PUBLIC_BASE_PATH || ""}/ius-4065-reference.html?lang=${locale}&v=20261021-1`;
 
   const measureFrame = () => {
     try {
-      const body = frame.current?.contentWindow?.document.body;
-      if (body) setHeight(body.scrollHeight);
+      const document = frame.current?.contentWindow?.document;
+      const contentBottom = document?.querySelector("main")?.getBoundingClientRect().bottom;
+      if (contentBottom && contentBottom > 0) setHeight(Math.ceil(contentBottom));
     } catch {
       frame.current?.contentWindow?.postMessage({ type: "ius4065:measure" }, window.location.origin);
     }
